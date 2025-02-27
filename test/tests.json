@@ -1,10 +1,1 @@
-{
-    "analysis": {
-        "input": "analysis-input.txt",
-        "mode": "lif-disam"
-    },
-    "generation": {
-        "input": "generation-input.txt",
-        "mode": "lif-gener"
-    }
-}
+{"analysis": {"input": "analysis-input.txt", "mode": "lif-disam"}, "generation": {"input": "generation-input.txt", "mode": "lif-gener"}, "Plurals-morph": {"input": "Plurals/Plurals-morph-input.txt", "mode": "lif-morph"}, "Plurals-gen": {"input": "Plurals/Plurals-gen-input.txt", "mode": "lif-gener"}, "Duals-morph": {"input": "Duals/Duals-morph-input.txt", "mode": "lif-morph"}, "Duals-gen": {"input": "Duals/Duals-gen-input.txt", "mode": "lif-gener"}, "Male-morph": {"input": "Male/Male-morph-input.txt", "mode": "lif-morph"}, "Male-gen": {"input": "Male/Male-gen-input.txt", "mode": "lif-gener"}, "Female-morph": {"input": "Female/Female-morph-input.txt", "mode": "lif-morph"}, "Female-gen": {"input": "Female/Female-gen-input.txt", "mode": "lif-gener"}, "Regular-morph": {"input": "Regular/Regular-morph-input.txt", "mode": "lif-morph"}, "Regular-gen": {"input": "Regular/Regular-gen-input.txt", "mode": "lif-gener"}, "Irregular-morph": {"input": "Irregular/Irregular-morph-input.txt", "mode": "lif-morph"}, "Irregular-gen": {"input": "Irregular/Irregular-gen-input.txt", "mode": "lif-gener"}, "Vocative case-morph": {"input": "Vocative case/Vocative case-morph-input.txt", "mode": "lif-morph"}, "Vocative case-gen": {"input": "Vocative case/Vocative case-gen-input.txt", "mode": "lif-gener"}, "Comitative case-morph": {"input": "Comitative case/Comitative case-morph-input.txt", "mode": "lif-morph"}, "Comitative case-gen": {"input": "Comitative case/Comitative case-gen-input.txt", "mode": "lif-gener"}, "Ablative case-morph": {"input": "Ablative case/Ablative case-morph-input.txt", "mode": "lif-morph"}, "Ablative case-gen": {"input": "Ablative case/Ablative case-gen-input.txt", "mode": "lif-gener"}, "Past Tense-morph": {"input": "Past Tense/Past Tense-morph-input.txt", "mode": "lif-morph"}, "Past Tense-gen": {"input": "Past Tense/Past Tense-gen-input.txt", "mode": "lif-gener"}}
