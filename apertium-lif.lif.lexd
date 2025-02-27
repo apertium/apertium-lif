@@ -33,7 +33,46 @@ PATTERNS
 # NounRoot RegNounInfl
 Number
 Punctuation
+Nouns
 
+PATTERNS
+
+Noun-Stems Gender? Plurals? Cases
+
+PATTERN Nouns
+
+Noun-Stems Plurals
+
+LEXICON Noun-Stems
+ᤐᤢ:ᤐᤢ
+ᤋᤱ:ᤋᤱ
+ᤀᤠᤶᤒᤣ:ᤀᤠᤶᤒᤣ
+ᤛᤠᤵᤗᤠ:ᤛᤠᤵᤗᤠ
+ᤖᤠ᤺ᤔ:ᤖᤠ᤺ᤔ
+ᤏᤠᤰ:ᤏᤠᤰ
+ᤔᤣᤴᤇᤠ:ᤔᤣᤴᤇᤠ
+ᤗᤠᤶᤛ᤹:ᤗᤠᤶᤛ᤹
+ᤏᤠᤵᤔᤡ:ᤏᤠᤵᤔᤡ
+ᤂᤩᤠ:ᤂᤩᤠ
+ᤀᤕᤰᤐᤠ:ᤀᤕᤰᤐᤠ
+ᤁᤖᤁᤘᤠ:ᤁᤖᤁᤘᤠ
+ᤀᤠᤔᤠ:ᤀᤠᤔᤠ
+ᤀᤠᤐᤠ:ᤀᤠᤐᤠ
+
+LEXICON Plurals
+<n><sg>:
+<n><pl>:>ᤄᤠ
+<n><du>:>ᤄᤠᤇᤡ
+
+LEXICON Cases
+<gen>:{M}{a}{n}
+<voc>:{ᤠ}ᤣ
+<com>:ᤏᤢᤱ
+<abl>:{ᤗᤠᤠᤶ}
+
+LEXICON Gender
+<m>:{B}{a}
+<f>:ᤔᤠ
 
 ## Example inflection lexicon:
 # LEXICON RegNounInfl
