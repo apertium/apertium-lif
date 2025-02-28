@@ -66,27 +66,17 @@ LEXICON Plurals
 
 LEXICON Cases
 <gen>:{M}{a}{n}
-<voc>:{ᤠ}ᤣ
+<voc>:{a}{e}
 <com>:ᤏᤢᤱ
-<abl>:{ᤗᤠᤠᤶ}
+<abl>:{L}{a}{m}
 
 LEXICON Gender
 <m>:{B}{a}
 <f>:ᤔᤠ
 
-## Example inflection lexicon:
-# LEXICON RegNounInfl
-# <n><sg>:
-# <n><pl>:>s
-
-
 ###############################################################################
 ###                          L E X I C O N                                  ###
 ###############################################################################
-
-## Example stem lexicon:
-# LEXICON NounRoot
-# house:house   # A noun
 
 
 PATTERN Number
