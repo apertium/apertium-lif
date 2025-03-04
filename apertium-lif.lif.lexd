@@ -34,13 +34,46 @@ PATTERNS
 Number
 Punctuation
 Nouns
+Verbs
+Determiners
+Adjectives
+
+PATTERN Adjectives
+Adjective-Stem Adj-Suff
+
+LEXICON Adjective-Stem
+ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
+
+LEXICON Adj-Suff
+<adj>:
+
+PATTERN Determiners
+Determiner-Words Det-Suff
+
+LEXICON Determiner-Words
+ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧᤰ
+
+LEXICON Det-Suff
+<det>:
+
+PATTERN Verbs
+Verb-Stems Tense 
+
+LEXICON Verb-Stems
+ᤀᤡᤶᤔᤠ:ᤀᤡ{ᤶᤔᤠ}
+ᤗᤡᤶᤔᤠ:ᤗᤡᤶ{ᤔᤠ}
+ᤛᤥ᤺ᤔᤠ:ᤛᤥ᤺{ᤔᤠ}
+
+LEXICON Tense
+<v><past>:{E}
 
 PATTERNS
-
-Noun-Stems Gender? Plurals? Cases
+Nouns Gender? Plurals Cases
+Verb-Stems Tense
+Determiner-Words Det-Suff
+Adjective-Stem Adj-Suff
 
 PATTERN Nouns
-
 Noun-Stems Plurals
 
 LEXICON Noun-Stems
@@ -58,6 +91,7 @@ LEXICON Noun-Stems
 ᤁᤖᤁᤘᤠ:ᤁᤖᤁᤘᤠ
 ᤀᤠᤔᤠ:ᤀᤠᤔᤠ
 ᤀᤠᤐᤠ:ᤀᤠᤐᤠ
+ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
 
 LEXICON Plurals
 <n><sg>:
@@ -71,8 +105,8 @@ LEXICON Cases
 <abl>:{L}{a}{m}
 
 LEXICON Gender
-<m>:{B}{a}
-<f>:ᤔᤠ
+<n><m><sg>:{B}{a}
+<n><f><sg>:ᤔᤠ
 
 ###############################################################################
 ###                          L E X I C O N                                  ###

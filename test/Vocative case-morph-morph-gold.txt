@@ -5,7 +5,7 @@
 ^ᤀᤠᤐᤥ/ᤀᤠᤐᤠ<n><voc>$ [/option]
 [/x7CXrLZfUGhD]
 [OLAmI2a30jks]
-^ᤆᤠ᤺ᤔᤠᤅᤥ/ᤆᤠ᤺ᤔᤠᤱ<np><voc>$ [/option]
+^ᤆᤠ᤺ᤔᤠᤅᤥ/ᤆᤠ᤺ᤔᤠᤱ<n><voc>$ [/option]
 [/OLAmI2a30jks]
 [ux2wVQ-f6Z9o]
 ^ᤏᤠᤵᤔᤡᤀᤣ/ᤏᤠᤵᤔᤡ<n><voc>$ [/option]
