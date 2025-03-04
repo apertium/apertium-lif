@@ -60,9 +60,9 @@ PATTERN Verbs
 Verb-Stems Tense 
 
 LEXICON Verb-Stems
-ᤀᤡᤶᤔᤠ:ᤀᤡ{ᤶᤔᤠ}
-ᤗᤡᤶᤔᤠ:ᤗᤡᤶ{ᤔᤠ}
-ᤛᤥ᤺ᤔᤠ:ᤛᤥ᤺{ᤔᤠ}
+ᤀᤡᤶᤔᤠ:ᤀᤡ{m}{M}{a}
+ᤗᤡᤶᤔᤠ:ᤗᤡᤶ{M}{a}
+ᤛᤥ᤺ᤔᤠ:ᤛᤥ᤺{M}{a}
 
 LEXICON Tense
 <v><past>:{E}
