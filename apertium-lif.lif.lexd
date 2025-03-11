@@ -35,46 +35,52 @@ Number
 Punctuation
 Nouns
 Verbs
-Determiners
 Adjectives
+Determiner-Words [ <det>: ]
+Proper-Nouns [ <n><sg>: ]
 
 PATTERN Adjectives
 Adjective-Stem Adj-Suff
 
-LEXICON Adjective-Stem
-ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
 
 LEXICON Adj-Suff
 <adj>:
 
-PATTERN Determiners
-Determiner-Words Det-Suff
+PATTERN Verbs
+Verb-Stems Tense 
+
+PATTERN Nouns
+Noun-Stems [<n>:] Plurals Cases
+
+LEXICON Tense
+<v><past>:{E}
+
+LEXICON Plurals
+<sg>:
+<pl>:>ᤄᤠ
+<du>:>ᤄᤠᤇᤡ
+
+LEXICON Cases
+<gen>:{M}{a}{n}
+<voc>:{a}{e}
+<com>:ᤏᤢᤱ
+<abl>:{L}{a}{m}
+
+
+###############################################################################
+###                          L E X I C O N                                  ###
+###############################################################################
+
+LEXICON Adjective-Stem
+ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
 
 LEXICON Determiner-Words
 ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧᤰ
-
-LEXICON Det-Suff
-<det>:
-
-PATTERN Verbs
-Verb-Stems Tense 
 
 LEXICON Verb-Stems
 ᤀᤡᤶᤔᤠ:ᤀᤡ{m}{M}{a}
 ᤗᤡᤶᤔᤠ:ᤗᤡᤶ{M}{a}
 ᤛᤥ᤺ᤔᤠ:ᤛᤥ᤺{M}{a}
-
-LEXICON Tense
-<v><past>:{E}
-
-PATTERNS
-Nouns Gender? Plurals Cases
-Verb-Stems Tense
-Determiner-Words Det-Suff
-Adjective-Stem Adj-Suff
-
-PATTERN Nouns
-Noun-Stems Plurals
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ
@@ -91,27 +97,9 @@ LEXICON Noun-Stems
 ᤁᤖᤁᤘᤠ:ᤁᤖᤁᤘᤠ
 ᤀᤠᤔᤠ:ᤀᤠᤔᤠ
 ᤀᤠᤐᤠ:ᤀᤠᤐᤠ
+
+LEXICON Proper-Nouns
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
-
-LEXICON Plurals
-<n><sg>:
-<n><pl>:>ᤄᤠ
-<n><du>:>ᤄᤠᤇᤡ
-
-LEXICON Cases
-<gen>:{M}{a}{n}
-<voc>:{a}{e}
-<com>:ᤏᤢᤱ
-<abl>:{L}{a}{m}
-
-LEXICON Gender
-<n><m><sg>:{B}{a}
-<n><f><sg>:ᤔᤠ
-
-###############################################################################
-###                          L E X I C O N                                  ###
-###############################################################################
-
 
 PATTERN Number
 Numeral [<num>:]

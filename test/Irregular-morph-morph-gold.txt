@@ -1,6 +1,6 @@
 [KK1InKE7NeNx]
-^ᤐᤡᤋᤏᤠᤱ/ᤐᤡᤋ<n><gen>$ [/option]
+^ᤐᤡᤋᤏᤠᤱ/ᤐᤡᤋ<n><sg><gen>$ [/option]
 [/KK1InKE7NeNx]
 [A4dHTrplZJiR]
-^ᤀᤡᤗᤠᤶᤔᤠᤱ/ᤀᤡᤗᤠᤶ<n><gen>$ [/option]
+^ᤀᤡᤗᤠᤶᤔᤠᤱ/ᤀᤡᤗᤠᤶ<n><sg><gen>$ [/option]
 [/A4dHTrplZJiR]
