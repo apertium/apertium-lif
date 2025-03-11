@@ -1,10 +1,10 @@
-[LO-sjROQqVO_#0] ^ᤀᤠᤔᤠᤏᤢᤱ/ᤀᤠᤔᤠ<n><sg><com>$
+[LO-sjROQqVO_#0] ^ᤀᤠᤔᤠᤏᤢᤱ/ᤀᤠᤔᤠ<n><sg><com>/ᤀᤠᤔᤠ<n><sg><abl>$
 [/LO-sjROQqVO_]
-[QlkG6hdbAf0y#0] ^ᤋᤣ᤺ᤱᤏᤢᤱ/*ᤋᤣ᤺ᤱᤏᤢᤱ$
+[QlkG6hdbAf0y#0] ^ᤋᤣ᤺ᤱᤏᤢᤱ/ᤋᤣ᤺ᤱ<n><sg><com>/ᤋᤣ᤺ᤱ<n><sg><abl>$
 [/QlkG6hdbAf0y]
-[UlcZoEpD85Zt#0] ^ᤛᤣᤒᤠᤏᤢᤱ/*ᤛᤣᤒᤠᤏᤢᤱ$
+[UlcZoEpD85Zt#0] ^ᤛᤣᤒᤠᤏᤢᤱ/ᤛᤣᤒᤠ<n><sg><com>/ᤛᤣᤒᤠ<n><sg><abl>$
 [/UlcZoEpD85Zt]
-[cN2kkvZmYcxg#0] ^ᤆᤢᤶᤏᤢᤱ/*ᤆᤢᤶᤏᤢᤱ$
+[cN2kkvZmYcxg#0] ^ᤆᤢᤶᤏᤢᤱ/ᤆᤢᤶ<n><sg><com>/ᤆᤢᤶ<n><sg><abl>$
 [/cN2kkvZmYcxg]
-[lIJztFvOSOaM#0] ^ᤀᤠᤐᤠᤏᤢᤱ/ᤀᤠᤐᤠ<n><sg><com>$
+[lIJztFvOSOaM#0] ^ᤀᤠᤐᤠᤏᤢᤱ/ᤀᤠᤐᤠ<n><sg><com>/ᤀᤠᤐᤠ<n><sg><abl>$
 [/lIJztFvOSOaM]

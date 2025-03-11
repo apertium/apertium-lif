@@ -1,10 +1,10 @@
-[ELNPcmZ65u7k#0] ^ᤐᤢᤀᤣ/*ᤐᤢᤀᤣ$
+[ELNPcmZ65u7k#0] ^ᤐᤢᤀᤣ/ᤐᤢ<n><sg><voc>$
 [/ELNPcmZ65u7k]
 [OLAmI2a30jks#0] ^ᤆᤠ᤺ᤔᤠᤅᤥ/*ᤆᤠ᤺ᤔᤠᤅᤥ$
 [/OLAmI2a30jks]
-[ux2wVQ-f6Z9o#0] ^ᤏᤠᤵᤔᤡᤀᤣ/*ᤏᤠᤵᤔᤡᤀᤣ$
+[ux2wVQ-f6Z9o#0] ^ᤏᤠᤵᤔᤡᤀᤣ/ᤏᤠᤵᤔᤡ<n><sg><voc>$
 [/ux2wVQ-f6Z9o]
 [x7CXrLZfUGhD#0] ^ᤀᤠᤐᤥ/*ᤀᤠᤐᤥ$
 [/x7CXrLZfUGhD]
-[xhlF4pkS7Z7K#0] ^ᤀᤠᤔᤠᤣ/ᤀᤠᤔᤠ<n><sg><voc>$
+[xhlF4pkS7Z7K#0] ^ᤀᤠᤔᤠᤣ/*ᤀᤠᤔᤠᤣ$
 [/xhlF4pkS7Z7K]

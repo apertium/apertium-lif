@@ -1,9 +1,10 @@
 Alphabet
  ᤀ ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ  ᤠ  ᤧ  ᤣ  ᤡ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ  ᤢ  ᤥ  ᤤ  ᤦ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤨ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ  ᤹ ᤝ ᤞ  ᤺  ᤷ   ᤻
  %{A%}:a 
- %{a%}:ᤠ %{a%}:0
+ %{a%}:ᤠ %{a%}:ᤀ
  %{n%}:ᤱ
- %{M%}:ᤔ %{M%}:ᤅ %{M%}:ᤏ %{M%}:ᤍ %{M%}:ᤛ
+ %{M%}:ᤍ %{M%}:ᤛ
+ %{NG%}:ᤅ %{NG%}:ᤔ %{NG%}:ᤏ
  %{m%}:ᤵ
  %{B%}:ᤒ %{B%}:ᤐ
  %{e%}:ᤣ
@@ -16,9 +17,15 @@ Alphabet
 Sets
 
 Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹  ;
+Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
 
 Rules
-
+"ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
+%{NG%}:ᤏ <=> :[ᤋ | ᤍ] _ ;
+"ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
+%{NG%}:ᤔ <=> :Bilabial _ ;
+"{a} becomes ᤀ after a i and u"
+%{a%}:ᤀ <=> : [ ᤡ |  ᤢ ] _ ;
 "Remove suffix vowel with vowel-ending stem"
 i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
 

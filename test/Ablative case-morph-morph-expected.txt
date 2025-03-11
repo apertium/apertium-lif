@@ -1,10 +1,10 @@
-[3sP8-nBaetSn#0] ^ᤑᤥᤃᤡᤍᤥᤏᤢᤱ/*ᤑᤥᤃᤡᤍᤥᤏᤢᤱ$
+[3sP8-nBaetSn#0] ^ᤑᤥᤃᤡᤍᤥᤏᤢᤱ/ᤑᤥᤃᤡᤍᤥ<n><sg><com>/ᤑᤥᤃᤡᤍᤥ<n><sg><abl>$
 [/3sP8-nBaetSn]
-[64juHN_s4-BQ#0] ^ᤐᤩᤠᤱᤛᤡᤏᤢᤱ/*ᤐᤩᤠᤱᤛᤡᤏᤢᤱ$
+[64juHN_s4-BQ#0] ^ᤐᤩᤠᤱᤛᤡᤏᤢᤱ/ᤐᤩᤠᤱᤛᤡ<n><sg><com>/ᤐᤩᤠᤱᤛᤡ<n><sg><abl>$
 [/64juHN_s4-BQ]
-[_DkCKs0mQvWk#0] ^ᤁᤠᤌᤔᤠᤴᤍᤢᤗᤠᤠᤶ/*ᤁᤠᤌᤔᤠᤴᤍᤢᤗᤠᤠᤶ$
+[_DkCKs0mQvWk#0] ^ᤁᤠᤌᤔᤠᤴᤍᤢᤗᤠᤠᤶ/ᤁᤠᤌᤔᤠᤴᤍᤢ<n><sg><abl>$
 [/_DkCKs0mQvWk]
-[jnwo6lZT_x98#0] ^ᤏᤣᤐᤠᤸᤏᤢᤱ/*ᤏᤣᤐᤠᤸᤏᤢᤱ$
+[jnwo6lZT_x98#0] ^ᤏᤣᤐᤠᤸᤏᤢᤱ/ᤏᤣᤐᤠᤸ<n><sg><com>/ᤏᤣᤐᤠᤸ<n><sg><abl>$
 [/jnwo6lZT_x98]
 [rlfc4TSQrVsf#0] ^ᤕᤠᤰᤌᤢᤱ/*ᤕᤠᤰᤌᤢᤱ$ ^ᤗᤠᤈᤣᤏᤢᤱ/*ᤗᤠᤈᤣᤏᤢᤱ$
 [/rlfc4TSQrVsf]

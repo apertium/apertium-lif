@@ -29,8 +29,6 @@
 ###############################################################################
 
 PATTERNS
-## Example inflection pattern:
-# NounRoot RegNounInfl
 Number
 Punctuation
 Nouns
@@ -50,7 +48,7 @@ PATTERN Verbs
 Verb-Stems Tense 
 
 PATTERN Nouns
-Noun-Stems [<n>:] Plurals Cases
+Noun-Stems [<n>:] Plurals Cases?
 
 LEXICON Tense
 <v><past>:{E}
@@ -61,10 +59,11 @@ LEXICON Plurals
 <du>:>ᤄᤠᤇᤡ
 
 LEXICON Cases
-<gen>:{M}{a}{n}
+<gen>:{NG}{a}{n}
 <voc>:{a}{e}
 <com>:ᤏᤢᤱ
-<abl>:{L}{a}{m}
+<abl>:ᤗᤠᤠᤶ
+<abl>:ᤏᤢᤱ # Dir/LR
 
 
 ###############################################################################
@@ -97,6 +96,16 @@ LEXICON Noun-Stems
 ᤁᤖᤁᤘᤠ:ᤁᤖᤁᤘᤠ
 ᤀᤠᤔᤠ:ᤀᤠᤔᤠ
 ᤀᤠᤐᤠ:ᤀᤠᤐᤠ
+ᤐᤡᤋ:ᤐᤡᤋ
+ᤀᤡᤗᤠᤶ:ᤀᤡᤗᤠᤶ
+ᤆᤠ᤺ᤔᤠᤱ:ᤆᤠ᤺ᤔᤠᤱ
+ᤛᤣᤒᤠ:ᤛᤣᤒᤠ
+ᤆᤢᤶ:ᤆᤢᤶ
+ᤋᤣ᤺ᤱ:ᤋᤣ᤺ᤱ
+ᤏᤣᤐᤠᤸ:ᤏᤣᤐᤠᤸ
+ᤁᤠᤌᤔᤠᤴᤍᤢ:ᤁᤠᤌᤔᤠᤴᤍᤢ
+ᤐᤩᤠᤱᤛᤡ:ᤐᤩᤠᤱᤛᤡ
+ᤑᤥᤃᤡᤍᤥ:ᤑᤥᤃᤡᤍᤥ
 
 LEXICON Proper-Nouns
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
