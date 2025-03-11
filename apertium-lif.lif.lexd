@@ -35,7 +35,6 @@ Nouns
 Verbs
 Adjectives
 Determiner-Words [ <det>: ]
-Proper-Nouns [ <n><sg>: ]
 
 PATTERN Adjectives
 Adjective-Stem Adj-Suff
@@ -106,8 +105,6 @@ LEXICON Noun-Stems
 ᤁᤠᤌᤔᤠᤴᤍᤢ:ᤁᤠᤌᤔᤠᤴᤍᤢ
 ᤐᤩᤠᤱᤛᤡ:ᤐᤩᤠᤱᤛᤡ
 ᤑᤥᤃᤡᤍᤥ:ᤑᤥᤃᤡᤍᤥ
-
-LEXICON Proper-Nouns
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
 
 PATTERN Number
