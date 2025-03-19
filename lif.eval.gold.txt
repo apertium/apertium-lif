@@ -5,7 +5,7 @@
 "<ᤋᤖ>"
 	"ᤋᤖ" cnjcoo
 "<ᤂᤧᤏᤡ>"
-	"ᤂᤧᤏᤡ" prn p2 pl subj
+	"ᤂᤧᤏᤡ" prn pers p2 pl subj
 "<ᤂᤶᤓ>"
 	"ᤂᤶᤓ" adv
 "<ᤕᤠ᤹>"
@@ -13,21 +13,21 @@
 "<ᤖᤠ᤺ᤰᤛᤧ>"
 	"ᤖᤠ᤺ᤰᤛᤧ" vblex pur
 "<ᤁᤧᤒᤣᤃᤡᤀᤠᤱ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤐᤣᤃ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
-	"ᤀᤠᤱ" cj
+	"ᤁᤧ" prn pers p2 subj
+		"ᤐᤣᤃ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj
+				"ᤀᤠᤱ" cj
 "<ᤁᤧᤍᤧᤀᤡᤸᤗᤧ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤋᤩᤧ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
-	"ᤀᤡᤸᤗᤧ" sub
+	"ᤁᤧ" prn pers p2 subj
+		"ᤋᤩᤧ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj
+				"ᤀᤡᤸᤗᤧ" sub
 "<ᤀᤧᤶᤓᤧᤸᤗᤧ>"
 	"ᤀᤧᤶᤓᤧᤸᤗᤧ" adv
 "<ᤁᤧᤀᤡᤵᤛᤡ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤀᤡᤵᤛ" vblex
-	"ᤀᤡ" prn p1 pl incl obj 
+	"ᤁᤧ" prn pers p2 subj
+		"ᤀᤡᤵᤛ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj 
 "<॥>"
 	"॥" sent
 "<ᤀᤠᤐᤠ>"
@@ -37,25 +37,25 @@
 "<ᤀᤠᤔᤠᤖᤧ>"
 	"ᤀᤠᤔᤠᤖᤧ" n sg erg
 "<ᤔᤧᤏᤡᤛᤢᤖ>"
-	"ᤔᤧ" prn p3 subj
-	"ᤏᤡᤛ" vblex
-	"ᤀᤢ" prn p3 sg obj
-	"ᤖ" prog
+	"ᤔᤧ" prn pers p3 subj
+		"ᤏᤡᤛ" vblex
+			"ᤀᤢ" prn pers p3 sg obj
+				"ᤖ" prog
 "<ᤕᤠ᤹>"
 	"ᤕᤠ᤹" n sg nom
 "<ᤖᤠ᤺ᤰᤛᤧ>"
 	"ᤖᤠ᤺ᤰᤛᤧ" vblex pur
 "<ᤁᤧᤒᤣᤃᤡᤀᤠᤱ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤐᤣᤃ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
-	"ᤀᤠᤱ" cj
+	"ᤁᤧ" prn pers p2 subj
+		"ᤐᤣᤃ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj
+				"ᤀᤠᤱ" cj
 "<ᤕᤠᤶᤔᤢ>"
 	"ᤕᤠᤶᤔᤢ" adv
 "<ᤁᤧᤍᤧᤀᤡ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤋᤩᤧ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
+	"ᤁᤧ" prn pers p2 subj
+		"ᤋᤩᤧ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj
 "<॥>"
 	"॥" sent
 "<ᤋᤖ>"
@@ -63,27 +63,27 @@
 "<ᤀᤖᤢ>"
 	"ᤀᤖᤢ" adj pl
 "<ᤁᤢᤈᤢᤶᤜᤠ᤹>"
-	"ᤁᤢ" prn p3 sg subj 
-	"ᤆᤢᤶᤄᤠ" n pl
+	"ᤁᤢ" prn pers p3 sg subj 
+		"ᤆᤢᤶᤄᤠ" n pl
 "<ᤖᤳ>"
 	"ᤖᤳ" adv
 "<ᤔᤧᤘᤠ᤹>"
-	"ᤔᤧ" prn p3 subj
-	"ᤘᤠ᤹" vbser ex
+	"ᤔᤧ" prn pers p3 subj
+		"ᤘᤠ᤹" vbser ex
 "<॥>"
 	"॥" sent
 "<ᤂᤶᤓᤧᤀᤠᤱ>"
 	"ᤂᤶᤓᤧ" adv
-	"ᤀᤠᤱ" cj
+		"ᤀᤠᤱ" cj
 "<ᤀᤧᤶᤓᤧᤸᤗᤧ>"
 	"ᤀᤧᤶᤓᤧᤸᤗᤧ" adv
 "<ᤛᤧ᤺ᤖᤡᤃᤧ>"
 	"ᤛᤧ᤺ᤖ" vblex
-	"ᤀᤡᤃᤧ" prn p1 pl ex
+		"ᤀᤡᤃᤧ" prn pers p1 pl ex
 "<->"
 	"-" guio
 "<ᤂᤴᤄᤠᤏᤢᤱ>"
-	"ᤂᤴᤄᤠᤏᤢᤱ" prn dem pl abl
+	"ᤂᤴᤄᤠᤏᤢᤱ" prn pers dem pl abl
 "<ᤆᤱ>"
 	"ᤆᤱ" n sg
 "<॥>"
@@ -91,7 +91,7 @@
 "<ᤋᤖ>"
 	"ᤋᤖ" cnjcoo
 "<ᤀᤠᤏᤡ>"
-	"ᤀᤠᤏᤡ" prn p1 pl incl subj
+	"ᤀᤠᤏᤡ" prn pers p1 pl incl subj
 "<ᤕᤠᤰᤌᤢᤶᤒᤠᤖᤧ>"
 	"ᤕᤠᤰᤌᤢᤶᤒᤠᤖᤧ" n sg gen 
 "<ᤕᤠᤰᤌᤢᤶᤒᤠᤏᤢ>"
@@ -100,22 +100,22 @@
 	"ᤐᤧᤏᤡᤸᤗᤧ" n sg gen
 "<ᤀᤠᤰᤂ᤹ᤕᤠᤖᤡᤰ>"
 	"ᤀᤠᤰᤂᤣ" adj sg
-	"ᤕᤠᤖᤡᤰ" n sg
+		"ᤕᤠᤖᤡᤰ" n sg
 "<ᤒᤡᤆᤠᤖ>"
 	"ᤒᤡᤆᤠᤖ" n sg
 "<ᤁᤧᤈᤥᤃᤢ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤆᤥᤃᤢ" vbdo p3 sg
+	"ᤁᤧ" prn pers p2 subj
+		"ᤆᤥᤃᤢ" vbdo p3 sg
 "<॥>"
 	"॥" sent
 "<ᤕᤠᤰᤌᤢᤶᤒᤧᤸᤗᤧ>"
 	"ᤕᤠᤰᤌᤢᤶᤒᤧᤸᤗᤧ" n sg erg
 "<ᤆᤥᤀᤠᤱ>"
 	"ᤆᤥ" vblex
-	"ᤀᤠᤱ" adv
+		"ᤀᤠᤱ" adv
 "<ᤆᤥᤃᤢᤀᤠᤱ>"
 	"ᤆᤥᤃᤢ" vbdo p3 sg
-	"ᤀᤠᤱ" adv
+		"ᤀᤠᤱ" adv
 "<॥>"
 	"॥" sent
 "<ᤀᤧᤶᤓᤧᤸᤗᤧ>"
@@ -125,18 +125,18 @@
 "<ᤐᤥᤰᤛᤧ>"
 	"ᤐᤥᤰᤛᤧ" vbser past
 "<ᤂᤧᤏᤡ>"
-	"ᤂᤧᤏᤡ" prn p2 pl subj
+	"ᤂᤧᤏᤡ" prn pers p2 pl subj
 "<ᤐᤧᤏᤡ>"
 	"ᤐᤧᤏᤡ" n sg
 "<ᤐᤠᤴ>"
 	"ᤐᤠᤴ" n sg
 "<ᤆᤡᤕᤸᤗᤡᤰ>"
 	"ᤆᤡ" adj sg
-	"ᤕᤸᤗᤡᤰ" det
+		"ᤕᤸᤗᤡᤰ" det
 "<ᤁᤧᤒᤠ᤹ᤖᤡ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤒᤠ᤹ᤖ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
+	"ᤁᤧ" prn pers p2 subj
+		"ᤒᤠ᤹ᤖ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj
 "<॥>"
 	"॥" sent
 "<ᤕᤠᤰᤌᤢᤱ>"
@@ -145,9 +145,9 @@
 	"ᤐᤠᤴ" n sg
 "<ᤆᤡᤃᤧᤔᤠᤛᤢᤶ>"
 	"ᤆᤡ" adj sg
-	"ᤁᤧ" prn p2 subj
-	"ᤔᤠᤛ" vblex
-	"ᤀᤢᤶ" prn p3 sg obj
+		"ᤁᤧ" prn pers p2 subj
+			"ᤔᤠᤛ" vblex
+				"ᤀᤢᤶ" prn pers p3 sg obj
 "<॥>"
 	"॥" sent
 "<ᤌᤥ>"
@@ -178,25 +178,25 @@
 	"ᤖᤧ" erg
 "<ᤗᤨ᤺ᤳᤔᤢᤏᤠᤱ>
 	"ᤗᤨ᤺ᤳᤔᤢᤏᤠ" vblex ger
-	"ᤀᤠᤱ" adv
+		"ᤀᤠᤱ" adv
 "<॥>"
 	"॥" sent
 "<ᤀᤠᤴᤆᤡ>"
-	"ᤀᤠᤴᤆᤡ" prn p1 du incl subj
+	"ᤀᤠᤴᤆᤡ" prn pers p1 du incl subj
 "<ᤀᤠᤸᤗᤠ>"
 	"ᤀᤠᤸᤗᤠ" adv
 "<->"
 	"-" guio
 "<ᤀᤠᤴᤆᤡ>"
-	"ᤀᤠᤴᤆᤡ" prn p1 du incl subj
+	"ᤀᤠᤴᤆᤡ" prn pers p1 du incl subj
 "<ᤆᤢᤶ>"
 	"ᤆᤢᤶ" n sg
 "<ᤀᤠᤒᤥᤰᤛᤧᤛᤡ>"
-	"ᤀᤠ" prn p1 incl
-	"ᤐᤥᤰᤛᤧᤛᤡ" vbser past du 
+	"ᤀᤠ" prn pers p1 incl
+		"ᤐᤥᤰᤛᤧᤛᤡ" vbser past du 
 "<ᤔᤧ᤺ᤴᤏᤡ>"
 	"ᤔᤧ᤺ᤴᤏ" adv
-	"ᤀᤡ" qst
+		"ᤀᤡ" qst
 "<᥅>"
 	"᥅" sent
 "<ᤌᤡᤰ>"
@@ -206,8 +206,8 @@
 "<ᤗᤧ>"
 	"ᤗᤧ" erg
 "<ᤀᤦ᤺ᤳᤋᤧᤛᤡ>"
-	"ᤀ" prn p1 incl
-	"ᤀᤢ᤺ᤳᤋᤧᤛᤡ" vblex past du
+	"ᤀ" prn pers p1 incl
+		"ᤀᤢ᤺ᤳᤋᤧᤛᤡ" vblex past du
 "<॥>"
 	"॥" sent
 "<ᤂᤶᤓ>"
@@ -221,36 +221,36 @@
 "<ᤔᤏᤠ>"
 	"ᤔᤏᤠ" n sg
 "<ᤀᤠᤘᤠ᤹>"
-	"ᤀᤠ" prn p1 incl
-	"ᤘᤠ᤹" vbser ex
+	"ᤀᤠ" prn pers p1 incl
+		"ᤘᤠ᤹" vbser ex
 "<ᤀᤠᤓᤣᤍᤠᤱᤒᤠ>"
 	"ᤀᤠᤓᤣᤍᤠᤱᤒᤠ" adj
 "<ᤀᤠᤘᤠ᤹>"
-	"ᤀᤠ" prn p1 incl
-	"ᤘᤠ᤹" vbser ex
+	"ᤀᤠ" prn pers p1 incl
+		"ᤘᤠ᤹" vbser ex
 "<ᤑᤧᤸᤗᤧ>"
 	"ᤑᤧᤸᤗᤧ" comp
 "<->"
 	"-" guio
 "<ᤀᤠᤏᤡ>"
-	"ᤀᤠᤏᤡ" prn p1 pl incl subj
+	"ᤀᤠᤏᤡ" prn pers p1 pl incl subj
 "<ᤕᤠᤰᤌᤢᤱᤒᤠ>"
 	"ᤕᤠᤰᤌᤢᤱᤒᤠ" n sg
 "<ᤀᤠᤘᤠ᤹ᤀᤧᤸᤗᤧ>"
-	"ᤀᤠ" prn p1 incl
-	"ᤘᤠ᤹" vbser ex
-	"ᤀᤡᤸᤗᤧ" sub
+	"ᤀᤠ" prn pers p1 incl
+		"ᤘᤠ᤹" vbser ex
+			"ᤀᤡᤸᤗᤧ" sub
 "<->"
 	"-" guio
 "<ᤁᤢᤏᤠᤖᤠ>"
-	"ᤁᤢ" prn p3 sg subj 
-	"ᤏᤠᤖᤠ" n sg
+	"ᤁᤢ" prn pers p3 sg subj 
+		"ᤏᤠᤖᤠ" n sg
 "<ᤋᤠᤵ>"
 	"ᤋᤠᤵ" nom
 "<ᤑᤧ᤺ᤴᤒᤠᤛᤠᤱ>"
 	"ᤑᤧ᤺ᤴᤒᤠᤛᤠᤱ" vblex nom concess
 "<ᤁᤢ>"
-	"ᤁᤢ" prn p3 sg subj
+	"ᤁᤢ" prn pers p3 sg subj
 "<ᤛᤥᤖ>"
 	"ᤛᤥᤖ" n sg
 "<ᤋᤠᤵ>"
@@ -262,24 +262,24 @@
 "<ᤕᤠ᤹>"
 	"ᤕᤠ᤹" n sg nom
 "<ᤀᤠᤖᤠ᤺ᤰ>"
-	"ᤀᤠ" prn p1 incl
-	"ᤖᤠ᤺ᤰ" vblex 
+	"ᤀᤠ" prn pers p1 incl
+		"ᤖᤠ᤺ᤰ" vblex 
 "<,>"
 	"," cm
 "<ᤏᤢᤖᤡᤰ>"
 	"ᤏᤢᤖᤡᤰ" adj sg
 "<ᤀᤠᤒᤠ᤺ᤳ>"
-	"ᤀᤠ" prn p1 incl
-	"ᤒᤠ᤺ᤳ" vblex 
+	"ᤀᤠ" prn pers p1 incl
+		"ᤒᤠ᤺ᤳ" vblex 
 "<ᤀᤤᤳ>"
-	"ᤀᤠ" prn p1 incl 
-	"ᤀᤣᤳ" vblex
+	"ᤀᤠ" prn pers p1 incl 
+		"ᤀᤣᤳ" vblex
 "<ᤑᤃᤖ>"
 	"ᤑᤃᤖ" cnjcoo
 "<->"
 	"-" guio
 "<ᤂᤴᤏᤧᤴ>"
-	"ᤂᤴᤏᤧᤴ" prn dem sg def
+	"ᤂᤴᤏᤧᤴ" prn pers dem sg def
 "<ᤏᤢᤒᤠ>"
 	"ᤏᤢᤒᤠ" adj
 "<ᤏᤡ>"
@@ -290,23 +290,23 @@
 	"ᤗᤇ" evid
 "<ᤔᤏᤠᤸᤗᤧ>"
 	"ᤔᤏᤠ" n sg
-	"ᤀᤡᤸᤗᤧ" erg
+		"ᤀᤡᤸᤗᤧ" erg
 "<॥>"
 	"॥" sent
 "<ᤀᤠᤏᤡᤃᤧ>"
-	"ᤀᤠᤏᤡᤃᤧ" prn p1 pl incl ex
+	"ᤀᤠᤏᤡᤃᤧ" prn pers p1 pl incl ex
 "<ᤀᤄᤡ>"
 	"ᤀᤄᤡ" adv
 "<ᤂᤶᤓ>"
 	"ᤂᤶᤓ" adv
 "<ᤘᤠᤕᤡᤃᤧᤸᤗᤧ>"
 	"ᤘᤠ" vbser ex
-	"ᤀᤡᤃᤧ" prn p1 pl incl ex
-	"ᤀᤡᤸᤗᤧ" sub
+		"ᤀᤡᤃᤧ" prn pers p1 pl incl ex
+			"ᤀᤡᤸᤗᤧ" sub
 "<ᤂᤶᤍᤠᤱ>"
 	"ᤂᤶᤍᤠᤱ" adj
 "<ᤂᤢᤴᤆᤡ>"
-	"ᤂᤢᤴᤆᤡ" prn p3 pl subj
+	"ᤂᤢᤴᤆᤡ" prn pers p3 pl subj
 "<ᤏᤠᤖᤠ>"
 	"ᤏᤠᤖᤠ" n sg 
 "<ᤋᤠᤵ>"
@@ -314,7 +314,7 @@
 "<ᤑᤧ᤺ᤴᤒᤠᤛᤠᤱ>"
 	"ᤑᤧ᤺ᤴᤒᤠᤛᤠᤱ" vblex nom concess
 "<ᤂᤢᤴᤆᤡ>"
-	"ᤂᤢᤴᤆᤡ" prn p3 pl subj
+	"ᤂᤢᤴᤆᤡ" prn pers p3 pl subj
 "<ᤛᤥᤖ>"
 	"ᤛᤥᤖ" n sg
 "<ᤋᤠᤵ>"
@@ -327,18 +327,18 @@
 	"ᤕᤠ᤹" n sg nom
 "<ᤖᤠ᤺ᤰᤋᤡ>"
 	"ᤖᤠ᤺ᤰᤋ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
+		"ᤀᤡ" prn pers p1 pl incl obj
 "<ᤐᤣᤃᤡᤃᤧᤸᤗᤧ>"
 	"ᤐᤣᤃ" vblex
-	"ᤀᤡᤃᤧ" prn p1 pl incl ex
-	"ᤀᤡᤸᤗᤧ" sub 
-"<ᤀᤠᤏᤡᤃᤧ>"
-	"ᤀᤠᤏᤡᤃᤧ" prn p1 pl incl ex
+		"ᤀᤡᤃᤧ" prn pers p1 pl incl ex
+			"ᤀᤡᤸᤗᤧ" sub 
+"<ᤀᤠᤏᤡᤃᤧ>"	
+	"ᤀᤠᤏᤡᤃᤧ" prn pers p1 pl incl ex
 "<ᤏᤢᤒᤠ>"
 	"ᤏᤢᤒᤠ" adj
 "<ᤏᤡᤛᤢᤶᤛᤡᤶᤒᤧ>"
 	"ᤏᤡᤛ" vblex
-	"ᤀᤢᤶᤛᤡᤶᤒᤧ" prn p3 pl
+		"ᤀᤢᤶᤛᤡᤶᤒᤧ" prn pers p3 pl
 "<ᤔᤧᤴᤆᤡᤀᤠᤜᤠ᤹>"
 	"ᤔᤧᤴᤆᤡᤀᤠᤜᤠ᤹" n pl
 "<॥>"
@@ -350,14 +350,14 @@
 "<ᤔᤧᤴᤆᤡᤀᤠᤜᤠ᤹>"
 	"ᤔᤧᤴᤆᤡᤀᤠᤜᤠ᤹" n pl
 "<ᤀᤠᤏᤡᤃᤧᤀᤠᤱ>"
-	"ᤀᤠᤏᤡᤃᤧ" prn p1 pl incl ex
-	"ᤀᤠᤱ" adv
+	"ᤀᤠᤏᤡᤃᤧ" prn pers p1 pl incl ex
+		"ᤀᤠᤱ" adv
 "<ᤏᤢᤒᤠ>"
 	"ᤏᤢᤒᤠ" adj
 "<ᤔᤧᤏᤡᤛᤡᤃᤧ>"
-	"ᤔᤧ" prn p3 subj 
-	"ᤏᤡᤛ" vblex
-	"ᤀᤡᤃᤧ" prn p1 pl incl ex
+	"ᤔᤧ" prn pers p3 subj 
+		"ᤏᤡᤛ" vblex
+			"ᤀᤡᤃᤧ" prn pers p1 pl incl ex
 "<॥>"
 	"॥" sent
 "<ᤂᤶᤓᤧᤸᤗᤧ>"
@@ -365,13 +365,13 @@
 "<ᤁ>"
 	"ᤁ" top
 "<ᤂᤧᤏᤧ>"
-	"ᤂᤧᤏᤧ" prn p2 sg subj
+	"ᤂᤧᤏᤧ" prn pers p2 sg subj
 "<ᤛᤧᤴ>"
 	"ᤛᤧᤴ" nom
 "<ᤋᤥᤏᤧᤒᤠ>"
 	"ᤋᤥ" vblex
-	"ᤏᤧ" prn p2 sg subj
-	"ᤒᤠ" nom
+		"ᤏᤧ" prn pers p2 sg subj
+			"ᤒᤠ" nom
 "<->"
 	"-" guio
 "<ᤀᤠᤓᤣᤍᤠᤱ>"
@@ -381,39 +381,39 @@
 "<ᤔᤧᤴᤆᤡᤀᤠᤜᤠ᤹>"
 	"ᤔᤧᤴᤆᤡᤀᤠᤜᤠ᤹" n pl
 "<ᤔᤧᤘᤠᤕᤧ>"
-	"ᤔᤧ" prn p3 subj 
-	"ᤘᤠᤕᤧ" vblex past 
+	"ᤔᤧ" prn pers p3 subj 
+		"ᤘᤠᤕᤧ" vblex past 
 "<ᤀᤠᤓᤣᤀᤠᤓᤣᤓᤣᤸᤗᤧ>"
 	"ᤀᤠᤓᤣ" redup
-	"ᤀᤠᤓᤣ" adv
-	"ᤓᤣᤸᤗᤧ" comp
+		"ᤀᤠᤓᤣ" adv
+			"ᤓᤣᤸᤗᤧ" comp
 "<ᤕᤠ᤹>"
 	"ᤕᤠ᤹" n sg nom
 "<ᤁᤧᤖᤠ᤺ᤰᤋᤡ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤖᤠ᤺ᤰᤋ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
+	"ᤁᤧ" prn pers p2 subj
+		"ᤖᤠ᤺ᤰᤋ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj
 "<ᤀᤡᤱᤃᤠ>"
-	"ᤀᤡᤱᤃᤠ" prn p1 sg obj
+	"ᤀᤡᤱᤃᤠ" prn pers p1 sg obj
 "<ᤛᤧᤴ>"
 	"ᤛᤧᤴ" nom
 "<ᤋᤥᤏᤧᤒᤠ>"
 	"ᤋᤥ" vblex
-	"ᤏᤧ" prn p2 sg subj
-	"ᤒᤠ" nom
+		"ᤏᤧ" prn pers p2 sg subj
+			"ᤒᤠ" nom
 "<॥>"
 	"॥" sent
 "<ᤀᤠᤓᤣᤓᤣᤸᤗᤧ>"
 	"ᤀᤠᤓᤣ" adv
-	"ᤓᤣᤸᤗᤧ" comp
+		"ᤓᤣᤸᤗᤧ" comp
 "<ᤂᤶᤓ>"
 	"ᤂᤶᤓ" adv
 "<ᤕᤠ᤹>"
 	"ᤕᤠ᤹" n sg nom
 "<ᤁᤧᤖᤠ᤺ᤰᤋᤡ>"
-	"ᤁᤧ" prn p2 subj
-	"ᤖᤠ᤺ᤰᤋ" vblex
-	"ᤀᤡ" prn p1 pl incl obj
+	"ᤁᤧ" prn pers p2 subj
+		"ᤖᤠ᤺ᤰᤋ" vblex
+			"ᤀᤡ" prn pers p1 pl incl obj
 "<᥅>"
 	"᥅" sent
 "<.>"
