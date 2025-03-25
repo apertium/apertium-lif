@@ -50,7 +50,7 @@ PATTERN Verbs
 Verb-Stems Tense 
 
 PATTERN Nouns
-Noun-Stems [<n>:] Plurals Cases
+Noun-Stems [<n>:] Plurals Cases?
 
 LEXICON Tense
 <v><past>:{E}
