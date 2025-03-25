@@ -35,6 +35,9 @@ Nouns
 Verbs
 Adjectives
 Determiner-Words [ <det>: ]
+Interjection [ <ij>: ]
+Conjunctions [ <cnjcoo>: ]
+Adverbs [ <adv>: ]
 
 PATTERN Adjectives
 Adjective-Stem Adj-Suff
@@ -58,6 +61,7 @@ LEXICON Plurals
 <du>:>ᤄᤠᤇᤡ
 
 LEXICON Cases
+<nom>:
 <gen>:{NG}{a}{n}
 <voc>:{a}{e}
 <com>:ᤏᤢᤱ
@@ -75,6 +79,27 @@ LEXICON Adjective-Stem
 
 LEXICON Determiner-Words
 ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧᤰ
+
+LEXICON Interjection
+ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠᤖᤥ
+
+LEXICON Conjunctions
+ᤋᤖ:ᤋᤖ
+
+LEXICON Adverbs
+ᤂᤶᤓ:ᤂᤶᤓ
+ᤀᤧᤶᤓᤧᤸᤗᤧ:ᤀᤧᤶᤓᤧᤸᤗᤧ
+ᤕᤠᤶᤔᤢ:ᤕᤠᤶᤔᤢ
+ᤖᤳ:ᤖᤳ
+ᤂᤶᤓᤧ:ᤂᤶᤓᤧ
+ᤀᤠᤱ:ᤀᤠᤱ
+ᤀᤠᤓᤣᤍᤠᤱᤒᤠ:ᤀᤠᤓᤣᤍᤠᤱᤒᤠ
+ᤀᤠᤸᤗᤠ:ᤀᤠᤸᤗᤠ
+ᤔᤧ᤺ᤴᤏ:ᤔᤧ᤺ᤴᤏ
+ᤌᤧᤕᤠ᤺ᤴᤍᤰ:ᤌᤧᤕᤠ᤺ᤴᤍᤰ
+ᤀᤄᤡ:ᤀᤄᤡ
+ᤂᤶᤓᤧᤸᤗᤧ:ᤂᤶᤓᤧᤸᤗᤧ
+ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
 
 LEXICON Verb-Stems
 ᤀᤡᤶᤔᤠ:ᤀᤡ{m}{M}{a}
@@ -108,6 +133,7 @@ LEXICON Noun-Stems
 ᤑᤥᤃᤡᤍᤥ:ᤑᤥᤃᤡᤍᤥ
 ᤕᤠᤰᤌᤢᤱ:ᤕᤠᤰᤌᤢᤱ
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
+ᤕᤠ᤹:ᤕᤠ᤹
 
 PATTERN Number
 Numeral [<num>:]
