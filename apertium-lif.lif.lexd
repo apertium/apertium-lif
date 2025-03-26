@@ -34,26 +34,37 @@ Punctuation
 Nouns
 Verbs
 Adjectives
-Determiner-Words [ <det>: ]
+Determiners-Words
 Interjection [ <ij>: ]
 Conjunctions [ <cnjcoo>: ]
 Adverbs [ <adv>: ]
+Question-Particles [ <qst>: ]
+CaseMarker
+Pronoun-Words
+Conjoints [ <cj>: ]
 
 PATTERN Adjectives
-Adjective-Stem Adj-Suff
+Adjective-Stem [ <adj>: ] Adj-Num
 
+LEXICON Adj-Num
+<sg>:
+<pl>:>ᤄᤠ
+<du>:>ᤄᤠᤇᤡ
 
-LEXICON Adj-Suff
-<adj>:
+PATTERN Determiners-Words
+Adjectives? Determiners [ <det>: ]
 
 PATTERN Verbs
-Verb-Stems Tense 
+Adjectives? Pronouns? Verb-Stems Tense Pronouns? CaseMarker? Adverbs? Conjoints?
+
+PATTERN Pronoun-Words
+Pronouns Plurals? Cases?
 
 PATTERN Nouns
-Noun-Stems [<n>:] Plurals Cases?
+Adjectives? Pronouns? Noun-Stems [<n>:] Plurals Cases? CaseMarker?
 
 LEXICON Tense
-<v><past>:{E}
+<past>:{E}
 
 LEXICON Plurals
 <sg>:
@@ -73,12 +84,67 @@ LEXICON Cases
 ###                          L E X I C O N                                  ###
 ###############################################################################
 
+LEXICON Pronouns
+ᤀᤠ<prn><pers><p1><sg>:ᤀᤠ
+ᤀᤠ<prn><poss><p1><sg>:ᤀᤠ
+ᤀᤠ<prn><pers><p1><du><incl>:ᤀᤠᤴᤆᤡ
+ᤀᤠ<prn><poss><p1><du><incl>:ᤀᤠᤴᤆᤡ
+ᤀᤠ<prn><pers><p1><du><excl>:ᤀᤠᤴᤆᤡᤅᤠ
+ᤀᤠ<prn><poss><p1><du><excl>:ᤀᤠᤴᤆᤡᤅᤠ
+ᤀᤠ<prn><pers><p1><pl><incl>:ᤀᤠᤏᤡ
+ᤀᤠ<prn><poss><p1><pl><incl>:ᤀᤠᤏᤡ
+ᤀᤠ<prn><pers><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ
+ᤀᤠ<prn><poss><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ
+
+ᤀᤠ<prn><pers><p1><pl><incl><ex>:ᤀᤠᤏᤡᤃᤧ
+ᤀᤡ<prn><pers><p1><pl><incl>:ᤀᤡ
+ᤀᤠ<prn><pers><p1><pl><ex>:ᤀᤡᤃᤧ
+ᤀᤠ<prn><pers><p1><incl>:ᤀ
+ᤀᤠ<prn><pers><p1><sg>:ᤀᤡᤱᤃᤠ
+
+ᤁᤠ<prn><pers><p2><sg>:ᤁᤠ
+ᤁᤠ<prn><poss><p2><sg>:ᤁᤠ
+ᤂᤧᤴᤆᤡ<prn><pers><p2><du>:ᤂᤧᤴᤆᤡ
+ᤂᤧᤴᤆᤡ<prn><poss><p2><du>:ᤂᤧᤴᤆᤡ
+ᤂᤧᤏᤡ<prn><pers><p2><pl>:ᤂᤧᤏᤡ
+ᤂᤧᤏᤡ<prn><poss><p2><pl>:ᤂᤧᤏᤡ
+ᤁᤢ<prn><pers><p3><sg>:ᤁᤢ
+ᤁᤢ<prn><pers><p3><sg>:ᤁᤢ
+ᤂᤢᤴᤆᤡ<prn><pers><p3><du>:ᤂᤢᤴᤆᤡ
+ᤂᤢᤴᤆᤡ<prn><poss><p3><du>:ᤂᤢᤴᤆᤡ
+ᤂᤢᤴᤆᤡ<prn><pers><p3><pl>:ᤂᤢᤴᤆᤡ
+ᤂᤢᤴᤆᤡ<prn><poss><p3><pl>:ᤂᤢᤴᤆᤡ
+
+ᤁᤧ<prn><pers><p2>:ᤁᤧ
+ᤔᤧ<prn><pers><p3>:ᤔᤧ
+ᤀᤢ<prn><pers><p3><sg>:ᤀᤢ
+ᤂᤴ<prn><pers><dem>:ᤂᤴ
+ᤀᤢᤶ<prn><pers><p3><sg>:ᤀᤢᤶ
+ᤀᤢᤶ<prn><pers><p3><pl>:ᤀᤢᤶᤛᤡᤶᤒᤧ
+ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
+ᤏᤧ<prn><pers><p2><sg>:ᤏᤧ
+
+LEXICON Conjoints
+ᤀᤠᤱ:ᤀᤠᤱ
+
 LEXICON Adjective-Stem
 ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
 ᤏᤢ:ᤏᤢ
 
-LEXICON Determiner-Words
+LEXICON CaseMarker
+ᤀᤡᤸᤗᤧ<sub>:ᤀᤡᤸᤗᤧ
+ᤀᤡᤸᤗᤧ<erg>:ᤀᤡᤸᤗᤧ
+ᤒᤠ<nom>:ᤒᤠ
+ᤖ<prog>:ᤖ
+
+LEXICON Question-Particles
+ᤀᤡ:ᤀᤡ
+
+LEXICON Determiners
 ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧᤰ
+ᤕᤸᤗᤡᤰ:ᤕᤸᤗᤡᤰ
+ᤈᤶᤔ:ᤈᤶᤔ
+ᤂ:ᤂ
 
 LEXICON Interjection
 ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠᤖᤥ
@@ -102,9 +168,9 @@ LEXICON Adverbs
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
 
 LEXICON Verb-Stems
-ᤀᤡᤶᤔᤠ:ᤀᤡ{m}{M}{a}
-ᤗᤡᤶᤔᤠ:ᤗᤡᤶ{M}{a}
-ᤛᤥ᤺ᤔᤠ:ᤛᤥ᤺{M}{a}
+ᤀᤡᤶᤔᤠ<vblex>:ᤀᤡ{m}{M}{a}
+ᤗᤡᤶᤔᤠ<vblex>:ᤗᤡᤶ{M}{a}
+ᤛᤥ᤺ᤔᤠ<vblex>:ᤛᤥ᤺{M}{a}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ
@@ -142,7 +208,16 @@ LEXICON Numeral
 /([0123456789])+/
 /([0123456789])+[.,]([0123456789])+/
 
+/([᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏])+/
+/([᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏])+[.,]([᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏])+/
+
 LEXICON Punctuation
+
+᥅<sent>:᥅
+॥<sent>:॥
+᥄<sent>:᥄
+।<sent>:।
+᥀<sent>:᥀
 
 .<sent>:.
 ..<sent>:..

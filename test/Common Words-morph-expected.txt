@@ -2,7 +2,7 @@
 [/45gNjVkGFQ3g]
 [4SAmHnyA05Mx#0] ^ᤜᤧᤰᤁᤩᤠᤱ/*ᤜᤧᤰᤁᤩᤠᤱ$
 [/4SAmHnyA05Mx]
-[4hyGSmhhn6r7#0] ^ᤏᤢ/*ᤏᤢ$
+[4hyGSmhhn6r7#0] ^ᤏᤢ/ᤏᤢ<adj>$
 [/4hyGSmhhn6r7]
 [Ct0GaQJ-3vuz#0] ^ᤗᤠᤃᤡ/*ᤗᤠᤃᤡ$
 [/Ct0GaQJ-3vuz]
