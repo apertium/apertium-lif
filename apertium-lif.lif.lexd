@@ -69,7 +69,9 @@ LEXICON Tense
 LEXICON Plurals
 <sg>:
 <pl>:>ᤄᤠ
+<pl>:ᤜᤠ᤹ # Dir/LR
 <du>:>ᤄᤠᤇᤡ
+<du>:ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 LEXICON Cases
 <nom>:
@@ -146,6 +148,8 @@ LEXICON CaseMarker
 # others
 ᤒᤠ<nom>:ᤒᤠ
 ᤖ<prog>:ᤖ
+ᤋᤠᤵ<nom>:ᤋᤠᤵ
+ᤛᤧᤴ<nom>:ᤛᤧᤴ
 
 LEXICON Question-Particles
 ᤀᤡ:ᤀᤡ
