@@ -8,13 +8,11 @@ Alphabet
  %{m%}:ᤵ
  %{B%}:ᤒ %{B%}:ᤐ
  %{e%}:ᤣ
- %{m%}:ᤔ
+ %{m%}:ᤔ %{m%}:ᤶ
  %{L%}:ᤗ
  %{E%}:ᤧ
  %{l%}:ᤸ
- %{ai%}:ᤀᤡ
- %{ae%}:ᤀᤧ
-
+ %{i%}:ᤡ
  %>:0  ;
 
 Sets
@@ -29,10 +27,12 @@ Rules
 %{NG%}:ᤔ <=> :Bilabial _ ;
 "{a} becomes ᤀ after a i and u"
 %{a%}:ᤀ <=> : [ ᤡ |  ᤢ ] _ ;
-"{i} becomes null if preceded by i"
-%{i%}:0 <=> : ᤡ _ ;
-"Remove suffix vowel with vowel-ending stem"
-i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
+"{i} becomes null if succeeded by i"
+%{i%}:0 <=> _ :ᤡ ;
+"{a} becomes null if succeeded by i or E"
+%{a%}:0 <=> _ :[ ᤡ | ᤧ ] ;
+"{m} becomes ᤔ if succeeded by a vowel"
+%{a%}:0 <=> _ :Vowel ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol

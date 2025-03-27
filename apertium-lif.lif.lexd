@@ -137,11 +137,11 @@ LEXICON Adjective-Stem
 ᤀᤠᤰᤂᤣ:ᤀᤠᤰᤂᤣ
 
 LEXICON CaseMarker
-# ille Cases
-ᤀᤡᤸᤗᤧ<sub>:{ai}{l}ᤗᤧ
-ᤀᤡᤸᤗᤧ<gen>:{ai}{l}ᤗᤧ
-ᤀᤡᤸᤗᤧ<erg>:{ai}{l}ᤗᤧ
-ᤀᤡᤸᤗᤧ<erg>:{ae}{l}ᤗᤧ
+# lle Cases
+ᤀᤡᤸᤗᤧ<sub>:{i}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<gen>:{i}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<erg>:{i}{l}ᤗᤧ
+ᤀᤧᤸᤗᤧ<erg>:{E}{l}ᤗᤧ
 
 # others
 ᤒᤠ<nom>:ᤒᤠ
@@ -213,7 +213,7 @@ LEXICON Noun-Stems
 ᤕᤠ᤹:ᤕᤠ᤹
 ᤆᤱ:ᤆᤱ
 ᤕᤠᤰᤌᤢᤶᤒᤠ:ᤕᤠᤰᤌᤢᤶᤒ{a}
-ᤐᤧᤏᤡ:ᤐᤧᤏᤡ
+ᤐᤧᤏᤡ:ᤐᤧᤏ{i}
 ᤕᤠᤖᤡᤰ:ᤕᤠᤖᤡᤰ
 ᤒᤡᤆᤠᤖ:ᤒᤡᤆᤠᤖ
 ᤐᤠᤴ:ᤐᤠᤴ
