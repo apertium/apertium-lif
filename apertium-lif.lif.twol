@@ -11,6 +11,9 @@ Alphabet
  %{m%}:ᤔ
  %{L%}:ᤗ
  %{E%}:ᤧ
+ %{l%}:ᤸ
+ %{ai%}:ᤀᤡ
+ %{ae%}:ᤀᤧ
 
  %>:0  ;
 
@@ -26,6 +29,8 @@ Rules
 %{NG%}:ᤔ <=> :Bilabial _ ;
 "{a} becomes ᤀ after a i and u"
 %{a%}:ᤀ <=> : [ ᤡ |  ᤢ ] _ ;
+"{i} becomes null if preceded by i"
+%{i%}:0 <=> : ᤡ _ ;
 "Remove suffix vowel with vowel-ending stem"
 i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
 

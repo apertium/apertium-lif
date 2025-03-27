@@ -78,6 +78,7 @@ LEXICON Cases
 <com>:ᤏᤢᤱ
 <abl>:ᤗᤠᤠᤶ
 <abl>:ᤏᤢᤱ # Dir/LR
+<erg>:ᤖᤧ
 
 
 ###############################################################################
@@ -96,6 +97,7 @@ LEXICON Pronouns
 ᤀᤠ<prn><pers><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ
 ᤀᤠ<prn><poss><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ
 
+# extras for p1
 ᤀᤠ<prn><pers><p1><pl><incl><ex>:ᤀᤠᤏᤡᤃᤧ
 ᤀᤡ<prn><pers><p1><pl><incl>:ᤀᤡ
 ᤀᤠ<prn><pers><p1><pl><ex>:ᤀᤡᤃᤧ
@@ -115,6 +117,8 @@ LEXICON Pronouns
 ᤂᤢᤴᤆᤡ<prn><pers><p3><pl>:ᤂᤢᤴᤆᤡ
 ᤂᤢᤴᤆᤡ<prn><poss><p3><pl>:ᤂᤢᤴᤆᤡ
 
+# extras (dialectical differences and short forms 
+# along with general prefixes)
 ᤁᤧ<prn><pers><p2>:ᤁᤧ
 ᤔᤧ<prn><pers><p3>:ᤔᤧ
 ᤀᤢ<prn><pers><p3><sg>:ᤀᤢ
@@ -130,10 +134,16 @@ LEXICON Conjoints
 LEXICON Adjective-Stem
 ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
 ᤏᤢ:ᤏᤢ
+ᤀᤠᤰᤂᤣ:ᤀᤠᤰᤂᤣ
 
 LEXICON CaseMarker
-ᤀᤡᤸᤗᤧ<sub>:ᤀᤡᤸᤗᤧ
-ᤀᤡᤸᤗᤧ<erg>:ᤀᤡᤸᤗᤧ
+# ille Cases
+ᤀᤡᤸᤗᤧ<sub>:{ai}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<gen>:{ai}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<erg>:{ai}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<erg>:{ae}{l}ᤗᤧ
+
+# others
 ᤒᤠ<nom>:ᤒᤠ
 ᤖ<prog>:ᤖ
 
@@ -147,6 +157,7 @@ LEXICON Determiners
 ᤂ:ᤂ
 
 LEXICON Interjection
+# hello
 ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠᤖᤥ
 
 LEXICON Conjunctions
@@ -191,7 +202,7 @@ LEXICON Noun-Stems
 ᤀᤡᤗᤠᤶ:ᤀᤡᤗᤠᤶ
 ᤆᤠ᤺ᤔᤠᤱ:ᤆᤠ᤺ᤔᤠᤱ
 ᤛᤣᤒᤠ:ᤛᤣᤒᤠ
-ᤆᤢᤶ:ᤆᤢᤶ
+ᤆᤢᤶ:ᤆᤢ{m}
 ᤋᤣ᤺ᤱ:ᤋᤣ᤺ᤱ
 ᤏᤣᤐᤠᤸ:ᤏᤣᤐᤠᤸ
 ᤁᤠᤌᤔᤠᤴᤍᤢ:ᤁᤠᤌᤔᤠᤴᤍᤢ
@@ -200,6 +211,17 @@ LEXICON Noun-Stems
 ᤕᤠᤰᤌᤢᤱ:ᤕᤠᤰᤌᤢᤱ
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
 ᤕᤠ᤹:ᤕᤠ᤹
+ᤆᤱ:ᤆᤱ
+ᤕᤠᤰᤌᤢᤶᤒᤠ:ᤕᤠᤰᤌᤢᤶᤒ{a}
+ᤐᤧᤏᤡ:ᤐᤧᤏᤡ
+ᤕᤠᤖᤡᤰ:ᤕᤠᤖᤡᤰ
+ᤒᤡᤆᤠᤖ:ᤒᤡᤆᤠᤖ
+ᤐᤠᤴ:ᤐᤠᤴ
+ᤏᤧᤜᤡ:ᤏᤧᤜᤡ
+ᤔᤧᤴᤆᤡᤀᤠ:ᤔᤧᤴᤆᤡᤀᤠ
+ᤔᤏᤠ:ᤔᤏᤠ
+ᤏᤠᤖᤠ:ᤏᤠᤖᤠ
+ᤛᤥᤖ:ᤛᤥᤖ
 
 PATTERN Number
 Numeral [<num>:]
