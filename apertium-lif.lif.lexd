@@ -89,15 +89,15 @@ LEXICON Cases
 
 LEXICON Pronouns
 ᤀᤠ<prn><pers><p1><sg>:ᤀᤠ
-ᤀᤠ<prn><poss><p1><sg>:ᤀᤠ
+ᤀᤠ<prn><pers><p1><sg><poss>:ᤀᤠ
 ᤀᤠ<prn><pers><p1><du><incl>:ᤀᤠᤴᤆᤡ
-ᤀᤠ<prn><poss><p1><du><incl>:ᤀᤠᤴᤆᤡ
+ᤀᤠ<prn><pers><p1><du><incl><poss>:ᤀᤠᤴᤆᤡ
 ᤀᤠ<prn><pers><p1><du><excl>:ᤀᤠᤴᤆᤡᤅᤠ
-ᤀᤠ<prn><poss><p1><du><excl>:ᤀᤠᤴᤆᤡᤅᤠ
+ᤀᤠ<prn><pers><p1><du><excl><poss>:ᤀᤠᤴᤆᤡᤅᤠ
 ᤀᤠ<prn><pers><p1><pl><incl>:ᤀᤠᤏᤡ
-ᤀᤠ<prn><poss><p1><pl><incl>:ᤀᤠᤏᤡ
+ᤀᤠ<prn><pers><p1><pl><incl><poss>:ᤀᤠᤏᤡ
 ᤀᤠ<prn><pers><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ
-ᤀᤠ<prn><poss><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ
+ᤀᤠ<prn><pers><p1><pl><excl><poss>:ᤀᤠᤏᤡᤅᤠ
 
 # extras for p1
 ᤀᤠ<prn><pers><p1><pl><incl><ex>:ᤀᤠᤏᤡᤃᤧ
@@ -107,17 +107,17 @@ LEXICON Pronouns
 ᤀᤠ<prn><pers><p1><sg>:ᤀᤡᤱᤃᤠ
 
 ᤁᤠ<prn><pers><p2><sg>:ᤁᤠ
-ᤁᤠ<prn><poss><p2><sg>:ᤁᤠ
+ᤁᤠ<prn><pers><p2><sg><poss>:ᤁᤠ
 ᤂᤧᤴᤆᤡ<prn><pers><p2><du>:ᤂᤧᤴᤆᤡ
-ᤂᤧᤴᤆᤡ<prn><poss><p2><du>:ᤂᤧᤴᤆᤡ
+ᤂᤧᤴᤆᤡ<prn><pers><p2><du><poss>:ᤂᤧᤴᤆᤡ
 ᤂᤧᤏᤡ<prn><pers><p2><pl>:ᤂᤧᤏᤡ
-ᤂᤧᤏᤡ<prn><poss><p2><pl>:ᤂᤧᤏᤡ
+ᤂᤧᤏᤡ<prn><pers><p2><pl><poss>:ᤂᤧᤏᤡ
 ᤁᤢ<prn><pers><p3><sg>:ᤁᤢ
-ᤁᤢ<prn><pers><p3><sg>:ᤁᤢ
+ᤁᤢ<prn><pers><p3><sg><poss>:ᤁᤢ
 ᤂᤢᤴᤆᤡ<prn><pers><p3><du>:ᤂᤢᤴᤆᤡ
-ᤂᤢᤴᤆᤡ<prn><poss><p3><du>:ᤂᤢᤴᤆᤡ
+ᤂᤢᤴᤆᤡ<prn><pers><p3><du><poss>:ᤂᤢᤴᤆᤡ
 ᤂᤢᤴᤆᤡ<prn><pers><p3><pl>:ᤂᤢᤴᤆᤡ
-ᤂᤢᤴᤆᤡ<prn><poss><p3><pl>:ᤂᤢᤴᤆᤡ
+ᤂᤢᤴᤆᤡ<prn><pers><p3><pl><poss>:ᤂᤢᤴᤆᤡ
 
 # extras (dialectical differences and short forms 
 # along with general prefixes)
@@ -183,9 +183,9 @@ LEXICON Adverbs
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
 
 LEXICON Verb-Stems
-ᤀᤡᤶᤔᤠ<vblex>:ᤀᤡ{m}{M}{a}
-ᤗᤡᤶᤔᤠ<vblex>:ᤗᤡᤶ{M}{a}
-ᤛᤥ᤺ᤔᤠ<vblex>:ᤛᤥ᤺{M}{a}
+ᤀᤡᤶᤔᤠ<v>:ᤀᤡ{P}{S}{a}
+ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{M}{a}
+ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{M}{a}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ

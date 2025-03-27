@@ -13,6 +13,8 @@ Alphabet
  %{E%}:ᤧ
  %{l%}:ᤸ
  %{i%}:ᤡ
+ %{S%}:ᤔ %{S%}:ᤛ
+ %{P%}:ᤶ %{P%}:ᤵ
  %>:0  ;
 
 Sets
@@ -33,6 +35,10 @@ Rules
 %{a%}:0 <=> _ :[ ᤡ | ᤧ ] ;
 "{m} becomes ᤔ if succeeded by a vowel"
 %{a%}:0 <=> _ :Vowel ;
+"{P} becomes p if followed by s and then e"
+%{P%}:ᤵ <=> _ :ᤛ ;
+"{S} becomes s if followed by e and preceded by p"
+%{S%}:ᤛ<=>  ᤵ: _ : ᤧ ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
