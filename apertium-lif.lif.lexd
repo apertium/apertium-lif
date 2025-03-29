@@ -86,8 +86,8 @@ LEXICON Plurals
 
 LEXICON Cases
 <nom>:
-<gen>:{NG}{a}{n}
-<voc>:{a}{e}
+<gen>:{NG}{A}{n}
+<voc>:{aa}{o}
 <com>:ᤏᤢ{ng}
 <abl>:ᤗᤠᤠ{m}
 <abl>:ᤏᤢ{ng} # Dir/LR
@@ -191,10 +191,10 @@ LEXICON AdverbStem
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
 
 LEXICON Verb-Stems
-ᤀᤡᤶᤔᤠ<v>:ᤀᤡ{P}{S}{a}
-ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}{a}
-ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}{a}
-ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{S}{a}
+ᤀᤡᤶᤔᤠ<v>:ᤀᤡ{P}{S}{A}
+ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}{A}
+ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}{A}
+ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{S}{A}
 ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
 
 LEXICON Noun-Stems
@@ -226,7 +226,7 @@ LEXICON Noun-Stems
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
 ᤕᤠ᤹:ᤕᤠ᤹
 ᤆᤱ:ᤆ{ng}
-ᤕᤠᤰᤌᤢᤶᤒᤠ:ᤕᤠᤰᤌᤢᤶᤒ{a}
+ᤕᤠᤰᤌᤢᤶᤒᤠ:ᤕᤠᤰᤌᤢᤶᤒ{A}
 ᤐᤧᤏᤡ:ᤐᤧᤏ{i}
 ᤕᤠᤖᤡᤰ:ᤕᤠᤖᤡ{k}
 ᤒᤡᤆᤠᤖ:ᤒᤡᤆᤠᤖ

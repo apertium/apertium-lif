@@ -1,7 +1,9 @@
 Alphabet
  ᤀ ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ  ᤠ  ᤧ  ᤣ  ᤡ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ  ᤢ  ᤥ  ᤤ  ᤦ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤨ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ  ᤹ ᤝ ᤞ  ᤺  ᤷ   ᤻
- %{A%}:a 
- %{a%}:ᤠ %{a%}:ᤀ %{a%}:0
+ %{A%}:ᤠ 
+ %{a%}:ᤀ %{a%}:0
+ %{aa%}:ᤀ %{aa%}:0
+ %{o%}:ᤣ %{o%}:ᤥ
  %{n%}:ᤱ
  %{N%}:ᤏ %{N%}:ᤴ
  %{M%}:ᤍ %{M%}:ᤛ
@@ -30,20 +32,27 @@ Sets
 Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹  ᤀ ;
 Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
 iorE = ᤧ  ᤡ ;
+Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹  ᤀ ;
 
 Rules
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
 %{NG%}:ᤏ <=> :[ᤋ | ᤍ] _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
 %{NG%}:ᤔ <=> :Bilabial _ ;
-"{a} becomes ᤀ after a i and u"
-%{a%}:ᤀ <=> : [ ᤡ |  ᤢ ] _ ;
+"{a} becomes ᤀ after a vowel"
+%{a%}:ᤀ <=> :Vowel _ ;
+"{aa} becomes ᤀ after a vowel but not a"
+%{a%}:ᤀ <=> :Vowelnota _ ;
+"{aa} becomes 0 after a"
+%{a%}:0 <=> :ᤣ _ ;
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ :ᤡ ;
-"{a} becomes null if succeeded by i or E"
+"{A} becomes null if succeeded by i or E"
 %{a%}:0 <=> _ :iorE ;
+"{o} becomes e if preceded by u or i or a"
+%{o%}:ᤣ <=> :ᤀ :[ ᤢ | ᤡ | ᤠ ] _ ;
 
-"{P} becomes p if followed by s and then e"
+"{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
 "{S} becomes s if followed by e"
 %{S%}:ᤛ<=> _ : ᤧ ;
