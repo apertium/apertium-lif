@@ -37,11 +37,14 @@ Adjectives
 Determiners-Words
 Interjection [ <ij>: ]
 Conjunctions [ <cnjcoo>: ]
-Adverbs [ <adv>: ]
+Adverbs
 Question-Particles [ <qst>: ]
 CaseMarker
 Pronoun-Words
 Conjoints [ <cj>: ]
+
+PATTERN Adverbs
+Pronouns? AdverbStem [ <adv>: ]
 
 PATTERN Adjectives
 Adjective-Stem [ <adj>: ] Adj-Num
@@ -55,7 +58,7 @@ PATTERN Determiners-Words
 Adjectives? Determiners [ <det>: ]
 
 PATTERN Verbs
-Adjectives? Pronouns? Verb-Stems Tense Pronouns? CaseMarker? Adverbs? Conjoints?
+Adjectives? PrnPrefix? Verb-Stems Tense PrnSuffix? Pronouns? CaseMarker? Adverbs? Conjoints?
 
 PATTERN Pronoun-Words
 Pronouns Plurals? Cases?
@@ -64,22 +67,30 @@ PATTERN Nouns
 Adjectives? Pronouns? Noun-Stems [<n>:] Plurals Cases? CaseMarker?
 
 LEXICON Tense
+<nonpast>:
 <past>:{E}
+
+LEXICON PrnPrefix
+ᤁᤧ<s_2>:ᤁᤧ>
+ᤔᤧ<s_3>:ᤔᤧ>
+
+LEXICON PrnSuffix
+ᤀᤡ<o_pl1i>:{a}{i}
 
 LEXICON Plurals
 <sg>:
-<pl>:>ᤄᤠ
+<pl>:ᤄᤠ
 <pl>:ᤜᤠ᤹ # Dir/LR
-<du>:>ᤄᤠᤇᤡ
+<du>:ᤄᤠᤇᤡ
 <du>:ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 LEXICON Cases
 <nom>:
 <gen>:{NG}{a}{n}
 <voc>:{a}{e}
-<com>:ᤏᤢᤱ
-<abl>:ᤗᤠᤠᤶ
-<abl>:ᤏᤢᤱ # Dir/LR
+<com>:ᤏᤢ{ng}
+<abl>:ᤗᤠᤠ{m}
+<abl>:ᤏᤢ{ng} # Dir/LR
 <erg>:ᤖᤧ
 
 
@@ -101,7 +112,6 @@ LEXICON Pronouns
 
 # extras for p1
 ᤀᤠ<prn><pers><p1><pl><incl><ex>:ᤀᤠᤏᤡᤃᤧ
-ᤀᤡ<prn><pers><p1><pl><incl>:ᤀᤡ
 ᤀᤠ<prn><pers><p1><pl><ex>:ᤀᤡᤃᤧ
 ᤀᤠ<prn><pers><p1><incl>:ᤀ
 ᤀᤠ<prn><pers><p1><sg>:ᤀᤡᤱᤃᤠ
@@ -121,17 +131,15 @@ LEXICON Pronouns
 
 # extras (dialectical differences and short forms 
 # along with general prefixes)
-ᤁᤧ<prn><pers><p2>:ᤁᤧ
-ᤔᤧ<prn><pers><p3>:ᤔᤧ
 ᤀᤢ<prn><pers><p3><sg>:ᤀᤢ
-ᤂᤴ<prn><pers><dem>:ᤂᤴ
-ᤀᤢᤶ<prn><pers><p3><sg>:ᤀᤢᤶ
+ᤂᤴ<prn><pers><dem>:ᤂ{N}
+ᤀᤢᤶ<prn><pers><p3><sg>:ᤀᤢ{m}
 ᤀᤢᤶ<prn><pers><p3><pl>:ᤀᤢᤶᤛᤡᤶᤒᤧ
 ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
 ᤏᤧ<prn><pers><p2><sg>:ᤏᤧ
 
 LEXICON Conjoints
-ᤀᤠᤱ:ᤀᤠᤱ
+ᤀᤠᤱ:ᤀᤠ{ng}
 
 LEXICON Adjective-Stem
 ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
@@ -148,15 +156,15 @@ LEXICON CaseMarker
 # others
 ᤒᤠ<nom>:ᤒᤠ
 ᤖ<prog>:ᤖ
-ᤋᤠᤵ<nom>:ᤋᤠᤵ
-ᤛᤧᤴ<nom>:ᤛᤧᤴ
+ᤋᤠᤵ<nom>:ᤋᤠ{p}
+ᤛᤧᤴ<nom>:ᤛᤧ{N}
 
 LEXICON Question-Particles
 ᤀᤡ:ᤀᤡ
 
 LEXICON Determiners
-ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧᤰ
-ᤕᤸᤗᤡᤰ:ᤕᤸᤗᤡᤰ
+ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧ{k}
+ᤕᤸᤗᤡᤰ:ᤕᤸᤗᤡ{k}
 ᤈᤶᤔ:ᤈᤶᤔ
 ᤂ:ᤂ
 
@@ -167,25 +175,27 @@ LEXICON Interjection
 LEXICON Conjunctions
 ᤋᤖ:ᤋᤖ
 
-LEXICON Adverbs
+LEXICON AdverbStem
 ᤂᤶᤓ:ᤂᤶᤓ
 ᤀᤧᤶᤓᤧᤸᤗᤧ:ᤀᤧᤶᤓᤧᤸᤗᤧ
 ᤕᤠᤶᤔᤢ:ᤕᤠᤶᤔᤢ
-ᤖᤳ:ᤖᤳ
+ᤖᤳ:ᤖ{t}
 ᤂᤶᤓᤧ:ᤂᤶᤓᤧ
-ᤀᤠᤱ:ᤀᤠᤱ
+ᤀᤠᤱ:ᤀᤠ{ng}
 ᤀᤠᤓᤣᤍᤠᤱᤒᤠ:ᤀᤠᤓᤣᤍᤠᤱᤒᤠ
 ᤀᤠᤸᤗᤠ:ᤀᤠᤸᤗᤠ
 ᤔᤧ᤺ᤴᤏ:ᤔᤧ᤺ᤴᤏ
-ᤌᤧᤕᤠ᤺ᤴᤍᤰ:ᤌᤧᤕᤠ᤺ᤴᤍᤰ
+ᤌᤧᤕᤠ᤺ᤴᤍᤰ:ᤌᤧᤕᤠ᤺ᤴᤍ{k}
 ᤀᤄᤡ:ᤀᤄᤡ
 ᤂᤶᤓᤧᤸᤗᤧ:ᤂᤶᤓᤧᤸᤗᤧ
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
 
 LEXICON Verb-Stems
 ᤀᤡᤶᤔᤠ<v>:ᤀᤡ{P}{S}{a}
-ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{M}{a}
-ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{M}{a}
+ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}{a}
+ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}{a}
+ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{S}{a}
+ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ
@@ -193,7 +203,7 @@ LEXICON Noun-Stems
 ᤀᤠᤶᤒᤣ:ᤀᤠᤶᤒᤣ
 ᤛᤠᤵᤗᤠ:ᤛᤠᤵᤗᤠ
 ᤖᤠ᤺ᤔ:ᤖᤠ᤺ᤔ
-ᤏᤠᤰ:ᤏᤠᤰ
+ᤏᤠᤰ:ᤏᤠ{k}
 ᤔᤣᤴᤇᤠ:ᤔᤣᤴᤇᤠ
 ᤗᤠᤶᤛ᤹:ᤗᤠᤶᤛ᤹
 ᤏᤠᤵᤔᤡ:ᤏᤠᤵᤔᤡ
@@ -203,24 +213,24 @@ LEXICON Noun-Stems
 ᤀᤠᤔᤠ:ᤀᤠᤔᤠ
 ᤀᤠᤐᤠ:ᤀᤠᤐᤠ
 ᤐᤡᤋ:ᤐᤡᤋ
-ᤀᤡᤗᤠᤶ:ᤀᤡᤗᤠᤶ
-ᤆᤠ᤺ᤔᤠᤱ:ᤆᤠ᤺ᤔᤠᤱ
+ᤀᤡᤗᤠᤶ:ᤀᤡᤗᤠ{m}
+ᤆᤠ᤺ᤔᤠᤱ:ᤆᤠ᤺ᤔᤠ{ng}
 ᤛᤣᤒᤠ:ᤛᤣᤒᤠ
 ᤆᤢᤶ:ᤆᤢ{m}
-ᤋᤣ᤺ᤱ:ᤋᤣ᤺ᤱ
-ᤏᤣᤐᤠᤸ:ᤏᤣᤐᤠᤸ
+ᤋᤣ᤺ᤱ:ᤋᤣ᤺{ng}
+ᤏᤣᤐᤠᤸ:ᤏᤣᤐᤠ{ll}
 ᤁᤠᤌᤔᤠᤴᤍᤢ:ᤁᤠᤌᤔᤠᤴᤍᤢ
 ᤐᤩᤠᤱᤛᤡ:ᤐᤩᤠᤱᤛᤡ
 ᤑᤥᤃᤡᤍᤥ:ᤑᤥᤃᤡᤍᤥ
-ᤕᤠᤰᤌᤢᤱ:ᤕᤠᤰᤌᤢᤱ
+ᤕᤠᤰᤌᤢᤱ:ᤕᤠᤰᤌᤢ{ng}
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
 ᤕᤠ᤹:ᤕᤠ᤹
-ᤆᤱ:ᤆᤱ
+ᤆᤱ:ᤆ{ng}
 ᤕᤠᤰᤌᤢᤶᤒᤠ:ᤕᤠᤰᤌᤢᤶᤒ{a}
 ᤐᤧᤏᤡ:ᤐᤧᤏ{i}
-ᤕᤠᤖᤡᤰ:ᤕᤠᤖᤡᤰ
+ᤕᤠᤖᤡᤰ:ᤕᤠᤖᤡ{k}
 ᤒᤡᤆᤠᤖ:ᤒᤡᤆᤠᤖ
-ᤐᤠᤴ:ᤐᤠᤴ
+ᤐᤠᤴ:ᤐᤠ{N}
 ᤏᤧᤜᤡ:ᤏᤧᤜᤡ
 ᤔᤧᤴᤆᤡᤀᤠ:ᤔᤧᤴᤆᤡᤀᤠ
 ᤔᤏᤠ:ᤔᤏᤠ

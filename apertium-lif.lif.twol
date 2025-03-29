@@ -1,26 +1,35 @@
 Alphabet
  ᤀ ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ  ᤠ  ᤧ  ᤣ  ᤡ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ  ᤢ  ᤥ  ᤤ  ᤦ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤨ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ  ᤹ ᤝ ᤞ  ᤺  ᤷ   ᤻
  %{A%}:a 
- %{a%}:ᤠ %{a%}:ᤀ
+ %{a%}:ᤠ %{a%}:ᤀ %{a%}:0
  %{n%}:ᤱ
+ %{N%}:ᤏ %{N%}:ᤴ
  %{M%}:ᤍ %{M%}:ᤛ
  %{NG%}:ᤅ %{NG%}:ᤔ %{NG%}:ᤏ
- %{m%}:ᤵ
+ %{ng%}:ᤅ %{ng%}:ᤱ
+ %{k%}:ᤁ %{k%}:ᤰ
+ %{K%}:ᤁ %{K%}:ᤃ
+ %{p%}:ᤐ %{p%}:ᤵ
+ %{t%}:ᤋ %{t%}:ᤳ
  %{B%}:ᤒ %{B%}:ᤐ
  %{e%}:ᤣ
+ %{do%}:᤺ %{do%}:0
  %{m%}:ᤔ %{m%}:ᤶ
  %{L%}:ᤗ
  %{E%}:ᤧ
  %{l%}:ᤸ
- %{i%}:ᤡ
+ %{ll%}:ᤸ %{ll%}:ᤗ
+ %{i%}:ᤡ %{i%}:0
  %{S%}:ᤔ %{S%}:ᤛ
  %{P%}:ᤶ %{P%}:ᤵ
+ %{D%}:ᤔ %{D%}:ᤍ
  %>:0  ;
 
 Sets
 
-Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹  ;
+Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹  ᤀ ;
 Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
+iorE = ᤧ  ᤡ ;
 
 Rules
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
@@ -32,13 +41,34 @@ Rules
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ :ᤡ ;
 "{a} becomes null if succeeded by i or E"
-%{a%}:0 <=> _ :[ ᤡ | ᤧ ] ;
-"{m} becomes ᤔ if succeeded by a vowel"
-%{a%}:0 <=> _ :Vowel ;
+%{a%}:0 <=> _ :iorE ;
+
 "{P} becomes p if followed by s and then e"
 %{P%}:ᤵ <=> _ :ᤛ ;
-"{S} becomes s if followed by e and preceded by p"
-%{S%}:ᤛ<=>  ᤵ: _ : ᤧ ;
+"{S} becomes s if followed by e"
+%{S%}:ᤛ<=> _ : ᤧ ;
+"{D} becomes d if followed by E"
+%{D%}:ᤍ<=> _ : ᤧ ;
+
+"{m} becomes ᤔ if succeeded by a vowel"
+%{m%}:ᤔ <=> _ :Vowel ;
+"{N} becomes ᤏ if succeeded by a vowel"
+%{N%}:ᤏ <=> _ :Vowel ;
+"{ng} becomes ᤅ if succeeded by a vowel"
+%{ng%}:ᤅ <=> _ :Vowel ;
+"{k} becomes ᤁ if succeeded by a vowel"
+%{k%}:ᤁ <=> _ :Vowel ;
+"{ll} becomes ᤗ if succeeded by a vowel"
+%{ll%}:ᤗ <=> _ :Vowel ;
+"{t} becomes ᤋ if succeeded by a vowel"
+%{t%}:ᤋ <=> _ :Vowel ;
+"{p} becomes ᤐ if succeeded by a vowel"
+%{p%}:ᤐ <=> _ :Vowel ;
+
+"{B} becomes ᤒ if preceded by a vowel"
+%{B%}:ᤒ <=> Vowel: _ ;
+"{K} becomes ᤃ if succeeded by a vowel"
+%{K%}:ᤃ <=> _ :Vowel ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
