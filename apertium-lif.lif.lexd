@@ -41,7 +41,10 @@ Adverbs
 Question-Particles [ <qst>: ]
 CaseMarker
 Pronoun-Words
-Conjoints [ <cj>: ]
+Conjoints
+
+PATTERN Conjoints
+Pronouns? Conjoint-Stem [ <cj>: ]
 
 PATTERN Adverbs
 Pronouns? AdverbStem [ <adv>: ]
@@ -60,7 +63,7 @@ PATTERN Determiners-Words
 Adjectives? Determiners [ <det>: ]
 
 PATTERN Verbs
-Adjectives? PrnPrefix? Verb-Stems Tense PrnSuffix? Pronouns? CaseMarker? Adverbs? Conjoints?
+Adjectives? PrnPrefix? Verb-Stems Tense PrnSuffix? Aspect? Pronouns? CaseMarker? Adverbs? Conjoints?
 
 PATTERN Pronoun-Words
 Pronouns Plurals? Cases?
@@ -78,6 +81,10 @@ LEXICON PrnPrefix
 
 LEXICON PrnSuffix
 <o_pl1i>:{a}{i}
+<o_sg3>:{a}{u}
+
+LEXICON Aspect
+<prog>:ᤖ
 
 LEXICON Plurals
 <sg>:
@@ -134,14 +141,17 @@ LEXICON Pronouns
 
 # extras (dialectical differences and short forms 
 # along with general prefixes)
-ᤀᤢ<prn><pers><p3><sg>:ᤀᤢ
 ᤂᤴ<prn><pers><dem>:ᤂ{N}
 ᤀᤢᤶ<prn><pers><p3><sg>:ᤀᤢ{m}
 ᤀᤢᤶ<prn><pers><p3><pl>:ᤀᤢᤶᤛᤡᤶᤒᤧ
 ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
 ᤏᤧ<prn><pers><p2><sg>:ᤏᤧ
 
-LEXICON Conjoints
+LEXICON PrnPrefix
+<s_2>:ᤁᤧ
+<s_3>:ᤔᤧ
+
+LEXICON Conjoint-Stem
 ᤀᤠᤱ:ᤀᤠ{ng}
 
 LEXICON Adjective-Stem
@@ -155,10 +165,10 @@ LEXICON CaseMarker
 ᤀᤡᤸᤗᤧ<gen>:{i}{l}ᤗᤧ
 ᤀᤡᤸᤗᤧ<erg>:{i}{l}ᤗᤧ
 ᤀᤧᤸᤗᤧ<erg>:{E}{l}ᤗᤧ
+ᤀᤧᤸᤗᤧ<sub>:{E}{l}ᤗᤧ
 
 # others
 ᤒᤠ<nom>:ᤒᤠ
-ᤖ<prog>:ᤖ
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
 ᤛᤧᤴ<nom>:ᤛᤧ{N}
 
@@ -198,7 +208,9 @@ LEXICON Verb-Stems
 ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}{A}
 ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}{A}
 ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{S}{A}
-ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{K}
+ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
+ᤋᤠ᤺ᤔᤠ<v>:{T}{A}
+ᤏᤡᤔᤠ<v>:ᤏᤡ{S}{A}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ
@@ -214,7 +226,9 @@ LEXICON Noun-Stems
 ᤀᤕᤰᤐᤠ:ᤀᤕᤰᤐᤠ
 ᤁᤖᤁᤘᤠ:ᤁᤖᤁᤘᤠ
 ᤀᤠᤔᤠ:ᤀᤠᤔ{A}
+ᤔᤠ:ᤔ{A}
 ᤀᤠᤐᤠ:ᤀᤠᤐ{A}
+ᤐᤠ:ᤐ{A}
 ᤐᤡᤋ:ᤐᤡᤋ
 ᤀᤡᤗᤠᤶ:ᤀᤡᤗᤠ{m}
 ᤆᤠ᤺ᤔᤠᤱ:ᤆᤠ᤺ᤔᤠ{ng}

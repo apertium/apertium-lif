@@ -14,6 +14,7 @@ Alphabet
  %{K%}:ᤁ %{K%}:ᤃ
  %{p%}:ᤐ %{p%}:ᤵ
  %{t%}:ᤋ %{t%}:ᤳ
+ %{T%}:ᤋ %{T%}:ᤍ
  %{B%}:ᤒ %{B%}:ᤐ
  %{e%}:ᤣ
  %{do%}:᤺ %{do%}:0
@@ -26,6 +27,7 @@ Alphabet
  %{S%}:ᤔ %{S%}:ᤛ
  %{P%}:ᤶ %{P%}:ᤵ
  %{D%}:ᤔ %{D%}:ᤍ
+ %{u%}:ᤢ
  %>:0  ;
 
 Sets
@@ -42,8 +44,6 @@ Rules
 %{NG%}:ᤏ <=> :[ᤋ | ᤍ] _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
 %{NG%}:ᤔ <=> :Bilabial _ ;
-"{a} becomes ᤀ after a vowel"
-%{a%}:ᤀ <=> :Vowel _ ;
 "{aa} becomes ᤀ after a vowel but not a"
 %{aa%}:ᤀ <=> :Vowelnota _ ;
 "{aa} becomes null after a"
@@ -54,16 +54,16 @@ Rules
 %{ana%}:ᤀ <=> :Vowel _ ;
 "{ana} becomes null after a consonant"
 %{ana%}:0 <=> :Consonant _ ;
-"{a} becomes null after a consonant"
-%{a%}:0 <=> :Consonant _ ;
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ :ᤡ ;
 "{A} becomes null if succeeded by i or E"
-%{A%}:0 <=> _ :iorE ;
+%{A%}:0 <=> _ :Vowel ;
 "{A} becomes null if succeeded by i or E"
-%{A%}:0 <=> _ :0 :iorE ;
+%{A%}:0 <=> _ :0 :Vowel ;
 "{o} becomes o if preceded by vowel that isnt u or i"
 %{o%}:ᤥ <=> :Vowelnotioru :ᤀ _ ;
+"{E} becomes null if preceded by i"
+%{E%}:0 <=> :ᤡ _ ;
 
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
@@ -103,6 +103,8 @@ Rules
 
 "{B} becomes ᤒ if preceded by a vowel"
 %{B%}:ᤒ <=> Vowel: _ ;
+"{T} becomes ᤒ if preceded by a vowel"
+%{T%}:ᤍ <=> Vowel: _ ;
 "{K} becomes ᤃ if succeeded by a vowel"
 %{K%}:ᤃ <=> _ :0 :Vowel ;
 
