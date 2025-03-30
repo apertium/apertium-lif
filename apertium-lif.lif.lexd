@@ -38,16 +38,17 @@ Determiners-Words
 Interjection [ <ij>: ]
 Conjunctions [ <cnjcoo>: ]
 Adverbs
-Question-Particles [ <qst>: ]
+Question-Particles
 CaseMarker
 Pronoun-Words
 Conjoints
+Prepositions [ <pr>: ]
 
 PATTERN Conjoints
 Pronouns? Conjoint-Stem [ <cj>: ]
 
 PATTERN Adverbs
-Pronouns? AdverbStem [ <adv>: ]
+Pronouns? AdverbStem [ <adv>: ] Conjoints?
 
 PATTERN Adjectives
 Adjective-Stem [ <adj>: ] Adj-Num
@@ -60,24 +61,30 @@ LEXICON Adj-Num
 <du>:ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 PATTERN Determiners-Words
-Adjectives? Determiners [ <det>: ]
+Adjectives? Determiners [ <det>: ] Cases?
 
 PATTERN Verbs
-Adjectives? PrnPrefix? Verb-Stems Tense PrnSuffix? Aspect? Pronouns? CaseMarker? Adverbs? Conjoints?
+Adjectives? PrnPrefix? Verb-Stems GerundMarker? Tense? PrnSuffix? Aspect? Pronouns? CaseMarker? Adverbs? Conjoints?
 
 PATTERN Pronoun-Words
 Pronouns Plurals? Cases?
 
 PATTERN Nouns
-Adjectives? Pronouns? Noun-Stems [<n>:] Plurals Cases? CaseMarker?
+Adjectives? Pronouns? Noun-Stems [<n>:] Plurals Cases CaseMarker?
 
 LEXICON Tense
 <nonpast>:
 <past>:{E}
 
+LEXICON GerundMarker
+<ger>:ᤔᤢᤏᤠ
+
 LEXICON PrnSuffix
 <o_pl1i>:{a}{i}
 <o_sg3>:{a}{u}
+<s_sg3>:{a}{u}{m}
+<s_pl3>:{a}{u}{m}ᤛᤡᤶᤒᤧ
+<o_pl1ex>:{a}{i}ᤃᤧ
 
 LEXICON Aspect
 <prog>:ᤖ
@@ -92,6 +99,7 @@ LEXICON Plurals
 LEXICON Cases
 <nom>:
 <gen>:{NG}{A}{n}
+<gen>:ᤖᤧ # Dir/LR
 <voc>:{aa}{o}
 <voc>:{ana}{e} # Dir/LR
 <com>:ᤏᤢ{ng}
@@ -118,7 +126,6 @@ LEXICON Pronouns
 
 # extras for p1
 ᤀᤠ<prn><pers><p1><pl><incl><ex>:ᤀᤠᤏᤡᤃᤧ
-ᤀᤠ<prn><pers><p1><pl><ex>:ᤀᤡᤃᤧ
 ᤀᤠ<prn><pers><p1><incl>:ᤀ
 ᤀᤠ<prn><pers><p1><sg>:ᤀᤡᤱᤃᤠ
 
@@ -138,14 +145,16 @@ LEXICON Pronouns
 # extras (dialectical differences and short forms 
 # along with general prefixes)
 ᤂᤴ<prn><pers><dem>:ᤂ{N}
-ᤀᤢᤶ<prn><pers><p3><sg>:ᤀᤢ{m}
-ᤀᤢᤶ<prn><pers><p3><pl>:ᤀᤢᤶᤛᤡᤶᤒᤧ
 ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
 ᤏᤧ<prn><pers><p2><sg>:ᤏᤧ
 
 LEXICON PrnPrefix
-<s_2>:ᤁᤧ
+<s_2>:{K}{E}
 <s_3>:ᤔᤧ
+
+LEXICON Prepositions
+ᤌᤥ:ᤌᤥ
+ᤏᤠ:ᤏᤠ
 
 LEXICON Conjoint-Stem
 ᤀᤠᤱ:ᤀᤠ{ng}
@@ -153,7 +162,8 @@ LEXICON Conjoint-Stem
 LEXICON Adjective-Stem
 ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
 ᤏᤢ:ᤏᤢ
-ᤀᤠᤰᤂᤣ:ᤀᤠᤰᤂᤣ
+ᤆᤡ:ᤆᤡ
+ᤀᤠᤰᤂᤣ:ᤀᤠᤰᤂ{eg}
 
 LEXICON CaseMarker
 # lle Cases
@@ -162,14 +172,16 @@ LEXICON CaseMarker
 ᤀᤡᤸᤗᤧ<erg>:{i}{l}ᤗᤧ
 ᤀᤧᤸᤗᤧ<erg>:{E}{l}ᤗᤧ
 ᤀᤧᤸᤗᤧ<sub>:{E}{l}ᤗᤧ
+ᤀᤧᤸᤗᤧ<gen>:{E}{l}ᤗᤧ
 
 # others
 ᤒᤠ<nom>:ᤒᤠ
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
 ᤛᤧᤴ<nom>:ᤛᤧ{N}
+ᤖᤧ<erg>:ᤖᤧ
 
 LEXICON Question-Particles
-ᤀᤡ:ᤀᤡ
+ᤀᤡ<qst>:ᤀᤡ
 
 LEXICON Determiners
 ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧ{k}
@@ -186,15 +198,17 @@ LEXICON Conjunctions
 
 LEXICON AdverbStem
 ᤂᤶᤓ:ᤂᤶᤓ
+ᤂᤶᤓᤧ:ᤂᤶᤓᤧ # Dir/LR
 ᤀᤧᤶᤓᤧᤸᤗᤧ:ᤀᤧᤶᤓᤧᤸᤗᤧ
 ᤕᤠᤶᤔᤢ:ᤕᤠᤶᤔᤢ
 ᤖᤳ:ᤖ{t}
-ᤂᤶᤓᤧ:ᤂᤶᤓᤧ
-ᤀᤠᤱ:ᤀᤠ{ng}
+ᤀᤠᤱ:{a}{A}{ng}
 ᤀᤠᤓᤣᤍᤠᤱᤒᤠ:ᤀᤠᤓᤣᤍᤠᤱᤒᤠ
 ᤀᤠᤸᤗᤠ:ᤀᤠᤸᤗᤠ
 ᤔᤧ᤺ᤴᤏ:ᤔᤧ᤺ᤴᤏ
+ᤔᤧᤏ᤻ᤏ:ᤔᤧᤏ᤻ᤏ # Dir/LR
 ᤌᤧᤕᤠ᤺ᤴᤍᤰ:ᤌᤧᤕᤠ᤺ᤴᤍ{k}
+ᤌᤧᤕᤠᤏ᤻ᤍᤰ:ᤌᤧᤕᤠᤏ᤻ᤍ{k} # Dir/LR
 ᤀᤄᤡ:ᤀᤄᤡ
 ᤂᤶᤓᤧᤸᤗᤧ:ᤂᤶᤓᤧᤸᤗᤧ
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
@@ -204,17 +218,33 @@ LEXICON Verb-Stems
 ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}{A}
 ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}{A}
 ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{S}{A}
+ᤖᤠᤁ᤻ᤔᤠ<v>:ᤖᤠᤁ᤻{S}{A} # Dir/LR
+ᤗᤠ᤺ᤰᤔᤠ<v>:ᤗᤠ᤺ᤰ{S}{A} # Dir/LR
+ᤗᤠᤁ᤻ᤔᤠ<v>:ᤗᤠᤁ᤻{S}{A} # Dir/LR
 ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
-ᤋᤠ᤺ᤔᤠ<v>:{T}{A}
+ᤐᤣᤁ᤻ᤔᤠ<v>:{B}{e}{K}{km} # Dir/LR
+ᤋᤠ᤺ᤔᤠ<v>:{T}{do}{A}
 ᤏᤡᤔᤠ<v>:ᤏᤡ{S}{A}
 ᤘᤠᤔᤠ<v>:ᤘᤠ{gs}
+ᤛᤧᤶᤔᤠ<v>:ᤛᤧ{do}{R}{A}
+ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{K}
+ᤆᤥᤁ᤻ᤔᤠ<vbdo>:{ch}{K}{km} # Dir/LR
+ᤆᤠᤔᤠ<v>:ᤆ{ao}
+ᤐᤥ᤺ᤱᤔᤠ<v>:ᤐᤥ{do}{NGK}{S}{A}
+ᤐᤥᤅ᤻ᤔᤠ<v>:ᤐᤥᤅ{km}{S}{A} # Dir/LR
+ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pg}{R}{A}
+ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R}{A} # Dir/LR
+ᤔᤠ᤺ᤔᤠ<v>:ᤔᤠ{do}{S}{A}
+ᤗ᤺ᤵᤔᤠ<v>:ᤗ᤺{tp}{tm}{A}
+ᤗᤐ᤻ᤔᤠ<v>:ᤗ{t}{km}{tm}{A}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ
 ᤋᤱ:ᤋᤱ
 ᤀᤠᤶᤒᤣ:ᤀᤠᤶᤒᤣ
 ᤛᤠᤵᤗᤠ:ᤛᤠᤵᤗᤠ
-ᤖᤠ᤺ᤔ:ᤖᤠ᤺ᤔ
+ᤖᤠ᤺ᤶ:ᤖᤠ᤺{m}
+ᤖᤠᤔ᤻:ᤖᤠᤔ᤻ # Dir/LR
 ᤏᤠᤰ:ᤏᤠ{k}
 ᤔᤣᤴᤇᤠ:ᤔᤣᤴᤇᤠ
 ᤗᤠᤶᤛ᤹:ᤗᤠᤶᤛ᤹
@@ -232,6 +262,7 @@ LEXICON Noun-Stems
 ᤛᤣᤒᤠ:ᤛᤣᤒᤠ
 ᤆᤢᤶ:{ch}{u}{m}
 ᤋᤣ᤺ᤱ:ᤋᤣ᤺{ng}
+ᤋᤣᤅ᤻:ᤋᤣᤅ᤻ # Dir/LR
 ᤏᤣᤐᤠᤸ:ᤏᤣᤐᤠ{ll}
 ᤁᤠᤌᤔᤠᤴᤍᤢ:ᤁᤠᤌᤔᤠᤴᤍᤢ
 ᤐᤩᤠᤱᤛᤡ:ᤐᤩᤠᤱᤛᤡ

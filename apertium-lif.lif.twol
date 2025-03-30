@@ -6,19 +6,24 @@ Alphabet
  %{aa%}:ᤀ %{aa%}:0
  %{ana%}:ᤀ %{ana%}:0
  %{o%}:ᤣ %{o%}:ᤥ
+ %{oo%}:ᤥ
+ %{ao%}:ᤥ %{ao%}:ᤠ
  %{n%}:ᤱ
  %{N%}:ᤏ %{N%}:ᤴ
  %{M%}:ᤍ %{M%}:ᤛ
  %{NG%}:ᤅ %{NG%}:ᤔ %{NG%}:ᤏ
  %{ng%}:ᤅ %{ng%}:ᤱ
  %{k%}:ᤁ %{k%}:ᤰ
- %{K%}:ᤁ %{K%}:ᤃ
+ %{K%}:ᤁ %{K%}:ᤃ %{K%}:ᤰ
  %{p%}:ᤐ %{p%}:ᤵ
  %{t%}:ᤋ %{t%}:ᤳ
  %{T%}:ᤋ %{T%}:ᤍ
+ %{tp%}:ᤳ %{tp%}:ᤵ
+ %{tm%}:ᤔ %{tm%}:ᤋ
  %{B%}:ᤒ %{B%}:ᤐ
  %{e%}:ᤣ
  %{do%}:᤺ %{do%}:0
+ %{km%}:᤻
  %{m%}:ᤔ %{m%}:ᤶ
  %{L%}:ᤗ
  %{E%}:ᤧ
@@ -30,15 +35,18 @@ Alphabet
  %{D%}:ᤔ %{D%}:ᤍ
  %{u%}:ᤢ
  %{ch%}:ᤈ %{ch%}:ᤆ
+ %{eg%}:᤹ %{eg%}:ᤣ
+ %{NGK%}:ᤱ %{NGK%}:ᤰ
+ %{pg%}:᤹ %{pg%}:ᤵ
  %>:0  ;
 
 Sets
 
-Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹ ;
+Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
 iorE = ᤧ  ᤡ ;
-Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹ ;
-Vowelnotioru = ᤠ  ᤧ  ᤣ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹ ;
+Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
+Vowelnotioru = ᤠ  ᤧ  ᤣ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Consonant = ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ ᤝ ᤞ ;
 
 Rules
@@ -67,12 +75,20 @@ Rules
 "{E} becomes null if preceded by i"
 %{E%}:0 <=> :ᤡ _ ;
 
+"{S} becomes s if followed by e"
+%{S%}:ᤛ <=> _ :0 :ᤧ ;
+"{S} becomes s if followed by Vowel"
+%{S%}:ᤛ <=> _ :0 :0 :Vowel ;
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
-"{S} becomes s if followed by e"
-%{S%}:ᤛ<=> _ : ᤧ ;
+"{tm} becomes t if followed by Vowel"
+%{tm%}:ᤋ <=> _ :0 :0 :Vowel ;
+"{tp} becomes t if followed by t"
+%{tp%}:ᤳ <=> _ :ᤋ ;
 "{D} becomes d if followed by E"
-%{D%}:ᤍ<=> _ : ᤧ ;
+%{D%}:ᤍ <=> _ :0 :ᤧ ;
+"{R} becomes r if followed by vowel?"
+%{R%}:ᤖ <=> _ :0 :0 :Vowel ;
 
 "{m} becomes ᤔ if succeeded by a vowel"
 %{m%}:ᤔ <=> _ :Vowel ;
@@ -107,10 +123,16 @@ Rules
 %{B%}:ᤒ <=> Vowel: _ ;
 "{ch} becomes ᤈ if preceded by a vowel"
 %{ch%}:ᤈ <=> Vowel: _ ;
-"{T} becomes ᤒ if preceded by a vowel"
+"{T} becomes ᤍ if preceded by a vowel"
 %{T%}:ᤍ <=> Vowel: _ ;
 "{K} becomes ᤃ if succeeded by a vowel"
 %{K%}:ᤃ <=> _ :0 :Vowel ;
+"{K} becomes ᤃ if succeeded by a vowel"
+%{K%}:ᤃ <=> _ :᤻ :0 :Vowel ;
+"{K} becomes ᤃ if preceded by a vowel"
+%{K%}:ᤃ <=> Vowel: _ ;
+"{eg} becomes glottal stop if succeeded by consonant"
+%{eg%}:᤹ <=> _ :Consonant ;
 
 
 ! Resources:
