@@ -51,8 +51,10 @@ Adjective-Stem [ <adj>: ] Adj-Num
 
 LEXICON Adj-Num
 <sg>:
-<pl>:>ᤄᤠ
-<du>:>ᤄᤠᤇᤡ
+<pl>:ᤄᤠ
+<pl>:ᤜᤠ᤹ # Dir/LR
+<du>:ᤄᤠᤇᤡ
+<du>:ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 PATTERN Determiners-Words
 Adjectives? Determiners [ <det>: ]
@@ -71,11 +73,11 @@ LEXICON Tense
 <past>:{E}
 
 LEXICON PrnPrefix
-ᤁᤧ<s_2>:ᤁᤧ>
-ᤔᤧ<s_3>:ᤔᤧ>
+<s_2>:ᤁᤧ>
+<s_3>:ᤔᤧ>
 
 LEXICON PrnSuffix
-ᤀᤡ<o_pl1i>:{a}{i}
+<o_pl1i>:{a}{i}
 
 LEXICON Plurals
 <sg>:
@@ -88,6 +90,7 @@ LEXICON Cases
 <nom>:
 <gen>:{NG}{A}{n}
 <voc>:{aa}{o}
+<voc>:{ana}{e} # Dir/LR
 <com>:ᤏᤢ{ng}
 <abl>:ᤗᤠᤠ{m}
 <abl>:ᤏᤢ{ng} # Dir/LR
@@ -195,7 +198,7 @@ LEXICON Verb-Stems
 ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}{A}
 ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}{A}
 ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{S}{A}
-ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
+ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{K}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ

@@ -3,6 +3,7 @@ Alphabet
  %{A%}:ᤠ 
  %{a%}:ᤀ %{a%}:0
  %{aa%}:ᤀ %{aa%}:0
+ %{ana%}:ᤀ %{ana%}:0
  %{o%}:ᤣ %{o%}:ᤥ
  %{n%}:ᤱ
  %{N%}:ᤏ %{N%}:ᤴ
@@ -31,9 +32,10 @@ Sets
 
 Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹ ;
 Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
-iorE = ᤧ  ᤡ   ᤥ ;
+iorE = ᤧ  ᤡ ;
 Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹ ;
 Vowelnotioru = ᤠ  ᤧ  ᤣ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ  ᤹ ;
+Consonant = ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ ᤝ ᤞ ;
 
 Rules
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
@@ -42,16 +44,26 @@ Rules
 %{NG%}:ᤔ <=> :Bilabial _ ;
 "{a} becomes ᤀ after a vowel"
 %{a%}:ᤀ <=> :Vowel _ ;
-"{aa} becomes ᤀ after a vowel"
-%{aa%}:ᤀ <=> :Vowel _ ;
+"{aa} becomes ᤀ after a vowel but not a"
+%{aa%}:ᤀ <=> :Vowelnota _ ;
+"{aa} becomes null after a"
+%{aa%}:0 <=> :ᤠ _ ;
+"{aa} becomes null after a consonant"
+%{aa%}:0 <=> :Consonant _ ;
+"{ana} becomes ᤀ after a Vowel"
+%{ana%}:ᤀ <=> :Vowel _ ;
+"{ana} becomes null after a consonant"
+%{ana%}:0 <=> :Consonant _ ;
+"{a} becomes null after a consonant"
+%{a%}:0 <=> :Consonant _ ;
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ :ᤡ ;
-"{A} becomes null if succeeded by i or E or o"
-%{a%}:0 <=> _ :iorE ;
-"{o} becomes o if preceded by u or i"
+"{A} becomes null if succeeded by i or E"
+%{A%}:0 <=> _ :iorE ;
+"{A} becomes null if succeeded by i or E"
+%{A%}:0 <=> _ :0 :iorE ;
+"{o} becomes o if preceded by vowel that isnt u or i"
 %{o%}:ᤥ <=> :Vowelnotioru :ᤀ _ ;
-"{o} becomes e if preceded by u or i"
-%{o%}:ᤣ <=> :[ ᤢ | ᤡ ] :ᤀ _ ;
 
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
@@ -62,23 +74,38 @@ Rules
 
 "{m} becomes ᤔ if succeeded by a vowel"
 %{m%}:ᤔ <=> _ :Vowel ;
+"{m} becomes ᤔ if succeeded by a vowel"
+%{m%}:ᤔ <=> _ :0 :Vowel ;
 "{N} becomes ᤏ if succeeded by a vowel"
 %{N%}:ᤏ <=> _ :Vowel ;
+"{N} becomes ᤏ if succeeded by a vowel"
+%{N%}:ᤏ <=> _ :0 :Vowel ;
+"{ng} becomes ᤅ if succeeded by a vowel"
+%{ng%}:ᤅ <=> _ :0 :Vowel ;
 "{ng} becomes ᤅ if succeeded by a vowel"
 %{ng%}:ᤅ <=> _ :Vowel ;
 "{k} becomes ᤁ if succeeded by a vowel"
 %{k%}:ᤁ <=> _ :Vowel ;
+"{k} becomes ᤁ if succeeded by a vowel"
+%{k%}:ᤁ <=> _ :0 :Vowel ;
 "{ll} becomes ᤗ if succeeded by a vowel"
 %{ll%}:ᤗ <=> _ :Vowel ;
+"{ll} becomes ᤗ if succeeded by a vowel"
+%{ll%}:ᤗ <=> _ :0 :Vowel ;
 "{t} becomes ᤋ if succeeded by a vowel"
 %{t%}:ᤋ <=> _ :Vowel ;
+"{t} becomes ᤋ if succeeded by a vowel"
+%{t%}:ᤋ <=> _ :0 :Vowel ;
 "{p} becomes ᤐ if succeeded by a vowel"
 %{p%}:ᤐ <=> _ :Vowel ;
+"{p} becomes ᤐ if succeeded by a vowel"
+%{p%}:ᤐ <=> _ :0 :Vowel ;
 
 "{B} becomes ᤒ if preceded by a vowel"
 %{B%}:ᤒ <=> Vowel: _ ;
 "{K} becomes ᤃ if succeeded by a vowel"
-%{K%}:ᤃ <=> _ :Vowel ;
+%{K%}:ᤃ <=> _ :0 :Vowel ;
+
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
