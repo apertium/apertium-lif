@@ -75,10 +75,6 @@ LEXICON Tense
 <nonpast>:
 <past>:{E}
 
-LEXICON PrnPrefix
-<s_2>:ᤁᤧ>
-<s_3>:ᤔᤧ>
-
 LEXICON PrnSuffix
 <o_pl1i>:{a}{i}
 <o_sg3>:{a}{u}
@@ -211,6 +207,7 @@ LEXICON Verb-Stems
 ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
 ᤋᤠ᤺ᤔᤠ<v>:{T}{A}
 ᤏᤡᤔᤠ<v>:ᤏᤡ{S}{A}
+ᤘᤠᤔᤠ<v>:ᤘᤠ{gs}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ
@@ -233,7 +230,7 @@ LEXICON Noun-Stems
 ᤀᤡᤗᤠᤶ:ᤀᤡᤗᤠ{m}
 ᤆᤠ᤺ᤔᤠᤱ:ᤆᤠ᤺ᤔᤠ{ng}
 ᤛᤣᤒᤠ:ᤛᤣᤒᤠ
-ᤆᤢᤶ:ᤆᤢ{m}
+ᤆᤢᤶ:{ch}{u}{m}
 ᤋᤣ᤺ᤱ:ᤋᤣ᤺{ng}
 ᤏᤣᤐᤠᤸ:ᤏᤣᤐᤠ{ll}
 ᤁᤠᤌᤔᤠᤴᤍᤢ:ᤁᤠᤌᤔᤠᤴᤍᤢ

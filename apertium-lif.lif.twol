@@ -1,6 +1,7 @@
 Alphabet
  ᤀ ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ  ᤠ  ᤧ  ᤣ  ᤡ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ  ᤢ  ᤥ  ᤤ  ᤦ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤨ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ  ᤹ ᤝ ᤞ  ᤺  ᤷ   ᤻
- %{A%}:ᤠ 
+ %{A%}:ᤠ
+ %{gs%}:᤹ %{gs%}:0
  %{a%}:ᤀ %{a%}:0
  %{aa%}:ᤀ %{aa%}:0
  %{ana%}:ᤀ %{ana%}:0
@@ -28,6 +29,7 @@ Alphabet
  %{P%}:ᤶ %{P%}:ᤵ
  %{D%}:ᤔ %{D%}:ᤍ
  %{u%}:ᤢ
+ %{ch%}:ᤈ %{ch%}:ᤆ
  %>:0  ;
 
 Sets
@@ -103,6 +105,8 @@ Rules
 
 "{B} becomes ᤒ if preceded by a vowel"
 %{B%}:ᤒ <=> Vowel: _ ;
+"{ch} becomes ᤈ if preceded by a vowel"
+%{ch%}:ᤈ <=> Vowel: _ ;
 "{T} becomes ᤒ if preceded by a vowel"
 %{T%}:ᤍ <=> Vowel: _ ;
 "{K} becomes ᤃ if succeeded by a vowel"
