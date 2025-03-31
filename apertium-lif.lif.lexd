@@ -45,67 +45,67 @@ Conjoints
 Prepositions [ <pr>: ]
 
 PATTERN Conjoints
-Pronouns? Conjoint-Stem [ <cj>: ]
+(Pronouns [ +:> ] )? Conjoint-Stem [ <cj>: ]
 
 PATTERN Adverbs
-Pronouns? AdverbStem [ <adv>: ] Conjoints?
+(Pronouns [ +:> ] )? AdverbStem [ <adv>: ] ( [ +:> ] Conjoints)?
 
 PATTERN Adjectives
 Adjective-Stem [ <adj>: ] Adj-Num
 
 LEXICON Adj-Num
 <sg>:
-<pl>:ᤄᤠ
-<pl>:ᤜᤠ᤹ # Dir/LR
-<du>:ᤄᤠᤇᤡ
-<du>:ᤜᤠ᤹ᤇᤡ # Dir/LR
+<pl>:>ᤄᤠ
+<pl>:>ᤜᤠ᤹ # Dir/LR
+<du>:>ᤄᤠᤇᤡ
+<du>:>ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 PATTERN Determiners-Words
-Adjectives? Determiners [ <det>: ] Cases?
+(Adjectives [ +:> ] )? Determiners [ <det>: ] Cases?
 
 PATTERN Verbs
-Adjectives? PrnPrefix? Verb-Stems GerundMarker? Tense? PrnSuffix? Aspect? Pronouns? CaseMarker? Adverbs? Conjoints?
+(Adjectives [ +:> ] )? PrnPrefix?(1) Verb-Stems GerundMarker? Tense? PrnPrefix?(2) PrnSuffix? Aspect? ( [ +:> ] Pronouns)? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)?
 
 PATTERN Pronoun-Words
 Pronouns Plurals? Cases?
 
 PATTERN Nouns
-Adjectives? Pronouns? Noun-Stems [<n>:] Plurals Cases? CaseMarker?
+(Adjectives [ +:> ] )? (Pronouns [ +:> ] )? Noun-Stems [<n>:] Plurals Cases? ( [ +:> ] CaseMarker)?
 
 LEXICON Tense
 <nonpast>:
-<past>:{E}
+<past>:>{E}
 
 LEXICON GerundMarker
-<ger>:ᤔᤢᤏᤠ
+<ger>:>ᤔᤢᤏᤠ
 
 LEXICON PrnSuffix
-<o_pl1i>:{a}{i}
-<o_sg3>:{a}{u}
-<s_sg3>:{a}{u}{m}
-<s_pl3>:{a}{u}{m}ᤛᤡᤶᤒᤧ
-<o_pl1ex>:{a}{i}ᤃᤧ
+<o_pl1i>:>{a}{i}
+<o_sg3>:>{a}{u}
+<s_sg3>:>{a}{u}{m}
+<s_pl3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ
+<o_pl1ex>:>{a}{i}ᤃᤧ
 
 LEXICON Aspect
-<prog>:ᤖ
+<prog>:>ᤖ
 
 LEXICON Plurals
 <sg>:
-<pl>:ᤄᤠ
-<pl>:ᤜᤠ᤹ # Dir/LR
-<du>:ᤄᤠᤇᤡ
-<du>:ᤜᤠ᤹ᤇᤡ # Dir/LR
+<pl>:>ᤄᤠ
+<pl>:>ᤜᤠ᤹ # Dir/LR
+<du>:>ᤄᤠᤇᤡ
+<du>:>ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 LEXICON Cases
 <nom>:
-<gen>:{NG}{A}{n}
-<gen>:ᤖᤧ # Dir/LR
-<voc>:{aa}{o}
-<voc>:{ana}{e} # Dir/LR
-<com>:ᤏᤢ{ng}
-<abl>:ᤗᤠᤠ{m}
-<abl>:ᤏᤢ{ng} # Dir/LR
-<erg>:ᤖᤧ
+<gen>:>{NG}{A}{n}
+<gen>:>ᤖᤧ # Dir/LR
+<voc>:>{aa}{o}
+<voc>:>{ana}{e} # Dir/LR
+<com>:>ᤏᤢ{ng}
+<abl>:>ᤗᤠᤠ{m}
+<abl>:>ᤏᤢ{ng} # Dir/LR
+<erg>:>ᤖᤧ
 
 
 ###############################################################################
@@ -148,9 +148,9 @@ LEXICON Pronouns
 ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
 ᤏᤧ<prn><pers><p2><sg>:ᤏᤧ
 
-LEXICON PrnPrefix
-<s_2>:{K}{E}
-<s_3>:ᤔᤧ
+LEXICON PrnPrefix(2)
+:{K}{E}>  <s_2>:
+:ᤔᤧ>       <s_3>:
 
 LEXICON Prepositions
 ᤌᤥ:ᤌᤥ

@@ -52,86 +52,64 @@ Consonant = ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ ᤊ ᤂ 
 
 Rules
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
-%{NG%}:ᤏ <=> :[ᤋ | ᤍ] _ ;
+%{NG%}:ᤏ <=> :[ᤋ | ᤍ] %>: _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
-%{NG%}:ᤔ <=> :Bilabial _ ;
+%{NG%}:ᤔ <=> :Bilabial %>: _ ;
 "{aa} becomes ᤀ after a vowel but not a"
-%{aa%}:ᤀ <=> :Vowelnota _ ;
+%{aa%}:ᤀ <=> :Vowelnota %>: _ ;
 "{aa} becomes null after a"
-%{aa%}:0 <=> :ᤠ _ ;
+%{aa%}:0 <=> :ᤠ %>: _ ;
 "{aa} becomes null after a consonant"
-%{aa%}:0 <=> :Consonant _ ;
+%{aa%}:0 <=> :Consonant %>: _ ;
 "{ana} becomes ᤀ after a Vowel"
-%{ana%}:ᤀ <=> :Vowel _ ;
+%{ana%}:ᤀ <=> :Vowel %>: _ ;
 "{ana} becomes null after a consonant"
-%{ana%}:0 <=> :Consonant _ ;
+%{ana%}:0 <=> :Consonant %>: _ ;
 "{i} becomes null if succeeded by i"
-%{i%}:0 <=> _ :ᤡ ;
-"{A} becomes null if succeeded by i or E"
-%{A%}:0 <=> _ :Vowel ;
-"{A} becomes null if succeeded by i or E 0"
-%{A%}:0 <=> _ :0 :Vowel ;
+%{i%}:0 <=> _ %>: :ᤡ ;
+"{A} becomes null if succeeded by a vowel"
+%{A%}:0 <=> _ %>: ( :0 ) :Vowel ;
 "{A} becomes null if preceded by A"
-%{A%}:0 <=> :ᤠ _ ;
-"{A} becomes null if preceded by A 0"
-%{A%}:0 <=> :ᤠ :0 _ ;
+%{A%}:0 <=> :ᤠ %>: ( :0 ) _ ;
 "{o} becomes o if preceded by vowel that isnt u or i"
-%{o%}:ᤥ <=> :Vowelnotioru :ᤀ _ ;
+%{o%}:ᤥ <=> :Vowelnotioru %>: :ᤀ _ ;
 "{E} becomes null if preceded by i"
-%{E%}:0 <=> :ᤡ _ ;
+%{E%}:0 <=> :ᤡ %>: _ ;
 
-"{S} becomes s if followed by e"
-%{S%}:ᤛ <=> _ :0 :ᤧ ;
 "{S} becomes s if followed by Vowel"
-%{S%}:ᤛ <=> _ :0 :0 :Vowel ;
+%{S%}:ᤛ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
 "{D} becomes d if followed by E"
-%{D%}:ᤍ <=> _ :0 :ᤧ ;
+%{D%}:ᤍ <=> _ ( :0 ) %>: ( :ᤧ ) ;
 "{R} becomes r if followed by vowel?"
-%{R%}:ᤖ <=> _ :0 :0 :Vowel ;
+%{R%}:ᤖ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
 
 "{m} becomes ᤔ if succeeded by a vowel"
-%{m%}:ᤔ <=> _ :Vowel ;
-"{m} becomes ᤔ if succeeded by a vowel 0"
-%{m%}:ᤔ <=> _ :0 :Vowel ;
+%{m%}:ᤔ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{N} becomes ᤏ if succeeded by a vowel"
-%{N%}:ᤏ <=> _ :Vowel ;
-"{N} becomes ᤏ if succeeded by a vowel 0"
-%{N%}:ᤏ <=> _ :0 :Vowel ;
-"{ng} becomes ᤅ if succeeded by a vowel 0"
-%{ng%}:ᤅ <=> _ :0 :Vowel ;
+%{N%}:ᤏ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{ng} becomes ᤅ if succeeded by a vowel"
-%{ng%}:ᤅ <=> _ :Vowel ;
+%{ng%}:ᤅ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{k} becomes ᤁ if succeeded by a vowel"
-%{k%}:ᤁ <=> _ :Vowel ;
-"{k} becomes ᤁ if succeeded by a vowel 0"
-%{k%}:ᤁ <=> _ :0 :Vowel ;
+%{k%}:ᤁ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{ll} becomes ᤗ if succeeded by a vowel"
-%{ll%}:ᤗ <=> _ :Vowel ;
-"{ll} becomes ᤗ if succeeded by a vowel 0"
-%{ll%}:ᤗ <=> _ :0 :Vowel ;
+%{ll%}:ᤗ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{t} becomes ᤋ if succeeded by a vowel"
-%{t%}:ᤋ <=> _ :Vowel ;
-"{t} becomes ᤋ if succeeded by a vowel 0"
-%{t%}:ᤋ <=> _ :0 :Vowel ;
+%{t%}:ᤋ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{p} becomes ᤐ if succeeded by a vowel"
-%{p%}:ᤐ <=> _ :Vowel ;
-"{p} becomes ᤐ if succeeded by a vowel 0"
-%{p%}:ᤐ <=> _ :0 :Vowel ;
+%{p%}:ᤐ <=> _ ( %>: ) ( :0 ) :Vowel ;
 
 "{B} becomes ᤒ if preceded by a vowel"
-%{B%}:ᤒ <=> Vowel: _ ;
+%{B%}:ᤒ <=> :Vowel %>: _ ;
 "{ch} becomes ᤈ if preceded by a vowel"
-%{ch%}:ᤈ <=> Vowel: _ ;
+%{ch%}:ᤈ <=> :Vowel %>: _ ;
 "{T} becomes ᤍ if preceded by a vowel"
-%{T%}:ᤍ <=> Vowel: _ ;
-"{K} becomes ᤃ if succeeded by a vowel 0"
-%{K%}:ᤃ <=> _ :0 :Vowel ;
-"{K} becomes ᤃ if succeeded by a vowel 0km"
-%{K%}:ᤃ <=> _ :᤻ :0 :Vowel ;
+%{T%}:ᤍ <=> :Vowel %>: _ ;
+"{K} becomes ᤃ if succeeded by a vowel"
+%{K%}:ᤃ <=> _ %>: ( :᤻ ) ( :0 ) :Vowel ;
 "{K} becomes ᤃ if preceded by a vowel"
-%{K%}:ᤃ <=> Vowel: _ ;
+%{K%}:ᤃ <=> :Vowel %>: _ ;
 "{eg} becomes glottal stop if succeeded by consonant"
 %{eg%}:᤹ <=> _ :Consonant ;
 
