@@ -70,7 +70,7 @@ PATTERN Pronoun-Words
 Pronouns Plurals? Cases?
 
 PATTERN Nouns
-Adjectives? Pronouns? Noun-Stems [<n>:] Plurals Cases CaseMarker?
+Adjectives? Pronouns? Noun-Stems [<n>:] Plurals Cases? CaseMarker?
 
 LEXICON Tense
 <nonpast>:
