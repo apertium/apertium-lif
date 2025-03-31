@@ -163,7 +163,6 @@ LEXICON Adjective-Stem
 ᤏᤢᤒᤠ:ᤏᤢᤒᤠ
 ᤏᤢ:ᤏᤢ
 ᤆᤡ:ᤆᤡ
-ᤀᤖᤢ:ᤀᤖᤢ
 ᤀᤠᤰᤂᤣ:ᤀᤠᤰᤂ{eg}
 
 LEXICON CaseMarker
@@ -189,6 +188,7 @@ LEXICON Determiners
 ᤕᤸᤗᤡᤰ:ᤕᤸᤗᤡ{k}
 ᤈᤶᤔ:ᤈᤶᤔ
 ᤂ:ᤂ
+ᤀᤖᤢ:ᤀᤖᤢ
 
 LEXICON Interjection
 # hello
