@@ -111,7 +111,7 @@ Rules
 "{K} becomes ᤃ if preceded by a vowel"
 %{K%}:ᤃ <=> :Vowel %>: _ ;
 "{eg} becomes glottal stop if succeeded by consonant"
-%{eg%}:᤹ <=> _ :Consonant ;
+%{eg%}:᤹ <=> _ %>: :Consonant ;
 
 
 ! Resources:
