@@ -1,6 +1,7 @@
 Alphabet
  ᤀ ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ  ᤠ  ᤧ  ᤣ  ᤡ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ  ᤢ  ᤥ  ᤤ  ᤦ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤨ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ  ᤹ ᤝ ᤞ  ᤺  ᤷ   ᤻
  %{A%}:ᤠ
+ %{Ao%}:ᤠ %{Ao%}:0
  %{gs%}:᤹ %{gs%}:0
  %{a%}:ᤀ %{a%}:0
  %{aa%}:ᤀ %{aa%}:0
@@ -19,7 +20,7 @@ Alphabet
  %{t%}:ᤋ %{t%}:ᤳ
  %{T%}:ᤋ %{T%}:ᤍ
  %{tp%}:ᤳ %{tp%}:ᤵ
- %{tm%}:ᤔ %{tm%}:ᤋ
+ %{tm%}:ᤔ %{tm%}:ᤋ %{tm%}:0
  %{B%}:ᤒ %{B%}:ᤐ
  %{e%}:ᤣ
  %{do%}:᤺ %{do%}:0
@@ -68,8 +69,12 @@ Rules
 %{i%}:0 <=> _ :ᤡ ;
 "{A} becomes null if succeeded by i or E"
 %{A%}:0 <=> _ :Vowel ;
-"{A} becomes null if succeeded by i or E"
+"{A} becomes null if succeeded by i or E 0"
 %{A%}:0 <=> _ :0 :Vowel ;
+"{A} becomes null if preceded by A"
+%{A%}:0 <=> :ᤠ _ ;
+"{A} becomes null if preceded by A 0"
+%{A%}:0 <=> :ᤠ :0 _ ;
 "{o} becomes o if preceded by vowel that isnt u or i"
 %{o%}:ᤥ <=> :Vowelnotioru :ᤀ _ ;
 "{E} becomes null if preceded by i"
@@ -81,10 +86,6 @@ Rules
 %{S%}:ᤛ <=> _ :0 :0 :Vowel ;
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
-"{tm} becomes t if followed by Vowel"
-%{tm%}:ᤋ <=> _ :0 :0 :Vowel ;
-"{tp} becomes t if followed by t"
-%{tp%}:ᤳ <=> _ :ᤋ ;
 "{D} becomes d if followed by E"
 %{D%}:ᤍ <=> _ :0 :ᤧ ;
 "{R} becomes r if followed by vowel?"
@@ -92,31 +93,31 @@ Rules
 
 "{m} becomes ᤔ if succeeded by a vowel"
 %{m%}:ᤔ <=> _ :Vowel ;
-"{m} becomes ᤔ if succeeded by a vowel"
+"{m} becomes ᤔ if succeeded by a vowel 0"
 %{m%}:ᤔ <=> _ :0 :Vowel ;
 "{N} becomes ᤏ if succeeded by a vowel"
 %{N%}:ᤏ <=> _ :Vowel ;
-"{N} becomes ᤏ if succeeded by a vowel"
+"{N} becomes ᤏ if succeeded by a vowel 0"
 %{N%}:ᤏ <=> _ :0 :Vowel ;
-"{ng} becomes ᤅ if succeeded by a vowel"
+"{ng} becomes ᤅ if succeeded by a vowel 0"
 %{ng%}:ᤅ <=> _ :0 :Vowel ;
 "{ng} becomes ᤅ if succeeded by a vowel"
 %{ng%}:ᤅ <=> _ :Vowel ;
 "{k} becomes ᤁ if succeeded by a vowel"
 %{k%}:ᤁ <=> _ :Vowel ;
-"{k} becomes ᤁ if succeeded by a vowel"
+"{k} becomes ᤁ if succeeded by a vowel 0"
 %{k%}:ᤁ <=> _ :0 :Vowel ;
 "{ll} becomes ᤗ if succeeded by a vowel"
 %{ll%}:ᤗ <=> _ :Vowel ;
-"{ll} becomes ᤗ if succeeded by a vowel"
+"{ll} becomes ᤗ if succeeded by a vowel 0"
 %{ll%}:ᤗ <=> _ :0 :Vowel ;
 "{t} becomes ᤋ if succeeded by a vowel"
 %{t%}:ᤋ <=> _ :Vowel ;
-"{t} becomes ᤋ if succeeded by a vowel"
+"{t} becomes ᤋ if succeeded by a vowel 0"
 %{t%}:ᤋ <=> _ :0 :Vowel ;
 "{p} becomes ᤐ if succeeded by a vowel"
 %{p%}:ᤐ <=> _ :Vowel ;
-"{p} becomes ᤐ if succeeded by a vowel"
+"{p} becomes ᤐ if succeeded by a vowel 0"
 %{p%}:ᤐ <=> _ :0 :Vowel ;
 
 "{B} becomes ᤒ if preceded by a vowel"
@@ -125,9 +126,9 @@ Rules
 %{ch%}:ᤈ <=> Vowel: _ ;
 "{T} becomes ᤍ if preceded by a vowel"
 %{T%}:ᤍ <=> Vowel: _ ;
-"{K} becomes ᤃ if succeeded by a vowel"
+"{K} becomes ᤃ if succeeded by a vowel 0"
 %{K%}:ᤃ <=> _ :0 :Vowel ;
-"{K} becomes ᤃ if succeeded by a vowel"
+"{K} becomes ᤃ if succeeded by a vowel 0km"
 %{K%}:ᤃ <=> _ :᤻ :0 :Vowel ;
 "{K} becomes ᤃ if preceded by a vowel"
 %{K%}:ᤃ <=> Vowel: _ ;

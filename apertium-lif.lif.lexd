@@ -235,7 +235,7 @@ LEXICON Verb-Stems
 ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pg}{R}{A}
 ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R}{A} # Dir/LR
 ᤔᤠ᤺ᤔᤠ<v>:ᤔᤠ{do}{S}{A}
-ᤗ᤺ᤵᤔᤠ<v>:ᤗ᤺{tp}{tm}{A}
+ᤗ᤺ᤵᤔᤠ<v>:ᤗ᤺{tp}{tm}{Ao}
 ᤗᤐ᤻ᤔᤠ<v>:ᤗ{t}{km}{tm}{A}
 
 LEXICON Noun-Stems
