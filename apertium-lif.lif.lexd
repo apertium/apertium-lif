@@ -54,7 +54,7 @@ PATTERN Adjectives
 Adjective-Stem [ <adj>: ] Adj-Num
 
 LEXICON Adj-Num
-<sg>:
+<sg>:>
 <pl>:>ᤄᤠ
 <pl>:>ᤜᤠ᤹ # Dir/LR
 <du>:>ᤄᤠᤇᤡ
@@ -63,41 +63,95 @@ LEXICON Adj-Num
 PATTERN Determiners-Words
 (Adjectives [ +:> ] )? Determiners [ <det>: ] Cases?
 
-PATTERN Verbs
-(Adjectives [ +:> ] )? PrnPrefix?(1) Verb-Stems GerundMarker? Tense? PrnPrefix?(2) PrnSuffix? Aspect? ( [ +:> ] Pronouns)? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)?
-
 PATTERN Pronoun-Words
 Pronouns Plurals? Cases?
 
 PATTERN Nouns
 (Adjectives [ +:> ] )? (Pronouns [ +:> ] )? Noun-Stems [<n>:] Plurals Cases? ( [ +:> ] CaseMarker)?
 
-LEXICON Tense
-<nonpast>:
-<past>:>{E}
+PATTERN Verbs
+(Adjectives [ +:> ] )? SubjPerson?(1) SubjPerson?(1) SubjNumber?(1) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity? Tense? SubjDuality? SubjPerson?(2) SubjPerson?(2) SubjNumber?(2) ObjPerson? ObjorSubjNumber? SubjSingularity? NegationSuff? Aspect? NonsgSubjNumber? ObjNumber? Subjcopy? Exclusivity? NegationSuff? ( [ +:> ] Pronouns)? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)?
+
+LEXICON SubjPerson(2)
+:ᤀᤠ>       <s_1>:
+:{K}{E}>  <s_2>:
+:>        <s_3>:
+
+LEXICON SubjNumber(2)
+:ᤔ{E}>        <s_nonsg>:
+:>            <s_sg>:
+
+LEXICON Negation(2)
+:ᤔᤧ>       <neg>: # Dir/LR
+:ᤔᤧ{N}>    <neg>:
+:ᤏ>    <neg>:
 
 LEXICON GerundMarker
 <ger>:>ᤔᤢᤏᤠ
 
-LEXICON PrnSuffix
-<o_pl1i>:>{a}{i}
-<o_sg3>:>{a}{u}
-<s_sg3>:>{a}{u}{m}
+LEXICON Reflexivity
+<refl>:>ᤛᤡ{ng}
+<refl>:>ᤏᤧ # Dir/LR
+
+LEXICON Tense
+<nonpast>:>
+<past>:>{E}
+
+LEXICON SubjDuality
+<s_du>:>ᤛ # Dir/LR
+<s_du>:>ᤇ
+
+LEXICON ObjPerson
+<o_3>:>{a}{u}
+
+LEXICON ObjorSubjNumber
+<os_pl>:>{a}{i}
+<os_du>:>ᤛᤡ # Dir/LR
+<os_du>:>ᤇᤡ
+<os_sg>:>
+<os_sg12np>:>ᤧ
+<os_sg12p>:>{a}{A}{ng}
+
+LEXICON SubjSingularity
+<s_sg1>:>{ng}
+<s_sg>:>
+
+# correct this:
 <s_pl3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ
-<o_pl1ex>:>{a}{i}ᤃᤧ
+
+LEXICON NegationSuff
+<neg>:>{N}
+<neg>:>ᤏᤧ{N} # Dir/LR
 
 LEXICON Aspect
 <prog>:>ᤖ
 
+LEXICON NonsgSubjNumber
+<s_nonsg>:>ᤇᤡ
+<s_pl>:>{m}
+<s_pl1exclp>:>ᤔᤏᤠ
+
+LEXICON ObjNumber
+<o_nonsg>:>ᤛᤡ
+<o_sg>:>
+
+LEXICON Subjcopy
+<s_sg1>:>{ng}
+<s_pl>:>{m}
+
+LEXICON Exclusivity
+<excl>:>ᤃᤧ
+<incl>:>
+
 LEXICON Plurals
-<sg>:
+<sg>:>
 <pl>:>ᤄᤠ
 <pl>:>ᤜᤠ᤹ # Dir/LR
 <du>:>ᤄᤠᤇᤡ
 <du>:>ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 LEXICON Cases
-<nom>:
+<nom>:>
 <gen>:>{NG}{A}{n}
 <gen>:>ᤖᤧ # Dir/LR
 <voc>:>{aa}{o}
@@ -147,10 +201,6 @@ LEXICON Pronouns
 ᤂᤴ<prn><pers><dem><sg>:ᤂ{N}
 ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
 ᤏᤧ<prn><pers><p2><sg>:ᤏᤧ
-
-LEXICON PrnPrefix(2)
-:{K}{E}>  <s_2>:
-:ᤔᤧ>       <s_3>:
 
 LEXICON Prepositions
 ᤌᤥ:ᤌᤥ
