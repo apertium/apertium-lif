@@ -39,6 +39,8 @@ Alphabet
  %{eg%}:᤹ %{eg%}:ᤣ
  %{NGK%}:ᤱ %{NGK%}:ᤰ
  %{pg%}:᤹ %{pg%}:ᤵ
+ %{NM%}:ᤶ %{NM%}:ᤴ
+ %{Dnull%}:ᤍ %{Dnull%}:0
  %>:0  ;
 
 Sets
