@@ -71,7 +71,7 @@ PATTERN Nouns
 (Adjectives [ +:> ] )? PossessivePrn?(1) Noun-Stems [<n>:] Plurals PossessivePrn?(2) Cases ( [ +:> ] CaseMarker)?
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber?(1) SubjPersonNumber?(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber?(6) SubjPersonNumber?(2) SubjPersonNumber?(5) ObjSlot SubjPersonNumber?(7) NegationSuff? Aspect? NonsgSubjNumber? ObjNumber? Subjcopy? SubjPersonNumber?(3) NegationSuff2? ( [ +:> ] Pronouns)? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast]]
+( (Adjectives [ +:> ] )? SubjPersonNumber?(1) SubjPersonNumber?(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber?(6) SubjPersonNumber?(2) SubjPersonNumber?(5) ObjSlot SubjPersonNumber?(7) NegationSuff? Aspect? SubjPersonNumber?(8) ObjNumber? Subjcopy? SubjPersonNumber?(3) NegationSuff2? ( [ +:> ] Pronouns)? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast]]
 
 LEXICON PossessivePrn(2)
 :ᤀᤠ>             <px1sg>:
@@ -87,22 +87,24 @@ LEXICON PossessivePrn(2)
 :ᤂᤢᤴᤆᤡ>            <px3du>:
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
 
-LEXICON SubjPersonNumber(7)
-:ᤀᤠ>       <s_1>:     <incl>:      :             <s_sg>:              :       <s_sg1>:>{ng}
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :             <s_sg>:              :       <s_sg1>:>{ng}
-:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤛ            :        # Dir/LR
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤛ            :        # Dir/LR
-:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤇ            :
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤇ            :
-:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_pl>:              :
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_pl>:              :
-#:{K}{E}>  <s_2>:           :
-#:         <s_3>:           :
-
-LEXICON SubjNumber(3)
-:ᤔ{E}>        <s_nonsg>:     <s_du>:>ᤛ  # Dir/LR
-:ᤔ{E}>        <s_nonsg>:     <s_du>:>ᤇ
-:             <s_sg>:              :
+LEXICON SubjPersonNumber(8)
+:ᤀᤠ>       <s_1>:     <incl>:      :             <s_sg>:              :              :>{ng}     :
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :             <s_sg>:              :              :>{ng}     :
+:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ       # Dir/LR
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ        # Dir/LR
+:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
+:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_pl>:              :          :>{m}
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_pl>:              :          :>{m}
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_pl>:              :          :>ᤔᤏᤠ[past]
+:{K}{E}>  <s_2>:           :       :             <s_sg>:              :              :          :
+:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ       # Dir/LR
+:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
+:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_pl>:              :          :>{m}
+:         <s_3>:           :       :             <s_sg>:              :              :          :
+:         <s_3>:           :       :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ       # Dir/LR
+:         <s_3>:           :       :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
+:         <s_3>:           :       :ᤔ{E}>              :        <s_pl>:              :          :>{m}
 
 LEXICON Negation(2)
 :ᤔᤧ>       <neg>: # Dir/LR
@@ -115,7 +117,7 @@ LEXICON GerundMarker
 LEXICON Reflexivity&Port
 <refl>:>ᤛᤡ{ng}
 <refl>:>ᤏᤧ # Dir/LR
-<s_1_o_2>:>ᤏᤧ
+<s_1><o_2>:>ᤏᤧ
 
 LEXICON Tense
 <nonpast>:[nonpast]
@@ -133,10 +135,6 @@ LEXICON ObjSlot
 <os_sg12>:>{a}{A}{ng}[past]
 <s_sg1><o_3>:>ᤐᤠ{ng}[past]
 
-LEXICON SubjSingularity
-<s_sg1>:>{ng}
-<s_sg>:
-
 # correct this:
 <s_pl3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ
 
@@ -145,11 +143,6 @@ LEXICON NegationSuff
 
 LEXICON Aspect
 <prog>:>ᤖ
-
-LEXICON NonsgSubjNumber
-<s_nonsg>:>ᤇᤡ
-<s_pl>:>{m}
-<s_pl1exclp>:>ᤔᤏᤠ
 
 LEXICON ObjNumber
 <o_nonsg>:>ᤛᤡ
