@@ -9,6 +9,12 @@ LIST NOUN = (n voc) (n com) (n abl) (n erg) (n nom);
 LIST ADJ = adj;
 LIST NGEN = (n gen);
 LIST VERB = v;
+LIST NONPAST = s_sg1_o_3np os_sg12np nonpast;
+LIST PAST = os_sg12p past;
+LIST PORT = s_1_o_2;
+LIST DEM = dem;
+LIST PL = pl du sg;
+LIST CASES = nom gen voc com abl erg
 
 SECTION
 # If there is a noun to the right, I am a adj unless genitive.
@@ -26,6 +32,19 @@ SELECT NGEN IF
 SELECT NOUN IF
     (0 NOUN)
     (1 VERB) ;
+
+REMOVE PAST IF
+    (0 NONPAST) ;
+
+REMOVE NONPAST IF
+    (0 PAST) ;
+
+REMOVE PORT IF
+    (0 (s_2))
+    (0 (s_3)) ;
+
+REMOVE PL IF
+    (NOT 0 DEM) ;
 
 # If there is a conjunction followed by a certain cohort of the same CASE as me, choose me.
 # SELECT $$Case IF (1 (cnjcoo) LINK 1C $$Case) ;
