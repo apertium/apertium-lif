@@ -9,17 +9,18 @@ LIST NGEN = (n gen);
 LIST VERB = v;
 
 SECTION
-# If there is a noun to the right, I am not a noun.
-
+# If there is a noun to the right, I am a adj unless genitive.
 SELECT ADJ IF 
     (0 NOUN)
     (0 ADJ)
     (1 NOUN) ;
 
+# genitive
 SELECT NGEN IF 
     (0 NGEN)
     (1 NOUN) ;
 
+# i am a noun if followed by a verb
 SELECT NOUN IF
     (0 NOUN)
     (1 VERB) ;
