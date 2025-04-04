@@ -4,18 +4,24 @@
 DELIMITERS = "<$.>" "<॥>" "<.>";
 
 # We can define sets for common tag clusters
-# LIST Case = (n s) (n p) ; # A set that matches either a Noun Singular or a Noun Plural
 LIST NOUN = (n voc) (n com) (n abl) (n erg) (n nom);
 LIST ADJ = adj;
 LIST NGEN = (n gen);
 LIST VERB = v;
-LIST NONPAST = s_sg1_o_3np os_sg12np nonpast;
-LIST PAST = os_sg12p past;
-LIST PORT = s_1_o_2;
-LIST DEM = dem;
-LIST PL = pl du sg;
-LIST CASES = nom gen voc com abl erg
-
+LIST PORT = (s_1 o_2);
+LIST CASES = nom gen voc com abl erg;
+LIST SG = (o_sg s_sg);
+LIST OPL = os_pl os_du;
+LIST OSG = o_sg os_sg12 os_sg ;
+LIST ADV = adv;
+LIST S3 = s_3;
+LIST S2S3 = s_3 s_2;
+LIST SSG1 = s_sg1;
+LIST OSSG12 = os_sg12;
+LIST PRN = prn;
+LIST GEN = gen;
+LIST ELSE = prn adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
+LIST TR = "ᤋᤖ";
 SECTION
 # If there is a noun to the right, I am a adj unless genitive.
 SELECT ADJ IF 
@@ -33,21 +39,41 @@ SELECT NOUN IF
     (0 NOUN)
     (1 VERB) ;
 
-REMOVE PAST IF
-    (0 NONPAST) ;
+REMOVE S2S3 IF
+    (0 PORT) ;
 
-REMOVE NONPAST IF
-    (0 PAST) ;
+REMOVE SG IF
+    (0 OPL) ;
 
-REMOVE PORT IF
-    (0 (s_2))
-    (0 (s_3)) ;
+REMOVE SUB:-1 SG IF
+    (0/-1 OPL) ;
 
-REMOVE PL IF
-    (NOT 0 DEM) ;
+REMOVE OSG IF
+    (0 OPL) ;
 
-# If there is a conjunction followed by a certain cohort of the same CASE as me, choose me.
-# SELECT $$Case IF (1 (cnjcoo) LINK 1C $$Case) ;
+REMOVE SUB:-1 OSG IF
+    (0/-1 OPL) ;
+
+REMOVE S2S3 IF
+    (0 SSG1) ;
+
+REMOVE S3 IF
+    (0 OSSG12) ;
+
+REMOVE SUB:-2 PRN IF
+    (0/-1 VERB) ;
+
+REMOVE S3 IF
+    (-1* (p2) OR (p1)) ;
+
+REMOVE SUB:0 GEN IF
+    (1/-1 ELSE) ;
+
+REMOVE SUB:0 GEN IF
+    (1 ELSE) ;
+
+SELECT (cnjcoo) IF
+    (0 TR) ;
 
 # Resources:
 # http://visl.sdu.dk/cg3.html

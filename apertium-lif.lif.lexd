@@ -71,7 +71,7 @@ PATTERN Nouns
 (Adjectives [ +:> ] )? PossessivePrn?(1) Noun-Stems [<n>:] Plurals PossessivePrn?(2) Cases ( [ +:> ] CaseMarker)?
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber?(1) SubjPersonNumber?(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber?(6) SubjPersonNumber?(2) SubjPersonNumber?(5) ObjSlot SubjPersonNumber?(7) NegationSuff? Aspect? SubjPersonNumber?(8) ObjNumber? Subjcopy? SubjPersonNumber?(3) NegationSuff2? ( [ +:> ] Pronouns)? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast]]
+( (Adjectives [ +:> ] )? SubjPersonNumber?(1) SubjPersonNumber?(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber?(6) SubjPersonNumber?(2) SubjPersonNumber?(5) ObjSlot SubjPersonNumber?(7) NegationSuff? Aspect? SubjPersonNumber?(8) ObjNumber? SubjPersonNumber?(9) SubjPersonNumber?(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast]]
 
 LEXICON PossessivePrn(2)
 :ᤀᤠ>             <px1sg>:
@@ -87,29 +87,29 @@ LEXICON PossessivePrn(2)
 :ᤂᤢᤴᤆᤡ>            <px3du>:
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
 
-LEXICON SubjPersonNumber(8)
-:ᤀᤠ>       <s_1>:     <incl>:      :             <s_sg>:              :              :>{ng}     :
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :             <s_sg>:              :              :>{ng}     :
-:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ       # Dir/LR
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ        # Dir/LR
-:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
-:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_pl>:              :          :>{m}
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_pl>:              :          :>{m}
-:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_pl>:              :          :>ᤔᤏᤠ[past]
-:{K}{E}>  <s_2>:           :       :             <s_sg>:              :              :          :
-:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ       # Dir/LR
-:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
-:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_pl>:              :          :>{m}
-:         <s_3>:           :       :             <s_sg>:              :              :          :
-:         <s_3>:           :       :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ       # Dir/LR
-:         <s_3>:           :       :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ
-:         <s_3>:           :       :ᤔ{E}>              :        <s_pl>:              :          :>{m}
+LEXICON SubjPersonNumber(9)
+:ᤀᤠ>       <s_1>:     <incl>:      :             <s_sg>:              :              :>{ng}     :            :>{ng}
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :             <s_sg>:              :              :>{ng}     :            :>{ng}
+:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ          :          # Dir/LR
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ          :          # Dir/LR
+:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ          :
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ          :
+:ᤀᤠ>       <s_1>:     <incl>:      :ᤔ{E}>              :        <s_pl>:              :          :>{m}        :>{m}
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_pl>:              :          :>{m}        :>{m}
+:ᤀᤠ>       <s_1>:     <excl>:>ᤃᤧ    :ᤔ{E}>              :        <s_pl>:              :          :>ᤔᤏᤠ[past]   :
+:{K}{E}>  <s_2>:           :       :             <s_sg>:              :              :          :            :
+:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ         :          # Dir/LR
+:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ         :
+:{K}{E}>  <s_2>:           :       :ᤔ{E}>              :        <s_pl>:              :          :>{m}       :>{m}
+:         <s_3>:           :       :             <s_sg>:              :              :          :            :
+:         <s_3>:           :       :ᤔ{E}>              :        <s_du>:>ᤛ            :          :>ᤇᤡ         :          # Dir/LR
+:         <s_3>:           :       :ᤔ{E}>              :        <s_du>:>ᤇ            :          :>ᤇᤡ         :
+:         <s_3>:           :       :ᤔ{E}>              :        <s_pl>:              :          :>{m}       :>{m}
 
 LEXICON Negation(2)
 :ᤔᤧ>       <neg>: # Dir/LR
 :ᤔᤧ{N}>    <neg>:
-:ᤏ>    <neg>:
+:ᤏ>       <neg>:
 
 LEXICON GerundMarker
 <ger>:>ᤔᤢᤏᤠ
@@ -147,10 +147,6 @@ LEXICON Aspect
 LEXICON ObjNumber
 <o_nonsg>:>ᤛᤡ
 <o_sg>:
-
-LEXICON Subjcopy
-<s_sg1>:>{ng}
-<s_pl>:>{m}
 
 LEXICON NegationSuff2
 <neg>:>{N}
