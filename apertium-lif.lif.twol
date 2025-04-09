@@ -78,6 +78,9 @@ Rules
 "{E} becomes null if preceded by i"
 %{E%}:0 <=> :ᤡ %>: _ ;
 
+"{a} as ᤀ after a vowel"  ! FIXME: don't do this in contexts when you get a diphthong
+%{a%}:ᤀ <=> :Vowel :0* _ ;
+
 "{S} becomes s if followed by Vowel"
 %{S%}:ᤛ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
 "{P} becomes p if followed by s"
@@ -114,6 +117,7 @@ Rules
 %{K%}:ᤃ <=> :Vowel ( %>: ) _ ;
 "{eg} becomes glottal stop if succeeded by consonant"
 %{eg%}:᤹ <=> _ %>: :Consonant ;
+
 
 
 ! Resources:
