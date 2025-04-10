@@ -54,7 +54,7 @@ PATTERN Adjectives
 Adjective-Stem [ <adj>: ] Adj-Num
 
 LEXICON Adj-Num
-<sg>:>
+<sg>:
 <pl>:>ᤄᤠ
 <pl>:>ᤜᤠ᤹ # Dir/LR
 <du>:>ᤄᤠᤇᤡ
@@ -90,23 +90,23 @@ LEXICON PossessivePrn(2)
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
 
 LEXICON SubjPersonNumber(8)
-:ᤀᤠ>       <s_1sg>:     <incl>:      :           :      :>{ng}     :           :>{ng}
-:ᤀᤠ>       <s_1sg>:     <excl>:>ᤃᤧ    :           :      :>{ng}     :           :>{ng}
-:ᤀᤠ>       <s_1du>:     <incl>:      :ᤔ{E}>      :>ᤛ    :          :>ᤇᤡ         :          # Dir/LR
-:ᤀᤠ>       <s_1du>:     <excl>:>ᤃᤧ    :ᤔ{E}>      :>ᤛ    :          :>ᤇᤡ         :          # Dir/LR
-:ᤀᤠ>       <s_1du>:     <incl>:      :ᤔ{E}>      :>ᤇ    :          :>ᤇᤡ         :
-:ᤀᤠ>       <s_1du>:     <excl>:>ᤃᤧ    :ᤔ{E}>      :>ᤇ    :          :>ᤇᤡ         :
-:ᤀᤠ>       <s_1pl>:     <incl>:      :ᤔ{E}>      :      :          :>{m}       :>{m}
-:ᤀᤠ>       <s_1pl>:     <excl>:>ᤃᤧ    :ᤔ{E}>      :      :          :>{m}       :>{m}
-:ᤀᤠ>[past]       <s_1pl>:[past]     <excl>:>ᤃᤧ[past]    :ᤔ{E}>[past]      :[past] :[past]    :>ᤔᤏᤠ[past]  :[past]
-:{K}{E}>  <s_2sg>:           :      :           :      :          :           :
-:{K}{E}>  <s_2du>:           :      :ᤔ{E}>      :>ᤛ    :          :>ᤇᤡ         :          # Dir/LR
-:{K}{E}>  <s_2du>:           :      :ᤔ{E}>      :>ᤇ    :          :>ᤇᤡ         :
-:{K}{E}>  <s_2pl>:           :      :ᤔ{E}>      :      :          :>{m}       :>{m}
-:         <s_3sg>:           :      :           :      :          :           :
-:         <s_3du>:           :      :ᤔ{E}>      :>ᤛ    :          :>ᤇᤡ         :          # Dir/LR
-:         <s_3du>:           :      :ᤔ{E}>      :>ᤇ    :          :>ᤇᤡ         :
-:         <s_3pl>:           :      :ᤔ{E}>      :      :          :>{m}       :>{m}
+:ᤀᤠ>         <s_sg1>:        <incl>:          :              :         :>{ng}     :           :>{ng}
+:ᤀᤠ>         <s_sg1>:        <excl>:>ᤃᤧ        :              :         :>{ng}     :           :>{ng}
+:ᤀᤠ>         <s_du1>:        <incl>:          :ᤔ{E}>         :>ᤛ       :          :>ᤇᤡ         :          # Dir/LR
+:ᤀᤠ>         <s_du1>:        <excl>:>ᤃᤧ        :ᤔ{E}>         :>ᤛ       :          :>ᤇᤡ         :          # Dir/LR
+:ᤀᤠ>         <s_du1>:        <incl>:          :ᤔ{E}>         :>ᤇ       :          :>ᤇᤡ         :
+:ᤀᤠ>         <s_du1>:        <excl>:>ᤃᤧ        :ᤔ{E}>         :>ᤇ       :          :>ᤇᤡ         :
+:ᤀᤠ>         <s_pl1>:        <incl>:          :ᤔ{E}>         :         :          :>{m}       :>{m}
+:ᤀᤠ>         <s_pl1>:        <excl>:>ᤃᤧ        :ᤔ{E}>         :         :          :>{m}       :>{m}
+:ᤀᤠ>[past]   <s_pl1>:[past]  <excl>:>ᤃᤧ[past]  :ᤔ{E}>[past]   :[past]   :[past]    :>ᤔᤏᤠ[past]  :[past]
+:{K}{E}>    <s_sg2>:              :          :              :         :           :           :
+:{K}{E}>    <s_du2>:              :          :ᤔ{E}>         :>ᤛ       :          :>ᤇᤡ         :          # Dir/LR
+:{K}{E}>    <s_du2>:              :          :ᤔ{E}>         :>ᤇ       :          :>ᤇᤡ         :
+:{K}{E}>    <s_pl2>:              :          :ᤔ{E}>         :         :          :>{m}       :>{m}
+:           <s_sg3>:              :          :              :         :          :           :
+:           <s_du3>:              :          :ᤔ{E}>         :>ᤛ       :          :>ᤇᤡ         :          # Dir/LR
+:           <s_du3>:              :          :ᤔ{E}>         :>ᤇ       :          :>ᤇᤡ         :
+:           <s_pl3>:              :          :ᤔ{E}>         :         :          :>{m}       :>{m}
 
 LEXICON Negation(2)
 :ᤔᤧ>       <neg>: # Dir/LR
@@ -327,7 +327,6 @@ LEXICON Noun-Stems
 ᤕᤠᤖᤡᤰ:ᤕᤠᤖᤡ{k}
 ᤒᤡᤆᤠᤖ:ᤒᤡᤆᤠᤖ
 ᤐᤠᤴ:ᤐᤠ{N}
-ᤏᤧᤜᤡ:ᤏᤧᤜᤡ
 ᤔᤧᤴᤆᤡᤀᤠ:ᤔᤧᤴᤆᤡᤀᤠ
 ᤔᤏᤠ:ᤔᤏᤠ
 ᤏᤠᤖᤠ:ᤏᤠᤖᤠ
@@ -335,6 +334,19 @@ LEXICON Noun-Stems
 ᤀ᤹ᤍ᤺ᤱ:ᤀ᤹ᤍ᤺{ng}
 ᤏᤢ:ᤏᤢ
 ᤁᤢᤶᤔᤠ:ᤁᤢᤶᤔ{A}
+
+# numerals
+ᤌᤡᤰ:ᤌᤡ{k}
+ᤗᤌᤡᤰ:ᤗᤌᤡ{k}
+ᤏᤧᤜᤡ:ᤏᤧᤜᤡ
+ᤛᤢᤶᤛᤡ:ᤛᤢᤶᤛᤡ
+ᤗᤡᤛᤡ:ᤗᤡᤛᤡ
+ᤏᤠᤛᤡ:ᤏᤠᤛᤡ
+ᤋᤢᤰᤛᤡ:ᤋᤢᤰᤛᤡ
+ᤏᤢᤛᤡ:ᤏᤢᤛᤡ
+ᤕᤧᤜᤡ:ᤕᤧᤜᤡ
+ᤑᤠᤱᤛᤡ:ᤑᤠᤱᤛᤡ
+ᤒᤥᤱ:ᤒᤥ{ng}
 
 PATTERN Number
 Numeral [<num>:]
