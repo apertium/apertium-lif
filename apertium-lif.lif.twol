@@ -77,8 +77,6 @@ Rules
 %{o%}:ᤥ <=> :Vowelnotioru %>: :ᤀ _ ;
 "{E} becomes null if preceded by i"
 %{E%}:0 <=> :ᤡ %>: _ ;
-"{a} as ᤀ after a vowel"
-%{a%}:ᤀ <=> :Vowel :0* _ ;
 
 "{S} becomes s if followed by Vowel"
 %{S%}:ᤛ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;

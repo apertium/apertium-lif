@@ -16,12 +16,13 @@ LIST OSG = o_sg os_sg12 os_sg ;
 LIST ADV = adv;
 LIST S3 = s_sg3 s_du3 s_pl3;
 LIST S2S3 = s_sg3 s_du3 s_pl3 s_sg2 s_du2 s_pl2;
-LIST SSG1 = s_sg1;
+LIST SSG1 = s_sg1_o_3;
 LIST OSSG12 = os_sg12;
 LIST PRN = prn;
 LIST GEN = gen;
 LIST ELSE = prn adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
 LIST TR = "ᤋᤖ";
+LIST NONONE = "ᤏᤧᤜᤡ" "ᤛᤢᤶᤛᤡ" "ᤗᤡᤛᤡ" "ᤏᤠᤛᤡ" "ᤋᤢᤰᤛᤡ" "ᤏᤢᤛᤡ" "ᤕᤧᤜᤡ" "ᤑᤠᤱᤛᤡ" "ᤒᤥᤱ";
 SECTION
 # If there is a noun to the right, I am a adj unless genitive.
 SELECT ADJ IF 
@@ -54,11 +55,11 @@ REMOVE OSG IF
 REMOVE SUB:-1 OSG IF
     (0/-1 OPL) ;
 
-REMOVE S2S3 IF
-    (0 SSG1) ;
+# REMOVE SSG1 IF
+#    (0 S2S3) ;
 
-REMOVE S3 IF
-    (0 OSSG12) ;
+REMOVE OSSG12 IF
+    (0 S3) ;
 
 REMOVE SUB:-2 PRN IF
     (0/-1 VERB) ;
@@ -74,6 +75,9 @@ REMOVE SUB:0 GEN IF
 
 SELECT (cnjcoo) IF
     (0 TR) ;
+
+REMOVE (o_sg) IF
+    (-1 NONONE) ;
 
 # Resources:
 # http://visl.sdu.dk/cg3.html
