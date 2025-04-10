@@ -89,23 +89,23 @@ LEXICON PossessivePrn(2)
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
 
 LEXICON SubjPersonNumber(8)[ssg1]
-:ᤀᤠ>   <s_sg1>:  <incl>:    :        :   :>{ng} :     :>{ng}
-:ᤀᤠ>   <s_sg1>:  <excl>:>ᤃᤧ  :        :   :>{ng} :     :>{ng}
+:ᤀᤠ>                <s_sg1>:               <incl>:                 :                     :                :>{ng}              :                  :>{ng}
+:ᤀᤠ>                <s_sg1>:               <excl>:>ᤃᤧ               :                     :                :>{ng}              :                  :>{ng}
 :ᤀᤠ>[-ssg1]         <s_du1>:[-ssg1]        <incl>:[-ssg1]          :ᤔ{E}>[-ssg1]         :>ᤛ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]             # Dir/LR
 :ᤀᤠ>[-ssg1]         <s_du1>:[-ssg1]        <excl>:>ᤃᤧ[-ssg1]        :ᤔ{E}>[-ssg1]         :>ᤛ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]             # Dir/LR
-:ᤀᤠ>[-ssg1]         <s_du1>:        <incl>:          :ᤔ{E}>         :>ᤇ       :            :>ᤇᤡ         :
-:ᤀᤠ>[-ssg1]         <s_du1>:        <excl>:>ᤃᤧ        :ᤔ{E}>         :>ᤇ       :            :>ᤇᤡ         :
-:ᤀᤠ>[-ssg1]         <s_pl1>:        <incl>:          :ᤔ{E}>         :         :            :>{m}       :>{m}
+:ᤀᤠ>[-ssg1]         <s_du1>:[-ssg1]        <incl>:[-ssg1]          :ᤔ{E}>[-ssg1]         :>ᤇ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]
+:ᤀᤠ>[-ssg1]         <s_du1>:[-ssg1]        <excl>:>ᤃᤧ[-ssg1]        :ᤔ{E}>[-ssg1]         :>ᤇ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]
+:ᤀᤠ>[-ssg1]         <s_pl1>:[-ssg1]        <incl>:[-ssg1]          :ᤔ{E}>[-ssg1]         :[-ssg1]         :[-ssg1]            :>{m}[-ssg1]       :>{m}[-ssg1]
 :ᤀᤠ>[-ssg1]         <s_pl1>:[-ssg1]        <excl>:>ᤃᤧ[-ssg1]        :ᤔ{E}>[-ssg1]         :[-ssg1]         :[-ssg1]            :>{m}[-ssg1]       :>{m}[-ssg1]
-:ᤀᤠ>[past,-ssg1]   <s_pl1>:[past,-ssg1]  <excl>:>ᤃᤧ[past,-ssg1]  :ᤔ{E}>[past,-ssg1]   :[past,-ssg1]   :[past,-ssg1]      :>ᤔᤏᤠ[past,-ssg1]  :[past,-ssg1]
+:ᤀᤠ>[past,-ssg1]    <s_pl1>:[past,-ssg1]   <excl>:>ᤃᤧ[past,-ssg1]   :ᤔ{E}>[past,-ssg1]    :[past,-ssg1]    :[past,-ssg1]       :>ᤔᤏᤠ[past,-ssg1]   :[past,-ssg1]
 :{K}{E}>[-ssg1]    <s_sg2>:[-ssg1]              :[-ssg1]          :[-ssg1]              :[-ssg1]         :[-ssg1]            :[-ssg1]           :[-ssg1]
-:{K}{E}>[-ssg1]    <s_du2>:              :          :ᤔ{E}>         :>ᤛ       :            :>ᤇᤡ         :             # Dir/LR
-:{K}{E}>[-ssg1]    <s_du2>:              :          :ᤔ{E}>         :>ᤇ       :            :>ᤇᤡ         :
-:{K}{E}>[-ssg1]    <s_pl2>:              :          :ᤔ{E}>         :         :            :>{m}       :>{m}
-:[-ssg1]           <s_sg3>:              :          :              :         :            :           :
-:[-ssg1]           <s_du3>:              :          :ᤔ{E}>         :>ᤛ       :            :>ᤇᤡ         :             # Dir/LR
-:[-ssg1]           <s_du3>:              :          :ᤔ{E}>         :>ᤇ       :            :>ᤇᤡ         :
-:[-ssg1]           <s_pl3>:              :          :ᤔ{E}>         :         :            :>{m}       :>{m}
+:{K}{E}>[-ssg1]    <s_du2>:[-ssg1]              :[-ssg1]          :ᤔ{E}>[-ssg1]         :>ᤛ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]             # Dir/LR
+:{K}{E}>[-ssg1]    <s_du2>:[-ssg1]              :[-ssg1]          :ᤔ{E}>[-ssg1]         :>ᤇ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]
+:{K}{E}>[-ssg1]    <s_pl2>:[-ssg1]              :[-ssg1]          :ᤔ{E}>[-ssg1]         :[-ssg1]         :[-ssg1]            :>{m}[-ssg1]       :>{m}[-ssg1]
+:[-ssg1]           <s_sg3>:[-ssg1]              :[-ssg1]          :[-ssg1]              :[-ssg1]         :[-ssg1]            :[-ssg1]           :[-ssg1]
+:[-ssg1]           <s_du3>:[-ssg1]              :[-ssg1]          :ᤔ{E}>[-ssg1]         :>ᤛ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]             # Dir/LR
+:[-ssg1]           <s_du3>:[-ssg1]              :[-ssg1]          :ᤔ{E}>[-ssg1]         :>ᤇ[-ssg1]       :[-ssg1]            :>ᤇᤡ[-ssg1]         :[-ssg1]
+:[-ssg1]           <s_pl3>:[-ssg1]              :[-ssg1]          :ᤔ{E}>[-ssg1]         :[-ssg1]         :[-ssg1]            :>{m}[-ssg1]       :>{m}[-ssg1]
 
 LEXICON Negation(2)
 :ᤔᤧ>       <neg>: # Dir/LR
@@ -132,11 +132,10 @@ LEXICON ObjSlot[ssg1]
 <os_sg>:
 
 <os_sg12>:>ᤧ[nonpast]
-<s_sg1><o_3>:>ᤧ[nonpast,-ssg1]
+<s_sg1_o_3>:>ᤧ[nonpast,-ssg1]
 <os_sg12>:>{a}{A}{ng}[past]
-<s_sg1><o_3>:>ᤐᤠ{ng}[past,-ssg1]
+<s_sg1_o_3>:>ᤐᤠ{ng}[past,-ssg1]
 
-# verb form: ᤖᤠ᤺ᤰᤛᤧ
 # correct this:
 <s_pl3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ
 
