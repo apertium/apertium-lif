@@ -71,8 +71,8 @@ PATTERN Nouns
 (Adjectives [ +:> ] )? PossessivePrn?(1) Noun-Stems [<n>:] Plurals PossessivePrn?(2) Cases ( [ +:> ] CaseMarker)?
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23]]
-( (Adjectives [ +:> ] )? SubjPersonNumber(1)? SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23]]  # Dir/LR
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
+( (Adjectives [ +:> ] )? SubjPersonNumber(1)? SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 
 LEXICON PossessivePrn(2)
 :ᤀᤠ>             <px1sg>:
@@ -130,17 +130,17 @@ LEXICON Tense
 <past>:>{E}[past]
 
 LEXICON ObjSlot
-<o_3>:>{a}{u}
-<os_pl>:>{a}{i}
-<os_du>:>ᤛᤡ # Dir/LR
-<os_du>:>ᤇᤡ
-<os_sg>:
+<o_3>:>{a}{u}[noport]
+<os_pl>:>{a}{i}[noport]
+<os_du>:>ᤛᤡ[noport]     # Dir/LR
+<os_du>:>ᤇᤡ[noport]
+<os_sg>:[noport]
 
-<os_sg12>:>ᤧ[nonpast]
-<o_3>:>ᤧ[nonpast,ssg1]
-<os_sg12>:>{a}{A}{ng}[past]
-<o_3>:>ᤐᤠ{ng}[past,ssg1]
-<port_o_3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ
+<os_sg12>:>ᤧ[nonpast,noport]
+<o_3>:>ᤧ[nonpast,ssg1,noport]
+<os_sg12>:>{a}{A}{ng}[past,noport]
+<o_3>:>ᤐᤠ{ng}[past,ssg1,noport]
+<port_o_3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ[bigport]
 
 LEXICON NegationSuff
 <neg>:>{N}
@@ -149,9 +149,9 @@ LEXICON Aspect
 <prog>:>ᤖ
 
 LEXICON ObjNumber
-<o_nonsg>:>ᤛᤡ
-<o_nonsg>:      # Dir/LR
-<o_sg>:
+<o_nonsg>:>ᤛᤡ[noport]
+<o_nonsg>:[bigport]      # Dir/LR
+<o_sg>:[noport]
 
 LEXICON NegationSuff2
 <neg>:>{N}
