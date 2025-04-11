@@ -26,9 +26,13 @@ LIST GEN = gen;
 LIST BIGPORT = ​o_3;        # added a whitespace before o_3 to make it uniform but unique
 LIST INCL = incl;
 LIST O2 = o_2;
-LIST ELSE = prn adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
+LIST ELSEN = prn adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
+LIST ELSEPR = n adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
 LIST TR = "ᤋᤖ";
 LIST NONONE = "ᤏᤧᤜᤡ" "ᤛᤢᤶᤛᤡ" "ᤗᤡᤛᤡ" "ᤏᤠᤛᤡ" "ᤋᤢᤰᤛᤡ" "ᤏᤢᤛᤡ" "ᤕᤧᤜᤡ" "ᤑᤠᤱᤛᤡ" "ᤒᤥᤱ";
+LIST PNPL1IN = (p1 sg) (p1 du) (p1 pl excl) (p2 sg) (p2 du) (p2 pl) (p3 sg) (p3 du) (p3 pl);
+LIST PNDU1IN = (p1 sg) (p1 du excl) (p1 pl) (p2 sg) (p2 du) (p2 pl) (p3 sg) (p3 du) (p3 pl);
+LIST PNPL2IN = (p1 sg) (p1 du) (p1 pl) (p2 sg) (p2 du) (p3 sg) (p3 du) (p3 pl);
 
 SECTION
 # If there is a noun to the right, I am a adj unless genitive.
@@ -80,23 +84,67 @@ SELECT (s_pl2) IF
 SELECT SUB:-1 (s_pl2) IF
     (-1* (p2 pl)) ;
 
+REMOVE (s_pl2) IF
+    (-1* ELSEPR) ;
+
+REMOVE (s_pl2) IF
+    (-1* PNPL2IN) ;
+
+REMOVE SUB:-1 (s_pl2) IF
+    (-1* ELSEPR) ;
+
+REMOVE SUB:-1 (s_pl2) IF
+    (-1* PNPL2IN) ;
+
 SELECT (s_du1) IF
     (-1* (p1 du)) ;
 
 SELECT SUB:-1 (s_du1) IF
     (-1* (p1 du)) ;
 
-SELECT (s_pl1) IF
+REMOVE (s_du1 incl) IF
+    (-1* ELSEPR) ;
+
+REMOVE (s_du1 incl) IF
+    (-1* PNDU1IN) ;
+
+REMOVE SUB:-1 (s_du1 incl) IF
+    (-1* ELSEPR) ;
+
+REMOVE SUB:-1 (s_du1 incl) IF
+    (-1* PNDU1IN) ;
+
+SELECT (s_pl1 incl) IF
     (-1* (p1 pl)) ;
 
-SELECT SUB:-1 (s_pl1) IF
+SELECT SUB:-1 (s_pl1 incl) IF
     (-1* (p1 pl)) ;
 
-REMOVE SUB:0 GEN IF
-    (1/-1 ELSE) ;
+REMOVE (s_pl1 incl) IF
+    (-1* ELSEPR) ;
+
+REMOVE (s_pl1 incl) IF
+    (-1* PNPL1IN) ;
+
+REMOVE SUB:-1 (s_pl1 incl) IF
+    (-1* ELSEPR) ;
+
+REMOVE SUB:-1 (s_pl1 incl) IF
+    (-1* PNPL1IN) ;
+
+SELECT (s_sg3) IF
+    (-1* ELSEPR)
+    (-1* (n sg)) ;
+
+SELECT SUB:-1 (s_sg3) IF
+    (-1* ELSEPR)
+    (-1* (n sg)) ;
 
 REMOVE SUB:0 GEN IF
-    (1 ELSE) ;
+    (1/-1 ELSEN) ;
+
+REMOVE SUB:0 GEN IF
+    (1 ELSEN) ;
 
 SELECT (cnjcoo) IF
     (0 TR) ;

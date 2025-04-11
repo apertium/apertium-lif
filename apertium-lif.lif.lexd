@@ -44,9 +44,10 @@ Conjoints
 Prepositions [ <pr>: ]
 Complementizer [ <comp>: ]
 Concession [ <concess>: ]
+Interjection
 
 PATTERN Interjection
-Ij-Stem [ <ij>: ] Question-Particles?
+Ij-Stem [ <ij>: ] ( [ +:> ]Question-Particles)?
 
 PATTERN Conjoints
 (Pronouns [ +:> ] )? Conjoint-Stem [ <cj>: ]
@@ -76,7 +77,7 @@ PATTERN Nouns
 
 PATTERN Verbs
 ( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
-( (Adjectives [ +:> ] )? SubjPersonNumber(1)? SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 
 LEXICON PossessivePrn(2)
 :ᤀᤠ>               <px1sg>:
@@ -99,15 +100,19 @@ LEXICON SubjPersonNumber(8)
 :ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                 # Dir/LR
 :ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
 :ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
+:[ssg23,noport]            <s_du1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                 # Dir/LR
+:[ssg23,noport]            <s_du1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
 :ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 :ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 :ᤀᤠ>[ssg23,noport,bigport]  <s_pl1>:[ssg23,noport,bigport]  <excl>:>[ssg23,noport,bigport]  :ᤔ{E}>[ssg23,noport,bigport]  :[ssg23,noport,bigport]  :[ssg23,noport,bigport]     :>{m}[ssg23,noport,bigport] :>{m}[ssg23,noport,bigport]      # Dir/LR
 :ᤀᤠ>[past,ssg23,noport]     <s_pl1>:[past,ssg23,noport]     <excl>:>ᤃᤧ[past,ssg23,noport]    :ᤔ{E}>[past,ssg23,noport]     :[past,ssg23,noport]     :[past,ssg23,noport]        :>ᤔᤏᤠ[past,ssg23,noport]     :[past,ssg23,noport]
 :ᤀᤠ>[past,ssg23,bigport]    <s_pl1>:[past,ssg23,bigport]    <excl>:>[past,ssg23,bigport]    :ᤔ{E}>[past,ssg23,bigport]    :[past,ssg23,bigport]    :[past,ssg23,bigport]       :>ᤔᤏᤠ[past,ssg23,bigport]    :[past,ssg23,bigport]            # Dir/LR
+:[ssg23,noport]            <s_pl1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 :{K}{E}>[ssg23,noport]     <s_sg2>:[ssg23,noport]                :[ssg23,noport]           :[ssg23,noport]                :[ssg23,noport]         :[ssg23,noport]             :[ssg23,noport]              :[ssg23,noport]
 :{K}{E}>[ssg23,noport]     <s_du2>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                  # Dir/LR
 :{K}{E}>[ssg23,noport]     <s_du2>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
 :{K}{E}>[ssg23,noport]     <s_pl2>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
+:[ssg23,noport]            <s_pl2>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 :[ssg23,noport]            <s_sg3>:[ssg23,noport]                :[ssg23,noport]           :[ssg23,noport]               :[ssg23,noport]          :[ssg23,noport]             :[ssg23,noport]             :[ssg23,noport]
 :[ssg23,noport]            <s_du3>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                  # Dir/LR
 :[ssg23,noport]            <s_du3>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
@@ -244,7 +249,7 @@ LEXICON Concession
 ᤛᤠᤱ:ᤛᤠ{ng}
 
 LEXICON Question-Particles
-ᤀᤡ<qst>:ᤀᤡ
+ᤀᤡ<qst>:{a}{i}
 
 LEXICON Determiners
 ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧ{k}
