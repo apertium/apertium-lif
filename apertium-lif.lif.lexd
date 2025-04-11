@@ -35,7 +35,6 @@ Nouns
 Verbs
 Adjectives
 Determiners-Words
-Interjection [ <ij>: ]
 Conjunctions [ <cnjcoo>: ]
 Adverbs
 Question-Particles
@@ -43,6 +42,11 @@ CaseMarker
 Pronoun-Words
 Conjoints
 Prepositions [ <pr>: ]
+Complementizer [ <comp>: ]
+Concession [ <concess>: ]
+
+PATTERN Interjection
+Ij-Stem [ <ij>: ] Question-Particles?
 
 PATTERN Conjoints
 (Pronouns [ +:> ] )? Conjoint-Stem [ <cj>: ]
@@ -61,7 +65,7 @@ LEXICON Adj-Num
 <du>:>ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 PATTERN Determiners-Words
-(Adjectives [ +:> ] )? Determiners [ <det>: ] Cases?
+(Adjectives [ +:> ] )? Determiners [ <det>: ]
 
 PATTERN Pronoun-Words
 Pronouns Adverbs?
@@ -71,20 +75,20 @@ PATTERN Nouns
 (Adjectives [ +:> ] )? PossessivePrn?(1) Noun-Stems [<n>:] Plurals PossessivePrn?(2) Cases ( [ +:> ] CaseMarker)?
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
-( (Adjectives [ +:> ] )? SubjPersonNumber(1)? SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
+( (Adjectives [ +:> ] )? SubjPersonNumber(1)? SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 
 LEXICON PossessivePrn(2)
-:ᤀᤠ>             <px1sg>:
+:ᤀᤠ>               <px1sg>:
 :ᤀᤠᤴᤆᤡ>         <px1duincl>:
-:ᤀᤠᤴᤆᤡᤅᤠ>        <px1duexcl>:
-:ᤀᤠᤏᤡ>         <px1plincl>:
+:ᤀᤠᤴᤆᤡᤅᤠ>       <px1duexcl>:
+:ᤀᤠᤏᤡ>          <px1plincl>:
 :ᤀᤠᤏᤡᤅᤠ>        <px1plexcl>:
 
-:ᤁᤠ>             <px2sg>:
+:ᤁᤠ>              <px2sg>:
 :ᤂᤧᤴᤆᤡ>            <px2du>:
-:ᤂᤧᤏᤡ>            <px2pl>:
-:ᤁᤢ>             <px3sg>:
+:ᤂᤧᤏᤡ>             <px2pl>:
+:ᤁᤢ>              <px3sg>:
 :ᤂᤢᤴᤆᤡ>            <px3du>:
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
 
@@ -110,7 +114,7 @@ LEXICON SubjPersonNumber(8)
 :[ssg23,noport]            <s_pl3>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 
 LEXICON Negation(2)
-:ᤔᤧ>       <neg>: # Dir/LR
+:ᤔᤧ>       <neg>:       # Dir/LR
 :ᤔᤧ{N}>    <neg>:
 :ᤏ>       <neg>:
 
@@ -119,7 +123,7 @@ LEXICON GerundMarker
 
 LEXICON Reflexivity&Port
 <refl>:>ᤛᤡ{ng}
-<refl>:>ᤏᤧ # Dir/LR
+<refl>:>ᤏᤧ              # Dir/LR
 <o_2>:>ᤏᤧ
 
 LEXICON Tense
@@ -205,6 +209,10 @@ LEXICON DemPrn
 LEXICON Prepositions
 ᤌᤥ:ᤌᤥ
 ᤏᤠ:ᤏᤠ
+ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ:ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ
+
+LEXICON Complementizer
+ᤑᤧᤸᤗᤧ:ᤑᤧᤸᤗᤧ
 
 LEXICON Conjoint-Stem
 ᤀᤠᤱ:ᤀᤠ{ng}
@@ -218,18 +226,22 @@ LEXICON Adjective-Stem
 
 LEXICON CaseMarker
 # lle Cases
-ᤀᤡᤸᤗᤧ<sub>:{i}{l}ᤗᤧ
-ᤀᤡᤸᤗᤧ<gen>:{i}{l}ᤗᤧ
-ᤀᤡᤸᤗᤧ<erg>:{i}{l}ᤗᤧ
-ᤀᤧᤸᤗᤧ<erg>:{E}{l}ᤗᤧ
-ᤀᤧᤸᤗᤧ<sub>:{E}{l}ᤗᤧ
-ᤀᤧᤸᤗᤧ<gen>:{E}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<sub>:{a}{i}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<gen>:{a}{i}{l}ᤗᤧ
+ᤀᤡᤸᤗᤧ<erg>:{a}{i}{l}ᤗᤧ
+ᤀᤧᤸᤗᤧ<erg>:{a}{E}{l}ᤗᤧ
+ᤀᤧᤸᤗᤧ<sub>:{a}{E}{l}ᤗᤧ
+ᤀᤧᤸᤗᤧ<gen>:{a}{E}{l}ᤗᤧ
 
 # others
 ᤒᤠ<nom>:ᤒᤠ
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
 ᤛᤧᤴ<nom>:ᤛᤧ{N}
 ᤖᤧ<erg>:ᤖᤧ
+ᤗᤧ<erg>:ᤗᤧ        # Dir/LR
+
+LEXICON Concession
+ᤛᤠᤱ:ᤛᤠ{ng}
 
 LEXICON Question-Particles
 ᤀᤡ<qst>:ᤀᤡ
@@ -241,9 +253,9 @@ LEXICON Determiners
 ᤂ:ᤂ
 ᤀᤖᤢ:ᤀᤖᤢ
 
-LEXICON Interjection
-# hello
+LEXICON Ij-Stem
 ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠᤖᤥ
+ᤔᤧ᤺ᤴ:ᤔᤧ᤺{N}
 
 LEXICON Conjunctions
 ᤋᤖ:ᤋᤖ
@@ -264,6 +276,7 @@ LEXICON AdverbStem
 ᤀᤄᤡ:ᤀᤄᤡ
 ᤂᤶᤓᤧᤸᤗᤧ:ᤂᤶᤓᤧᤸᤗᤧ
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
+ᤏᤢᤖᤡᤰ:ᤏᤢᤖᤡ{k}
 
 LEXICON Verb-Stems
 ᤀᤡᤶᤔᤠ<v>:ᤀᤡ{P}{S}
@@ -284,12 +297,15 @@ LEXICON Verb-Stems
 ᤆᤠᤔᤠ<v>:ᤆ{ao}
 ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{S}
 ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{S} # Dir/LR
-ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pg}{R}
+ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pgt}{R}
 ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R} # Dir/LR
 ᤔᤠ᤺ᤔᤠ<v>:ᤔᤠ{do}{S}
 ᤗ᤺ᤵᤔᤠ<v>:ᤗ᤺{tp}{tm}
 ᤗᤐ᤻ᤔᤠ<v>:ᤗ{t}{km}{tm}
 ᤗ᤺ᤶᤔᤠ<v>:ᤗ{do}{NM}{Dnull}
+ᤀᤢ᤺ᤵᤔᤠ<v>:ᤀᤢ{do}{tp}{tm}
+ᤀᤢᤐ᤻ᤔᤠ<v>:ᤀᤢᤐ{km}{tm}
+ᤑᤧ᤹ᤔᤠ<v>:ᤑᤧ{dg}{N}
 
 LEXICON Noun-Stems
 ᤐᤢ:ᤐᤢ

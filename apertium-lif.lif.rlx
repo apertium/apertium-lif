@@ -74,6 +74,24 @@ REMOVE SUB:-2 PRN IF
 REMOVE S3 IF
     (-1* (p2) OR (p1)) ;
 
+SELECT (s_pl2) IF
+    (-1* (p2 pl)) ;
+
+SELECT SUB:-1 (s_pl2) IF
+    (-1* (p2 pl)) ;
+
+SELECT (s_du1) IF
+    (-1* (p1 du)) ;
+
+SELECT SUB:-1 (s_du1) IF
+    (-1* (p1 du)) ;
+
+SELECT (s_pl1) IF
+    (-1* (p1 pl)) ;
+
+SELECT SUB:-1 (s_pl1) IF
+    (-1* (p1 pl)) ;
+
 REMOVE SUB:0 GEN IF
     (1/-1 ELSE) ;
 
