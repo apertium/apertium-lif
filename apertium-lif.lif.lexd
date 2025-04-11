@@ -89,28 +89,25 @@ LEXICON PossessivePrn(2)
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
 
 LEXICON SubjPersonNumber(8)
-:ᤀᤠ>[ssg1]          <s_sg1>:[ssg1]         <incl>:[ssg1]           :[ssg1]               :[ssg1]          :>{ng}[ssg1]        :[ssg1]            :>{ng}[ssg1]
-:ᤀᤠ>[ssg1]          <s_sg1>:[ssg1]         <excl>:>ᤃᤧ[ssg1]         :[ssg1]               :[ssg1]          :>{ng}[ssg1]        :[ssg1]            :>{ng}[ssg1]
-:ᤀᤠ>[ssg1]          <s_sg1>:[ssg1]         <excl>:>[ssg1]          :[ssg1]               :[ssg1]          :>{ng}[ssg1]        :[ssg1]            :>{ng}[ssg1]         # Dir/LR
-:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <incl>:[ssg23]          :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
-:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>ᤃᤧ[ssg23]        :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
-:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>[ssg23]         :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
-:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <incl>:[ssg23]          :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]
-:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>ᤃᤧ[ssg23]        :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]
-:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>[ssg23]         :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
-:ᤀᤠ>[ssg23]         <s_pl1>:[ssg23]        <incl>:[ssg23]          :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]
-:ᤀᤠ>[ssg23]         <s_pl1>:[ssg23]        <excl>:>ᤃᤧ[ssg23]        :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]
-:ᤀᤠ>[ssg23]         <s_pl1>:[ssg23]        <excl>:>[ssg23]         :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]         # Dir/LR
-:ᤀᤠ>[past,ssg23]    <s_pl1>:[past,ssg23]   <excl>:>ᤃᤧ[past,ssg23]   :ᤔ{E}>[past,ssg23]    :[past,ssg23]    :[past,ssg23]       :>ᤔᤏᤠ[past,ssg23]   :[past,ssg23]
-:ᤀᤠ>[past,ssg23]    <s_pl1>:[past,ssg23]   <excl>:>[past,ssg23]    :ᤔ{E}>[past,ssg23]    :[past,ssg23]    :[past,ssg23]       :>ᤔᤏᤠ[past,ssg23]   :[past,ssg23]        # Dir/LR
-:{K}{E}>[ssg23]    <s_sg2>:[ssg23]              :[ssg23]          :[ssg23]              :[ssg23]         :[ssg23]            :[ssg23]           :[ssg23]
-:{K}{E}>[ssg23]    <s_du2>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
-:{K}{E}>[ssg23]    <s_du2>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]
-:{K}{E}>[ssg23]    <s_pl2>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]
-:[ssg23]           <s_sg3>:[ssg23]              :[ssg23]          :[ssg23]              :[ssg23]         :[ssg23]            :[ssg23]           :[ssg23]
-:[ssg23]           <s_du3>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
-:[ssg23]           <s_du3>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]
-:[ssg23]           <s_pl3>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]
+:ᤀᤠ>[ssg1,noport]           <s_sg1>:[ssg1,noport]           <incl>:[ssg1,noport]            :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
+:ᤀᤠ>[ssg1,noport]           <s_sg1>:[ssg1,noport]           <excl>:>ᤃᤧ[ssg1,noport]          :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
+:ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                 # Dir/LR
+:ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                 # Dir/LR
+:ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
+:ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
+:ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
+:ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
+:ᤀᤠ>[ssg23,noport,bigport]  <s_pl1>:[ssg23,noport,bigport]  <excl>:>[ssg23,noport,bigport]  :ᤔ{E}>[ssg23,noport,bigport]  :[ssg23,noport,bigport]  :[ssg23,noport,bigport]     :>{m}[ssg23,noport,bigport] :>{m}[ssg23,noport,bigport]      # Dir/LR
+:ᤀᤠ>[past,ssg23,noport]     <s_pl1>:[past,ssg23,noport]     <excl>:>ᤃᤧ[past,ssg23,noport]    :ᤔ{E}>[past,ssg23,noport]     :[past,ssg23,noport]     :[past,ssg23,noport]        :>ᤔᤏᤠ[past,ssg23,noport]     :[past,ssg23,noport]
+:ᤀᤠ>[past,ssg23,bigport]    <s_pl1>:[past,ssg23,bigport]    <excl>:>[past,ssg23,bigport]    :ᤔ{E}>[past,ssg23,bigport]    :[past,ssg23,bigport]    :[past,ssg23,bigport]       :>ᤔᤏᤠ[past,ssg23,bigport]    :[past,ssg23,bigport]            # Dir/LR
+:{K}{E}>[ssg23,noport]     <s_sg2>:[ssg23,noport]                :[ssg23,noport]           :[ssg23,noport]                :[ssg23,noport]         :[ssg23,noport]             :[ssg23,noport]              :[ssg23,noport]
+:{K}{E}>[ssg23,noport]     <s_du2>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                  # Dir/LR
+:{K}{E}>[ssg23,noport]     <s_du2>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
+:{K}{E}>[ssg23,noport]     <s_pl2>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
+:[ssg23,noport]            <s_sg3>:[ssg23,noport]                :[ssg23,noport]           :[ssg23,noport]               :[ssg23,noport]          :[ssg23,noport]             :[ssg23,noport]             :[ssg23,noport]
+:[ssg23,noport]            <s_du3>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                  # Dir/LR
+:[ssg23,noport]            <s_du3>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
+:[ssg23,noport]            <s_pl3>:[ssg23,noport]                :[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 
 LEXICON Negation(2)
 :ᤔᤧ>       <neg>: # Dir/LR
@@ -285,8 +282,8 @@ LEXICON Verb-Stems
 ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{K}
 ᤆᤥᤁ᤻ᤔᤠ<vbdo>:{ch}{K}{km} # Dir/LR
 ᤆᤠᤔᤠ<v>:ᤆ{ao}
-ᤐᤥ᤺ᤱᤔᤠ<v>:ᤐᤥ{do}{NGK}{S}
-ᤐᤥᤅ᤻ᤔᤠ<v>:ᤐᤥᤅ{km}{S} # Dir/LR
+ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{S}
+ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{S} # Dir/LR
 ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pg}{R}
 ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R} # Dir/LR
 ᤔᤠ᤺ᤔᤠ<v>:ᤔᤠ{do}{S}
