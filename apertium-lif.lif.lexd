@@ -140,7 +140,7 @@ LEXICON ObjSlot
 <o_3>:>ᤧ[nonpast,ssg1,noport]
 <os_sg12>:>{a}{A}{ng}[past,noport]
 <o_3>:>ᤐᤠ{ng}[past,ssg1,noport]
-<port_o_3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ[bigport]
+<​o_3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ[bigport]
 
 LEXICON NegationSuff
 <neg>:>{N}
