@@ -8,21 +8,28 @@ LIST NOUN = (n voc) (n com) (n abl) (n erg) (n nom);
 LIST ADJ = adj;
 LIST NGEN = (n gen);
 LIST VERB = v;
-LIST PORT = (s_1 o_2);
+LIST PORT = o_2;
 LIST CASES = nom gen voc com abl erg;
 LIST SG = (o_sg s_sg);
-LIST OPL = os_pl os_du;
-LIST OSG = o_sg os_sg12 os_sg ;
+LIST PL = os_pl os_du;
+LIST OPL = (s_sg1 os_pl) (s_sg2 os_pl) (s_sg3 os_pl) (s_du1 os_pl) (s_du2 os_pl) (s_du3 os_pl);
+LIST ODU = (s_sg1 os_du) (s_sg2 os_du) (s_sg3 os_du) (s_pl1 os_du) (s_pl2 os_du) (s_pl3 os_du);
+LIST OSG = o_sg;
 LIST ADV = adv;
 LIST S3 = s_sg3 s_du3 s_pl3;
 LIST S2S3 = s_sg3 s_du3 s_pl3 s_sg2 s_du2 s_pl2;
-LIST SSG1 = s_sg1_o_3;
+LIST S1NONSG = s_sg1 s_du1;
+LIST BPL = (s_du1 o_nonsg) (s_du2 o_nonsg) (s_du3 o_nonsg) (s_pl1 o_nonsg) (s_pl2 o_nonsg) (s_pl3 o_nonsg);
 LIST OSSG12 = os_sg12;
 LIST PRN = prn;
 LIST GEN = gen;
+LIST BIGPORT = port_o_3;
+LIST INCL = incl;
+LIST O2 = o_2;
 LIST ELSE = prn adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
 LIST TR = "ᤋᤖ";
 LIST NONONE = "ᤏᤧᤜᤡ" "ᤛᤢᤶᤛᤡ" "ᤗᤡᤛᤡ" "ᤏᤠᤛᤡ" "ᤋᤢᤰᤛᤡ" "ᤏᤢᤛᤡ" "ᤕᤧᤜᤡ" "ᤑᤠᤱᤛᤡ" "ᤒᤥᤱ";
+
 SECTION
 # If there is a noun to the right, I am a adj unless genitive.
 SELECT ADJ IF 
@@ -43,23 +50,23 @@ SELECT NOUN IF
 REMOVE S2S3 IF
     (0 PORT) ;
 
-REMOVE SG IF
-    (0 OPL) ;
+REMOVE PL IF
+    (0 SG) ;
 
-REMOVE SUB:-1 SG IF
-    (0/-1 OPL) ;
+REMOVE SUB:-1 PL IF
+    (0/-1 SG) ;
 
-REMOVE OSG IF
-    (0 OPL) ;
+REMOVE OPL IF
+    (0 OSG) ;
 
-REMOVE SUB:-1 OSG IF
-    (0/-1 OPL) ;
+REMOVE SUB:-1 OPL IF
+    (0/-1 OSG) ;
 
-# REMOVE SSG1 IF
-#    (0 S2S3) ;
+REMOVE ODU IF
+    (0 OSG) ;
 
-REMOVE OSSG12 IF
-    (0 S3) ;
+REMOVE SUB:-1 ODU IF
+    (0/-1 OSG) ;
 
 REMOVE SUB:-2 PRN IF
     (0/-1 VERB) ;
@@ -79,6 +86,26 @@ SELECT (cnjcoo) IF
 REMOVE (o_sg) IF
     (-1 NONONE) ;
 
+REMOVE BPL IF
+    (0 OSSG12) ;
+
+REMOVE PORT IF
+    (0 (o_3)) ;
+
+REMOVE INCL IF
+    (0 BIGPORT) ;
+
+REMOVE S2S3 IF
+    (0 BIGPORT) ;
+
+REMOVE S1NONSG IF
+    (0 BIGPORT) ;
+
+REMOVE BIGPORT IF 
+    (0 O2) ;
+
+REMOVE OSG IF
+    (0 BIGPORT) ;
 # Resources:
 # http://visl.sdu.dk/cg3.html
 # http://groups.google.com/group/constraint-grammar

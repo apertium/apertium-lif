@@ -71,8 +71,8 @@ PATTERN Nouns
 (Adjectives [ +:> ] )? PossessivePrn?(1) Noun-Stems [<n>:] Plurals PossessivePrn?(2) Cases ( [ +:> ] CaseMarker)?
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber? SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23]]
-( (Adjectives [ +:> ] )? SubjPersonNumber(1)? SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber? SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23]]  # Dir/LR
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23]]
+( (Adjectives [ +:> ] )? SubjPersonNumber(1)? SubjPersonNumber(4)? Negation?(1) Verb-Stems GerundMarker? Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? )[^[past,nonpast],^[ssg1,ssg23]]  # Dir/LR
 
 LEXICON PossessivePrn(2)
 :ᤀᤠ>             <px1sg>:
@@ -91,13 +91,18 @@ LEXICON PossessivePrn(2)
 LEXICON SubjPersonNumber(8)
 :ᤀᤠ>[ssg1]          <s_sg1>:[ssg1]         <incl>:[ssg1]           :[ssg1]               :[ssg1]          :>{ng}[ssg1]        :[ssg1]            :>{ng}[ssg1]
 :ᤀᤠ>[ssg1]          <s_sg1>:[ssg1]         <excl>:>ᤃᤧ[ssg1]         :[ssg1]               :[ssg1]          :>{ng}[ssg1]        :[ssg1]            :>{ng}[ssg1]
+:ᤀᤠ>[ssg1]          <s_sg1>:[ssg1]         <excl>:>[ssg1]          :[ssg1]               :[ssg1]          :>{ng}[ssg1]        :[ssg1]            :>{ng}[ssg1]         # Dir/LR
 :ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <incl>:[ssg23]          :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
 :ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>ᤃᤧ[ssg23]        :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
+:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>[ssg23]         :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
 :ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <incl>:[ssg23]          :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]
 :ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>ᤃᤧ[ssg23]        :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]
+:ᤀᤠ>[ssg23]         <s_du1>:[ssg23]        <excl>:>[ssg23]         :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
 :ᤀᤠ>[ssg23]         <s_pl1>:[ssg23]        <incl>:[ssg23]          :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]
 :ᤀᤠ>[ssg23]         <s_pl1>:[ssg23]        <excl>:>ᤃᤧ[ssg23]        :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]
+:ᤀᤠ>[ssg23]         <s_pl1>:[ssg23]        <excl>:>[ssg23]         :ᤔ{E}>[ssg23]         :[ssg23]         :[ssg23]            :>{m}[ssg23]       :>{m}[ssg23]         # Dir/LR
 :ᤀᤠ>[past,ssg23]    <s_pl1>:[past,ssg23]   <excl>:>ᤃᤧ[past,ssg23]   :ᤔ{E}>[past,ssg23]    :[past,ssg23]    :[past,ssg23]       :>ᤔᤏᤠ[past,ssg23]   :[past,ssg23]
+:ᤀᤠ>[past,ssg23]    <s_pl1>:[past,ssg23]   <excl>:>[past,ssg23]    :ᤔ{E}>[past,ssg23]    :[past,ssg23]    :[past,ssg23]       :>ᤔᤏᤠ[past,ssg23]   :[past,ssg23]        # Dir/LR
 :{K}{E}>[ssg23]    <s_sg2>:[ssg23]              :[ssg23]          :[ssg23]              :[ssg23]         :[ssg23]            :[ssg23]           :[ssg23]
 :{K}{E}>[ssg23]    <s_du2>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :>ᤛ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]             # Dir/LR
 :{K}{E}>[ssg23]    <s_du2>:[ssg23]              :[ssg23]          :ᤔ{E}>[ssg23]         :>ᤇ[ssg23]       :[ssg23]            :>ᤇᤡ[ssg23]         :[ssg23]
@@ -118,7 +123,7 @@ LEXICON GerundMarker
 LEXICON Reflexivity&Port
 <refl>:>ᤛᤡ{ng}
 <refl>:>ᤏᤧ # Dir/LR
-<s_1><o_2>:>ᤏᤧ
+<o_2>:>ᤏᤧ
 
 LEXICON Tense
 <nonpast>:[nonpast]
@@ -132,12 +137,10 @@ LEXICON ObjSlot
 <os_sg>:
 
 <os_sg12>:>ᤧ[nonpast]
-<s_sg1_o_3>:>ᤧ[nonpast,ssg1]
+<o_3>:>ᤧ[nonpast,ssg1]
 <os_sg12>:>{a}{A}{ng}[past]
-<s_sg1_o_3>:>ᤐᤠ{ng}[past,ssg1]
-
-# correct this:
-<s_pl3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ[ssg23]
+<o_3>:>ᤐᤠ{ng}[past,ssg1]
+<port_o_3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ
 
 LEXICON NegationSuff
 <neg>:>{N}
@@ -147,6 +150,7 @@ LEXICON Aspect
 
 LEXICON ObjNumber
 <o_nonsg>:>ᤛᤡ
+<o_nonsg>:      # Dir/LR
 <o_sg>:
 
 LEXICON NegationSuff2
