@@ -140,6 +140,10 @@ SELECT SUB:-1 (s_sg3) IF
     (-1* ELSEPR)
     (-1* (n sg)) ;
 
+SELECT SUB:-1 (s_sg3) IF
+    (-1/* ELSEPR)
+    (-1/* (n sg)) ;
+
 REMOVE SUB:0 GEN IF
     (1/-1 ELSEN) ;
 

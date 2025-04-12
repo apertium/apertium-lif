@@ -104,7 +104,8 @@ LEXICON SubjPersonNumber(8)
 :[ssg23,noport]            <s_du1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤇ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]
 :ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 :ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
-:ᤀᤠ>[ssg23,noport,bigport]  <s_pl1>:[ssg23,noport,bigport]  <excl>:>[ssg23,noport,bigport]  :ᤔ{E}>[ssg23,noport,bigport]  :[ssg23,noport,bigport]  :[ssg23,noport,bigport]     :>{m}[ssg23,noport,bigport] :>{m}[ssg23,noport,bigport]      # Dir/LR
+:[ssg23,noport]            <s_pl1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
+:ᤀᤠ>[ssg23,bigport]         <s_pl1>:[ssg23,bigport]         <excl>:>[ssg23,bigport]         :ᤔ{E}>[ssg23,bigport]         :[ssg23,bigport]         :[ssg23,bigport]            :>{m}[ssg23,bigport]        :>{m}[ssg23,bigport]             # Dir/LR
 :ᤀᤠ>[past,ssg23,noport]     <s_pl1>:[past,ssg23,noport]     <excl>:>ᤃᤧ[past,ssg23,noport]    :ᤔ{E}>[past,ssg23,noport]     :[past,ssg23,noport]     :[past,ssg23,noport]        :>ᤔᤏᤠ[past,ssg23,noport]     :[past,ssg23,noport]
 :ᤀᤠ>[past,ssg23,bigport]    <s_pl1>:[past,ssg23,bigport]    <excl>:>[past,ssg23,bigport]    :ᤔ{E}>[past,ssg23,bigport]    :[past,ssg23,bigport]    :[past,ssg23,bigport]       :>ᤔᤏᤠ[past,ssg23,bigport]    :[past,ssg23,bigport]            # Dir/LR
 :[ssg23,noport]            <s_pl1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
@@ -137,16 +138,20 @@ LEXICON Tense
 
 LEXICON ObjSlot
 <o_3>:>{a}{u}[noport]
+<o_3>:>{u}[noport]       # Dir/LR
 <os_pl>:>{a}{i}[noport]
-<os_du>:>ᤛᤡ[noport]     # Dir/LR
+<os_pl>:>{i}[noport]     # Dir/LR
+<os_du>:>ᤛᤡ[noport]       # Dir/LR
 <os_du>:>ᤇᤡ[noport]
 <os_sg>:[noport]
 
 <os_sg12>:>ᤧ[nonpast,noport]
 <o_3>:>ᤧ[nonpast,ssg1,noport]
 <os_sg12>:>{a}{A}{ng}[past,noport]
+<os_sg12>:>{A}{ng}[past,noport]       # Dir/LR
 <o_3>:>ᤐᤠ{ng}[past,ssg1,noport]
 <​o_3>:>{a}{u}{m}ᤛᤡᤶᤒᤧ[bigport]
+<​o_3>:>{u}{m}ᤛᤡᤶᤒᤧ[bigport]            # Dir/LR
 
 LEXICON NegationSuff
 <neg>:>{N}
@@ -238,6 +243,14 @@ LEXICON CaseMarker
 ᤀᤧᤸᤗᤧ<sub>:{a}{E}{l}ᤗᤧ
 ᤀᤧᤸᤗᤧ<gen>:{a}{E}{l}ᤗᤧ
 
+# lle without a
+ᤀᤡᤸᤗᤧ<sub>:{i}{l}ᤗᤧ      # Dir/LR
+ᤀᤡᤸᤗᤧ<gen>:{i}{l}ᤗᤧ      # Dir/LR
+ᤀᤡᤸᤗᤧ<erg>:{i}{l}ᤗᤧ      # Dir/LR
+ᤀᤧᤸᤗᤧ<erg>:{E}{l}ᤗᤧ      # Dir/LR
+ᤀᤧᤸᤗᤧ<sub>:{E}{l}ᤗᤧ      # Dir/LR
+ᤀᤧᤸᤗᤧ<gen>:{E}{l}ᤗᤧ      # Dir/LR
+
 # others
 ᤒᤠ<nom>:ᤒᤠ
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
@@ -250,6 +263,7 @@ LEXICON Concession
 
 LEXICON Question-Particles
 ᤀᤡ<qst>:{a}{i}
+ᤀᤡ<qst>:{i}      # Dir/LR
 
 LEXICON Determiners
 ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧ{k}
@@ -267,17 +281,18 @@ LEXICON Conjunctions
 
 LEXICON AdverbStem
 ᤂᤶᤓ:ᤂᤶᤓ
-ᤂᤶᤓᤧ:ᤂᤶᤓᤧ # Dir/LR
+ᤂᤶᤓᤧ:ᤂᤶᤓᤧ           # Dir/LR
 ᤀᤧᤶᤓᤧᤸᤗᤧ:ᤀᤧᤶᤓᤧᤸᤗᤧ
 ᤕᤠᤶᤔᤢ:ᤕᤠᤶᤔᤢ
 ᤖᤳ:ᤖ{t}
 ᤀᤠᤱ:{a}{A}{ng}
+ᤀᤠᤱ:{A}{ng}         # Dir/LR
 ᤀᤠᤓᤣᤍᤠᤱᤒᤠ:ᤀᤠᤓᤣᤍᤠᤱᤒᤠ
 ᤀᤠᤸᤗᤠ:ᤀᤠᤸᤗᤠ
 ᤔᤧ᤺ᤴᤏ:ᤔᤧ᤺ᤴᤏ
 ᤔᤧᤏ᤻ᤏ:ᤔᤧᤏ᤻ᤏ # Dir/LR
 ᤌᤧᤕᤠ᤺ᤴᤍᤰ:ᤌᤧᤕᤠ᤺ᤴᤍ{k}
-ᤌᤧᤕᤠᤏ᤻ᤍᤰ:ᤌᤧᤕᤠᤏ᤻ᤍ{k} # Dir/LR
+ᤌᤧᤕᤠᤏ᤻ᤍᤰ:ᤌᤧᤕᤠᤏ᤻ᤍ{k}     # Dir/LR
 ᤀᤄᤡ:ᤀᤄᤡ
 ᤂᤶᤓᤧᤸᤗᤧ:ᤂᤶᤓᤧᤸᤗᤧ
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ

@@ -3,7 +3,7 @@ Alphabet
  %{A%}:ᤠ
  %{Ao%}:ᤠ %{Ao%}:0
  %{gs%}:᤹ %{gs%}:0
- %{a%}:ᤀ %{a%}:0
+ %{a%}:ᤀ
  %{aa%}:ᤀ %{aa%}:0
  %{ana%}:ᤀ %{ana%}:0
  %{o%}:ᤣ %{o%}:ᤥ
@@ -82,12 +82,16 @@ Rules
 
 "{S} becomes s if followed by Vowel"
 %{S%}:ᤛ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
+"{S} becomes null if followed by nothing"
+%{S%}:ᤛ <=> _ %>: :0 :0 ;
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
 "{D} becomes d if followed by E"
 %{D%}:ᤍ <=> _ ( :0 ) %>: ( :ᤧ ) ;
 "{R} becomes r if followed by vowel?"
 %{R%}:ᤖ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
+"{R} becomes null if followed by nothing"
+%{R%}:0 <=> _ %>: :0 :0 ;
 
 "{m} becomes ᤔ if succeeded by a vowel"
 %{m%}:ᤔ <=> _ ( %>: ) ( :0 ) :Vowel ;
