@@ -33,6 +33,7 @@ LIST NONONE = "ᤏᤧᤜᤡ" "ᤛᤢᤶᤛᤡ" "ᤗᤡᤛᤡ" "ᤏᤠᤛᤡ" "�
 LIST PNPL1IN = (p1 sg) (p1 du) (p1 pl excl) (p2 sg) (p2 du) (p2 pl) (p3 sg) (p3 du) (p3 pl);
 LIST PNDU1IN = (p1 sg) (p1 du excl) (p1 pl) (p2 sg) (p2 du) (p2 pl) (p3 sg) (p3 du) (p3 pl);
 LIST PNPL2IN = (p1 sg) (p1 du) (p1 pl) (p2 sg) (p2 du) (p3 sg) (p3 du) (p3 pl);
+LIST NUBA = "ᤏᤢᤒᤠ";
 
 SECTION
 # If there is a noun to the right, I am a adj unless genitive.
@@ -176,6 +177,9 @@ REMOVE BIGPORT IF
 
 REMOVE OSG IF
     (0 BIGPORT) ;
+
+SELECT (adj) IF
+    (0 NUBA) ;
 # Resources:
 # http://visl.sdu.dk/cg3.html
 # http://groups.google.com/group/constraint-grammar

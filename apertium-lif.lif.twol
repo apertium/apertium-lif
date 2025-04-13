@@ -31,7 +31,7 @@ Alphabet
  %{l%}:ᤸ
  %{ll%}:ᤸ %{ll%}:ᤗ
  %{i%}:ᤡ %{i%}:0
- %{S%}:ᤔ %{S%}:ᤛ %{S%}:0
+ %{S%}:ᤛ %{S%}:0
  %{P%}:ᤶ %{P%}:ᤵ
  %{D%}:ᤔ %{D%}:ᤍ
  %{u%}:ᤢ
@@ -71,6 +71,8 @@ Rules
 %{ana%}:0 <=> :Consonant %>: _ ;
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ %>: :ᤡ ;
+"{i} becomes null if preceded by Vowel ?"
+%{i%}:0 <=> :Vowel %>: _ ;
 "{A} becomes null if succeeded by a vowel"
 %{A%}:0 <=> _ %>: ( :0 ) :Vowel ;
 "{A} becomes null if preceded by A"
@@ -80,10 +82,6 @@ Rules
 "{E} becomes null if preceded by i"
 %{E%}:0 <=> :ᤡ %>: _ ;
 
-"{S} becomes s if followed by Vowel"
-%{S%}:ᤛ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
-"{S} becomes null if followed by nothing"
-%{S%}:ᤛ <=> _ %>: :0 :0 ;
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
 "{D} becomes d if followed by E"
