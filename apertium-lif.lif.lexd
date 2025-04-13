@@ -40,20 +40,18 @@ Adverbs
 Question-Particles
 CaseMarker
 Pronoun-Words
-Conjoints
 Prepositions [ <pr>: ]
 Complementizer [ <comp>: ]
 Concession [ <concess>: ]
 Interjection
+TopicMarker
 
 PATTERN Interjection
 Ij-Stem [ <ij>: ] ( [ +:> ]Question-Particles)?
 
-PATTERN Conjoints
-(Pronouns [ +:> ] )? Conjoint-Stem [ <cj>: ]
-
 PATTERN Adverbs
-(Pronouns [ +:> ] )? AdverbStem [ <adv>: ] ( [ +:> ] Conjoints)?
+(Pronouns [ +:> ] )? AdverbStem [ <adv>: ]
+AdverbStem Adverbs2
 
 PATTERN Determiners-Words
 (Adjectives [ +:> ] )? Determiners [ <det>: ]
@@ -64,12 +62,13 @@ Pronouns Cases?
 DemPrn Plurals? Cases?
 
 PATTERN Nouns
-(Adjectives [ +:> ] )? PossessivePrn?(1) Noun-Stems [<n>:] Plurals PossessivePrn?(2) (Cases Cases2?)|( [ +:> ] CaseMarker)?
+(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) (Cases Cases2?)|( [ +:> ] CaseMarker)?
+Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)?
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Conjoints)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
-Verb-Stems GerundMarker Cases
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
+Voice?(1) Verb-Stems GerundMarker Voice?(2) Cases
 
 LEXICON PossessiveSuff
 <pos>:>{i}{N}
@@ -87,6 +86,9 @@ LEXICON PossessivePrn(2)
 :ᤁᤢ>              <px3sg>:
 :ᤂᤢᤴᤆᤡ>            <px3du>:
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
+
+LEXICON Voice(2)
+:{K}{E}>      <act>:
 
 LEXICON SubjPersonNumber(8)
 :ᤀᤠ>[ssg1,noport]           <s_sg1>:[ssg1,noport]           <incl>:[ssg1,noport]            :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
@@ -121,7 +123,8 @@ LEXICON Negation(2)
 
 LEXICON GerundMarker
 <ger>:>ᤔᤢᤏᤠ
-<inf>:>ᤔᤧ
+<inf>:>ᤔᤧ    # Dir/LR
+<inf>:>ᤔᤠ
 
 LEXICON Reflexivity&Port
 <refl>:>ᤛᤡ{ng}
@@ -213,15 +216,13 @@ ALIAS Cases Cases2
 LEXICON Pronouns
 ᤀᤠ<prn><pers><p1><sg>:ᤀᤠᤅᤠ
 ᤀᤠ<prn><pers><p1><sg>:ᤅᤠ          # Dir/LR
+ᤀᤠ<prn><pers><p1><sg>:ᤀᤡᤱᤃᤠ         # Dir/LR
 ᤀᤠ<prn><pers><p1><du><incl>:ᤀᤠᤴᤆᤡ
 ᤀᤠ<prn><pers><p1><du><excl>:ᤀᤠᤴᤆᤡᤅᤠ # Dir/LR
 ᤀᤠ<prn><pers><p1><du><excl>:ᤀᤠᤴᤆᤡ>ᤃᤧ
 ᤀᤠ<prn><pers><p1><pl><incl>:ᤀᤠᤏᤡ
 ᤀᤠ<prn><pers><p1><pl><excl>:ᤀᤠᤏᤡ>ᤃᤧ
 ᤀᤠ<prn><pers><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ  # Dir/LR
-
-# extras for p1
-ᤀᤠ<prn><pers><p1><sg>:ᤀᤡᤱᤃᤠ
 
 ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
 ᤂᤧᤴᤆᤡ<prn><pers><p2><du>:ᤂᤧᤴᤆᤡ
@@ -243,11 +244,12 @@ LEXICON Prepositions
 ᤏᤠ:ᤏᤠ
 ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ:ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ
 
+LEXICON TopicMarker
+ᤆᤀᤡᤲ<top>:ᤆᤀᤡᤲ
+ᤁ<top>:ᤁ
+
 LEXICON Complementizer
 ᤑᤧᤸᤗᤧ:ᤑᤧᤸᤗᤧ
-
-LEXICON Conjoint-Stem
-ᤀᤠᤱ:ᤀᤠ{ng}
 
 LEXICON Adjectives
 ᤏᤢᤒᤠ<adj><m>:ᤏᤢᤒᤠ
@@ -256,6 +258,8 @@ LEXICON Adjectives
 ᤀᤠᤰᤂᤣ<adj>:ᤀᤠᤰᤂ{eg}
 ᤀ᤹ᤍ᤺ᤱ<adj>:ᤀ᤹ᤍ᤺{ng}
 ᤆᤢᤰᤛᤠ<adj><dim>:ᤆᤢᤰᤛᤠ
+
+ALIAS Adjectives Adj2
 
 LEXICON CaseMarker
 # lle Cases
@@ -305,6 +309,7 @@ LEXICON Conjunctions
 LEXICON AdverbStem
 ᤂᤶᤓ:ᤂᤶᤓ
 ᤂᤶᤓᤧ:ᤂᤶᤓᤧ           # Dir/LR
+ᤂᤶᤓᤠ:ᤂᤶᤓᤠ           # Dir/LR
 ᤀᤧᤶᤓᤧᤸᤗᤧ:ᤀᤧᤶᤓᤧᤸᤗᤧ
 ᤕᤠᤶᤔᤢ:ᤕᤠᤶᤔᤢ
 ᤖᤳ:ᤖ{t}
@@ -320,6 +325,9 @@ LEXICON AdverbStem
 ᤂᤶᤓᤧᤸᤗᤧ:ᤂᤶᤓᤧᤸᤗᤧ
 ᤀᤠᤓᤣ:ᤀᤠᤓᤣ
 ᤏᤢᤖᤡᤰ:ᤏᤢᤖᤡ{k}
+ᤀᤳᤋᤡ:ᤀᤳᤋᤡ
+
+ALIAS AdverbStem Adverbs2
 
 LEXICON Verb-Stems
 ᤀᤡᤶᤔᤠ<v>:ᤀᤡ{P}{S}
@@ -351,90 +359,137 @@ LEXICON Verb-Stems
 ᤑᤧ᤹ᤔᤠ<v>:ᤑᤧ{dg}{N}
 
 LEXICON Noun-Stems
-ᤐᤢ:ᤐᤢ
-ᤋᤱ:ᤋᤱ
-ᤀᤠᤶᤒᤣ:ᤀᤠᤶᤒᤣ
-ᤛᤠᤵᤗᤠ:ᤛᤠᤵᤗᤠ
-ᤖᤠ᤺ᤶ:ᤖᤠ᤺{m}
-ᤖᤠᤔ᤻:ᤖᤠᤔ᤻ # Dir/LR
-ᤏᤠᤰ:ᤏᤠ{k}
-ᤔᤣᤴᤇᤠ:ᤔᤣᤴᤇᤠ
-ᤗᤠᤶᤛ᤹:ᤗᤠᤶᤛ᤹
-ᤏᤠᤵᤔᤡ:ᤏᤠᤵᤔᤡ
-ᤂᤩᤠ:ᤂᤩᤠ
-ᤀᤕᤰᤐᤠ:ᤀᤕᤰᤐᤠ
-ᤁᤖᤁᤘᤠ:ᤁᤖᤁᤘᤠ
-ᤔᤠ:ᤔ{A}
-ᤐᤠ:ᤐ{A}
-ᤐᤡᤋ:ᤐᤡᤋ
-ᤀᤡᤗᤠᤶ:ᤀᤡᤗᤠ{m}
-ᤆᤠ᤺ᤔᤠᤱ:ᤆᤠ᤺ᤔᤠ{ng}
-ᤛᤣᤒᤠ:ᤛᤣᤒᤠ
-ᤆᤢᤶ:{ch}{u}{m}
-ᤋᤣ᤺ᤱ:ᤋᤣ᤺{ng}
-ᤋᤣᤅ᤻:ᤋᤣᤅ᤻ # Dir/LR
-ᤏᤣᤐᤠᤸ:ᤏᤣᤐᤠ{ll}
-ᤁᤠᤌᤔᤠᤴᤍᤢ:ᤁᤠᤌᤔᤠᤴᤍᤢ
-ᤐᤩᤠᤱᤛᤡ:ᤐᤩᤠᤱᤛᤡ
-ᤑᤥᤃᤡᤍᤥ:ᤑᤥᤃᤡᤍᤥ
-ᤕᤠᤰᤌᤢᤱ:ᤕᤠᤰᤌᤢ{ng}
-ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
-ᤕᤠ᤹:ᤕᤠ᤹
-ᤆᤱ:ᤆ{ng}
-ᤕᤠᤰᤌᤢᤶᤒᤠ:ᤕᤠᤰᤌᤢᤶᤒ{A}
-ᤐᤧᤏᤡ:ᤐᤧᤏ{i}
-ᤕᤠᤖᤡᤰ:ᤕᤠᤖᤡ{k}
-ᤒᤡᤆᤠᤖ:ᤒᤡᤆᤠᤖ
-ᤐᤠᤴ:ᤐᤠ{N}
-ᤔᤧᤴᤆᤡᤀᤠ:ᤔᤧᤴᤆᤡᤀᤠ
-ᤔᤏᤠ:ᤔᤏᤠ
-ᤏᤠᤖᤠ:ᤏᤠᤖᤠ
-ᤛᤥᤖ:ᤛᤥᤖ
-ᤀ᤹ᤍ᤺ᤱ:ᤀ᤹ᤍ᤺{ng}
-ᤏᤢ:ᤏᤢ
-ᤁᤢᤶᤔᤠ:ᤁᤢᤶᤔ{A}
-ᤁᤏᤠᤶ:ᤁᤏᤠ{m}
-ᤁᤰ:ᤁ{k}
-ᤁᤰᤁᤓᤡᤰᤏᤠ:ᤁᤰᤁᤓᤡᤰᤏ{A}
-ᤁᤰᤑᤠ:ᤁᤰᤑ{A}
-ᤁᤰᤑᤣ᤹:ᤁᤰᤑᤣ᤹
-ᤁᤰᤗᤠ:ᤁᤰᤗ{A}
-ᤁᤰᤗᤡᤰᤔᤢᤕᤠ:ᤁᤰᤗᤡᤰᤔᤢᤕ{A}
-ᤁᤰᤗᤡᤰᤘᤠ:ᤁᤰᤗᤡᤰᤘ{A}
-ᤁᤰᤗᤡᤎᤡ᤺ᤶᤒᤠ:ᤁᤰᤗᤡᤎᤡ᤺ᤶᤒ{A}
-ᤁᤰᤗᤡᤎᤡᤔ᤻ᤒᤠ:ᤁᤰᤗᤡᤎᤡᤔ᤻ᤒ{A}  # Dir/LR
-ᤁᤰᤗᤧᤰᤂᤣ:ᤁᤰᤗᤧᤰᤂᤣ
+ᤐᤢ<n>:ᤐᤢ
+ᤋᤱ<n>:ᤋᤱ
+ᤀᤠᤶᤒᤣ<n>:ᤀᤠᤶᤒᤣ
+ᤛᤠᤵᤗᤠ<n>:ᤛᤠᤵᤗᤠ
+ᤖᤠᤔ᤻<n>:ᤖᤠᤔ᤻ # Dir/LR
+ᤏᤠᤰ<n>:ᤏᤠ{k}
+ᤔᤣᤴᤇᤠ<n>:ᤔᤣᤴᤇᤠ
+ᤗᤠᤶᤛ᤹<n>:ᤗᤠᤶᤛ᤹
+ᤏᤠᤵᤔᤡ<n>:ᤏᤠᤵᤔᤡ
+ᤂᤩᤠ<n>:ᤂᤩᤠ
+ᤀᤕᤰᤐᤠ<n>:ᤀᤕᤰᤐᤠ
+ᤁᤖᤁᤘᤠ<n>:ᤁᤖᤁᤘᤠ
+ᤔᤠ<n>:ᤔ{A}
+ᤐᤠ<n>:ᤐ{A}
+ᤐᤡᤋ<n>:ᤐᤡᤋ
+ᤀᤡᤗᤠᤶ<n>:ᤀᤡᤗᤠ{m}
+ᤆᤠ᤺ᤔᤠᤱ<n>:ᤆᤠ᤺ᤔᤠ{ng}
+ᤛᤣᤒᤠ<n>:ᤛᤣᤒᤠ
+ᤆᤢᤶ<n>:{ch}{u}{m}
+ᤋᤣ᤺ᤱ<n>:ᤋᤣ᤺{ng}
+ᤋᤣᤅ᤻<n>:ᤋᤣᤅ᤻ # Dir/LR
+ᤁᤠᤌᤔᤠᤴᤍᤢ<n>:ᤁᤠᤌᤔᤠᤴᤍᤢ
+ᤐᤩᤠᤱᤛᤡ<n>:ᤐᤩᤠᤱᤛᤡ
+ᤕᤠᤰᤌᤢᤱ<n>:ᤕᤠᤰᤌᤢ{ng}
+ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ<n>:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
+ᤕᤠ᤹<n>:ᤕᤠ᤹
+ᤆᤱ<n>:ᤆ{ng}
+ᤕᤠᤰᤌᤢᤶᤒᤠ<n>:ᤕᤠᤰᤌᤢᤶᤒ{A}
+ᤐᤧᤏᤡ<n>:ᤐᤧᤏ{i}
+ᤕᤠᤖᤡᤰ<n>:ᤕᤠᤖᤡ{k}
+ᤒᤡᤆᤠᤖ<n>:ᤒᤡᤆᤠᤖ
+ᤐᤠᤴ<n>:ᤐᤠ{N}
+ᤔᤧᤴᤆᤡᤀᤠ<n>:ᤔᤧᤴᤆᤡᤀᤠ
+ᤔᤏᤠ<n>:ᤔᤏᤠ
+ᤏᤠᤖᤠ<n>:ᤏᤠᤖᤠ
+ᤛᤥᤖ<n>:ᤛᤥᤖ
+ᤀ᤹ᤍ᤺ᤱ<n>:ᤀ᤹ᤍ᤺{ng}
+ᤏᤢ<n>:ᤏᤢ
+ᤁᤢᤶᤔᤠ<n>:ᤁᤢᤶᤔ{A}
+ᤁᤏᤠᤶ<n>:ᤁᤏᤠ{m}
+ᤁᤰ<n>:ᤁ{k}
+ᤁᤰᤁᤓᤡᤰᤏᤠ<n>:ᤁᤰᤁᤓᤡᤰᤏ{A}
+ᤁᤰᤑᤠ<n>:ᤁᤰᤑ{A}
+ᤁᤰᤑᤣ᤹<n>:ᤁᤰᤑᤣ᤹
+ᤁᤰᤗᤠ<n>:ᤁᤰᤗ{A}
+ᤁᤰᤗᤡᤰᤔᤢᤕᤠ<n>:ᤁᤰᤗᤡᤰᤔᤢᤕ{A}
+ᤁᤰᤗᤡᤰᤘᤠ<n>:ᤁᤰᤗᤡᤰᤘ{A}
+ᤁᤰᤗᤡᤎᤡ᤺ᤶᤒᤠ<n>:ᤁᤰᤗᤡᤎᤡ᤺ᤶᤒ{A}
+ᤁᤰᤗᤡᤎᤡᤔ᤻ᤒᤠ<n>:ᤁᤰᤗᤡᤎᤡᤔ᤻ᤒ{A}  # Dir/LR
+ᤁᤰᤗᤧᤰᤂᤣ<n>:ᤁᤰᤗᤧᤰᤂᤣ
 
 # time Words
-ᤐᤡᤴᤆᤧᤵ:ᤐᤡᤴᤆᤧ{p}
-ᤐᤣᤔᤢᤰ:ᤐᤣᤔᤢ{k}
-ᤁᤢᤔᤢᤰ:ᤁᤢᤔᤢ{k}
-ᤕᤧᤴ:ᤕᤧ{N}
-ᤕᤧᤴᤃᤠᤵ:ᤕᤧᤴᤃᤠ{p}
-ᤗᤠ:ᤗ{A}
-ᤋᤱᤒᤣ:ᤋᤱᤒᤣ
+ᤐᤡᤴᤆᤧᤵ<n>:ᤐᤡᤴᤆᤧ{p}
+ᤐᤣᤔᤢᤰ<n>:ᤐᤣᤔᤢ{k}
+ᤁᤢᤔᤢᤰ<n>:ᤁᤢᤔᤢ{k}
+ᤕᤧᤴ<n>:ᤕᤧ{N}
+ᤕᤧᤴᤃᤠᤵ<n>:ᤕᤧᤴᤃᤠ{p}
+ᤗᤠ<n>:ᤗ{A}
+ᤋᤱᤒᤣ<n>:ᤋᤱᤒᤣ
 
 # days of the week
-ᤋᤧᤏᤧᤒᤠ:ᤋᤧᤏᤧᤒ{A}
-ᤑᤥᤖᤠᤒᤠ:ᤑᤥᤖᤠᤒ{A}
-ᤔᤡᤰᤜᤠᤱᤒᤠ:ᤔᤡᤰᤜᤠᤱᤒ{A}
-ᤂᤣᤰᤛᤢᤒᤠ:ᤂᤣᤰᤛᤢᤒ{A}
-ᤁᤢᤖᤢᤵᤐᤠ:ᤁᤢᤖᤢᤵᤐ{A}
-ᤑᤛᤢᤵᤐᤠ:ᤑᤛᤢᤵᤐ{A}
-ᤛᤧᤴᤇᤪᤧᤱᤒᤠ:ᤛᤧᤴᤇᤪᤧᤱᤒ{A}
+ᤋᤧᤏᤧᤒᤠ<n>:ᤋᤧᤏᤧᤒ{A}
+ᤑᤥᤖᤠᤒᤠ<n>:ᤑᤥᤖᤠᤒ{A}
+ᤔᤡᤰᤜᤠᤱᤒᤠ<n>:ᤔᤡᤰᤜᤠᤱᤒ{A}
+ᤂᤣᤰᤛᤢᤒᤠ<n>:ᤂᤣᤰᤛᤢᤒ{A}
+ᤁᤢᤖᤢᤵᤐᤠ<n>:ᤁᤢᤖᤢᤵᤐ{A}
+ᤑᤛᤢᤵᤐᤠ<n>:ᤑᤛᤢᤵᤐ{A}
+ᤛᤧᤴᤇᤪᤧᤱᤒᤠ<n>:ᤛᤧᤴᤇᤪᤧᤱᤒ{A}
+
+# seasons
+ᤜᤠᤱᤘᤠ᤺ᤶᤔᤠ<n>:ᤜᤠᤱᤘᤠ᤺ᤶᤔ{A}
+ᤋᤱᤘᤠ᤺ᤶᤔᤠ<n>:ᤋᤱᤘᤠ᤺ᤶᤔ{A}
+ᤆᤢᤱᤘᤠ᤺ᤶᤔᤠ<n>:ᤆᤢᤱᤘᤠ᤺ᤶᤔ{A}
+ᤑᤢᤱᤘᤠ᤺ᤶᤔᤠ<n>:ᤑᤢᤱᤘᤠ᤺ᤶᤔ{A}
+
+# months
+ᤁ᤺ᤰᤑᤧᤰᤘᤠ<n>:ᤁ᤺ᤰᤑᤧᤰᤘ{A}
+ᤛ᤺ᤵᤑᤧᤰᤘᤠ<n>:ᤛ᤺ᤵᤑᤧᤰᤘ{A}
+ᤆᤧᤖᤧᤱᤏᤠᤶ<n>:ᤆᤧᤖᤧᤱᤏᤠ{m}
+ᤌᤧᤖᤧᤱᤏᤠᤶ<n>:ᤌᤧᤖᤧᤱᤏᤠ{m}
+ᤁᤠᤵᤔᤣ᤺ᤵᤐᤠ<n>:ᤁᤠᤵᤔᤣ᤺ᤵᤐ{A}
+ᤌᤰᤔᤣ᤺ᤵᤐᤠ<n>:ᤌᤰᤔᤣ᤺ᤵᤐ{A}
+ᤛᤡᤛᤣ᤺ᤰᤐᤠ<n>:ᤛᤡᤛᤣ᤺ᤰᤐ{A}
+ᤌᤧᤛᤣ᤺ᤰᤐᤠ<n>:ᤌᤧᤛᤣ᤺ᤰᤐ{A}
+ᤛᤡᤛᤣ᤺ᤰᤖᤥ<n>:ᤛᤡᤛᤣ᤺ᤰᤖ{oo}
+ᤌᤧᤛᤣ᤺ᤰᤁᤪᤥ<n>:ᤌᤧᤛᤣ᤺ᤰᤁᤪ{oo}
+ᤛᤧᤴᤇᤧᤱᤗᤠ<n>:ᤛᤧᤴᤇᤧᤱᤗ{A}
+ᤛᤡᤛᤣ᤺ᤰᤗᤠ<n>:ᤛᤡᤛᤣ᤺ᤰᤗ{A}
 
 # numerals
-ᤌᤡᤰ:ᤌᤡ{k}
-ᤗᤌᤡᤰ:ᤗᤌᤡ{k}
-ᤏᤧᤜᤡ:ᤏᤧᤜᤡ
-ᤛᤢᤶᤛᤡ:ᤛᤢᤶᤛᤡ
-ᤗᤡᤛᤡ:ᤗᤡᤛᤡ
-ᤏᤠᤛᤡ:ᤏᤠᤛᤡ
-ᤋᤢᤰᤛᤡ:ᤋᤢᤰᤛᤡ
-ᤏᤢᤛᤡ:ᤏᤢᤛᤡ
-ᤕᤧᤜᤡ:ᤕᤧᤜᤡ
-ᤑᤠᤱᤛᤡ:ᤑᤠᤱᤛᤡ
-ᤒᤥᤱ:ᤒᤥ{ng}
+ᤜᤥᤵ<num>:ᤜᤥ{p}
+ᤌᤡᤰ<num>:ᤌᤡ{k}
+ᤗᤌᤡᤰ<num>:ᤗᤌᤡ{k}    # Dir/LR
+ᤏᤧᤜᤡ<num>:ᤏᤧᤜᤡ
+ᤛᤢᤶᤛᤡ<num>:ᤛᤢᤶᤛᤡ
+ᤗᤡᤛᤡ<num>:ᤗᤡᤛᤡ
+ᤏᤠᤛᤡ<num>:ᤏᤠᤛᤡ
+ᤋᤢᤰᤛᤡ<num>:ᤋᤢᤰᤛᤡ
+ᤏᤢᤛᤡ<num>:ᤏᤢᤛᤡ
+ᤕᤧᤜᤡ<num>:ᤕᤧᤜᤡ
+ᤑᤠᤱᤛᤡ<num>:ᤑᤠᤱᤛᤡ
+ᤒᤥᤱ<num>:ᤒᤥ{ng}
+ᤌᤡᤒᤥᤱ<num>:ᤌᤡᤒᤥ{ng}   # Dir/LR
+ᤌᤡᤰᤌᤡᤰ<num>:ᤌᤡᤰᤌᤡ{k}
+ᤌᤡᤰᤏᤧᤳ<num>:ᤌᤡᤰᤏᤧ{t}
+ᤌᤡᤰᤛᤢᤶ<num>:ᤌᤡᤰᤛᤢ{m}
+ᤌᤡᤰᤗᤡ<num>:ᤌᤡᤰᤗᤡ
+ᤌᤡᤰᤅᤠ<num>:ᤌᤡᤰᤅ{A}
+ᤌᤡᤰᤋᤢᤰ<num>:ᤌᤡᤰᤋᤢ{k}
+ᤌᤡᤰᤏᤢ<num>:ᤌᤡᤰᤏᤢ
+ᤌᤡᤰᤕᤧᤳ<num>:ᤌᤡᤰᤕᤧ{t}
+ᤌᤡᤰᤑᤠᤱ<num>:ᤌᤡᤰᤑᤠ{ng}
+ᤏᤡᤒᤥ᤺ᤱ<num>:ᤏᤡᤒᤥ᤺{ng}
+ᤛᤢᤶᤒᤥ᤺ᤱ<num>:ᤛᤢᤶᤒᤥ᤺{ng}
+ᤗᤡᤒᤥ᤺ᤱ<num>:ᤗᤡᤒᤥ᤺{ng}
+ᤅᤠᤒᤥ᤺ᤱ<num>:ᤅᤠᤒᤥ᤺{ng}
+ᤋᤢᤰᤒᤥ᤺ᤱ<num>:ᤋᤢᤰᤒᤥ᤺{ng}
+ᤏᤢᤒᤥ᤺ᤱ<num>:ᤏᤢᤒᤥ᤺{ng}
+ᤕᤧᤳᤒᤥ᤺ᤱ<num>:ᤕᤧᤳᤒᤥ᤺{ng}
+ᤑᤠᤱᤒᤥ᤺ᤱ<num>:ᤑᤠᤱᤒᤥ᤺{ng}
+ᤌᤡᤰᤁᤡᤵ<num>:ᤌᤡᤰᤁᤡ{p}
+
+# proper Nouns
+ᤖᤠ᤺ᤶ<np>:ᤖᤠ᤺{m}
+ᤏᤣᤐᤠᤸ<np>:ᤏᤣᤐᤠ{ll}
+ᤑᤥᤃᤡᤍᤥ<np>:ᤑᤥᤃᤡᤍᤥ
+ᤁᤖᤍ<np>:ᤁᤖᤍ
+ᤌᤧᤈᤱᤒᤥ<np>:ᤌᤧᤈᤱᤒ{oo}
+ᤌᤱᤗᤱ<np>:ᤌᤱᤗ{ng}
+ᤗᤡᤱᤎᤧᤵ<np>:ᤗᤡᤱᤎᤧ{p}
+ᤂᤰᤗᤡᤱ<np>:ᤂᤰᤗᤡ{ng}
 
 PATTERN Number
 Numeral [<num>:]
