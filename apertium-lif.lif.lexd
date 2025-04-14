@@ -35,7 +35,7 @@ Nouns
 Verbs
 Adjectives
 Determiners-Words
-Conjunctions [ <cnjcoo>: ]
+Conjunctions
 Adverbs
 Question-Particles
 CaseMarker
@@ -45,13 +45,15 @@ Complementizer [ <comp>: ]
 Concession [ <concess>: ]
 Interjection
 TopicMarker
+Evidentiality
 
 PATTERN Interjection
 Ij-Stem [ <ij>: ] ( [ +:> ]Question-Particles)?
 
 PATTERN Adverbs
 (Pronouns [ +:> ] )? AdverbStem [ <adv>: ]
-AdverbStem Adverbs2
+AdverbStem [ <adv>: ] ( [ +:> ]Adverbs2) [ <adv>: ] ( [ +:> ]Complementizer)?
+AdverbStem [ <adv>: ] ( [ +:> ]Complementizer)?
 
 PATTERN Determiners-Words
 (Adjectives [ +:> ] )? Determiners [ <det>: ]
@@ -102,7 +104,7 @@ LEXICON SubjPersonNumber(8)
 :ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 :ᤀᤠ>[ssg23,noport]          <s_pl1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
 :[ssg23,noport]            <s_pl1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
-:ᤀᤠ>[ssg23,bigport]         <s_pl1>:[ssg23,bigport]         <excl>:>[ssg23,bigport]         :ᤔ{E}>[ssg23,bigport]         :[ssg23,bigport]         :[ssg23,bigport]            :>{m}[ssg23,bigport]        :>{m}[ssg23,bigport]             # Dir/LR
+:[ssg23,bigport]           <s_pl1>:[ssg23,bigport]         <excl>:>[ssg23,bigport]         :ᤔ{E}>[ssg23,bigport]         :[ssg23,bigport]         :[ssg23,bigport]            :>{m}[ssg23,bigport]        :>{m}[ssg23,bigport]             # Dir/LR
 :ᤀᤠ>[past,ssg23,noport]     <s_pl1>:[past,ssg23,noport]     <excl>:>ᤃᤧ[past,ssg23,noport]    :ᤔ{E}>[past,ssg23,noport]     :[past,ssg23,noport]     :[past,ssg23,noport]        :>ᤔᤏᤠ[past,ssg23,noport]     :[past,ssg23,noport]
 :ᤀᤠ>[past,ssg23,bigport]    <s_pl1>:[past,ssg23,bigport]    <excl>:>[past,ssg23,bigport]    :ᤔ{E}>[past,ssg23,bigport]    :[past,ssg23,bigport]    :[past,ssg23,bigport]       :>ᤔᤏᤠ[past,ssg23,bigport]    :[past,ssg23,bigport]            # Dir/LR
 :[ssg23,noport]            <s_pl1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :[ssg23,noport]          :[ssg23,noport]             :>{m}[ssg23,noport]         :>{m}[ssg23,noport]
@@ -128,12 +130,13 @@ LEXICON GerundMarker
 
 LEXICON Reflexivity&Port
 <refl>:>ᤛᤡ{ng}
-<refl>:>ᤏᤧ              # Dir/LR
+<refl>:>ᤏᤧ                # Dir/LR
 <o_2>:>ᤏᤧ
 
 LEXICON Tense
 <nonpast>:[nonpast]
 <past>:>{E}[past]
+<past>:>{a}{E}[past]     # Dir/LR
 
 LEXICON ObjSlot
 <o_3>:>{a}{u}[noport]
@@ -236,6 +239,7 @@ LEXICON Pronouns
 
 LEXICON DemPrn
 ᤂᤴ<prn><pers><dem>:ᤂ{N}
+ᤂᤴᤏᤧᤴ<prn><pers><def>:ᤂᤴᤏ>{E}{N}
 ᤂᤧᤱ<prn><pers><dem>:ᤂᤧ{ng} # Dir/LR
 ᤁᤱ<prn><pers><dem>:ᤁ{ng}
 
@@ -249,15 +253,16 @@ LEXICON TopicMarker
 ᤁ<top>:ᤁ
 
 LEXICON Complementizer
-ᤑᤧᤸᤗᤧ:ᤑᤧᤸᤗᤧ
+ᤑᤧᤸᤗᤧ:{BH}{E}{l}ᤗᤧ
 
 LEXICON Adjectives
-ᤏᤢᤒᤠ<adj><m>:ᤏᤢᤒᤠ
+ᤏᤢᤒᤠ<adj><m>:ᤏᤢ>ᤒᤠ
 ᤏᤢ<adj>:ᤏᤢ
 ᤆᤡ<adj>:ᤆᤡ
 ᤀᤠᤰᤂᤣ<adj>:ᤀᤠᤰᤂ{eg}
 ᤀ᤹ᤍ᤺ᤱ<adj>:ᤀ᤹ᤍ᤺{ng}
-ᤆᤢᤰᤛᤠ<adj><dim>:ᤆᤢᤰᤛᤠ
+ᤆᤢᤰᤛᤠ<adj><dim>:ᤆᤢᤰ>ᤛᤠ
+ᤂᤶᤍᤠᤱ<adj>:ᤂᤶᤍᤠ{ng}
 
 ALIAS Adjectives Adj2
 
@@ -304,7 +309,12 @@ LEXICON Ij-Stem
 ᤔᤧ᤺ᤴ:ᤔᤧ᤺{N}
 
 LEXICON Conjunctions
-ᤋᤖ:ᤋᤖ
+ᤋᤖ<cnjcoo>:ᤋᤖ
+ᤑᤃᤖ<cnjsub>:ᤑᤃᤖ
+
+LEXICON Evidentiality
+ᤗᤇ<evid>:ᤗᤇ
+ᤖᤇ<evid>:ᤖᤇ
 
 LEXICON AdverbStem
 ᤂᤶᤓ:ᤂᤶᤓ
@@ -357,6 +367,8 @@ LEXICON Verb-Stems
 ᤀᤢ᤺ᤵᤔᤠ<v>:ᤀᤢ{do}{tp}{tm}
 ᤀᤢᤐ᤻ᤔᤠ<v>:ᤀᤢᤐ{km}{tm}
 ᤑᤧ᤹ᤔᤠ<v>:ᤑᤧ{dg}{N}
+ᤋᤧᤶᤔᤠ<v>:ᤋᤧ{t}
+ᤋᤥ᤺ᤔᤠ<v>:ᤋᤥ{do}
 
 LEXICON Noun-Stems
 ᤐᤢ<n>:ᤐᤢ

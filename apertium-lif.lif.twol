@@ -31,7 +31,7 @@ Alphabet
  %{l%}:ᤸ
  %{ll%}:ᤸ %{ll%}:ᤗ
  %{i%}:ᤡ %{i%}:0
- %{S%}:ᤛ %{S%}:0
+ %{S%}:ᤛ %{S%}:0 %{S%}:ᤋ
  %{P%}:ᤶ %{P%}:ᤵ
  %{D%}:ᤔ %{D%}:ᤍ
  %{u%}:ᤢ
@@ -43,6 +43,7 @@ Alphabet
  %{Dnull%}:ᤍ %{Dnull%}:0
  %{dg%}:᤺ %{dg%}:᤹
  %{R%}:ᤖ %{R%}:0 %{R%}:ᤶ
+ %{BH%}:ᤑ %{BH%}:ᤓ
  %>:0  ;
 
 Sets
@@ -88,8 +89,6 @@ Rules
 %{D%}:ᤍ <=> _ ( :0 ) %>: ( :ᤧ ) ;
 "{R} becomes r if followed by vowel?"
 %{R%}:ᤖ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
-"{R} becomes null if followed by nothing"
-%{R%}:0 <=> _ %>: :0 :0 ;
 
 "{m} becomes ᤔ if succeeded by a vowel"
 %{m%}:ᤔ <=> _ ( %>: ) ( :0 ) :Vowel ;
@@ -106,6 +105,8 @@ Rules
 "{p} becomes ᤐ if succeeded by a vowel"
 %{p%}:ᤐ <=> _ ( %>: ) ( :0 ) :Vowel ;
 
+"ph becomes bh if preceded by a vowel"
+%{BH%}:ᤓ <=> :Vowel ( %>: ) _ ;
 "{B} becomes ᤒ if preceded by a vowel"
 %{B%}:ᤒ <=> :Vowel ( %>: ) _ ;
 "{ch} becomes ᤈ if preceded by a vowel"
