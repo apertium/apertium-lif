@@ -45,7 +45,7 @@ SECTION
 
 SELECT (prn) IF
     (0 ANIGE) 
-    (0 (prn pers p1 pl excl));
+    (0 (prn pers p1 pl excl)) ;
 
 SELECT (s_sg3) IF
     (-1* KHUNNEN) ;
