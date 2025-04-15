@@ -61,9 +61,10 @@ PATTERN Pronoun-Words
 Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
 Pronouns Cases?
 DemPrn Plurals? Cases?
+DefPrn
 
 PATTERN Nouns
-(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) Cases Cases2?
+(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) Cases? Cases2?
 (Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) ( [ +:> ] CaseMarker)
 Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
 
@@ -179,7 +180,6 @@ LEXICON Plurals
 <du>:>ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 LEXICON Cases
-<nom>:            # Dir/LR
 <nom>:>ᤒᤧ
 <gen>:>{NG}{A}{n}
 <gen>:>ᤖᤧ          # Dir/LR
@@ -188,7 +188,7 @@ LEXICON Cases
 <voc>:>{aa}{o}
 <voc>:>{ana}{e}   # Dir/LR
 <voc>:>ᤖᤧ          # Dir/LR
-<imp>:>{E}
+<imp>:>{Ee}
 <loc>:>{oo}
 <med>:>ᤗᤠᤠ{m}
 <ela>:>{oo}ᤏᤢ
@@ -206,7 +206,7 @@ LEXICON Cases
 <erg>:>ᤗᤧ          # Dir/LR
 <erg>:>{l}ᤗᤧ       # Dir/LR
 <erg>:>{i}{l}ᤗᤧ    # Dir/LR
-<abs>:>{i}{N}
+<abs>:>{I}{N}
 <ins>:>ᤗᤧ
 <ins>:>{l}ᤗᤧ       # Dir/LR
 <ins>:>{i}{l}ᤗᤧ    # Dir/LR
@@ -239,10 +239,12 @@ LEXICON Pronouns
 ᤂᤧᤱᤜᤠ<prn><pers><p3><nonsg>:ᤂᤧᤱᤜᤠ   # Dir/LR
 
 LEXICON DemPrn
-ᤂᤴ<prn><pers><dem>:ᤂ{N}
-ᤂᤴᤏᤧᤴ<prn><pers><def>:ᤂᤴᤏ>{E}{N}
-ᤂᤧᤱ<prn><pers><dem>:ᤂᤧ{ng} # Dir/LR
-ᤁᤱ<prn><pers><dem>:ᤁ{ng}
+ᤂᤴ<prn><dem>:ᤂ{N}
+ᤂᤧᤱ<prn><dem>:ᤂᤧ{ng} # Dir/LR
+ᤁᤱ<prn><dem>:ᤁ{ng}
+
+LEXICON DefPrn
+ᤂᤴᤏᤧᤴ<prn><def>:ᤂᤴᤏ>{E}{N}
 
 LEXICON Prepositions
 ᤌᤥ:ᤌᤥ
@@ -345,14 +347,14 @@ LEXICON Verb-Stems
 ᤀᤡᤶᤔᤠ<v>:ᤀᤡ{P}{S}
 ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}
 ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}
-ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{S}
-ᤖᤠᤁ᤻ᤔᤠ<v>:ᤖᤠᤁ᤻{S} # Dir/LR
+ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{s}
+ᤖᤠᤁ᤻ᤔᤠ<v>:ᤖᤠᤁ᤻{s} # Dir/LR
 ᤗᤠ᤺ᤰᤔᤠ<v>:ᤗᤠ᤺ᤰ{S} # Dir/LR
 ᤗᤠᤁ᤻ᤔᤠ<v>:ᤗᤠᤁ᤻{S} # Dir/LR
 ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
 ᤐᤣᤁ᤻ᤔᤠ<v>:{B}{e}{K}{km} # Dir/LR
 ᤋᤠ᤺ᤔᤠ<v>:{T}{do}
-ᤏᤡᤔᤠ<v>:ᤏᤡ{S}
+ᤏᤡᤔᤠ<v>:ᤏᤡ{So}
 ᤘᤠᤔᤠ<v>:ᤘᤠ{gs}
 ᤛᤧᤶᤔᤠ<v>:ᤛᤧ{do}{R}
 ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{K}

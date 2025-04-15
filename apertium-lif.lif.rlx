@@ -4,12 +4,12 @@
 DELIMITERS = "<$.>" "<॥>" "<.>";
 
 # We can define sets for common tag clusters
-LIST NOUN = (n voc) (n com) (n abl) (n erg) (n nom);
+LIST NOUN = (n voc) (n com) (n abl) (n erg) (n nom) (n ins) (n abs) (n comp) (n itrt) (n all) (n ela) (n med) (n loc) (n imp);
 LIST ADJ = adj;
 LIST NGEN = (n gen);
 LIST VERB = v;
 LIST PORT = o_2;
-LIST CASES = nom gen voc com abl erg;
+LIST CASES = nom gen voc com abl erg ins abs comp itrt all ela med loc imp;
 LIST SG = (o_sg s_sg);
 LIST PL = os_pl os_du;
 LIST OPL = (s_sg1 os_pl) (s_sg2 os_pl) (s_sg3 os_pl) (s_du1 os_pl) (s_du2 os_pl) (s_du3 os_pl);
@@ -21,7 +21,7 @@ LIST S2S3 = s_sg3 s_du3 s_pl3 s_sg2 s_du2 s_pl2;
 LIST S1NONSG = s_sg1 s_du1;
 LIST BPL = (s_du1 o_nonsg) (s_du2 o_nonsg) (s_du3 o_nonsg) (s_pl1 o_nonsg) (s_pl2 o_nonsg) (s_pl3 o_nonsg);
 LIST OSSG12 = os_sg12;
-LIST PRN = prn;
+LIST PRN = prn pers;
 LIST GEN = gen;
 LIST BIGPORT = ​o_3;        # added a whitespace before o_3 to make it uniform but unique
 LIST INCL = incl;
@@ -37,15 +37,31 @@ LIST NUBA = "ᤏᤢᤒᤠ";
 LIST REFL = refl;
 LIST ONSG = o_nonsg;
 LIST SEN = "ᤛᤧᤴ";
-LIST ANIGEANG = "ᤀᤠᤏᤡᤃᤧᤀᤠᤱ";
+LIST ANIGEANG = "ᤀᤠ";
+LIST KHUNNEN = "ᤂᤴᤏᤧᤴ";
+LIST ANIGE = "ᤀᤠ";
 
 SECTION
 
+SELECT (prn) IF
+    (0 ANIGE) 
+    (0 (prn pers p1 pl excl));
+
+SELECT (s_sg3) IF
+    (-1* KHUNNEN) ;
+
+SELECT SUB:-1 (s_sg3) IF
+    (-1* KHUNNEN) ;
+
 SELECT PRN IF
-    (0 ANIGEANG) ;
+    (0/-1 ANIGEANG)
+    (0/-1 (prn pers p1 pl excl))
+    (0/-2 (adv)) ;
 
 SELECT SUB:-1 PRN IF
-    (0 ANIGEANG) ;
+    (0/-1 ANIGEANG)
+    (0/-1 (prn pers p1 pl excl))
+    (0/-2 (adv)) ;
 
 SELECT (top) IF
     (0 SEN) ;
@@ -239,6 +255,12 @@ REMOVE REFL IF
 
 REMOVE SUB:-1 REFL IF
     (0/-1 ONSG) ;
+
+REMOVE SUB:-2 (erg) IF
+    (0 (n erg)) ;
+
+REMOVE SUB:-2 (gen) IF
+    (0 (n gen)) ;
 
 # Resources:
 # http://visl.sdu.dk/cg3.html

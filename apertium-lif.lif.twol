@@ -27,12 +27,15 @@ Alphabet
  %{km%}:᤻
  %{m%}:ᤔ %{m%}:ᤶ
  %{L%}:ᤗ
+ %{Ee%}:ᤧ
  %{E%}:ᤧ %{E%}:0
  %{l%}:ᤸ
  %{ll%}:ᤸ %{ll%}:ᤗ
  %{i%}:ᤡ
  %{I%}:ᤡ
- %{S%}:ᤛ %{S%}:0 %{S%}:ᤋ
+ %{s%}:ᤛ %{s%}:0 %{s%}:ᤋ
+ %{S%}:ᤛ
+ %{So%}:ᤛ %{So%}:0
  %{P%}:ᤶ %{P%}:ᤵ
  %{D%}:ᤔ %{D%}:ᤍ
  %{u%}:ᤢ
@@ -53,6 +56,7 @@ Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
 iorE = ᤧ  ᤡ ;
 Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
+Vowelnote = ᤠ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Vowelnotioru = ᤠ  ᤧ  ᤣ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Consonant = ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ ᤝ ᤞ ;
 
@@ -86,10 +90,14 @@ Rules
 "{E} becomes null if preceded by i"
 %{E%}:0 <=> :ᤡ %>: _ ;
 
+"{s} becomes s if followed by e"
+%{s%}:ᤛ <=> _ ( :0 )  :ᤧ  ;
+"{s} becomes t if followed by vowel not e"
+%{s%}:ᤋ <=> _ ( :0 )  :Vowelnote ;
 "{P} becomes p if followed by s"
 %{P%}:ᤵ <=> _ :ᤛ ;
 "{D} becomes d if followed by E"
-%{D%}:ᤍ <=> _ ( :0 ) %>: ( :ᤧ ) ;
+%{D%}:ᤍ <=> _ ( :0 ) ( %>: ) :ᤧ  ;
 "{R} becomes r if followed by vowel?"
 %{R%}:ᤖ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
 
