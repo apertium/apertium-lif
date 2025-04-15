@@ -30,7 +30,8 @@ Alphabet
  %{E%}:ᤧ %{E%}:0
  %{l%}:ᤸ
  %{ll%}:ᤸ %{ll%}:ᤗ
- %{i%}:ᤡ %{i%}:0
+ %{i%}:ᤡ
+ %{I%}:ᤡ
  %{S%}:ᤛ %{S%}:0 %{S%}:ᤋ
  %{P%}:ᤶ %{P%}:ᤵ
  %{D%}:ᤔ %{D%}:ᤍ
@@ -74,6 +75,8 @@ Rules
 %{i%}:0 <=> _ %>: :ᤡ ;
 "{i} becomes null if preceded by Vowel ?"
 %{i%}:0 <=> :Vowel %>: _ ;
+"{I} becomes null if succeeded by i"
+%{I%}:0 <=> _ %>: :ᤡ ;
 "{A} becomes null if succeeded by a vowel"
 %{A%}:0 <=> _ %>: ( :0 ) :Vowel ;
 "{A} becomes null if preceded by A"

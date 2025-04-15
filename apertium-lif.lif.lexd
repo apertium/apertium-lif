@@ -51,7 +51,6 @@ PATTERN Interjection
 Ij-Stem [ <ij>: ] ( [ +:> ]Question-Particles)?
 
 PATTERN Adverbs
-(Pronouns [ +:> ] )? AdverbStem [ <adv>: ]
 AdverbStem [ <adv>: ] ( [ +:> ]Adverbs2) [ <adv>: ] ( [ +:> ]Complementizer)?
 AdverbStem [ <adv>: ] ( [ +:> ]Complementizer)?
 
@@ -59,13 +58,14 @@ PATTERN Determiners-Words
 (Adjectives [ +:> ] )? Determiners [ <det>: ]
 
 PATTERN Pronoun-Words
-Pronouns PossessiveSuff? Adverbs?
+Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
 Pronouns Cases?
 DemPrn Plurals? Cases?
 
 PATTERN Nouns
-(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) (Cases Cases2?)|( [ +:> ] CaseMarker)?
-Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)?
+(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) Cases Cases2?
+(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) ( [ +:> ] CaseMarker)
+Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
 
 PATTERN Verbs
 ( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
@@ -94,6 +94,7 @@ LEXICON Voice(2)
 
 LEXICON SubjPersonNumber(8)
 :ᤀᤠ>[ssg1,noport]           <s_sg1>:[ssg1,noport]           <incl>:[ssg1,noport]            :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
+:[ssg1,noport]             <s_sg1>:[ssg1,noport]           <incl>:[ssg1,noport]            :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
 :ᤀᤠ>[ssg1,noport]           <s_sg1>:[ssg1,noport]           <excl>:>ᤃᤧ[ssg1,noport]          :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
 :ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <incl>:[ssg23,noport]           :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                 # Dir/LR
 :ᤀᤠ>[ssg23,noport]          <s_du1>:[ssg23,noport]          <excl>:>ᤃᤧ[ssg23,noport]         :ᤔ{E}>[ssg23,noport]          :>ᤛ[ssg23,noport]        :[ssg23,noport]             :>ᤇᤡ[ssg23,noport]           :[ssg23,noport]                 # Dir/LR
@@ -141,8 +142,8 @@ LEXICON Tense
 LEXICON ObjSlot
 <o_3>:>{a}{u}[noport]
 <o_3>:>{u}[noport]       # Dir/LR
-<os_pl>:>{a}{i}[noport]
-<os_pl>:>{i}[noport]     # Dir/LR
+<os_pl>:>{a}{I}[noport]
+<os_pl>:>{I}[noport]     # Dir/LR
 <os_du>:>ᤛᤡ[noport]       # Dir/LR
 <os_du>:>ᤇᤡ[noport]
 <os_sg>:[noport]
@@ -251,6 +252,7 @@ LEXICON Prepositions
 LEXICON TopicMarker
 ᤆᤀᤡᤲ<top>:ᤆᤀᤡᤲ
 ᤁ<top>:ᤁ
+ᤛᤧᤴ<top>:ᤛᤧ{N}
 
 LEXICON Complementizer
 ᤑᤧᤸᤗᤧ:{BH}{E}{l}ᤗᤧ
@@ -286,7 +288,6 @@ LEXICON CaseMarker
 # others
 ᤒᤠ<nom>:ᤒᤠ
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
-ᤛᤧᤴ<nom>:ᤛᤧ{N}
 ᤖᤧ<erg>:ᤖᤧ
 ᤗᤧ<erg>:ᤗᤧ        # Dir/LR
 
@@ -294,8 +295,8 @@ LEXICON Concession
 ᤛᤠᤱ:ᤛᤠ{ng}
 
 LEXICON Question-Particles
-ᤀᤡ<qst>:{a}{i}
-ᤀᤡ<qst>:{i}      # Dir/LR
+ᤀᤡ<qst>:{a}{I}
+ᤀᤡ<qst>:{I}      # Dir/LR
 
 LEXICON Determiners
 ᤁᤧᤖᤧᤰ:ᤁᤧᤖᤧ{k}
@@ -326,6 +327,7 @@ LEXICON AdverbStem
 ᤀᤠᤱ:{a}{A}{ng}
 ᤀᤠᤱ:{A}{ng}         # Dir/LR
 ᤀᤠᤓᤣᤍᤠᤱᤒᤠ:ᤀᤠᤓᤣᤍᤠᤱᤒᤠ
+ᤀᤠᤓᤣᤍᤠᤱ:ᤀᤠᤓᤣᤍᤠᤱ
 ᤀᤠᤸᤗᤠ:ᤀᤠᤸᤗᤠ
 ᤔᤧ᤺ᤴᤏ:ᤔᤧ᤺ᤴᤏ
 ᤔᤧᤏ᤻ᤏ:ᤔᤧᤏ᤻ᤏ # Dir/LR
