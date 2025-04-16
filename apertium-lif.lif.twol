@@ -126,8 +126,7 @@ Rules
 %{T%}:ᤍ <=> :Vowel ( %>: ) _ ;
 "{K} becomes ᤃ if succeeded by a vowel"
 %{K%}:ᤃ <=> _ %>: ( :᤻ ) ( :0 ) :Vowel ;
-"{K} becomes ᤃ if preceded by a vowel"
-%{K%}:ᤃ <=> :Vowel ( %>: ) _ ;
+            :Vowel ( %>: ) _ ;
 "{eg} becomes glottal stop if succeeded by consonant"
 %{eg%}:᤹ <=> _ %>: :Consonant ;
 
