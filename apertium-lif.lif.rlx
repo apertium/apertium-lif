@@ -1,10 +1,12 @@
 # Wiki: https://wikis.swarthmore.edu/ling073/Limbu_and_English/Ambiguity_Resolution
 
+SUBREADINGS = LTR ;
+
 # Firstly, we need to define what tags should be considered sentence delimiters. For this example, only full stop is set as delimiter.
 DELIMITERS = "<$.>" "<॥>" "<.>";
 
 # We can define sets for common tag clusters
-LIST NOUN = (n voc) (n com) (n abl) (n erg) (n nom) (n ins) (n abs) (n comp) (n itrt) (n all) (n ela) (n med) (n loc) (n imp);
+LIST NOUN = n;
 LIST ADJ = adj;
 LIST NGEN = (n gen);
 LIST VERB = v;
@@ -187,17 +189,13 @@ REMOVE SUB:-1 (s_pl1 incl) IF
 REMOVE SUB:-1 (s_pl1 incl) IF
     (-1* PNPL1IN) ;
 
+SELECT SUB:-1 (s_sg3) IF
+    (-1C* ELSEPR)
+    (-1* (n sg)) ;
+
 SELECT (s_sg3) IF
-    (-1C* ELSEPR)
+    (NOT -1C* PRN)
     (-1* (n sg)) ;
-
-SELECT SUB:-1 (s_sg3) IF
-    (-1C* ELSEPR)
-    (-1* (n sg)) ;
-
-SELECT SUB:-1 (s_sg3) IF
-    (-1C*/* ELSEPR)
-    (-1/* (n sg)) ;
 
 SELECT (s_pl3) IF
     (-1C* ELSEPR)
