@@ -41,8 +41,8 @@ Question-Particles
 CaseMarker
 Pronoun-Words
 Prepositions [ <pr>: ]
-Complementizer [ <comp>: ]
-Concession [ <concess>: ]
+Complementizer
+Concession
 Interjection
 TopicMarker
 Evidentiality
@@ -257,7 +257,7 @@ LEXICON TopicMarker
 ᤛᤧᤴ<top>:ᤛᤧ{N}
 
 LEXICON Complementizer
-ᤑᤧᤸᤗᤧ:{BH}{E}{l}ᤗᤧ
+ᤑᤧᤸᤗᤧ<comp>:{BH}{E}{l}ᤗᤧ
 
 LEXICON Adjectives
 ᤏᤢᤒᤠ<adj><m>:ᤏᤢ>ᤒᤠ
@@ -295,7 +295,7 @@ LEXICON CaseMarker
 ᤗᤧ<erg>:ᤗᤧ        # Dir/LR
 
 LEXICON Concession
-ᤛᤠᤱ:ᤛᤠ{ng}
+ᤛᤠᤱ<concess>:ᤛᤠ{ng}
 
 LEXICON Question-Particles
 ᤀᤡ<qst>:{a}{I}
