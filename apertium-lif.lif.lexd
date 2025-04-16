@@ -171,10 +171,10 @@ LEXICON Aspect
 <perf>:
 
 LEXICON Clitic
-<ass>:>ᤖᤥ
-<ass>:>ᤗᤥ   # Dir/LR
-<depr>:>ᤗᤇ  # Dir/LR
-<depr>:>ᤖᤇ
+<clt><ass>:>ᤖᤥ
+<clt><ass>:>ᤗᤥ   # Dir/LR
+<clt><depr>:>ᤗᤇ  # Dir/LR
+<clt><depr>:>ᤖᤇ
 
 LEXICON ObjNumber
 <o_nonsg>:>ᤛᤡ[noport]
@@ -231,7 +231,7 @@ ALIAS Cases Cases2
 ###############################################################################
 
 LEXICON Pronouns
-ᤀᤠ<prn><pers><p1><sg>:ᤀᤠᤅᤠ
+ᤀᤠ<prn><pers><p1><sg>:ᤀᤠᤱᤃᤠ{gs}
 ᤀᤠ<prn><pers><p1><sg>:ᤅᤠ          # Dir/LR
 ᤀᤠ<prn><pers><p1><sg>:ᤀᤡᤱᤃᤠ         # Dir/LR
 ᤀᤠ<prn><pers><p1><du><incl>:ᤀᤠᤴᤆᤡ
@@ -244,6 +244,8 @@ LEXICON Pronouns
 ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ{gs}
 ᤂᤧᤴᤆᤡ<prn><pers><p2><du>:ᤂᤧᤴᤆᤡ
 ᤂᤧᤏᤡ<prn><pers><p2><pl>:ᤂᤧᤏᤡ{gs}
+ᤂᤡᤏᤡ<prn><pers><p2><pl>:ᤂᤡᤏᤡ{gs}       # Dir/LR
+ᤁᤴ<prn><pers><p3><sg>:ᤁᤴ
 ᤂᤢᤏᤧ<prn><pers><p3><mf><sg>:ᤂᤢᤏᤧ{gs}
 ᤂᤧᤱ<prn><pers><p3><nt><sg>:ᤂᤧᤱ
 ᤂᤢᤴᤆᤡ<prn><pers><p3><du>:ᤂᤢᤴᤆᤡ
@@ -254,6 +256,7 @@ LEXICON Pronouns
 
 LEXICON DemPrn
 ᤂᤴ<prn><dem>:ᤂ{N}
+ᤂᤧᤴ<prn><dem>:ᤂᤧ{N}
 ᤂᤧᤱ<prn><dem>:ᤂᤧ{ng} # Dir/LR
 ᤁᤱ<prn><dem>:ᤁ{ng}
 
@@ -264,6 +267,7 @@ LEXICON Prepositions
 ᤌᤥ:ᤌᤥ
 ᤏᤠ:ᤏᤠ
 ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ:ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ
+ᤗᤠᤃᤡ:ᤗᤠᤃᤡ
 
 LEXICON TopicMarker
 ᤆᤀᤡᤲ<top>:ᤆᤀᤡᤲ
@@ -330,6 +334,7 @@ LEXICON Conjunctions
 ᤋᤖ<cnjcoo>:ᤋᤖ
 ᤑᤃᤖ<cnjsub>:ᤑᤃᤖ
 ᤜᤧᤰᤁᤩᤠᤱ<cnjcoo>:ᤜᤧᤰᤁᤩᤠ{ng}
+ᤁᤖ<cnj>:ᤁᤖ
 
 LEXICON Evidentiality
 ᤗᤇ<evid>:ᤗᤇ
@@ -461,6 +466,7 @@ LEXICON Noun-Stems
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱ<n>:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠ{ng}
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ<n>:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱᤅᤡᤸᤗᤧ
 ᤆᤠ᤺ᤔᤠᤱ<n>:ᤆᤠ᤺ᤔᤠ{ng}
+ᤕᤜᤘᤣ<n>:ᤕᤜᤘᤣ
 
 # time Words
 ᤐᤡᤴᤆᤧᤵ<n>:ᤐᤡᤴᤆᤧ{p}
