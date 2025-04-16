@@ -77,19 +77,19 @@ Rules
 %{ana%}:0 <=> :Consonant %>: _ ;
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ %>: :ᤡ ;
-"{i} becomes null if preceded by Vowel ?"
-%{i%}:0 <=> :Vowel %>: _ ;
+            :Vowel %>: _ ;
 "{I} becomes null if succeeded by i"
 %{I%}:0 <=> _ %>: :ᤡ ;
 "{A} becomes null if succeeded by a vowel"
 %{A%}:0 <=> _ %>: ( :0 ) :Vowel ;
-"{A} becomes null if preceded by A"
-%{A%}:0 <=> :ᤠ %>: ( :0 ) _ ;
+            :ᤠ %>: ( :0 ) _ ;
 "{o} becomes o if preceded by vowel that isnt u or i"
 %{o%}:ᤥ <=> :Vowelnotioru %>: :ᤀ _ ;
 "{E} becomes null if preceded by i"
 %{E%}:0 <=> :ᤡ %>: _ ;
 
+"{s} becomes null if at the end"
+%{s%}:0 <=> _ ( :0 )  .#. ;
 "{s} becomes s if followed by e"
 %{s%}:ᤛ <=> _ ( :0 )  :ᤧ  ;
 "{s} becomes t if followed by vowel not e"
@@ -100,6 +100,8 @@ Rules
 %{D%}:ᤍ <=> _ ( :0 ) ( %>: ) :ᤧ  ;
 "{R} becomes r if followed by vowel?"
 %{R%}:ᤖ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
+"{R} becomes null if at the end"
+%{R%}:0 <=> _ ( :0 )  .#. ;
 
 "{m} becomes ᤔ if succeeded by a vowel"
 %{m%}:ᤔ <=> _ ( %>: ) ( :0 ) :Vowel ;
@@ -126,7 +128,7 @@ Rules
 %{T%}:ᤍ <=> :Vowel ( %>: ) _ ;
 "{K} becomes ᤃ if succeeded by a vowel"
 %{K%}:ᤃ <=> _ %>: ( :᤻ ) ( :0 ) :Vowel ;
-            :Vowel ( %>: ) _ ;          ! environment immediately at end of word: _ .#. ;
+            :Vowel ( %>: ) _ ;
 "{eg} becomes glottal stop if succeeded by consonant"
 %{eg%}:᤹ <=> _ %>: :Consonant ;
 

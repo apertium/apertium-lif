@@ -69,9 +69,9 @@ PATTERN Nouns
 Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? Aspect? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? Aspect? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
-Voice?(1) Verb-Stems GerundMarker Voice?(2) Cases
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
+( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
+Voice?(1) Verb-Stems GerundMarker Voice?(2) Cases? ( [ +:> ] Adverbs)?
 
 LEXICON PossessiveSuff
 <pos>:>{i}{N}
@@ -160,8 +160,21 @@ LEXICON ObjSlot
 LEXICON NegationSuff
 <neg>:>{N}
 
+LEXICON Mode
+<opt>:>ᤖ
+<opt>:>ᤗ   # Dir/LR
+<cni>:>ᤔᤧ{N}
+<irr>:>ᤃᤏᤡ
+
 LEXICON Aspect
-<prog>:>ᤖ
+<impf>:>{B}{A}
+<perf>:
+
+LEXICON Clitic
+<ass>:>ᤖᤥ
+<ass>:>ᤗᤥ   # Dir/LR
+<depr>:>ᤗᤇ  # Dir/LR
+<depr>:>ᤖᤇ
 
 LEXICON ObjNumber
 <o_nonsg>:>ᤛᤡ[noport]
@@ -228,15 +241,16 @@ LEXICON Pronouns
 ᤀᤠ<prn><pers><p1><pl><excl>:ᤀᤠᤏᤡ>ᤃᤧ
 ᤀᤠ<prn><pers><p1><pl><excl>:ᤀᤠᤏᤡᤅᤠ  # Dir/LR
 
-ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ
+ᤂᤧᤏᤧ<prn><pers><p2><sg>:ᤂᤧᤏᤧ{gs}
 ᤂᤧᤴᤆᤡ<prn><pers><p2><du>:ᤂᤧᤴᤆᤡ
-ᤂᤧᤏᤡ<prn><pers><p2><pl>:ᤂᤧᤏᤡ
-ᤂᤢᤏᤧ<prn><pers><p3><mf><sg>:ᤂᤢᤏᤧ
+ᤂᤧᤏᤡ<prn><pers><p2><pl>:ᤂᤧᤏᤡ{gs}
+ᤂᤢᤏᤧ<prn><pers><p3><mf><sg>:ᤂᤢᤏᤧ{gs}
 ᤂᤧᤱ<prn><pers><p3><nt><sg>:ᤂᤧᤱ
 ᤂᤢᤴᤆᤡ<prn><pers><p3><du>:ᤂᤢᤴᤆᤡ
 ᤂᤧᤱᤜᤠ<prn><pers><p3><pl>:ᤂᤧᤱᤜᤠ
-ᤂᤢᤴᤆᤡ<prn><pers><p3><nonsg>:ᤂᤢᤴᤆᤡ  # Dir/LR
-ᤂᤧᤱᤜᤠ<prn><pers><p3><nonsg>:ᤂᤧᤱᤜᤠ   # Dir/LR
+ᤂᤢᤴᤆᤡ<prn><pers><p3><nonsg>:ᤂᤢᤴᤆᤡ      # Dir/LR
+ᤂᤢᤴᤇᤡ<prn><pers><p3><nonsg>:ᤂᤢᤴᤇᤡ{gs}  # Dir/LR
+ᤂᤧᤱᤜᤠ<prn><pers><p3><nonsg>:ᤂᤧᤱᤜᤠ       # Dir/LR
 
 LEXICON DemPrn
 ᤂᤴ<prn><dem>:ᤂ{N}
@@ -289,8 +303,8 @@ LEXICON CaseMarker
 ᤀᤧᤸᤗᤧ<gen>:{E}{l}ᤗᤧ      # Dir/LR
 
 # others
-ᤒᤠ<nom>:ᤒᤠ
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
+ᤒᤠ<nom>:ᤒᤠ
 ᤖᤧ<erg>:ᤖᤧ
 ᤗᤧ<erg>:ᤗᤧ        # Dir/LR
 
@@ -351,28 +365,28 @@ LEXICON Verb-Stems
 ᤗᤡᤶᤔᤠ<v>:ᤗᤡᤶ{D}
 ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}
 ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{s}
-ᤖᤠᤁ᤻ᤔᤠ<v>:ᤖᤠᤁ᤻{s} # Dir/LR
-ᤗᤠ᤺ᤰᤔᤠ<v>:ᤗᤠ᤺ᤰ{S} # Dir/LR
-ᤗᤠᤁ᤻ᤔᤠ<v>:ᤗᤠᤁ᤻{S} # Dir/LR
+ᤖᤠᤁ᤻ᤔᤠ<v>:ᤖᤠᤁ᤻{s}              # Dir/LR
+ᤗᤠ᤺ᤰᤔᤠ<v>:ᤗᤠ᤺ᤰ{S}              # Dir/LR
+ᤗᤠᤁ᤻ᤔᤠ<v>:ᤗᤠᤁ᤻{S}              # Dir/LR
 ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}
-ᤐᤣᤁ᤻ᤔᤠ<v>:{B}{e}{K}{km} # Dir/LR
+ᤐᤣᤁ᤻ᤔᤠ<v>:{B}{e}{K}{km}      # Dir/LR
 ᤋᤠ᤺ᤔᤠ<v>:{T}{do}
 ᤏᤡᤔᤠ<v>:ᤏᤡ{So}
 ᤘᤠᤔᤠ<v>:ᤘᤠ{gs}
 ᤛᤧᤶᤔᤠ<v>:ᤛᤧ{do}{R}
 ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{K}
-ᤆᤥᤁ᤻ᤔᤠ<vbdo>:{ch}{K}{km} # Dir/LR
+ᤆᤥᤁ᤻ᤔᤠ<vbdo>:{ch}{K}{km}     # Dir/LR
 ᤆᤠᤔᤠ<v>:ᤆ{ao}
 ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{S}
-ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{S} # Dir/LR
+ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{S}  # Dir/LR
 ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pgt}{R}
-ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R} # Dir/LR
+ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R}    # Dir/LR
 ᤔᤠ᤺ᤔᤠ<v>:ᤔᤠ{do}{S}
 ᤗ᤺ᤵᤔᤠ<v>:ᤗ᤺{tp}{tm}
 ᤗᤐ᤻ᤔᤠ<v>:ᤗ{t}{km}{tm}
 ᤗ᤺ᤶᤔᤠ<v>:ᤗ{do}{NM}{Dnull}
 ᤀᤢ᤺ᤵᤔᤠ<v>:ᤀᤢ{do}{tp}{tm}
-ᤀᤢᤐ᤻ᤔᤠ<v>:ᤀᤢᤐ{km}{tm}
+ᤀᤢᤐ᤻ᤔᤠ<v>:ᤀᤢᤐ{km}{tm}        # Dir/LR
 ᤑᤧ᤹ᤔᤠ<v>:ᤑᤧ{dg}{N}
 ᤋᤧᤶᤔᤠ<v>:ᤋᤧ{t}
 ᤋᤥ᤺ᤔᤠ<v>:ᤋᤥ{do}

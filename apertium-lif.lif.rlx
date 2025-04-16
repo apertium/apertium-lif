@@ -1,7 +1,5 @@
 # Wiki: https://wikis.swarthmore.edu/ling073/Limbu_and_English/Ambiguity_Resolution
 
-SUBREADINGS = LTR ;
-
 # Firstly, we need to define what tags should be considered sentence delimiters. For this example, only full stop is set as delimiter.
 DELIMITERS = "<$.>" "<॥>" "<.>";
 
@@ -27,8 +25,6 @@ LIST PRN = prn pers;
 LIST GEN = gen;
 LIST BIGPORT = ​o_3;        # added a whitespace before o_3 to make it uniform but unique
 LIST INCL = incl;
-LIST ELSEN = prn adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
-LIST ELSEPR = n adv adj cj v det cnjcoo pr qst ij gen erg prog sub nom;
 LIST TR = "ᤋᤖ";
 LIST NONONE = "ᤏᤧᤜᤡ" "ᤛᤢᤶᤛᤡ" "ᤗᤡᤛᤡ" "ᤏᤠᤛᤡ" "ᤋᤢᤰᤛᤡ" "ᤏᤢᤛᤡ" "ᤕᤧᤜᤡ" "ᤑᤠᤱᤛᤡ" "ᤒᤥᤱ";
 LIST PNPL1IN = (p1 sg) (p1 du) (p1 pl excl) (p2 sg) (p2 du) (p2 pl) (p3 sg) (p3 du) (p3 pl);
@@ -124,13 +120,13 @@ SELECT SUB:-1 (s_sg1 incl) IF
     (-1* (p1 sg)) ;
 
 REMOVE (s_sg1 incl) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE (s_sg1 incl) IF
     (-1* PNSG1IN) ;
 
 REMOVE SUB:-1 (s_sg1 incl) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE SUB:-1 (s_sg1 incl) IF
     (-1* PNSG1IN) ;
@@ -142,13 +138,13 @@ SELECT SUB:-1 (s_pl2) IF
     (-1* (p2 pl)) ;
 
 REMOVE (s_pl2) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE (s_pl2) IF
     (-1* PNPL2IN) ;
 
 REMOVE SUB:-1 (s_pl2) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE SUB:-1 (s_pl2) IF
     (-1* PNPL2IN) ;
@@ -160,13 +156,13 @@ SELECT SUB:-1 (s_du1) IF
     (-1* (p1 du)) ;
 
 REMOVE (s_du1 incl) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE (s_du1 incl) IF
     (-1* PNDU1IN) ;
 
 REMOVE SUB:-1 (s_du1 incl) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE SUB:-1 (s_du1 incl) IF
     (-1* PNDU1IN) ;
@@ -178,42 +174,52 @@ SELECT SUB:-1 (s_pl1 incl) IF
     (-1* (p1 pl)) ;
 
 REMOVE (s_pl1 incl) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE (s_pl1 incl) IF
     (-1* PNPL1IN) ;
 
 REMOVE SUB:-1 (s_pl1 incl) IF
-    (-1C* ELSEPR) ;
+    (NOT -1C* PRN) ;
 
 REMOVE SUB:-1 (s_pl1 incl) IF
     (-1* PNPL1IN) ;
-
-SELECT SUB:-1 (s_sg3) IF
-    (-1C* ELSEPR)
-    (-1* (n sg)) ;
 
 SELECT (s_sg3) IF
     (NOT -1C* PRN)
     (-1* (n sg)) ;
 
+SELECT SUB:-1 (s_sg3) IF
+    (NOT -1C* PRN)
+    (-1* (n sg)) ;
+
+SELECT SUB:-1 (s_sg3) IF
+    (NOT -1C*/* PRN)
+    (-1/* (n sg)) ;
+
 SELECT (s_pl3) IF
-    (-1C* ELSEPR)
+    (NOT -1C* PRN)
     (-1* (n pl)) ;
 
 SELECT SUB:-1 (s_pl3) IF
-    (-1C* ELSEPR)
+    (NOT -1C* PRN)
     (-1* (n pl)) ;
 
 SELECT SUB:-1 (s_pl3) IF
-    (-1C*/* ELSEPR)
+    (NOT -1C*/* PRN)
     (-1/* (n pl)) ;
 
-REMOVE SUB:0 GEN IF
-    (1/-1 ELSEN) ;
+REMOVE GEN IF
+    (NOT 1/-1 NOUN) ;
 
-REMOVE SUB:0 GEN IF
-    (1 ELSEN) ;
+REMOVE SUB:-1 GEN IF
+    (NOT 1/-1 NOUN) ;
+
+REMOVE GEN IF
+    (NOT 1 NOUN) ;
+
+REMOVE SUB:-1 GEN IF
+    (NOT 1 NOUN) ;
 
 SELECT (cnjcoo) IF
     (0 TR) ;
@@ -254,11 +260,17 @@ REMOVE REFL IF
 REMOVE SUB:-1 REFL IF
     (0/-1 ONSG) ;
 
-REMOVE SUB:-2 (erg) IF
-    (0 (n erg)) ;
+REMOVE (erg) IF
+    (0/-1 (erg)) ;
 
-REMOVE SUB:-2 (gen) IF
-    (0 (n gen)) ;
+REMOVE (gen) IF
+    (0/-1 (gen)) ;
+
+REMOVE (imp) IF
+    (0/-1 (sub)) ;
+
+SELECT (ger) IF
+    (0 (ger)) ;
 
 # Resources:
 # http://visl.sdu.dk/cg3.html
