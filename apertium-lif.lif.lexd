@@ -67,6 +67,7 @@ PATTERN Nouns
 (Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) Cases? Cases2?
 (Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) ( [ +:> ] CaseMarker)
 Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
+Noun-Stems Attr
 
 PATTERN Verbs
 ( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
@@ -225,6 +226,9 @@ LEXICON Cases
 <ins>:>{i}{l}ᤗᤧ    # Dir/LR
 
 ALIAS Cases Cases2
+
+LEXICON Attr
+<attr>:
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
