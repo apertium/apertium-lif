@@ -272,6 +272,13 @@ REMOVE (imp) IF
 SELECT (ger) IF
     (0 (ger)) ;
 
+SELECT (s_sg3) IF
+    (0 (s_du3))
+    (0 (s_sg3))
+    (0 (s_pl3))
+    (NOT -1* PRN)
+    (NOT -1* NOUN) ;
+
 # Resources:
 # http://visl.sdu.dk/cg3.html
 # http://groups.google.com/group/constraint-grammar
