@@ -70,8 +70,8 @@ Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
 Noun-Stems Attr
 
 PATTERN Verbs
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
-( (Adjectives [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
+( (AdverbStem [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs2)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
+( (AdverbStem [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs2)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 Voice?(1) Verb-Stems GerundMarker Voice?(2) Cases? ( [ +:> ] Adverbs)?
 
 LEXICON PossessiveSuff
@@ -289,7 +289,6 @@ LEXICON Complementizer
 LEXICON Adjectives
 ᤏᤢᤒᤠ<adj><m>:ᤏᤢ>ᤒ{A}
 ᤏᤢ<adj>:ᤏᤢ
-ᤆᤡ<adj>:ᤆᤡ
 ᤀᤠᤰᤂᤣ<adj>:ᤀᤠᤰᤂ{eg}
 ᤀ᤹ᤍ᤺ᤱ<adj>:ᤀ᤹ᤍ᤺{ng}
 ᤆᤢᤰᤛᤠ<adj><dim>:ᤆᤢᤰ>ᤛ{A}
@@ -298,6 +297,9 @@ LEXICON Adjectives
 ᤘᤣ᤹<adj>:ᤘᤣ{gs}
 ᤗᤳᤇᤠ<adj>:ᤗᤳᤇ{A}
 ᤕᤶᤒᤠ<adj><m>:ᤕᤶ>ᤒ{A}
+ᤕᤖᤡᤰ<adj>:ᤕᤖᤡ{k}
+ᤌᤣᤀᤠᤱ<adj>:ᤌᤣᤀᤠ{ng}
+ᤜᤠᤱ<adj>:ᤜᤠ{ng}
 
 ALIAS Adjectives Adj2
 
@@ -359,6 +361,7 @@ LEXICON AdverbStem
 ᤂᤶᤓᤠ:ᤂᤶᤓᤠ           # Dir/LR
 ᤀᤧᤶᤓᤧᤸᤗᤧ:ᤀᤧᤶᤓᤧᤸᤗᤧ
 ᤕᤠᤶᤔᤢ:ᤕᤠᤶᤔᤢ
+ᤕᤠᤶᤔᤥ:ᤕᤠᤶᤔᤥ          # Dir/LR
 ᤖᤳ:ᤖ{t}
 ᤀᤠᤱ:{a}{A}{ng}
 ᤀᤠᤱ:{A}{ng}         # Dir/LR
@@ -378,6 +381,10 @@ LEXICON AdverbStem
 ᤜᤧᤰᤁᤩᤠᤱ:ᤜᤧᤰᤁᤩᤠ{ng}
 ᤀᤠᤸᤗ:ᤀᤠᤸᤗ
 ᤛᤠ᤹ᤖᤡᤰ:ᤛᤠ{gs}ᤖᤡ{k}
+ᤆᤡ:ᤆᤡ
+ᤜᤧᤰᤁᤧ:ᤜᤧᤰᤁᤧ
+ᤜᤧᤰᤁᤣ:ᤜᤧᤰᤁᤣ  # Dir/LR
+ᤌᤣᤀᤠᤱ:ᤌᤣᤀᤠ{ng}
 
 ALIAS AdverbStem Adverbs2
 
@@ -444,7 +451,8 @@ LEXICON Noun-Stems
 ᤐᤧᤏᤡ<n>:ᤐᤧᤏ{i}
 ᤕᤠᤖᤡᤰ<n>:ᤕᤠᤖᤡ{k}
 ᤒᤡᤆᤠᤖ<n>:ᤒᤡᤆᤠᤖ
-ᤐᤠᤴ<n>:ᤐᤠ{N}
+ᤐᤠᤴ<n>:ᤐᤠ{do}{N}
+ᤐᤠᤏ᤻<n>:ᤐᤠ{do}{N}  # Dir/LR
 ᤔᤧᤴᤆᤡᤀᤠ<n>:ᤔᤧᤴᤆᤡᤀᤠ
 ᤔᤏᤠ<n>:ᤔᤏᤠ
 ᤏᤠᤖᤠ<n>:ᤏᤠᤖᤠ
@@ -472,7 +480,11 @@ LEXICON Noun-Stems
 ᤆᤀᤡ᤺ᤳ<n>:ᤆᤀᤡ{do}{t}
 ᤏᤠᤘᤠ<n>:ᤏᤠᤘ{A}
 ᤏᤡᤱᤘᤠ᤹<n>:ᤏᤡᤱᤘᤠ{gs}
-ᤆᤥ᤺ᤰᤔᤠ<n>:ᤆᤥ᤺ᤰᤔ{A} # this word shouldnt be possible
+ᤆᤥ᤺ᤰᤔᤠ<n>:ᤆᤥ᤺ᤰᤔ{A}   # this word shouldnt be possible
+ᤕᤠ᤺ᤶᤒᤰ<n>:ᤕᤠ᤺ᤶᤒ{k}
+ᤕᤠᤔ᤻ᤒᤰ<n>:ᤕᤠᤔ᤻ᤒ{k}       # Dir/LR
+ᤜᤠᤱ<n>:ᤜᤠ{ng}
+ᤜᤠᤱᤅᤡᤸᤗᤧ<n>:ᤜᤠᤱᤅᤡᤸᤗᤧ
 
 # names of god
 ᤀᤸᤗᤧᤰᤂᤠ<n>:ᤀᤸᤗᤧᤰᤂᤠ
