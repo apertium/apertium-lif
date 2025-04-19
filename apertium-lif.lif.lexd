@@ -62,6 +62,8 @@ Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
 Pronouns Cases?
 DemPrn Plurals? Cases?
 DefPrn
+IntPrn
+IndPrn
 
 PATTERN Nouns
 (Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) Cases? Cases2?
@@ -270,6 +272,12 @@ LEXICON DemPrn
 LEXICON DefPrn
 ᤂᤴᤏᤧᤴ<prn><def>:ᤂᤴᤏ>{E}{N}
 
+LEXICON IntPrn
+ᤌᤣ<prn><itg>:ᤌᤣ
+
+LEXICON IndPrn
+ᤁᤢᤓᤠ<prn><ind>:ᤁᤢᤓᤠ
+
 LEXICON Prepositions
 ᤌᤥ:ᤌᤥ
 ᤏᤠ:ᤏᤠ
@@ -277,6 +285,9 @@ LEXICON Prepositions
 ᤗᤠᤃᤡ:ᤗᤠᤃᤡ
 ᤑᤠ᤹ᤀᤠᤱ:ᤑᤠ᤹ᤀᤠᤱ
 ᤌᤠᤖᤡᤰ:ᤌᤠᤖᤡᤰ
+ᤋᤃᤡ:ᤋᤃᤡ
+ᤗᤧᤵᤔᤠᤱ:ᤗᤧᤵᤔᤠᤱ
+ᤁᤢᤛᤡᤱ:ᤁᤢᤛᤡᤱ
 
 LEXICON TopicMarker
 ᤆᤀᤡᤲ<top>:ᤆᤀᤡᤲ
@@ -300,6 +311,7 @@ LEXICON Adjectives
 ᤕᤖᤡᤰ<adj>:ᤕᤖᤡ{k}
 ᤌᤣᤀᤠᤱ<adj>:ᤌᤣᤀᤠ{ng}
 ᤜᤠᤱ<adj>:ᤜᤠ{ng}
+ᤁᤢᤓᤠ<adj>:ᤁᤢᤓ{A}
 
 ALIAS Adjectives Adj2
 
@@ -350,6 +362,7 @@ LEXICON Conjunctions
 ᤜᤧᤰᤁᤩᤠᤱ<cnjcoo>:ᤜᤧᤰᤁᤩᤠ{ng}
 ᤁᤖ<cnj>:ᤁᤖ
 ᤑᤠ᤹ᤀᤠᤱ<cnj>:ᤑᤠ᤹ᤀᤠ{ng}
+ᤀᤡᤃᤪ<cnjcoo>:ᤀᤡᤃᤪ
 
 LEXICON Evidentiality
 ᤗᤇ<evid>:ᤗᤇ
@@ -402,7 +415,7 @@ LEXICON Verb-Stems
 ᤏᤡᤔᤠ<v>:ᤏᤡ{So}
 ᤘᤠᤔᤠ<v>:ᤘᤠ{gs}
 ᤛᤧᤶᤔᤠ<v>:ᤛᤧ{do}{R}
-ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{K}
+ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{do}{Kk}
 ᤆᤥᤁ᤻ᤔᤠ<vbdo>:{ch}{K}{km}     # Dir/LR
 ᤆᤠᤔᤠ<v>:ᤆ{ao}
 ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{S}
@@ -432,7 +445,7 @@ LEXICON Noun-Stems
 ᤗᤠᤶᤛ᤹<n>:ᤗᤠᤶᤛ᤹
 ᤏᤠᤵᤔᤡ<n>:ᤏᤠᤵᤔᤡ
 ᤂᤩᤠ<n>:ᤂᤩᤠ
-ᤀᤕᤰᤐᤠ<n>:ᤀᤕᤰᤐᤠ
+ᤀᤕᤰᤐᤠ<n>:ᤀᤕᤰ>ᤐᤠ
 ᤁᤖᤁᤘᤠ<n>:ᤁᤖᤁᤘᤠ
 ᤔᤠ<n>:ᤔ{A}
 ᤐᤠ<n>:ᤐ{A}
@@ -447,7 +460,7 @@ LEXICON Noun-Stems
 ᤕᤠᤰᤌᤢᤱ<n>:ᤕᤠᤰᤌᤢ{ng}
 ᤕᤠ᤹<n>:ᤕᤠ᤹
 ᤆᤱ<n>:ᤆ{ng}
-ᤕᤠᤰᤌᤢᤶᤒᤠ<n>:ᤕᤠᤰᤌᤢᤶᤒ{A}
+ᤕᤠᤰᤌᤢᤶᤒᤠ<n>:ᤕᤠᤰᤌᤢᤶ>ᤒ{A}
 ᤐᤧᤏᤡ<n>:ᤐᤧᤏ{i}
 ᤕᤠᤖᤡᤰ<n>:ᤕᤠᤖᤡ{k}
 ᤒᤡᤆᤠᤖ<n>:ᤒᤡᤆᤠᤖ
@@ -480,11 +493,12 @@ LEXICON Noun-Stems
 ᤆᤀᤡ᤺ᤳ<n>:ᤆᤀᤡ{do}{t}
 ᤏᤠᤘᤠ<n>:ᤏᤠᤘ{A}
 ᤏᤡᤱᤘᤠ᤹<n>:ᤏᤡᤱᤘᤠ{gs}
-ᤆᤥ᤺ᤰᤔᤠ<n>:ᤆᤥ᤺ᤰᤔ{A}   # this word shouldnt be possible
 ᤕᤠ᤺ᤶᤒᤰ<n>:ᤕᤠ᤺ᤶᤒ{k}
 ᤕᤠᤔ᤻ᤒᤰ<n>:ᤕᤠᤔ᤻ᤒ{k}       # Dir/LR
 ᤜᤠᤱ<n>:ᤜᤠ{ng}
 ᤜᤠᤱᤅᤡᤸᤗᤧ<n>:ᤜᤠᤱᤅᤡᤸᤗᤧ
+ᤔᤧᤴᤇᤠᤶ<n>:ᤔᤧᤴᤇᤠ{m}
+ᤀᤡᤛᤪᤠᤀᤡᤗᤒᤠ<n>:ᤀᤡᤛᤪᤠᤀᤡᤗ>ᤒᤠ
 
 # names of god
 ᤀᤸᤗᤧᤰᤂᤠ<n>:ᤀᤸᤗᤧᤰᤂᤠ

@@ -16,6 +16,7 @@ Alphabet
  %{ng%}:ᤅ %{ng%}:ᤱ
  %{k%}:ᤁ %{k%}:ᤰ
  %{K%}:ᤁ %{K%}:ᤃ %{K%}:ᤰ
+ %{Kk%}:ᤁ %{Kk%}:ᤃ %{Kk%}:ᤰ
  %{p%}:ᤐ %{p%}:ᤵ
  %{t%}:ᤋ %{t%}:ᤳ
  %{T%}:ᤋ %{T%}:ᤍ
@@ -129,6 +130,8 @@ Rules
 "{K} becomes ᤃ if succeeded by a vowel"
 %{K%}:ᤃ <=> _ %>: ( :᤻ ) ( :0 ) :Vowel ;
             :Vowel ( %>: ) _ ;
+"{Kk} becomes ᤃ if succeeded by a vowel"
+%{Kk%}:ᤃ <=> _ %>: ( :᤻ ) ( :0 ) :Vowel ;
 "{eg} becomes glottal stop if succeeded by consonant"
 %{eg%}:᤹ <=> _ %>: :Consonant ;
 
