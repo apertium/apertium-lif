@@ -49,19 +49,19 @@ Alphabet
  %{dg%}:᤺ %{dg%}:᤹
  %{R%}:ᤖ %{R%}:0 %{R%}:ᤶ
  %{BH%}:ᤑ %{BH%}:ᤓ
- %{MNG%}:ᤔ %{MNG%}:ᤏ %{MNG%}:ᤅ %{MNG%}:ᤥ %{MNG%}:0
+ %{MNG%}:ᤔ %{MNG%}:ᤏ %{MNG%}:ᤅ %{MNG%}:᤺ %{MNG%}:᤹ %{MNG%}:0
  %{EGS%}:ᤧ %{EGS%}:ᤡ %{EGS%}:0
  %{Iabs%}:ᤡ %{Iabs%}:0
  %>:0  ;
 
 Sets
 
-Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
+Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ ;
 Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
 iorE = ᤧ  ᤡ ;
-Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
-Vowelnote = ᤠ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
-Vowelnotioru = ᤠ  ᤧ  ᤣ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
+Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ ;
+Vowelnote = ᤠ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ ;
+Vowelnotioru = ᤠ  ᤧ  ᤣ  ᤥ  ᤤ  ᤦ ;
 Consonant = ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ ᤝ ᤞ ;
 M = ᤶ ;
 N = ᤴ ;
@@ -78,6 +78,8 @@ Rules
 "MNG becomes null if preceded by GS"
 %{MNG%}:0 <=> :GS ( %>: ) ( :0 ) _ ;
               :ᤒ ( %>: ) ( :0 ) _ ;
+"MNG becomes kemphreng if preceded by Vowel"
+%{MNG%}:᤺ <=> :Vowel ( %>: ) ( :0 ) _ ;
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
 %{NG%}:ᤏ <=> :[ᤋ | ᤍ] %>: _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
@@ -98,8 +100,12 @@ Rules
 "{EGS} becomes E if preceded by GS"
 %{EGS%}:ᤧ <=> :GS ( %>: ) ( :0 ) ( %>: ) _ ;
               :ᤒ ( %>: ) ( :0 ) ( %>: ) _ ;
+"{EGS} becomes null if preceded by vowel"
+%{EGS%}:0 <=> :Vowel ( %>: ) :᤺ _ ;
 "{Iabs} becomes E if preceded by B"
 %{Iabs%}:ᤧ <=> :ᤒ ( %>: ) ( :0 ) ( %>: ) _ ;
+"{Iabs} becomes null if preceded by vowel"
+%{Iabs%}:0 <=> :Vowel ( %>: ) :᤺ _ ;
 "{I} becomes null if succeeded by i"
 %{I%}:0 <=> _ %>: :ᤡ ;
 "{A} becomes null if succeeded by a vowel"
