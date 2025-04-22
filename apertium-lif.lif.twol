@@ -1,6 +1,7 @@
 Alphabet
  ᤀ ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ  ᤠ  ᤧ  ᤣ  ᤡ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ  ᤢ  ᤥ  ᤤ  ᤦ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤨ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ  ᤹ ᤝ ᤞ  ᤺  ᤷ   ᤻
  %{A%}:ᤠ
+ %{Aabs%}:ᤠ
  %{Ao%}:ᤠ %{Ao%}:0
  %{gs%}:᤹ %{gs%}:0
  %{a%}:ᤀ
@@ -80,10 +81,14 @@ Rules
               :ᤒ ( %>: ) ( :0 ) _ ;
 "MNG becomes kemphreng if preceded by Vowel"
 %{MNG%}:᤺ <=> :Vowel ( %>: ) ( :0 ) _ ;
+"MNG becomes e if preceded by Vowel"
+%{MNG%}:ᤧ <=> :{Aabs} ( %>: ) ( :0 ) _ ;
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
 %{NG%}:ᤏ <=> :[ᤋ | ᤍ] %>: _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
 %{NG%}:ᤔ <=> :Bilabial %>: _ ;
+"Aabs becomes null if succeeded by MNG"
+%{Aabs%}:0 <=> _ ( %>:) ( :0 ) :{MNG} ;
 "{aa} becomes ᤀ after a vowel but not a"
 %{aa%}:ᤀ <=> :Vowelnota %>: _ ;
 "{aa} becomes null after a"
