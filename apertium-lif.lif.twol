@@ -32,7 +32,7 @@ Alphabet
  %{E%}:ᤧ %{E%}:0
  %{l%}:ᤸ
  %{ll%}:ᤸ %{ll%}:ᤗ
- %{i%}:ᤡ
+ %{i%}:ᤡ %{i%}:0
  %{I%}:ᤡ
  %{s%}:ᤛ %{s%}:0 %{s%}:ᤋ
  %{S%}:ᤛ
@@ -49,6 +49,9 @@ Alphabet
  %{dg%}:᤺ %{dg%}:᤹
  %{R%}:ᤖ %{R%}:0 %{R%}:ᤶ
  %{BH%}:ᤑ %{BH%}:ᤓ
+ %{MNG%}:ᤔ %{MNG%}:ᤏ %{MNG%}:ᤅ %{MNG%}:ᤥ %{MNG%}:0
+ %{EGS%}:ᤧ %{EGS%}:ᤡ %{EGS%}:0
+ %{Iabs%}:ᤡ %{Iabs%}:0
  %>:0  ;
 
 Sets
@@ -60,8 +63,21 @@ Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Vowelnote = ᤠ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Vowelnotioru = ᤠ  ᤧ  ᤣ  ᤥ  ᤤ  ᤦ  ᤺   ᤻  ᤨ ;
 Consonant = ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ ᤝ ᤞ ;
+M = ᤶ ;
+N = ᤴ ;
+NG = ᤱ ;
+GS = ᤹ ;
 
 Rules
+"MNG becomes M if preceded by M"
+%{MNG%}:ᤔ <=> :M ( %>: ) ( :0 ) _ ;
+"MNG becomes N if preceded by N"
+%{MNG%}:ᤏ <=> :N ( %>: ) ( :0 ) _ ;
+"MNG becomes N if preceded by N"
+%{MNG%}:ᤅ <=> :NG ( %>: ) ( :0 ) _ ;
+"MNG becomes null if preceded by GS"
+%{MNG%}:0 <=> :GS ( %>: ) ( :0 ) _ ;
+              :ᤒ ( %>: ) ( :0 ) _ ;
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
 %{NG%}:ᤏ <=> :[ᤋ | ᤍ] %>: _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
@@ -78,7 +94,12 @@ Rules
 %{ana%}:0 <=> :Consonant %>: _ ;
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ %>: :ᤡ ;
-            :Vowel %>: _ ;
+            :Vowel ( %>: ) ( :0 ) ( %>: ) _ ;
+"{EGS} becomes E if preceded by GS"
+%{EGS%}:ᤧ <=> :GS ( %>: ) ( :0 ) ( %>: ) _ ;
+              :ᤒ ( %>: ) ( :0 ) ( %>: ) _ ;
+"{Iabs} becomes E if preceded by B"
+%{Iabs%}:ᤧ <=> :ᤒ ( %>: ) ( :0 ) ( %>: ) _ ;
 "{I} becomes null if succeeded by i"
 %{I%}:0 <=> _ %>: :ᤡ ;
 "{A} becomes null if succeeded by a vowel"

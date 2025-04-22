@@ -198,34 +198,35 @@ LEXICON Plurals
 LEXICON Cases
 <nom>:>ᤒᤧ
 <gen>:>{NG}{A}{n}
-<gen>:>ᤖᤧ          # Dir/LR
-<gen>:>ᤗᤧ          # Dir/LR
-<gen>:>{l}ᤗᤧ       # Dir/LR
+<gen>:>ᤖᤧ              # Dir/LR
+<gen>:>ᤗᤧ              # Dir/LR
+<gen>:>{l}ᤗᤧ           # Dir/LR
 <voc>:>{aa}{o}
-<voc>:>{ana}{e}   # Dir/LR
-<voc>:>ᤖᤧ          # Dir/LR
+<voc>:>{ana}{e}       # Dir/LR
+<voc>:>ᤖᤧ              # Dir/LR
 <imp>:>{Ee}
 <loc>:>{oo}
 <med>:>ᤗᤠᤠ{m}
 <ela>:>{oo}ᤏᤢ
-<ela>:>{oo}ᤗᤠᤠ{m}   # Dir/LR
+<ela>:>{oo}ᤗᤠᤠ{m}       # Dir/LR
 <all>:>ᤌᤠᤰ
-<all>:>ᤎᤠᤰ         # Dir/LR
+<all>:>ᤎᤠᤰ             # Dir/LR
 <itrt>:>ᤗᤢᤔᤥ
-<itrt>:>ᤗᤢᤶᤔᤥ      # Dir/LR
+<itrt>:>ᤗᤢᤶᤔᤥ          # Dir/LR
 <comp>:>ᤏᤢᤸᤗᤧ
 <com>:>ᤏᤢ{ng}
-<com>:>ᤏᤢ          # Dir/LR
+<com>:>ᤏᤢ              # Dir/LR
 <abl>:>ᤗᤠᤠ{m}
-<abl>:>ᤏᤢ{ng}      # Dir/LR
+<abl>:>ᤏᤢ{ng}          # Dir/LR
 <erg>:>ᤖᤧ
-<erg>:>ᤗᤧ          # Dir/LR
-<erg>:>{l}ᤗᤧ       # Dir/LR
-<erg>:>{i}{l}ᤗᤧ    # Dir/LR
-<abs>:>{I}{N}
+<erg>:>ᤗᤧ              # Dir/LR
+<erg>:>{l}ᤗᤧ           # Dir/LR
+<erg>:>{i}{l}ᤗᤧ        # Dir/LR
+<abs>:>{MNG}{Iabs}{N}
+<abs>:>{MNG}{EGS}{N}   # Dir/LR
 <ins>:>ᤗᤧ
-<ins>:>{l}ᤗᤧ       # Dir/LR
-<ins>:>{i}{l}ᤗᤧ    # Dir/LR
+<ins>:>{l}ᤗᤧ           # Dir/LR
+<ins>:>{i}{l}ᤗᤧ        # Dir/LR
 
 ALIAS Cases Cases2
 
