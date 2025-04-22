@@ -223,7 +223,7 @@ LEXICON Cases
 <erg>:>{l}ᤗᤧ           # Dir/LR
 <erg>:>{i}{l}ᤗᤧ        # Dir/LR
 <abs>:>{MNG}{Iabs}{N}
-<abs>:>{MNG}{EGS}{N}   # Dir/LR
+<abs>:>{MNG}{EGS}{N}  # Dir/LR
 <ins>:>ᤗᤧ
 <ins>:>{l}ᤗᤧ           # Dir/LR
 <ins>:>{i}{l}ᤗᤧ        # Dir/LR
