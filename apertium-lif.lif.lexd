@@ -55,7 +55,7 @@ AdverbStem [ <adv>: ] ( [ +:> ]Adverbs2) [ <adv>: ] ( [ +:> ]Complementizer)?
 AdverbStem [ <adv>: ] ( [ +:> ]Complementizer)?
 
 PATTERN Determiners-Words
-(Adjectives [ +:> ] )? Determiners [ <det>: ]
+(Adverbs [ +:> ] )? Determiners [ <det>: ]
 
 PATTERN Pronoun-Words
 Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
@@ -72,8 +72,8 @@ Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
 Noun-Stems Attr
 
 PATTERN Verbs
-( (AdverbStem [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs2)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
-( (AdverbStem [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs2)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
+( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
+( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 Voice?(1) Verb-Stems GerundMarker Voice?(2) Cases? ( [ +:> ] Adverbs)?
 
 LEXICON PossessiveSuff
