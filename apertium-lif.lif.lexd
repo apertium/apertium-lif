@@ -67,7 +67,7 @@ IndPrn
 
 PATTERN Nouns
 (Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) Cases? Cases2?
-(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) ( [ +:> ] CaseMarker)
+(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) ( [ +:> ] CaseMarker) ( [ +:> ] CaseMarker2)?
 Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
 Noun-Stems Attr
 
@@ -75,6 +75,7 @@ PATTERN Verbs
 ( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
 ( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? ( [ +:> ] CaseMarker)? ( [ +:> ] Adverbs)? ( [ +:> ] Concession)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 Voice?(1) Verb-Stems GerundMarker Voice?(2) Cases? ( [ +:> ] Adverbs)?
+Voice?(1) Verb-Stems GerundMarker Voice?(2) ( [ +:> ] CaseMarker)? ( [ +:> ] CaseMarker2)? ( [ +:> ] Adverbs)?
 
 LEXICON PossessiveSuff
 <pos>:>{i}{N}
@@ -335,9 +336,11 @@ LEXICON CaseMarker
 
 # others
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
-ᤒᤠ<nom>:ᤒᤠ
+ᤒᤠ<nom>:{Bb}{A}
 ᤖᤧ<erg>:ᤖᤧ
 ᤗᤧ<erg>:ᤗᤧ        # Dir/LR
+
+ALIAS CaseMarker CaseMarker2
 
 LEXICON Concession
 ᤛᤠᤱ<concess>:ᤛᤠ{ng}
@@ -409,6 +412,8 @@ LEXICON Verb-Stems
 ᤛᤥ᤺ᤔᤠ<v>:ᤛᤥ᤺{S}
 ᤖᤠ᤺ᤰᤔᤠ<v>:ᤖᤠ᤺ᤰ{s}
 ᤖᤠᤁ᤻ᤔᤠ<v>:ᤖᤠᤁ᤻{s}              # Dir/LR
+ᤗᤠᤁ᤻ᤔᤠ<v>:ᤗᤠᤁ᤻{s}              # Dir/LR
+ᤗᤠ᤺ᤰᤔᤠ<v>:ᤗᤠ᤺ᤰ{s}              # Dir/LR
 ᤗᤠ᤺ᤰᤔᤠ<v>:ᤗᤠ᤺ᤰ{S}              # Dir/LR
 ᤗᤠᤁ᤻ᤔᤠ<v>:ᤗᤠᤁ᤻{S}              # Dir/LR
 ᤐᤣ᤺ᤰᤔᤠ<v>:{B}{e}{do}{K}

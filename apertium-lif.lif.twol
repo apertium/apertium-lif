@@ -53,6 +53,7 @@ Alphabet
  %{MNG%}:ᤔ %{MNG%}:ᤏ %{MNG%}:ᤅ %{MNG%}:᤺ %{MNG%}:᤹ %{MNG%}:0
  %{EGS%}:ᤧ %{EGS%}:ᤡ %{EGS%}:0
  %{Iabs%}:ᤡ %{Iabs%}:0
+ %{Bb%}:ᤒ %{Bb%}:ᤐ
  %>:0  ;
 
 Sets
@@ -82,13 +83,14 @@ Rules
 "MNG becomes kemphreng if preceded by Vowel"
 %{MNG%}:᤺ <=> :Vowel ( %>: ) ( :0 ) _ ;
 "MNG becomes e if preceded by Vowel"
-%{MNG%}:ᤧ <=> :{Aabs} ( %>: ) ( :0 ) _ ;
+%{MNG%}:ᤧ <=> %{Aabs%}:0 ( %>: ) ( :0 ) _ ;
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
 %{NG%}:ᤏ <=> :[ᤋ | ᤍ] %>: _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
 %{NG%}:ᤔ <=> :Bilabial %>: _ ;
 "Aabs becomes null if succeeded by MNG"
-%{Aabs%}:0 <=> _ ( %>:) ( :0 ) :{MNG} ;
+%{Aabs%}:0 <=> _ ( %>:) ( :0 ) %{MNG%}:ᤧ ;
+               _ %>: ( :0 ) :Vowel ;
 "{aa} becomes ᤀ after a vowel but not a"
 %{aa%}:ᤀ <=> :Vowelnota %>: _ ;
 "{aa} becomes null after a"

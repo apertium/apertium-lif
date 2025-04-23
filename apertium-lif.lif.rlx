@@ -285,6 +285,18 @@ SELECT (attr) IF
 REMOVE (attr) IF
     (NOT 1 NOUN) ;
 
+REMOVE (erg) IF
+    (0 VERB) ;
+
+REMOVE SUB:-1 (erg) IF
+    (0 VERB) ;
+
+REMOVE (sub) IF
+    (NOT 0 VERB) ;
+
+REMOVE SUB:-1 (sub) IF
+    (NOT 0 VERB) ;
+
 # Resources:
 # http://visl.sdu.dk/cg3.html
 # http://groups.google.com/group/constraint-grammar
