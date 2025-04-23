@@ -1,7 +1,7 @@
 Alphabet
  ᤀ ᤒ ᤍ ᤈ ᤃ ᤛ ᤘ ᤖ ᤕ  ᤠ  ᤧ  ᤣ  ᤡ ᤏ ᤅ ᤋ ᤁ ᤐ ᤗ ᤔ  ᤢ  ᤥ  ᤤ  ᤦ ᤊ ᤂ ᤑ ᤆ ᤇ ᤙ ᤜ ᤌ ᤓ ᤎ ᤉ ᤄ ᤚ ᤫ  ᤪ  ᤩ  ᤨ  ᤴ  ᤱ  ᤳ  ᤰ  ᤵ  ᤸ  ᤶ  ᤹ ᤝ ᤞ  ᤺  ᤷ   ᤻
  %{A%}:ᤠ
- %{Aabs%}:ᤠ
+ %{Aabs%}:ᤠ  %{Aabs%}:0
  %{Ao%}:ᤠ %{Ao%}:0
  %{gs%}:᤹ %{gs%}:0
  %{a%}:ᤀ
@@ -50,9 +50,9 @@ Alphabet
  %{dg%}:᤺ %{dg%}:᤹
  %{R%}:ᤖ %{R%}:0 %{R%}:ᤶ
  %{BH%}:ᤑ %{BH%}:ᤓ
- %{MNG%}:ᤔ %{MNG%}:ᤏ %{MNG%}:ᤅ %{MNG%}:᤺ %{MNG%}:᤹ %{MNG%}:0
- %{EGS%}:ᤧ %{EGS%}:ᤡ %{EGS%}:0
- %{Iabs%}:ᤡ %{Iabs%}:0
+ %{MNG%}:ᤔ %{MNG%}:ᤏ %{MNG%}:ᤅ %{MNG%}:᤺ %{MNG%}:ᤧ %{MNG%}:0
+ %{EGS%}:ᤧ %{EGS%}:᤹  %{EGS%}:0
+ %{Iabs%}:ᤧ  %{Iabs%}:ᤡ %{Iabs%}:0
  %{Bb%}:ᤒ %{Bb%}:ᤐ
  %>:0  ;
 
@@ -71,19 +71,37 @@ NG = ᤱ ;
 GS = ᤹ ;
 
 Rules
-"MNG becomes M if preceded by M"
-%{MNG%}:ᤔ <=> :M ( %>: ) ( :0 ) _ ;
-"MNG becomes N if preceded by N"
-%{MNG%}:ᤏ <=> :N ( %>: ) ( :0 ) _ ;
-"MNG becomes N if preceded by N"
-%{MNG%}:ᤅ <=> :NG ( %>: ) ( :0 ) _ ;
+!"MNG becomes M if preceded by M"
+!%{MNG%}:ᤔ <=> :M ( %>: ) ( :0 ) _ ;
+!"MNG becomes N if preceded by N"
+!%{MNG%}:ᤏ <=> :N ( %>: ) ( :0 ) _ ;
+!"MNG becomes N if preceded by N"
+!%{MNG%}:ᤅ <=> :NG ( %>: ) ( :0 ) _ ;
 "MNG becomes null if preceded by GS"
-%{MNG%}:0 <=> :GS ( %>: ) ( :0 ) _ ;
-              :ᤒ ( %>: ) ( :0 ) _ ;
+%{MNG%}:0 <=> [ :GS | :ᤒ ] [ :0 - %{Aabs%}: ]* _ ;
+!%{MNG%}:0 <=> :GS ( %>: ) ( :0 ) _ ;
+!              :ᤒ ( %>: ) ( :0 ) _ ;
 "MNG becomes kemphreng if preceded by Vowel"
-%{MNG%}:᤺ <=> :Vowel ( %>: ) ( :0 ) _ ;
-"MNG becomes e if preceded by Vowel"
-%{MNG%}:ᤧ <=> %{Aabs%}:0 ( %>: ) ( :0 ) _ ;
+%{MNG%}:᤺ <=> [ :Vowel - %{Aabs%}: ] [ :0 - %{Aabs%}: ]* _ ;
+"MNG becomes e if preceded by {Aabs}"
+%{MNG%}:ᤧ <=> %{Aabs%}:0 [ :0 - %{Aabs%}: ]* _ ;
+
+"MNG consonant rule"
+%{MNG%}:Ly <=> :Lx [ :0 - %{Aabs%}: ]* _ ;
+           where
+               Lx in ( ᤶ  ᤴ  ᤱ  )
+               Ly in ( ᤔ  ᤏ  ᤅ  )
+           matched ;
+
+!@ ᤀ ᤕ ᤰ  >:0 ᤐ {Aabs}:0 >:0 {MNG}:ᤧ  {EGS}:0 {N}:ᤴ
+!@ ᤀ ᤕ ᤰ  >:0 ᤐ {Aabs}:0 >:0 {MNG}:ᤧ  {Iabs}:0 {N}:ᤴ
+
+!ajak{A}>{MNG}{EGS}n → ajakaːn
+!ajak>p{Aabs}>{MNG}{EGS}n → ajakpen
+!ajak{E}>{MNG}{EGS}n → ajakeːn
+!ajaʔ>{MNG}{EGS}{N} → ajaʔen
+!aja>{MNG}{EGS}{N} → ajaːn
+
 "ᤅᤠᤱ becomes ᤏᤠᤱ after a dental stop"
 %{NG%}:ᤏ <=> :[ᤋ | ᤍ] %>: _ ;
 "ᤅᤠᤱ becomes ᤔᤠᤱ after a bilabial"
@@ -104,15 +122,25 @@ Rules
 "{i} becomes null if succeeded by i"
 %{i%}:0 <=> _ %>: :ᤡ ;
             :Vowel ( %>: ) ( :0 ) ( %>: ) _ ;
-"{EGS} becomes E if preceded by GS"
-%{EGS%}:ᤧ <=> :GS ( %>: ) ( :0 ) ( %>: ) _ ;
-              :ᤒ ( %>: ) ( :0 ) ( %>: ) _ ;
+
+"{EGS} becomes E if preceded by GS or B"
+%{EGS%}:ᤧ <=> [ :GS | :ᤒ ] %>: %{MNG%}:0 _ ;
+
 "{EGS} becomes null if preceded by vowel"
-%{EGS%}:0 <=> :Vowel ( %>: ) :᤺ _ ;
+%{EGS%}:0 <=> :Vowel %>: %{MNG%}: _ ;
+              %{MNG%}:Vowel _ ;
+
+"{Iabs} becomes I if preceded by GS"
+%{Iabs%}:ᤡ  <=> :GS %>: %{MNG%}:0 _ ;
+!%{Iabs%}:ᤧ <=> :ᤒ ( %>: ) ( :0 ) ( %>: ) _ ;
+
 "{Iabs} becomes E if preceded by B"
-%{Iabs%}:ᤧ <=> :ᤒ ( %>: ) ( :0 ) ( %>: ) _ ;
+%{Iabs%}:ᤧ <=> :ᤒ %>: %{MNG%}:0 _ ;
+
 "{Iabs} becomes null if preceded by vowel"
-%{Iabs%}:0 <=> :Vowel ( %>: ) :᤺ _ ;
+%{Iabs%}:0 <=> :Vowel %>: %{MNG%}: _ ;
+               %{MNG%}:Vowel _ ;
+
 "{I} becomes null if succeeded by i"
 %{I%}:0 <=> _ %>: :ᤡ ;
 "{A} becomes null if succeeded by a vowel"

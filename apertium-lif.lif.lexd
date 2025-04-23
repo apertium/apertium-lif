@@ -66,8 +66,8 @@ IntPrn
 IndPrn
 
 PATTERN Nouns
-(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) Cases? Cases2?
-(Adjectives [ +:> ] )? Voice? PossessivePrn?(1) Noun-Stems Plurals PossessivePrn?(2) ( [ +:> ] CaseMarker) ( [ +:> ] CaseMarker2)?
+(Adjectives [ +:> ] )? Voice?(1) PossessivePrn?(1) Noun-Stems Plurals Voice?(2) PossessivePrn?(2) Cases? Cases2?
+(Adjectives [ +:> ] )? Voice?(1) PossessivePrn?(1) Noun-Stems Plurals Voice?(2) PossessivePrn?(2) ( [ +:> ] CaseMarker) ( [ +:> ] CaseMarker2)?
 Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
 Noun-Stems Attr
 
