@@ -54,6 +54,7 @@ PATTERN Adverbs
 AdverbStem [ <adv>: ] ( [ +:> ]Adverbs2) [ <adv>: ] ( [ +:> ]Complementizer)?
 AdverbStem [ <adv>: ] ( [ +:> ]Complementizer)?
 AdverbStem [ <adv>: ] Concession
+AdverbStem [ <adv>: ] Nominalizer
 
 PATTERN Determiners-Words
 (Adverbs [ +:> ] )? Determiners [ <det>: ]
@@ -63,7 +64,7 @@ Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
 Pronouns Cases?
 DemPrn Plurals? Cases?
 DefPrn
-IntPrn
+IntPrn Nominalizer?
 IndPrn
 
 PATTERN Nouns
