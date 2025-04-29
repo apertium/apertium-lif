@@ -68,17 +68,17 @@ IndPrn
 
 PATTERN Nouns
 (Adjectives [ +:> ] )? Voice?(1) PossessivePrn?(1) Noun-Stems Plurals Voice?(2) PossessivePrn?(2) Cases?
-Noun-Stems Nomination Plurals ( [ +:> ] Adjectives)
-Noun-Stems Nomination Imperious? Cases? ( [ +:> ] Adverbs)
-(Adjectives [ +:> ] )? Noun-Stems Nomination
+Noun-Stems Nominalizer Plurals ( [ +:> ] Adjectives)
+Noun-Stems Nominalizer Imperious? Cases? ( [ +:> ] Adverbs)
+(Adjectives [ +:> ] )? Noun-Stems Nominalizer
 Noun-Stems Attr
 
 PATTERN Verbs
-( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nomination? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
-( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nomination? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
+( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nominalizer? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
+( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nominalizer? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 Voice?(1) Negation?(1) Verb-Stems GerundMarker Negation?(2) Voice?(2) Cases? Subord? Concession? ( [ +:> ] Adverbs)?
 Verb-Stems GerundMarker Imperious ( [ +:> ] Adverbs)?
-Voice?(1) Verb-Stems Voice?(2) Nomination Cases? Subord|Concession
+Voice?(1) Verb-Stems Voice?(2) Nominalizer Cases? Subord|Concession
 Verb-Stems GerundMarker ObjNumber|Reflexivity&Port ( [ +:> ] Adverbs)?
 Verb-Stems Verb2 Concession
 
@@ -248,7 +248,7 @@ LEXICON Subord
 LEXICON Imperious
 <def>:>{E}{N}
 
-LEXICON Nomination
+LEXICON Nominalizer
 <nom>:{Bb}{A}
 
 ###############################################################################
