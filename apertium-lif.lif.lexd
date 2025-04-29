@@ -67,9 +67,10 @@ IntPrn
 IndPrn
 
 PATTERN Nouns
-(Adjectives [ +:> ] )? Voice?(1) PossessivePrn?(1) Noun-Stems Plurals Voice?(2) PossessivePrn?(2) Imperious? Cases? Cases2?
-(Adjectives [ +:> ] )? Voice?(1) PossessivePrn?(1) Noun-Stems Plurals Voice?(2) PossessivePrn?(2) Imperious? ( [ +:> ] CaseMarker) ( [ +:> ] CaseMarker2)?
-Noun-Stems ( [ +:> ] CaseMarker)? Plurals ( [ +:> ] Adj2)
+(Adjectives [ +:> ] )? Voice?(1) PossessivePrn?(1) Noun-Stems Plurals Voice?(2) PossessivePrn?(2) Cases?
+Noun-Stems Nomination Plurals ( [ +:> ] Adj2)
+Noun-Stems Nomination Imperious? Cases? ( [ +:> ] Adverbs)
+(Adjectives [ +:> ] )? Noun-Stems Nomination
 Noun-Stems Attr
 
 PATTERN Verbs
@@ -206,6 +207,8 @@ LEXICON Cases
 <gen>:>ᤖᤧ              # Dir/LR
 <gen>:>ᤗᤧ              # Dir/LR
 <gen>:>{l}ᤗᤧ           # Dir/LR
+<gen>:>{ie}{l}ᤗᤧ       # Dir/LR
+<gen>:>{a}{ie}{l}ᤗᤧ    # Dir/LR
 <voc>:>{aa}{o}
 <voc>:>{ana}{e}       # Dir/LR
 <voc>:>ᤖᤧ              # Dir/LR
@@ -226,7 +229,8 @@ LEXICON Cases
 <erg>:>ᤖᤧ
 <erg>:>ᤗᤧ              # Dir/LR
 <erg>:>{l}ᤗᤧ           # Dir/LR
-<erg>:>{i}{l}ᤗᤧ        # Dir/LR
+<erg>:>{ie}{l}ᤗᤧ       # Dir/LR
+<erg>:>{a}{ie}{l}ᤗᤧ    # Dir/LR
 <abs>:>{MNG}{Iabs}{N}
 <abs>:>{MNG}{EGS}{N}  # Dir/LR
 <ins>:>ᤗᤧ
@@ -333,21 +337,7 @@ LEXICON Adjectives
 ALIAS Adjectives Adj2
 
 LEXICON CaseMarker
-# lle Cases
-ᤀᤡᤸᤗᤧ<gen>:{a}{i}{l}ᤗᤧ
-ᤀᤡᤸᤗᤧ<erg>:{a}{i}{l}ᤗᤧ
-ᤀᤧᤸᤗᤧ<erg>:{a}{E}{l}ᤗᤧ
-ᤀᤧᤸᤗᤧ<gen>:{a}{E}{l}ᤗᤧ
-
-# lle without a
-ᤀᤡᤸᤗᤧ<gen>:{i}{l}ᤗᤧ      # Dir/LR
-ᤀᤡᤸᤗᤧ<erg>:{i}{l}ᤗᤧ      # Dir/LR
-ᤀᤧᤸᤗᤧ<erg>:{E}{l}ᤗᤧ      # Dir/LR
-ᤀᤧᤸᤗᤧ<gen>:{E}{l}ᤗᤧ      # Dir/LR
-
-# others
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
-ᤒᤠ<nom>:{Bb}{A}
 ᤖᤧ<erg>:ᤖᤧ
 ᤗᤧ<erg>:ᤗᤧ        # Dir/LR
 
