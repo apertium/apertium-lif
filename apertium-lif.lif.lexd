@@ -68,7 +68,7 @@ IndPrn
 
 PATTERN Nouns
 (Adjectives [ +:> ] )? Voice?(1) PossessivePrn?(1) Noun-Stems Plurals Voice?(2) PossessivePrn?(2) Cases?
-Noun-Stems Nomination Plurals ( [ +:> ] Adj2)
+Noun-Stems Nomination Plurals ( [ +:> ] Adjectives)
 Noun-Stems Nomination Imperious? Cases? ( [ +:> ] Adverbs)
 (Adjectives [ +:> ] )? Noun-Stems Nomination
 Noun-Stems Attr
@@ -237,8 +237,6 @@ LEXICON Cases
 <ins>:>{l}ᤗᤧ           # Dir/LR
 <ins>:>{i}{l}ᤗᤧ        # Dir/LR
 
-ALIAS Cases Cases2
-
 LEXICON Attr
 <attr>:
 
@@ -334,14 +332,10 @@ LEXICON Adjectives
 ᤜᤠᤱ<adj>:ᤜᤠ{ng}
 ᤁᤢᤓᤠ<adj>:ᤁᤢᤓ{A}
 
-ALIAS Adjectives Adj2
-
 LEXICON CaseMarker
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
 ᤖᤧ<erg>:ᤖᤧ
 ᤗᤧ<erg>:ᤗᤧ        # Dir/LR
-
-ALIAS CaseMarker CaseMarker2
 
 LEXICON Concession
 ᤛᤠᤱ<concess>:ᤛᤠ{ng}
