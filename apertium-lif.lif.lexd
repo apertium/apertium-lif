@@ -46,6 +46,10 @@ Concession
 Interjection
 TopicMarker
 Evidentiality
+Postpositions
+
+PATTERN Postpositions
+PossessivePrn? Postpos-Stems Cases?
 
 PATTERN Interjection
 Ij-Stem [ <ij>: ] ( [ +:> ]Question-Particles)?
@@ -84,6 +88,7 @@ Verb-Stems Nominalizer Cases? Subord|Concession
 Voice(1) Verb-Stems Voice(2) Voice(3) Cases? Subord|Concession
 Verb-Stems GerundMarker ObjNumber|Reflexivity&Port ( [ +:> ] Adverbs)?
 Verb-Stems Verb2 Concession
+Verb-Stems GerundMarker Comparative
 
 LEXICON PossessiveSuff
 <pos>:>{i}{N}
@@ -256,6 +261,9 @@ LEXICON Imperious
 LEXICON Nominalizer
 <nom>:>{Bb}{A}
 
+LEXICON Comparative
+<comp>:>ᤏᤢᤸᤗᤧ
+
 ###############################################################################
 ###                          L E X I C O N                                  ###
 ###############################################################################
@@ -323,6 +331,9 @@ LEXICON Prepositions
 ᤋᤃᤡ:ᤋᤃᤡ
 ᤗᤧᤵᤔᤠᤱ:ᤗᤧᤵᤔᤠᤱ
 ᤁᤢᤛᤡᤱ:ᤁᤢᤛᤡᤱ
+
+LEXICON Postpos-Stems
+ᤛᤡᤰᤋᤥ:ᤛᤡᤰᤋᤥ
 
 LEXICON TopicMarker
 ᤆᤀᤡᤲ<top>:ᤆᤀᤡᤲ
@@ -588,16 +599,52 @@ LEXICON Noun-Stems
 ᤌᤡᤒᤥᤱ<num>:ᤌᤡᤒᤥ{ng}   # Dir/LR
 ᤌᤡᤰᤌᤡᤰ<num>:ᤌᤡᤰᤌᤡ{k}
 ᤌᤡᤰᤏᤧᤳ<num>:ᤌᤡᤰᤏᤧ{t}
+ᤌᤡᤰᤏᤧ᤹ᤸ<num>:ᤌᤡᤰᤏᤧ᤹{l}   # Dir/LR
 ᤌᤡᤰᤛᤢᤶ<num>:ᤌᤡᤰᤛᤢ{m}
 ᤌᤡᤰᤗᤡ<num>:ᤌᤡᤰᤗᤡ
 ᤌᤡᤰᤅᤠ<num>:ᤌᤡᤰᤅ{A}
+ᤌᤡᤰᤏᤠ<num>:ᤌᤡᤰᤏ{A}    # Dir/LR
 ᤌᤡᤰᤋᤢᤰ<num>:ᤌᤡᤰᤋᤢ{k}
+ᤌᤡᤰᤌᤢᤰ<num>:ᤌᤡᤰᤌᤢ{k}   # Dir/LR
 ᤌᤡᤰᤏᤢ<num>:ᤌᤡᤰᤏᤢ
 ᤌᤡᤰᤕᤧᤳ<num>:ᤌᤡᤰᤕᤧ{t}
+ᤌᤡᤰᤕᤧ᤹ᤸ<num>:ᤌᤡᤰᤕᤧ᤹{l}    # Dir/LR
 ᤌᤡᤰᤑᤠᤱ<num>:ᤌᤡᤰᤑᤠ{ng}
 ᤏᤡᤒᤥ᤺ᤱ<num>:ᤏᤡᤒᤥ᤺{ng}
+ᤏᤧᤳᤌᤡᤰ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤌᤡ{k}
+ᤏᤧᤳᤏᤧᤳ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤏᤧᤜᤡ
+ᤏᤧᤳᤏᤧ᤹ᤸ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤏᤧᤜᤡ     # Dir/LR
+ᤏᤧᤳᤆᤢᤶ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤛᤢᤶᤛᤡ
+ᤏᤧᤳᤗᤡ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤗᤡᤛᤡ
+ᤏᤧᤳᤏᤠ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤏᤠᤛᤡ
+ᤏᤧᤳᤋᤢᤰ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤋᤢᤰᤛᤡ
+ᤏᤧᤳᤏᤢ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤏᤢᤛᤡ
+ᤏᤧᤳᤕᤧᤳ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤕᤧᤜᤡ
+ᤏᤧᤳᤑᤠᤱ<num>:ᤏᤡᤒᤥ᤺ᤱ+ᤑᤠᤱᤛᤡ
 ᤛᤢᤶᤒᤥ᤺ᤱ<num>:ᤛᤢᤶᤒᤥ᤺{ng}
+ᤛᤢᤶᤌᤡᤰ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤌᤡ{k}
+ᤛᤢᤶᤎᤡᤰ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤌᤡ{k}   # Dir/LR
+ᤛᤢᤶᤏᤧᤳ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤏᤧᤜᤡ
+ᤛᤢᤶᤏᤧ᤹ᤸ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤏᤧᤜᤡ     # Dir/LR
+ᤛᤢᤶᤛᤢᤶ<num>:ᤛᤢᤶᤒᤥ᤺ᤱᤒᤥ᤺ᤱ+ᤛᤢᤶᤛᤡ
+ᤛᤢᤶᤗᤡ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤗᤡᤛᤡ
+ᤛᤢᤶᤏᤠ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤏᤠᤛᤡ
+ᤛᤢᤶᤋᤢᤰ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤋᤢᤰᤛᤡ
+ᤛᤢᤶᤏᤢ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤏᤢᤛᤡ
+ᤛᤢᤶᤕᤧᤳ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤕᤧᤜᤡ
+ᤛᤢᤶᤑᤠᤱ<num>:ᤛᤢᤶᤒᤥ᤺ᤱ+ᤑᤠᤱᤛᤡ
 ᤗᤡᤒᤥ᤺ᤱ<num>:ᤗᤡᤒᤥ᤺{ng}
+ᤗᤡᤁᤡᤵ<num>:ᤗᤡᤁᤡ{p}
+ᤗᤡᤌᤡᤰ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤌᤡ{k}
+ᤗᤡᤏᤧᤳ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤏᤧᤜᤡ
+ᤗᤡᤏᤧ᤹ᤸ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤏᤧᤜᤡ     # Dir/LR
+ᤗᤡᤛᤢᤶ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤛᤢᤶᤛᤡ
+ᤗᤡᤗᤡ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤗᤡᤛᤡ
+ᤗᤡᤏᤠ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤏᤠᤛᤡ
+ᤗᤡᤋᤢᤰ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤋᤢᤰᤛᤡ
+ᤗᤡᤏᤢ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤏᤢᤛᤡ
+ᤗᤡᤕᤧᤳ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤕᤧᤜᤡ
+ᤗᤡᤑᤠᤱ<num>:ᤗᤡᤒᤥ᤺ᤱ+ᤑᤠᤱᤛᤡ
 ᤅᤠᤒᤥ᤺ᤱ<num>:ᤅᤠᤒᤥ᤺{ng}
 ᤋᤢᤰᤒᤥ᤺ᤱ<num>:ᤋᤢᤰᤒᤥ᤺{ng}
 ᤏᤢᤒᤥ᤺ᤱ<num>:ᤏᤢᤒᤥ᤺{ng}
