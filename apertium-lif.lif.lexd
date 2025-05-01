@@ -73,13 +73,15 @@ Noun-Stems Nominalizer Plurals ( [ +:> ] Adjectives)
 Noun-Stems Nominalizer Imperious? Cases? ( [ +:> ] Adverbs)
 (Adjectives [ +:> ] )? Noun-Stems Nominalizer
 Noun-Stems Attr
+Noun-Stems Cases Cases2
 
 PATTERN Verbs
 ( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nominalizer? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
 ( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nominalizer? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 Voice?(1) Negation?(1) Verb-Stems GerundMarker Negation?(2) Voice?(2) Cases? Subord? Concession? ( [ +:> ] Adverbs)?
 Verb-Stems GerundMarker Imperious ( [ +:> ] Adverbs)?
-Voice?(1) Verb-Stems Voice?(2) Nominalizer Cases? Subord|Concession
+Verb-Stems Nominalizer Cases? Subord|Concession
+Voice(1) Verb-Stems Voice(2) Voice(3) Cases? Subord|Concession
 Verb-Stems GerundMarker ObjNumber|Reflexivity&Port ( [ +:> ] Adverbs)?
 Verb-Stems Verb2 Concession
 
@@ -100,8 +102,8 @@ LEXICON PossessivePrn(2)
 :ᤂᤢᤴᤆᤡ>            <px3du>:
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
 
-LEXICON Voice(2)
-:{K}{E}>      <act>:
+LEXICON Voice(3)
+:{K}{E}>      <act>:        :>{Bb}{A}
 
 LEXICON SubjPersonNumber(8)
 :ᤀᤠ>[ssg1,noport]           <s_sg1>:[ssg1,noport]           <incl>:[ssg1,noport]            :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
@@ -238,6 +240,8 @@ LEXICON Cases
 <ins>:>{l}ᤗᤧ           # Dir/LR
 <ins>:>{i}{l}ᤗᤧ        # Dir/LR
 
+ALIAS Cases Cases2
+
 LEXICON Attr
 <attr>:
 
@@ -250,7 +254,7 @@ LEXICON Imperious
 <def>:>{E}{N}
 
 LEXICON Nominalizer
-<nom>:{Bb}{A}
+<nom>:>{Bb}{A}
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
@@ -294,6 +298,17 @@ LEXICON DefPrn
 
 LEXICON IntPrn
 ᤌᤣ<prn><itg>:ᤌᤣ
+ᤌᤧᤔᤠ<prn><itg>:ᤌᤧᤔᤠ
+ᤌᤣᤔᤠ<prn><itg>:ᤌᤣᤔᤠ
+ᤜᤠᤔᤠ<prn><itg>:ᤜᤠᤔᤠ
+ᤜᤣᤔᤠ<prn><itg>:ᤜᤣᤔᤠ
+ᤜᤧᤴ<prn><itg>:ᤜᤧᤴ
+ᤀᤣ᤺ᤴ<prn><itg>:ᤀᤣ᤺{N}
+ᤀᤣᤏ᤻<prn><itg>:ᤀᤣᤏ᤻     # Dir/LR
+ᤀᤣ᤺ᤸᤗᤣ<prn><itg>:ᤀᤣ᤺ᤸᤗᤣ
+ᤀᤣᤗ᤻ᤗᤣ<prn><itg>:ᤀᤣᤗ᤻ᤗᤣ  # Dir/LR
+ᤀᤠᤳᤋᤡ<prn><itg>:ᤀᤠᤳᤋᤡ
+ᤀᤠᤳᤋᤡᤴ<prn><itg>:ᤀᤠᤳᤋᤡ{N} 
 
 LEXICON IndPrn
 ᤁᤢᤓᤠ<prn><ind>:ᤁᤢᤓᤠ
@@ -355,6 +370,7 @@ LEXICON Determiners
 LEXICON Ij-Stem
 ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠᤖᤥ
 ᤔᤧ᤺ᤴ:ᤔᤧ᤺{N}
+ᤗᤥ:ᤗᤥ
 
 LEXICON Conjunctions
 ᤋᤖ<cnjcoo>:ᤋᤖ
@@ -399,6 +415,7 @@ LEXICON AdverbStem
 ᤜᤧᤰᤁᤣ:ᤜᤧᤰᤁᤣ  # Dir/LR
 ᤌᤣᤀᤠᤱ:ᤌᤣᤀᤠ{ng}
 ᤀᤣᤃᤠᤱ:ᤀᤣᤃᤠ{ng}
+ᤀᤠᤳᤋᤡ:ᤀᤠᤳᤋᤡ
 
 ALIAS AdverbStem Adverbs2
 
