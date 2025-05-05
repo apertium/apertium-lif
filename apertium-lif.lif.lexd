@@ -48,6 +48,8 @@ TopicMarker
 Evidentiality
 Postpositions
 NumeralWords
+Units [ <num>: ]
+Ordinals [ <ord>: ]
 
 PATTERN NumeralWords
 NumeralStems
@@ -271,7 +273,7 @@ LEXICON Comparative
 <comp>:>ᤏᤢᤸᤗᤧ
 
 LEXICON Collectivity
-<cnt>:>ᤑᤢ
+<cnt>:>{BH}{u}
 
 ###############################################################################
 ###                          L E X I C O N                                  ###
@@ -874,6 +876,29 @@ LEXICON NumeralStems
 ᤌᤡᤰᤁᤡᤵ<num>:ᤌᤡᤰᤁᤡ{p}     # Dir/LR
 ᤁᤡᤵᤌᤡᤰ<num>:ᤁᤡᤵᤌᤡ{k}
 ᤁᤡᤵ<num>:ᤁᤡ{p}
+
+LEXICON Units
+ᤌᤡᤰ:ᤌᤡ{k}
+ᤁᤠᤵᤛᤡᤱ:ᤁᤠᤵᤛᤡ{ng}
+ᤏᤠᤴᤇᤡᤱ:ᤏᤠᤴᤇᤡ{ng}
+ᤜᤣᤴᤇᤡᤱ:ᤜᤣᤴᤇᤡ{ng}
+ᤌᤡᤒᤥᤱᤜᤣᤴᤇᤡᤱ:ᤌᤡᤒᤥᤱᤜᤣᤴᤇᤡ{ng}
+ᤗᤠᤅᤧᤴ:ᤗᤠᤅᤧ{N}
+ᤌᤡᤒᤥᤱᤗᤠᤅᤧᤴ:ᤌᤡᤒᤥᤱᤗᤠᤅᤧ{N}
+ᤋᤥᤛᤡᤱ:ᤋᤥᤛᤡ{ng}
+
+LEXICON Ordinals
+ᤌᤡᤰᤛᤡᤃᤧᤰ:ᤌᤡᤰ>ᤛᤡ>ᤃᤧ{k}
+ᤏᤧᤛᤡᤃᤧᤰ:ᤏᤧ>ᤛᤡ>ᤃᤧ{k}
+ᤛᤢᤶᤛᤡᤃᤧᤰ:ᤛᤢᤶ>ᤛᤡ>ᤃᤧ{k}
+ᤗᤡᤛᤡᤃᤧᤰ:ᤗᤡ>ᤛᤡ>ᤃᤧ{k}
+ᤏᤠᤛᤡᤃᤧᤰ:ᤏᤠ>ᤛᤡ>ᤃᤧ{k}
+ᤅᤠᤛᤡᤃᤧᤰ:ᤅᤠ>ᤛᤡ>ᤃᤧ{k}      # Dir/LR
+ᤋᤢᤰᤛᤡᤃᤧᤰ:ᤋᤢᤰ>ᤛᤡ>ᤃᤧ{k}
+ᤏᤢᤛᤡᤃᤧᤰ:ᤏᤢ>ᤛᤡ>ᤃᤧ{k}
+ᤕᤧᤛᤡᤃᤧᤰ:ᤕᤧ>ᤛᤡ>ᤃᤧ{k}
+ᤑᤠᤱᤛᤡᤃᤧᤰ:ᤑᤠᤱ>ᤛᤡ>ᤃᤧ{k}
+ᤌᤡᤒᤥᤱᤛᤡᤃᤧᤰ:ᤌᤡᤒᤥᤱ>ᤛᤡ>ᤃᤧ{k}   # Dir/LR
 
 PATTERN Number
 Numeral [<num>:]

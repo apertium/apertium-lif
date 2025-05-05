@@ -61,6 +61,7 @@ Sets
 
 Vowel = ᤠ  ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ ;
 Bilabial = ᤔ ᤐ ᤑ ᤒ ᤓ  ᤵ  ᤶ ;
+Nasal = ᤶ  ᤴ  ᤱ ;
 iorE = ᤧ  ᤡ ;
 Vowelnota = ᤧ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ ;
 Vowelnote = ᤠ  ᤣ  ᤡ   ᤢ  ᤥ  ᤤ  ᤦ ;
@@ -159,6 +160,7 @@ Rules
 
 "ph becomes bh if preceded by a vowel"
 %{BH%}:ᤓ <=> :Vowel ( %>: ) _ ;
+             :Nasal ( %>: ) _ ;
 "{B} becomes ᤒ if preceded by a vowel"
 %{B%}:ᤒ <=> :Vowel ( %>: ) _ ;
 "{ch} becomes ᤈ if preceded by a vowel"
