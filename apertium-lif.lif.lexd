@@ -85,7 +85,7 @@ Noun-Stems Nominalizer Plurals ( [ +:> ] Adjectives)
 Noun-Stems Nominalizer Imperious? Cases? ( [ +:> ] Adverbs)
 (Adjectives [ +:> ] )? Noun-Stems Nominalizer
 Noun-Stems Attr
-Noun-Stems Cases Cases2
+Noun-Stems Cases Cases2 Plurals?
 
 PATTERN Verbs
 ( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nominalizer? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
@@ -218,16 +218,23 @@ LEXICON Plurals
 <du>:>ᤜᤠ᤹ᤇᤡ # Dir/LR
 
 LEXICON Cases
-<nom>:>ᤒᤧ
+<nom​>:>ᤒᤧ
+<nom>:>ᤒᤣ
 <gen>:>{NG}{A}{n}
-<gen>:>ᤖᤧ              # Dir/LR
-<gen>:>ᤗᤧ              # Dir/LR
+<gen​>:>ᤖᤧ              # Dir/LR
+<gen​>:>ᤗᤧ              # Dir/LR
 <gen>:>{l}ᤗᤧ           # Dir/LR
 <gen>:>{ie}{l}ᤗᤧ       # Dir/LR
 <gen>:>{a}{ie}{l}ᤗᤧ    # Dir/LR
+<gen>:>ᤖᤣ              # Dir/LR
+<gen>:>ᤗᤣ              # Dir/LR
+<gen>:>{l}ᤗᤣ           # Dir/LR
+<gen>:>{ie}{l}ᤗᤣ       # Dir/LR
+<gen>:>{a}{ie}{l}ᤗᤣ    # Dir/LR
 <voc>:>{aa}{o}
 <voc>:>{ana}{e}       # Dir/LR
 <voc>:>ᤖᤧ              # Dir/LR
+<voc>:>ᤖᤣ              # Dir/LR
 <imp>:>{Ee}
 <loc>:>{oo}
 <med>:>ᤗᤠᤠ{m}
@@ -238,6 +245,7 @@ LEXICON Cases
 <itrt>:>ᤗᤢᤔᤥ
 <itrt>:>ᤗᤢᤶᤔᤥ          # Dir/LR
 <comp>:>ᤏᤢᤸᤗᤧ
+<comp>:>ᤏᤢᤸᤗᤣ           # Dir/LR
 <com>:>ᤏᤢ{ng}
 <com>:>ᤏᤢ              # Dir/LR
 <abl>:>ᤗᤠᤠ{m}
@@ -247,11 +255,20 @@ LEXICON Cases
 <erg>:>{l}ᤗᤧ           # Dir/LR
 <erg>:>{ie}{l}ᤗᤧ       # Dir/LR
 <erg>:>{a}{ie}{l}ᤗᤧ    # Dir/LR
+<erg>:>ᤖᤣ              # Dir/LR
+<erg>:>ᤗᤣ              # Dir/LR
+<erg>:>{l}ᤗᤣ           # Dir/LR
+<erg>:>{ie}{l}ᤗᤣ       # Dir/LR
+<erg>:>{a}{ie}{l}ᤗᤣ    # Dir/LR
 <abs>:>{MNG}{Iabs}{N}
 <abs>:>{MNG}{EGS}{N}  # Dir/LR
+<abs​>:>{N}            # Dir/LR
 <ins>:>ᤗᤧ
 <ins>:>{l}ᤗᤧ           # Dir/LR
 <ins>:>{i}{l}ᤗᤧ        # Dir/LR
+<ins>:>ᤗᤣ              # Dir/LR
+<ins>:>{l}ᤗᤣ           # Dir/LR
+<ins>:>{i}{l}ᤗᤣ        # Dir/LR
 
 ALIAS Cases Cases2
 

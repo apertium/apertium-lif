@@ -4,9 +4,9 @@
 DELIMITERS = "<$.>" "<॥>" "<.>";
 
 # We can define sets for common tag clusters
-LIST NOUN = n;
+LIST NOUN = n np;
 LIST ADJ = adj;
-LIST NGEN = (n gen);
+LIST NGEN = (n gen) (np gen);
 LIST VERB = v;
 LIST PORT = o_2;
 LIST CASES = nom gen voc com abl erg ins abs comp itrt all ela med loc imp;
@@ -38,6 +38,12 @@ LIST SEN = "ᤛᤧᤴ";
 LIST ANIGEANG = "ᤀᤠ";
 LIST KHUNNEN = "ᤂᤴᤏᤧᤴ";
 LIST ANIGE = "ᤀᤠ";
+LIST GENW = gen​;
+LIST ABSW = abs​;
+LIST NOMW = nom​;
+LIST NSG = (n sg) (np sg);
+LIST NPL = (n pl) (np pl);
+LIST NU = "ᤏᤢ";
 
 SECTION
 
@@ -187,27 +193,27 @@ REMOVE SUB:-1 (s_pl1 incl) IF
 
 SELECT (s_sg3) IF
     (NOT -1C* PRN)
-    (-1* (n sg)) ;
+    (-1* NSG) ;
 
 SELECT SUB:-1 (s_sg3) IF
     (NOT -1C* PRN)
-    (-1* (n sg)) ;
+    (-1* NSG) ;
 
 SELECT SUB:-1 (s_sg3) IF
     (NOT -1C*/* PRN)
-    (-1/* (n sg)) ;
+    (-1/* NSG) ;
 
 SELECT (s_pl3) IF
     (NOT -1C* PRN)
-    (-1* (n pl)) ;
+    (-1* NSG) ;
 
 SELECT SUB:-1 (s_pl3) IF
     (NOT -1C* PRN)
-    (-1* (n pl)) ;
+    (-1* NPL) ;
 
 SELECT SUB:-1 (s_pl3) IF
     (NOT -1C*/* PRN)
-    (-1/* (n pl)) ;
+    (-1/* NPL) ;
 
 REMOVE GEN IF
     (NOT 1/-1 NOUN) ;
@@ -302,6 +308,23 @@ REMOVE (act) IF
 
 REMOVE (act) IF
     (NOT 0 (nom)) ;
+
+SELECT GENW IF
+    (0 ABSW) ;
+
+SELECT NOMW IF
+    (0 ABSW) ;
+
+REMOVE ABSW IF
+    (NOT 0 GENW OR NOMW) ;
+
+SELECT ABSW IF
+    (0 GENW OR NOMW) ;
+
+SELECT (cnjcoo) IF
+    (0 NU)
+    (-1 NOUN)
+    (1 NOUN) ;
 
 # Resources:
 # http://visl.sdu.dk/cg3.html
