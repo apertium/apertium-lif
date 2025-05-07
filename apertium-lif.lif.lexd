@@ -50,6 +50,7 @@ Postpositions
 NumeralWords
 Units [ <num>: ]
 Ordinals [ <ord>: ]
+EmphMarker
 
 PATTERN NumeralWords
 NumeralStems
@@ -69,7 +70,7 @@ AdverbStem [ <adv>: ] Concession
 AdverbStem [ <adv>: ] Nominalizer
 
 PATTERN Determiners-Words
-(Adverbs [ +:> ] )? Determiners [ <det>: ]
+(Adverbs [ +:> ] )? Determiners [ <det>: ] Comparative?
 
 PATTERN Pronoun-Words
 Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
@@ -86,20 +87,25 @@ Noun-Stems Nominalizer Imperious? Cases? ( [ +:> ] Adverbs)
 (Adjectives [ +:> ] )? Noun-Stems Nominalizer
 Noun-Stems Attr
 Noun-Stems Cases Cases2 Plurals?
+PossessivePrn?(1) Noun-Stems PossessivePrn?(2) Nominalizer? ToBeSuff
 
 PATTERN Verbs
 ( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4) Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5) SubjPersonNumber(2) ObjSlot SubjPersonNumber(6) NegationSuff? SubjPersonNumber(7) ObjNumber SubjPersonNumber(8) SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nominalizer? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]
 ( (Adverbs [ +:> ] )? SubjPersonNumber(1) SubjPersonNumber(4)? Negation?(1) Verb-Stems Negation?(2) Reflexivity&Port? Tense SubjPersonNumber(5)? SubjPersonNumber(2) ObjSlot SubjPersonNumber(6)? NegationSuff? SubjPersonNumber(7)? ObjNumber SubjPersonNumber(8)? SubjPersonNumber(3) NegationSuff2? Mode? Aspect Clitic? Nominalizer? Subord? ( [ +:> ] Adverbs)? )[^[past,nonpast],^[ssg1,ssg23],^[noport,bigport]]  # Dir/LR
 Voice?(1) Negation?(1) Verb-Stems GerundMarker Negation?(2) Voice?(2) Cases? Subord? Concession? ( [ +:> ] Adverbs)?
 Verb-Stems GerundMarker Imperious ( [ +:> ] Adverbs)?
-Verb-Stems Nominalizer Cases? Subord|Concession
-Voice(1) Verb-Stems Voice(2) Voice(3) Cases? Subord|Concession
+Verb-Stems Nominalizer Cases? Subord
+Verb-Stems Nominalizer Cases? Concession
+Voice(1) Verb-Stems Voice(2) Voice(3) Cases? Subord
+Voice(1) Verb-Stems Voice(2) Voice(3) Cases? Concession
+Voice(1) Verb-Stems Voice(2) Voice(3) Cases Cases2
 Verb-Stems GerundMarker ObjNumber|Reflexivity&Port ( [ +:> ] Adverbs)?
 Verb-Stems Verb2 Concession
 Verb-Stems GerundMarker Comparative
+Verb-Stems ToBeSuff
 
 LEXICON PossessiveSuff
-<pos>:>{i}{N}
+<pos>:>{gs}{i}{N}
 
 LEXICON PossessivePrn(2)
 :ᤀᤠ>               <px1sg>:
@@ -114,6 +120,20 @@ LEXICON PossessivePrn(2)
 :ᤁᤢ>              <px3sg>:
 :ᤂᤢᤴᤆᤡ>            <px3du>:
 :ᤂᤢᤴᤆᤡ>            <px3pl>:
+
+LEXICON ToBeSuff
+<ser1sg>:>{gs}{Ee}
+<ser1duincl>:>ᤛᤡ
+<ser1plincl>:>ᤛᤡ
+<ser1duexcl>:>ᤛᤡ>ᤃᤧ
+<ser1plexcl>:>ᤛᤡ>ᤃᤧ
+<ser2sg>:>ᤏᤧ
+<ser2du>:>ᤏᤧᤆᤡ{ng}
+<ser2du>:>ᤏᤧᤇᤡ{ng}
+<ser2pl>:>ᤏᤡ{ng}
+<ser3sg>:
+<ser3du>:>ᤛᤡ
+<ser3pl>:>ᤛᤡ
 
 LEXICON Voice(3)
 :{K}{E}>      <act>:        :>{Bb}{A}
@@ -279,6 +299,7 @@ LEXICON Subord
 <sub>:>{ie}{l}ᤗᤧ
 <sub>:>{l}ᤗᤧ           # Dir/LR
 <sub>:>ᤗᤧ              # Dir/LR
+<sub​>:>ᤗᤠ{do}ᤃᤡ
 
 LEXICON Imperious
 <def>:>{E}{N}
@@ -287,7 +308,8 @@ LEXICON Nominalizer
 <nom>:>{Bb}{A}
 
 LEXICON Comparative
-<comp>:>ᤏᤢᤸᤗᤧ
+<comp>:>ᤏᤢ{do}{l}ᤗᤧ
+<comp>:>ᤏᤢ{do}{l}ᤗᤣ    # Dir/LR
 
 LEXICON Collectivity
 <cnt>:>{BH}{u}
@@ -423,6 +445,9 @@ LEXICON Conjunctions
 LEXICON Evidentiality
 ᤗᤇ<evid>:ᤗᤇ
 ᤖᤇ<evid>:ᤖᤇ
+
+LEXICON EmphMarker
+ᤏᤠ<emph>:ᤏᤠ
 
 LEXICON AdverbStem
 ᤂᤶᤓ:ᤂᤶᤓ

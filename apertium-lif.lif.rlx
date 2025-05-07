@@ -44,6 +44,8 @@ LIST NOMW = nom​;
 LIST NSG = (n sg) (np sg);
 LIST NPL = (n pl) (np pl);
 LIST NU = "ᤏᤢ";
+LIST SUBW = sub​;
+LIST VGEN = (v gen);
 
 SECTION
 
@@ -325,6 +327,9 @@ SELECT (cnjcoo) IF
     (0 NU)
     (-1 NOUN)
     (1 NOUN) ;
+
+REMOVE SUBW IF
+    (NOT 0 VGEN) ;
 
 # Resources:
 # http://visl.sdu.dk/cg3.html
