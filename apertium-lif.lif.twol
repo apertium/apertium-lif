@@ -55,6 +55,12 @@ Alphabet
  %{Iabs%}:ᤧ  %{Iabs%}:ᤡ %{Iabs%}:0
  %{Bb%}:ᤒ %{Bb%}:ᤐ
  %{ie%}:ᤡ %{ie%}:ᤧ %{ie%}:0
+ %{rr%}:ᤖ %{rr%}:0
+ %{rtl%}:ᤖ %{rtl%}:ᤳ %{rtl%}:ᤸ
+ %{th%}:ᤌ %{th%}:ᤎ
+ %{tnull%}:ᤋ %{tnull%}:0
+ %{snull%}:ᤛ %{snull%}:0
+ %{kg%}:ᤁ %{kg%}:ᤰ %{kg%}:ᤃ
  %>:0  ;
 
 Sets
@@ -80,7 +86,7 @@ Rules
 "MNG becomes e if preceded by {Aabs}"
 %{MNG%}:ᤧ <=> %{Aabs%}:0 [ :0 - %{Aabs%}: ]* _ ;
 "MNG consonant rule"
-%{MNG%}:Ly <=> :Lx [ :0 - %{Aabs%}: ]* _ ;
+%{MNG%}:Ly <=> :Lx ( %>: ) [ :0 - %{Aabs%}: ]* _ ;
            where
                Lx in ( ᤶ  ᤴ  ᤱ  )
                Ly in ( ᤔ  ᤏ  ᤅ  )
@@ -142,6 +148,19 @@ Rules
 %{R%}:ᤖ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
 "{R} becomes null if at the end"
 %{R%}:0 <=> _ ( :0 )  .#. ;
+"{rr} becomes r if followed by Vowel"
+%{rr%}:ᤖ <=> _ ( %>: ) ( :0 ) :Vowel ;
+"{rr} becomes null if followed by consonant"
+%{rr%}:0 <=> _ ( %>: ) ( :0 ) :Consonant ;
+"{rtl} becomes r if followed by Vowel"
+%{rtl%}:ᤖ <=> _ ( %>: ) ( :0 ) :Vowel ;
+"{rtl} becomes t if followed by consonant"
+%{rtl%}:ᤳ <=> _ ( %>: ) ( :0 ) :Consonant ;
+"{rtl} becomes l if followed by consonant"
+%{rtl%}:ᤸ <=> _ ( %>: ) ( :0 ) :GS ;
+               _ ( %>: ) ( :0 ) .#. ;
+"{kg} becomes ᤁ if succeeded by a vowel"
+%{kg%}:ᤁ <=> _ ( %>: ) ( :0 ) :Vowel ;
 
 "{m} becomes ᤔ if succeeded by a vowel"
 %{m%}:ᤔ <=> _ ( %>: ) ( :0 ) :Vowel ;
@@ -161,6 +180,8 @@ Rules
 "ph becomes bh if preceded by a vowel"
 %{BH%}:ᤓ <=> :Vowel ( %>: ) _ ;
              :Nasal ( %>: ) _ ;
+"th becomes dh if preceded by a vowel"
+%{th%}:ᤎ <=> :Vowel ( %>: ) _ ;
 "{B} becomes ᤒ if preceded by a vowel"
 %{B%}:ᤒ <=> :Vowel ( %>: ) _ ;
 "{ch} becomes ᤈ if preceded by a vowel"

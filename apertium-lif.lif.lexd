@@ -103,6 +103,7 @@ Verb-Stems GerundMarker ObjNumber|Reflexivity&Port ( [ +:> ] Adverbs)?
 Verb-Stems Verb2 Concession
 Verb-Stems GerundMarker Comparative
 Verb-Stems ToBeSuff
+(Conjunctions [ +:> ] ) Verb-Stems ObjSlot Cases
 
 LEXICON PossessiveSuff
 <pos>:>{gs}{i}{N}
@@ -408,6 +409,7 @@ LEXICON Adjectives
 ᤌᤣᤀᤠᤱ<adj>:ᤌᤣᤀᤠ{ng}
 ᤜᤠᤱ<adj>:ᤜᤠ{ng}
 ᤁᤢᤓᤠ<adj>:ᤁᤢᤓ{A}
+ᤁᤠᤰ<adj>:ᤁᤠ{k}
 
 LEXICON CaseMarker
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
@@ -441,6 +443,7 @@ LEXICON Conjunctions
 ᤑᤠ᤹ᤀᤠᤱ<cnj>:ᤑᤠ᤹ᤀᤠ{ng}
 ᤀᤡᤃᤪ<cnjcoo>:ᤀᤡᤃᤪ
 ᤏᤢ<cnjcoo>:ᤏᤢ
+ᤂᤧᤸᤗᤧ<cnjcoo>:ᤂᤧᤸᤗᤧ
 
 LEXICON Evidentiality
 ᤗᤇ<evid>:ᤗᤇ
@@ -481,6 +484,9 @@ LEXICON AdverbStem
 ᤌᤣᤀᤠᤱ:ᤌᤣᤀᤠ{ng}
 ᤀᤣᤃᤠᤱ:ᤀᤣᤃᤠ{ng}
 ᤀᤠᤳᤋᤡ:ᤀᤠᤳᤋᤡ
+ᤛᤍᤣ:ᤛᤍᤣ
+ᤛᤍᤠᤍᤡᤱ:ᤛᤍᤠᤍᤡ{ng}
+ᤂᤧᤒᤩᤠᤱ:ᤂᤧᤒᤩᤠᤱ
 
 ALIAS AdverbStem Adverbs2
 
@@ -520,6 +526,16 @@ LEXICON Verb-Stems
 ᤋᤠ᤹ᤔᤠ<v>:ᤋ{R}{do}{ng}  # unsure
 ᤔᤠᤛᤡᤱᤔᤠ<v>:ᤔᤠᤛᤡᤱ{gs}
 ᤁᤠᤶᤔᤠ<v>:ᤁᤠ{m}
+ᤔᤡᤈᤠ᤹ᤔᤠ<v>:ᤔᤡᤈᤠ{gs}{rr}
+ᤗᤧᤵᤔᤠ<v>:ᤗᤧ{gs}{rtl}
+ᤏᤠ᤺ᤰᤔᤠ<v>:ᤏᤠ{do}{k}{tnull}
+ᤌᤢᤱᤔᤠ<v>:{th}{u}{ng}{snull}
+ᤗᤠᤱᤄᤣ᤺ᤰᤔᤠ<v>:ᤗᤠᤱᤄᤣ{do}{gs}{kg}
+ᤗᤠᤱᤄᤣᤁ᤻ᤔᤠ<v>:ᤗᤠᤱᤄᤣᤁ{km}{gs}{kg}
+ᤗᤧ᤺ᤔᤠ<v>:ᤗᤧ{do}
+ᤛᤢᤰᤔᤠ<v>:ᤛᤢ{k}{tnull}
+ᤜᤠ᤺ᤵᤔᤠ<v>:ᤜᤠ{do}
+ᤗ᤹ᤔᤠ<vbdo>:ᤗ᤹
 
 ALIAS Verb-Stems Verb2
 
@@ -588,6 +604,14 @@ LEXICON Noun-Stems
 ᤜᤠᤱ<n>:ᤜᤠ{ng}{ng}      # Dir/LR
 ᤔᤧᤴᤇᤠᤶ<n>:ᤔᤧᤴᤇᤠ{m}
 ᤀᤡᤛᤪᤠᤀᤡᤗᤒᤠ<n>:ᤀᤡᤛᤪᤠᤀᤡᤗ>ᤒ{Aabs}
+ᤁᤠᤰ<n>:ᤁᤠ{k}
+ᤕᤠᤵᤔᤡ<n>:ᤕᤠᤵᤔᤡ
+ᤐᤥᤱ<n>:ᤐᤥ{do}{ng}{gs}
+ᤔᤠᤱᤏᤡᤱᤘᤠ᤹ᤐᤠᤴ<n>:ᤔᤠᤱᤏᤡᤱᤘᤠ᤹>ᤐᤠ{N}
+ᤔᤠᤱᤏᤡᤱᤘᤠ᤹ᤒᤠ<n>:ᤔᤠᤱᤏᤡᤱᤘᤠ᤹>ᤒ{Aabs}
+ᤛᤡᤍᤢᤱᤈᤓᤠ<n>:ᤛᤡᤍᤢᤱᤈᤓ{A}
+ᤛᤡᤍᤢᤱᤆᤓᤠ<n>:ᤛᤡᤍᤢᤱᤆᤓ{A}
+ᤋᤢᤰᤂᤣ<n>:ᤋᤢᤰᤂᤣ
 
 # names of god
 ᤀᤸᤗᤧᤰᤂᤠ<n>:ᤀᤸᤗᤧᤰᤂᤠ
@@ -600,6 +624,7 @@ LEXICON Noun-Stems
 ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠᤱ<n>:ᤏᤡᤱᤘᤠ᤹ᤑᤢᤔᤠ{ng}{ng}   # Dir/LR
 ᤆᤠ᤺ᤔᤠᤱ<n>:ᤆᤠ᤺ᤔᤠ{ng}
 ᤕᤜᤘᤣ<n>:ᤕᤜᤘᤣ
+ᤕᤧᤛᤢ<n>:ᤕᤧᤛᤢ
 
 # time Words
 ᤐᤡᤴᤆᤧᤵ<n>:ᤐᤡᤴᤆᤧ{p}
@@ -780,6 +805,9 @@ LEXICON Noun-Stems
 ᤐᤋᤪᤢᤛ<np>:ᤐᤋᤪᤢᤛ
 ᤕᤜᤢᤍᤠ<np>:ᤕᤜᤢᤍᤠ
 ᤛᤢᤑᤥ<np>:ᤛᤢᤑᤥ
+
+# ones with unknown meaning for now
+ᤁᤢᤛ᤻ᤛᤠ<n>:ᤁᤢᤛ᤻ᤛᤠ{do}
 
 LEXICON NumeralStems
 ᤜᤥᤵ<num>:ᤜᤥ{p}
