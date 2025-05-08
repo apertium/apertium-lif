@@ -516,9 +516,10 @@ LEXICON Verb-Stems
 ᤑᤧ᤹ᤔᤠ<v>:ᤑᤧ{dg}{N}
 ᤋᤧᤶᤔᤠ<v>:ᤋᤧ{t}
 ᤋᤥ᤺ᤔᤠ<v>:ᤋᤥ{do}
-ᤏᤠᤘᤠᤔᤠ<v>:ᤏᤠᤘᤠ # unsure
-ᤋᤠ᤹ᤔᤠ<v>:ᤋ{R}{do}{ng} # unsure
+ᤏᤠᤘᤠᤔᤠ<v>:ᤏᤠᤘᤠ          # unsure
+ᤋᤠ᤹ᤔᤠ<v>:ᤋ{R}{do}{ng}  # unsure
 ᤔᤠᤛᤡᤱᤔᤠ<v>:ᤔᤠᤛᤡᤱ{gs}
+ᤁᤠᤶᤔᤠ<v>:ᤁᤠ{m}
 
 ALIAS Verb-Stems Verb2
 
