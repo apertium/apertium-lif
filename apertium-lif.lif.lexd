@@ -385,6 +385,7 @@ LEXICON Prepos-Stems
 ᤋᤃᤡ<pr>:ᤋᤃᤡ
 ᤗᤧᤵᤔᤠᤱ<pr>:ᤗᤧᤵᤔᤠ{ng}
 ᤁᤢᤛᤡᤱ<pr>:ᤁᤢᤛᤡ{ng}
+ᤛᤥᤖᤡᤰ:ᤛᤥᤖᤡ{k}
 
 LEXICON Postpos-Stems
 ᤛᤡᤰᤋᤥ:ᤛᤡᤰᤋᤥ
@@ -432,6 +433,8 @@ LEXICON Determiners
 ᤈᤶᤔ:ᤈᤶᤔ
 ᤂ:ᤂ
 ᤀᤖᤢ:ᤀᤖᤢ
+ᤍᤠᤱᤒᤧᤸᤗᤧ:ᤍᤠᤱᤒᤧᤸᤗᤧ    #unsure
+ᤍᤠᤱᤒᤠᤸᤗᤧ:ᤍᤠᤱᤒᤠᤸᤗᤧ    #unsure
 
 LEXICON Ij-Stem
 ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠᤖᤥ
@@ -752,6 +755,9 @@ LEXICON Noun-Stems
 ᤀᤠᤍᤶ<np>:ᤀᤠᤍ{m}
 ᤀᤠᤍᤶ<np>:ᤀᤠᤍ{m}{m}     # Dir/LR
 ᤏᤢᤜ<np>:ᤏᤢᤜ
+ᤀᤡᤛ᤻ᤔᤠᤀᤣᤗ<np>:ᤀᤡᤛ᤻ᤔᤠᤀᤣᤗ
+ᤀᤡᤛᤪᤠᤀᤡᤗ<np><top>:ᤀᤡᤛᤪᤠᤀᤡᤗ
+ᤀᤡᤛᤪᤠᤀᤡᤗᤡ<np>:ᤀᤡᤛᤪᤠᤀᤡᤗᤡ
 
 # bible chapter names
 ᤗᤠᤶᤍᤡᤰ<np>:ᤗᤠᤶᤍᤡ{k}
