@@ -119,10 +119,13 @@ Rules
               %{MNG%}:Vowel _ ;
 "{Iabs} becomes I if preceded by GS"
 %{Iabs%}:ᤡ  <=> :GS %>: %{MNG%}:0 _ ;
+                %{MNG%}:ᤔ _ ;
+                %{MNG%}:ᤏ _ ;
+                %{MNG%}:ᤅ _ ;
 "{Iabs} becomes E if preceded by B"
 %{Iabs%}:ᤧ <=> :ᤒ %>: %{MNG%}:0 _ ;
 "{Iabs} becomes null if preceded by vowel"
-%{Iabs%}:0 <=> :Vowel %>: %{MNG%}: _ ;
+%{Iabs%}:0 <=> :Vowel %>: %{MNG%}:0 _ ;
                %{MNG%}:Vowel _ ;
 "{I} becomes null if succeeded by i"
 %{I%}:0 <=> _ %>: :ᤡ ;

@@ -40,7 +40,7 @@ Adverbs
 Question-Particles
 CaseMarker
 Pronoun-Words
-Prepositions [ <pr>: ]
+Prepositions
 Complementizer
 Concession
 Interjection
@@ -52,13 +52,16 @@ Units [ <num>: ]
 Ordinals [ <ord>: ]
 EmphMarker
 
+PATTERN Prepositions
+PossessivePrn?(1) Prepos-Stems PossessivePrn?(2)
+
 PATTERN NumeralWords
 NumeralStems
 NumeralStems ( [ +:> ]Adverbs)
 NumeralStems Collectivity
 
 PATTERN Postpositions
-PossessivePrn? Postpos-Stems Cases?
+PossessivePrn?(1) Postpos-Stems PossessivePrn?(2) Cases?
 
 PATTERN Interjection
 Ij-Stem [ <ij>: ] ( [ +:> ]Question-Particles)?
@@ -372,16 +375,16 @@ LEXICON IntPrn
 LEXICON IndPrn
 ᤁᤢᤓᤠ<prn><ind>:ᤁᤢᤓᤠ
 
-LEXICON Prepositions
-ᤌᤥ:ᤌᤥ
-ᤏᤠ:ᤏᤠ
-ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ:ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ
-ᤗᤠᤃᤡ:ᤗᤠᤃᤡ
-ᤑᤠ᤹ᤀᤠᤱ:ᤑᤠ᤹ᤀᤠᤱ
-ᤌᤠᤖᤡᤰ:ᤌᤠᤖᤡᤰ
-ᤋᤃᤡ:ᤋᤃᤡ
-ᤗᤧᤵᤔᤠᤱ:ᤗᤧᤵᤔᤠᤱ
-ᤁᤢᤛᤡᤱ:ᤁᤢᤛᤡᤱ
+LEXICON Prepos-Stems
+ᤌᤥ<pr>:ᤌᤥ
+ᤏᤠ<pr>:ᤏ{A}
+ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ<pr>:ᤀᤧᤶᤓᤧᤍᤠᤱ>ᤒ{Aabs}
+ᤗᤠᤃᤡ<pr>:ᤗᤠᤃᤡ
+ᤑᤠ᤹ᤀᤠᤱ<pr>:ᤑᤠ᤹ᤀᤠ{ng}
+ᤌᤠᤖᤡᤰ<pr>:ᤌᤠᤖᤡ{k}
+ᤋᤃᤡ<pr>:ᤋᤃᤡ
+ᤗᤧᤵᤔᤠᤱ<pr>:ᤗᤧᤵᤔᤠ{ng}
+ᤁᤢᤛᤡᤱ<pr>:ᤁᤢᤛᤡ{ng}
 
 LEXICON Postpos-Stems
 ᤛᤡᤰᤋᤥ:ᤛᤡᤰᤋᤥ
@@ -572,7 +575,7 @@ LEXICON Noun-Stems
 ᤐᤠᤴ<n>:ᤐᤠ{do}{N}
 ᤐᤠᤏ᤻<n>:ᤐᤠ{do}{N}  # Dir/LR
 ᤔᤧᤴᤆᤡᤀᤠ<n>:ᤔᤧᤴᤆᤡᤀᤠ
-ᤔᤏᤠ<n>:ᤔᤏᤠ
+ᤔᤏᤠ<n>:ᤔᤏᤠ{do}
 ᤏᤠᤖᤠ<n>:ᤏᤠᤖᤠ
 ᤛᤥᤖ<n>:ᤛᤥᤖ
 ᤀ᤹ᤍ᤺ᤱ<n>:ᤀ᤹ᤍ᤺{ng}
@@ -746,6 +749,9 @@ LEXICON Noun-Stems
 ᤛᤠᤖᤠ<np>:ᤛᤠᤖ{A}
 ᤔᤡᤛᤪ<np><top>:ᤔᤡᤛᤪ
 ᤔᤡᤛᤪᤡ<np>:ᤔᤡᤛᤪᤡ
+ᤀᤠᤍᤶ<np>:ᤀᤠᤍ{m}
+ᤀᤠᤍᤶ<np>:ᤀᤠᤍ{m}{m}     # Dir/LR
+ᤏᤢᤜ<np>:ᤏᤢᤜ
 
 # bible chapter names
 ᤗᤠᤶᤍᤡᤰ<np>:ᤗᤠᤶᤍᤡ{k}
@@ -808,6 +814,7 @@ LEXICON Noun-Stems
 
 # ones with unknown meaning for now
 ᤁᤢᤛ᤻ᤛᤠ<n>:ᤁᤢᤛ᤻ᤛᤠ{do}
+ᤕᤧᤶᤔᤥ<n>:ᤕᤧᤶᤔᤥ
 
 LEXICON NumeralStems
 ᤜᤥᤵ<num>:ᤜᤥ{p}
