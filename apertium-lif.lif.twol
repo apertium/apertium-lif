@@ -12,7 +12,7 @@ Alphabet
  %{oo%}:ᤥ
  %{ao%}:ᤥ %{ao%}:ᤠ
  %{n%}:ᤱ
- %{N%}:ᤏ %{N%}:ᤴ
+ %{N%}:ᤏ %{N%}:ᤴ %{N%}:ᤸ
  %{M%}:ᤍ %{M%}:ᤛ
  %{NG%}:ᤅ %{NG%}:ᤔ %{NG%}:ᤏ
  %{ng%}:ᤅ %{ng%}:ᤱ
@@ -170,6 +170,8 @@ Rules
 %{m%}:ᤔ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{N} becomes ᤏ if succeeded by a vowel"
 %{N%}:ᤏ <=> _ ( %>: ) ( :0 ) :Vowel ;
+"{N} becomes ᤸ if succeeded by ᤗ"
+%{N%}:ᤸ <=> _ %>: :ᤗ ;
 "{ng} becomes ᤅ if succeeded by a vowel"
 %{ng%}:ᤅ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{k} becomes ᤁ if succeeded by a vowel"
@@ -188,8 +190,7 @@ Rules
 %{th%}:ᤎ <=> :Vowel ( %>: ) _ ;
 "{B} becomes ᤒ if preceded by a vowel"
 %{B%}:ᤒ <=> :Vowel ( %>: ) _ ;
-"{ch} becomes ᤈ if preceded by a vowel"
-%{ch%}:ᤈ <=> :Vowel ( %>: ) _ ;
+
 "{T} becomes ᤍ if preceded by a vowel"
 %{T%}:ᤍ <=> :Vowel ( %>: ) _ ;
 "{K} becomes ᤃ if succeeded by a vowel"

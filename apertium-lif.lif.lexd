@@ -40,6 +40,11 @@ Adverbs
 Question-Particles
 CaseMarker
 Pronoun-Words
+DemonstrativePrns
+DefinitivePrns
+IndefinitePrns
+InterrogativePrns
+ReflexivePrns
 Prepositions
 Complementizer
 Concession
@@ -78,10 +83,20 @@ PATTERN Determiners-Words
 PATTERN Pronoun-Words
 Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
 Pronouns Cases?
+
+PATTERN DemonstrativePrns
 DemPrn Plurals? Cases?
+
+PATTERN DefinitivePrns
 DefPrn
+
+PATTERN InterrogativePrns
 IntPrn Nominalizer?
+
+PATTERN IndefinitePrns
 IndPrn
+
+PATTERN ReflexivePrns
 ReflPrn
 
 PATTERN Nouns
@@ -108,6 +123,7 @@ Verb-Stems Verb2 Concession
 Verb-Stems GerundMarker Comparative
 Verb-Stems ToBeSuff
 (Conjunctions [ +:> ] ) Verb-Stems ObjSlot Cases
+(DemonstrativePrns [ +:> ] ) Verb-Stems Tense SubjPersonNumber(2) ObjSlot ObjNumber Ergation
 
 LEXICON PossessiveSuff
 <pos>:>{gs}{i}{N}
@@ -296,6 +312,18 @@ LEXICON Cases
 <ins>:>{i}{l}ᤗᤣ        # Dir/LR
 
 ALIAS Cases Cases2
+
+LEXICON Ergation
+<erg>:>ᤖᤧ
+<erg>:>ᤗᤧ              # Dir/LR
+<erg>:>{l}ᤗᤧ           # Dir/LR
+<erg>:>{ie}{l}ᤗᤧ       # Dir/LR
+<erg>:>{a}{ie}{l}ᤗᤧ    # Dir/LR
+<erg>:>ᤖᤣ              # Dir/LR
+<erg>:>ᤗᤣ              # Dir/LR
+<erg>:>{l}ᤗᤣ           # Dir/LR
+<erg>:>{ie}{l}ᤗᤣ       # Dir/LR
+<erg>:>{a}{ie}{l}ᤗᤣ    # Dir/LR
 
 LEXICON Attr
 <attr>:
@@ -635,6 +663,7 @@ LEXICON Noun-Stems
 ᤛᤧᤴᤍᤡᤁ᤻<n>:ᤛᤧᤴᤍᤡᤁ{km}
 ᤛᤧᤴ<n>:ᤛᤧ{N}
 ᤍᤠᤱᤒᤠ<n>:ᤍᤠᤱ>ᤒ{Aabs}
+ᤗᤢᤱᤔᤠ᤹<n>:ᤗᤢᤱᤔᤠ᤹
 
 # names of god
 ᤀᤸᤗᤧᤰᤂᤠ<n>:ᤀᤸᤗᤧᤰᤂᤠ
