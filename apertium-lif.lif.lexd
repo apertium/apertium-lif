@@ -41,7 +41,7 @@ Question-Particles
 CaseMarker
 Pronoun-Words
 DemonstrativePrns
-DefinitivePrns
+DefinitePrns
 IndefinitePrns
 InterrogativePrns
 ReflexivePrns
@@ -80,6 +80,7 @@ AdverbStem Ergation
 
 PATTERN Determiners-Words
 (Adverbs [ +:> ] )? Determiners [ <det>: ] Comparative?
+Determiners Ergation
 
 PATTERN Pronoun-Words
 Pronouns PossessiveSuff? ( [ +:> ]Adverbs)?
@@ -88,7 +89,7 @@ Pronouns Cases?
 PATTERN DemonstrativePrns
 DemPrn Plurals? Cases?
 
-PATTERN DefinitivePrns
+PATTERN DefinitePrns
 DefPrn
 
 PATTERN InterrogativePrns
@@ -454,6 +455,8 @@ LEXICON Adjectives
 ᤜᤠᤱ<adj>:ᤜᤠ{ng}
 ᤁᤢᤓᤠ<adj>:ᤁᤢᤓ{A}
 ᤁᤠᤰ<adj>:ᤁᤠ{k}
+ᤐᤕᤶ<adj>:ᤐᤕ{m}
+ᤜᤧᤰᤋᤱᤒᤠ<adj><m>:ᤜᤧᤰᤋᤱ>ᤒ{A}
 
 LEXICON CaseMarker
 ᤋᤠᤵ<nom>:ᤋᤠ{p}
@@ -493,6 +496,7 @@ LEXICON Conjunctions
 ᤏᤢ<cnjcoo>:ᤏᤢ
 ᤂᤧᤸᤗᤧ<cnjcoo>:ᤂᤧᤸᤗᤧ
 ᤗᤢᤶᤔᤥ<cnj>:ᤗᤢᤶ>ᤔᤥ
+ᤑᤠ᤹ᤃᤪ<cnjsub>:ᤑᤠ᤹ᤃᤪ
 
 LEXICON Evidentiality
 ᤗᤇ<evid>:ᤗᤇ
@@ -539,6 +543,7 @@ LEXICON AdverbStem
 ᤂᤧᤵᤔᤥ:ᤂᤧᤵᤔᤥ
 ᤀᤠᤵᤑᤣᤰ:ᤀᤠᤵᤑᤣ{k}
 ᤗ᤹ᤖᤡᤰ:ᤗ᤹ᤖᤡ{k}
+ᤐᤕᤶ:ᤐᤕ{m}
 
 ALIAS AdverbStem Adverbs2
 
@@ -561,8 +566,8 @@ LEXICON Verb-Stems
 ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{do}{Kk}
 ᤆᤥᤁ᤻ᤔᤠ<vbdo>:{ch}{K}{km}     # Dir/LR
 ᤆᤠᤔᤠ<v>:ᤆ{ao}
-ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{So}
-ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{So}  # Dir/LR
+ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{KSo}
+ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{KSo}  # Dir/LR
 ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pgt}{R}
 ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R}    # Dir/LR
 ᤔᤠ᤺ᤔᤠ<v>:ᤔᤠ{do}{S}
@@ -579,7 +584,7 @@ LEXICON Verb-Stems
 ᤔᤠᤛᤡᤱᤔᤠ<v>:ᤔᤠᤛᤡᤱ{gs}
 ᤁᤠᤶᤔᤠ<v>:ᤁᤠ{m}
 ᤔᤡᤈᤠ᤹ᤔᤠ<v>:ᤔᤡᤈᤠ{gs}{rr}
-ᤗᤧᤵᤔᤠ<v>:ᤗᤧ{gs}{rtl}
+ᤗᤧᤵᤔᤠ<v>:ᤗᤧ{gs}{rtl}{To}
 ᤏᤠ᤺ᤰᤔᤠ<v>:ᤏᤠ{do}{k}{tnull}
 ᤌᤢᤱᤔᤠ<v>:{th}{u}{ng}{snull}
 ᤗᤠᤱᤄᤣ᤺ᤰᤔᤠ<v>:ᤗᤠᤱᤄᤣ{do}{gs}{kg}
@@ -592,6 +597,8 @@ LEXICON Verb-Stems
 ᤆᤡᤱᤔᤠ<v>:ᤆᤡ{ng}
 ᤕᤠᤱᤔᤠ<v>:ᤕᤠ{ng}
 ᤕᤢᤱᤔᤠ<v>:ᤕᤢ{ng}
+ᤂᤥ᤺ᤔᤠ<v>:ᤂᤥ{do}
+ᤐᤡᤔᤠ<v>:ᤐᤡ{rr}
 
 ALIAS Verb-Stems Verb2
 
@@ -687,6 +694,8 @@ LEXICON Noun-Stems
 ᤋᤠᤵᤑᤧ᤺ᤶᤒᤠ<n>:ᤋᤠᤵᤑᤧ᤺ᤶ>ᤒ{Aabs}
 ᤐᤣᤗᤡ<n>:ᤐᤣᤗ{I}
 ᤌᤱ<n>:ᤌ{ng}
+ᤕᤠ᤺ᤶᤒᤣ<n>:ᤕᤠ᤺ᤶᤒᤣ
+ᤕᤠᤶᤒᤣ<n>:ᤕᤠᤶᤒᤣ
 
 # names of god
 ᤀᤸᤗᤧᤰᤂᤠ<n>:ᤀᤸᤗᤧᤰᤂᤠ

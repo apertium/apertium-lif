@@ -22,6 +22,7 @@ Alphabet
  %{p%}:ᤐ %{p%}:ᤵ
  %{t%}:ᤋ %{t%}:ᤳ
  %{T%}:ᤋ %{T%}:ᤍ
+ %{To%}:ᤋ %{To%}:0
  %{tp%}:ᤳ %{tp%}:ᤵ
  %{tm%}:ᤔ %{tm%}:ᤋ %{tm%}:0
  %{B%}:ᤒ %{B%}:ᤐ
@@ -39,6 +40,7 @@ Alphabet
  %{s%}:ᤛ %{s%}:0 %{s%}:ᤋ
  %{S%}:ᤛ
  %{So%}:ᤛ %{So%}:0
+ %{KSo%}:ᤛ %{KSo%}:0 %{KSo%}:ᤂ
  %{P%}:ᤶ %{P%}:ᤵ
  %{D%}:ᤔ %{D%}:ᤍ
  %{u%}:ᤢ
@@ -197,6 +199,10 @@ Rules
 %{Kk%}:ᤃ <=> _ %>: ( :᤻ ) ( :0 ) :Vowel ;
 "{eg} becomes glottal stop if succeeded by consonant"
 %{eg%}:᤹ <=> _ %>: :Consonant ;
+"{KSo} becomes kh if preceded by k"
+%{eg%}:ᤂ <=> :ᤰ ( %>: ) _ ;
+"{To} becomes t if preceded by t"
+%{eg%}:ᤋ <=> :ᤳ ( %>: ) _ ;
 
 
 
