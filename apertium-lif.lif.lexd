@@ -76,6 +76,7 @@ AdverbStem [ <adv>: ] ( [ +:> ]Adverbs2) [ <adv>: ] ( [ +:> ]Complementizer)?
 AdverbStem [ <adv>: ] ( [ +:> ]Complementizer)?
 AdverbStem [ <adv>: ] Concession
 AdverbStem [ <adv>: ] Cases? Nominalizer
+AdverbStem Ergation
 
 PATTERN Determiners-Words
 (Adverbs [ +:> ] )? Determiners [ <det>: ] Comparative?
@@ -115,6 +116,7 @@ Voice?(1) Negation?(1) Verb-Stems GerundMarker Negation?(2) Voice?(2) Cases? Sub
 Verb-Stems GerundMarker Imperious ( [ +:> ] Adverbs)?
 Verb-Stems Nominalizer Cases? Subord
 Verb-Stems Nominalizer Cases? Concession
+Voice(1) Verb-Stems Voice(2) Voice(3)
 Voice(1) Verb-Stems Voice(2) Voice(3) Cases? Subord
 Voice(1) Verb-Stems Voice(2) Voice(3) Cases? Concession
 Voice(1) Verb-Stems Voice(2) Voice(3) Cases Cases2
@@ -151,6 +153,7 @@ LEXICON ToBeSuff
 <ser2sg>:>ᤏᤧ
 <ser2du>:>ᤏᤧᤆᤡ{ng}
 <ser2du>:>ᤏᤧᤇᤡ{ng}
+<ser2du>:>ᤏᤧᤳᤇᤡ      # Dir/LR
 <ser2pl>:>ᤏᤡ{ng}
 <ser3sg>:
 <ser3du>:>ᤛᤡ
@@ -277,10 +280,10 @@ LEXICON Cases
 <voc>:>ᤖᤧ              # Dir/LR
 <voc>:>ᤖᤣ              # Dir/LR
 <imp>:>{Ee}
-<loc>:>{oo}
+<loc>:>{aa}{oo}
 <med>:>ᤗᤠ{m}
-<ela>:>{oo}ᤏᤢ
-<ela>:>{oo}ᤗᤠ{m}       # Dir/LR
+<ela>:>{aa}{oo}ᤏᤢ
+<ela>:>{aa}{oo}ᤗᤠ{m}       # Dir/LR
 <all>:>ᤌᤠᤰ
 <all>:>ᤎᤠᤰ             # Dir/LR
 <itrt>:>ᤗᤢᤔᤥ
@@ -380,6 +383,7 @@ LEXICON Pronouns
 
 LEXICON DemPrn
 ᤂᤴ<prn><dem>:ᤂ{N}
+ᤁᤴ<prn><dem>:ᤁ{N}
 ᤂᤧᤴ<prn><dem>:ᤂᤧ{N}
 ᤂᤧᤱ<prn><dem>:ᤂᤧ{ng} # Dir/LR
 ᤁᤱ<prn><dem>:ᤁ{ng}
@@ -420,9 +424,11 @@ LEXICON Prepos-Stems
 ᤛᤥᤖᤡᤰ:ᤛᤥᤖᤡ{k}
 
 LEXICON Postpos-Stems
-ᤛᤡᤰᤋᤥ:ᤛᤡᤰᤋᤥ
-ᤀᤡᤛᤡᤰ:ᤀᤡᤛᤡ{k}{do}
-ᤀᤡᤛᤡᤁ᤻:ᤀᤡᤛᤡᤁ{km}    # Dir/LR
+ᤛᤡᤰᤋᤥ<post>:ᤛᤡᤰᤋᤥ
+ᤀᤡᤛᤡᤰ<post>:ᤀᤡᤛᤡ{k}{do}
+ᤀᤡᤛᤡᤁ᤻<post>:ᤀᤡᤛᤡᤁ{km}    # Dir/LR
+ᤋᤃᤡ<post>:{T}ᤃ{I}
+ᤋᤃᤡᤒᤠ<post>:{T}ᤃᤡ>ᤒ{Aabs}
 
 LEXICON TopicMarker
 ᤆᤀᤡᤲ<top>:ᤆᤀᤡᤲ
@@ -471,10 +477,11 @@ LEXICON Determiners
 ᤍᤠᤱᤒᤠᤸᤗᤧ:ᤍᤠᤱᤒᤠᤸᤗᤧ    #unsure
 
 LEXICON Ij-Stem
-ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠᤖᤥ
-ᤛᤧᤘᤠᤖᤥ:ᤛᤧᤘᤠᤖᤥ
+ᤛᤣᤘᤠᤖᤥ:ᤛᤣᤘᤠ>ᤖᤥ
+ᤛᤧᤘᤠᤖᤥ:ᤛᤧᤘᤠ>ᤖᤥ
 ᤔᤧ᤺ᤴ:ᤔᤧ᤺{N}
 ᤗᤥ:ᤗᤥ
+ᤛᤧᤘᤠ:ᤛᤧᤘᤠ
 
 LEXICON Conjunctions
 ᤋᤖ<cnjcoo>:ᤋᤖ
@@ -485,6 +492,7 @@ LEXICON Conjunctions
 ᤀᤡᤃᤪ<cnjcoo>:ᤀᤡᤃᤪ
 ᤏᤢ<cnjcoo>:ᤏᤢ
 ᤂᤧᤸᤗᤧ<cnjcoo>:ᤂᤧᤸᤗᤧ
+ᤗᤢᤶᤔᤥ<cnj>:ᤗᤢᤶ>ᤔᤥ
 
 LEXICON Evidentiality
 ᤗᤇ<evid>:ᤗᤇ
@@ -520,8 +528,8 @@ LEXICON AdverbStem
 ᤀᤠᤸᤗ:ᤀᤠᤸᤗ
 ᤛᤠ᤹ᤖᤡᤰ:ᤛᤠ{gs}ᤖᤡ{k}
 ᤆᤡ:ᤆᤡ
-ᤜᤧᤰᤁᤧ:ᤜᤧᤰᤁᤧ
-ᤜᤧᤰᤁᤣ:ᤜᤧᤰᤁᤣ  # Dir/LR
+ᤜᤧᤰᤁᤧ:ᤜᤧᤰᤁᤧ{do}
+ᤜᤧᤰᤁᤣ:ᤜᤧᤰᤁᤣ{do}  # Dir/LR
 ᤌᤣᤀᤠᤱ:ᤌᤣᤀᤠ{ng}
 ᤀᤣᤃᤠᤱ:ᤀᤣᤃᤠ{ng}
 ᤀᤠᤳᤋᤡ:ᤀᤠᤳᤋᤡ
@@ -530,6 +538,7 @@ LEXICON AdverbStem
 ᤂᤧᤒᤩᤠᤱ:ᤂᤧᤒᤩᤠᤱ
 ᤂᤧᤵᤔᤥ:ᤂᤧᤵᤔᤥ
 ᤀᤠᤵᤑᤣᤰ:ᤀᤠᤵᤑᤣ{k}
+ᤗ᤹ᤖᤡᤰ:ᤗ᤹ᤖᤡ{k}
 
 ALIAS AdverbStem Adverbs2
 
@@ -552,8 +561,8 @@ LEXICON Verb-Stems
 ᤆᤥ᤺ᤰᤔᤠ<vbdo>:{ch}{oo}{do}{Kk}
 ᤆᤥᤁ᤻ᤔᤠ<vbdo>:{ch}{K}{km}     # Dir/LR
 ᤆᤠᤔᤠ<v>:ᤆ{ao}
-ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{S}
-ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{S}  # Dir/LR
+ᤐᤥ᤺ᤱᤔᤠ<v>:{B}{oo}{do}{NGK}{So}
+ᤐᤥᤅ᤻ᤔᤠ<v>:{B}{oo}ᤅ{km}{So}  # Dir/LR
 ᤐᤠ᤺ᤵᤔᤠ<v>:{B}{A}{do}{pgt}{R}
 ᤐᤠᤐ᤻ᤔᤠ<v>:{B}{A}ᤐ{km}{R}    # Dir/LR
 ᤔᤠ᤺ᤔᤠ<v>:ᤔᤠ{do}{S}
@@ -580,6 +589,9 @@ LEXICON Verb-Stems
 ᤜᤠ᤺ᤵᤔᤠ<v>:ᤜᤠ{do}
 ᤗ᤹ᤔᤠ<vbdo>:ᤗ᤹
 ᤔᤧᤵᤔᤠ<v>:ᤔᤧ{tp}{t}
+ᤆᤡᤱᤔᤠ<v>:ᤆᤡ{ng}
+ᤕᤠᤱᤔᤠ<v>:ᤕᤠ{ng}
+ᤕᤢᤱᤔᤠ<v>:ᤕᤢ{ng}
 
 ALIAS Verb-Stems Verb2
 
@@ -664,6 +676,17 @@ LEXICON Noun-Stems
 ᤛᤧᤴ<n>:ᤛᤧ{N}
 ᤍᤠᤱᤒᤠ<n>:ᤍᤠᤱ>ᤒ{Aabs}
 ᤗᤢᤱᤔᤠ᤹<n>:ᤗᤢᤱᤔᤠ᤹
+ᤗᤠᤈᤣ᤹<n>:ᤗᤠᤈᤣ᤹
+ᤏᤛᤠᤴ<n>:ᤏᤛᤠ{do}{N}
+ᤏᤛᤠᤏ᤻<n>:ᤏᤛᤠᤏ{km}
+ᤁᤢᤈᤠ<n>:ᤁᤢᤈ{A}
+ᤛᤧᤘᤠ<n>:ᤛᤧᤘ{A}
+ᤛᤣᤛᤣ<n>:ᤛᤣᤛᤣ
+ᤀᤡᤱᤈᤠᤱ<n>:ᤀᤡᤱᤈᤠ{ng}
+ᤔᤢᤰᤛᤠᤶᤍᤠᤱᤒᤠ<n>:ᤔᤢᤰᤛᤠᤶ>ᤍᤠᤱ>ᤒ{Aabs}
+ᤋᤠᤵᤑᤧ᤺ᤶᤒᤠ<n>:ᤋᤠᤵᤑᤧ᤺ᤶ>ᤒ{Aabs}
+ᤐᤣᤗᤡ<n>:ᤐᤣᤗ{I}
+ᤌᤱ<n>:ᤌ{ng}
 
 # names of god
 ᤀᤸᤗᤧᤰᤂᤠ<n>:ᤀᤸᤗᤧᤰᤂᤠ
@@ -874,6 +897,8 @@ LEXICON NumeralStems
 ᤌᤡᤰ<num>:ᤌᤡ{k}
 ᤗᤌᤡᤰ<num>:ᤗ>ᤌᤡ{k}    # Dir/LR
 ᤏᤧᤜᤡ<num>:ᤏᤧ>ᤜᤡ
+ᤏᤧᤳᤇᤡ<num>:ᤏᤧᤳ>ᤇᤡ       # Dir/LR
+ᤏᤧᤳᤏᤧᤳᤇᤡ<num>:ᤏᤧᤳᤏᤧᤳᤇᤡ
 ᤛᤢᤶᤛᤡ<num>:ᤛᤢᤶ>ᤛᤡ
 ᤗᤡᤛᤡ<num>:ᤗᤡ>ᤛᤡ
 ᤏᤠᤛᤡ<num>:ᤏᤠ>ᤛᤡ

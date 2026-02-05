@@ -49,7 +49,7 @@ Alphabet
  %{NM%}:ᤶ %{NM%}:ᤴ
  %{Dnull%}:ᤍ %{Dnull%}:0
  %{dg%}:᤺ %{dg%}:᤹
- %{R%}:ᤖ %{R%}:0 %{R%}:ᤶ
+ %{R%}:ᤖ %{R%}:0 %{R%}:ᤶ %{R%}:ᤋ
  %{BH%}:ᤑ %{BH%}:ᤓ
  %{MNG%}:ᤔ %{MNG%}:ᤏ %{MNG%}:ᤅ %{MNG%}:᤺ %{MNG%}:ᤧ %{MNG%}:0
  %{EGS%}:ᤧ %{EGS%}:᤹  %{EGS%}:0
@@ -99,8 +99,9 @@ Rules
 "Aabs becomes null if succeeded by MNG"
 %{Aabs%}:0 <=> _ ( %>:) ( :0 ) %{MNG%}:ᤧ ;
                _ %>: ( :0 ) :Vowel ;
-"{aa} becomes ᤀ after a vowel but not a"
+"{aa} becomes ᤀ after a vowel or gs but not a"
 %{aa%}:ᤀ <=> :Vowelnota %>: _ ;
+              :GS %>: _;
 "{aa} becomes null after a"
 %{aa%}:0 <=> :ᤠ %>: _ ;
 "{aa} becomes null after a consonant"
@@ -148,10 +149,6 @@ Rules
 %{P%}:ᤵ <=> _ :ᤛ ;
 "{D} becomes d if followed by E"
 %{D%}:ᤍ <=> _ ( :0 ) ( %>: ) :ᤧ  ;
-"{R} becomes r if followed by vowel?"
-%{R%}:ᤖ <=> _ ( :0 ) %>: ( :0 ) :Vowel ;
-"{R} becomes null if at the end"
-%{R%}:0 <=> _ ( :0 )  .#. ;
 "{rr} becomes r if followed by Vowel"
 %{rr%}:ᤖ <=> _ ( %>: ) ( :0 ) :Vowel ;
 "{rr} becomes null if followed by consonant"
