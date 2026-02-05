@@ -61,11 +61,11 @@ If you are in the source directory after running make, the following
 commands should work:
 
 ```console
-$ echo "TODO: test sentence" | apertium -d . lif-morph
-TODO: test analysis result
+$ echo "ᤕᤠᤰᤌᤢᤱ ᤐᤠᤴ ᤆᤡᤃᤧᤔᤠᤛᤢᤶ॥" | apertium -d . lif-morph
+^ᤕᤠᤰᤌᤢᤱ/ᤕᤠᤰᤌᤢᤱ<n><attr> ^ᤐᤠᤴ/ᤐᤠ<n><sg> ^ᤆᤡᤃᤧᤔᤠᤛᤢᤶ/ᤆᤡ<adv>+ᤔᤠ᤺ᤔᤠ<v><nonpast><s_pl2><o_3><o_sg><perf>$^॥/॥<sent>$^./.<cm>$
 
-$ echo "TODO: test sentence" | apertium -d . lif-tagger
-TODO: test tagger result
+$ echo "ᤕᤠᤰᤌᤢᤱ ᤐᤠᤴ ᤆᤡᤃᤧᤔᤠᤛᤢᤶ॥" | apertium -d . lif-tagger
+^ᤕᤠᤰᤌᤢᤱ<n><attr>$ ^ᤐᤠᤴ<n><sg>$ ^ᤆᤡ<adv>+ᤔᤠ᤺ᤔᤠ<v><nonpast><s_pl2><o_3><o_sg><perf>$^॥<sent>$^.<cm>$
 ```
 
 Files and data
