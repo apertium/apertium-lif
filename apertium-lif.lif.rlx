@@ -6,7 +6,7 @@ DELIMITERS = "<$.>" "<॥>" "<.>";
 # We can define sets for common tag clusters
 LIST NOUN = n np;
 LIST ADJ = adj;
-LIST NGEN = (n gen) (np gen);
+LIST NGEN = (n gen​) (np gen​) (n gen) (np gen);
 LIST VERB = v;
 LIST PORT = o_2;
 LIST CASES = nom gen voc com abl erg ins abs comp itrt all ela med loc imp;
