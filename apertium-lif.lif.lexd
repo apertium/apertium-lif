@@ -161,7 +161,7 @@ LEXICON ToBeSuff
 <ser3pl>:>ᤛᤡ
 
 LEXICON Voice(3)
-:{K}{E}>      <act>:        :>{Bb}{A}
+:{K}{E}>      <act>:        <nom>:>{Bb}{A}
 
 LEXICON SubjPersonNumber(8)
 :ᤀᤠ>[ssg1,noport]           <s_sg1>:[ssg1,noport]           <incl>:[ssg1,noport]            :[ssg1,noport]                :[ssg1,noport]           :>{ng}[ssg1,noport]         :[ssg1,noport]              :>{ng}[ssg1,noport]
@@ -422,7 +422,7 @@ LEXICON Prepos-Stems
 ᤋᤃᤡ<pr>:ᤋᤃᤡ
 ᤗᤧᤵᤔᤠᤱ<pr>:ᤗᤧᤵᤔᤠ{ng}
 ᤁᤢᤛᤡᤱ<pr>:ᤁᤢᤛᤡ{ng}
-ᤛᤥᤖᤡᤰ:ᤛᤥᤖᤡ{k}
+ᤛᤥᤖᤡᤰ<pr>:ᤛᤥᤖᤡ{k}
 
 LEXICON Postpos-Stems
 ᤛᤡᤰᤋᤥ<post>:ᤛᤡᤰᤋᤥ

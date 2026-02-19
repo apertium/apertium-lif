@@ -2,10 +2,10 @@
 	"ᤀᤧᤶᤓᤠ" prn dem
 
 "<ᤁᤥᤰᤋᤢᤶᤒᤣ>"
-	"ᤁᤥᤰᤋᤢᤶᤒᤣ" vblex nonpast s_pl1 o_3 o_sg excl perf
+	"ᤁᤥᤰᤔᤠ" v nonpast s_pl1 o_3 o_sg excl perf
 
 "<ᤐᤣᤃᤡᤃᤡ᤹ᤸᤗᤧ>"
-	"ᤐᤣᤃᤡᤃᤡ᤹ᤸᤗᤧ" vblex nonpast s_pl1 excl sub  
+	"ᤐᤣ᤺ᤰᤔᤠ" v nonpast s_pl1 excl sub  
 
 "<ᤈᤶᤔ>"
 	"ᤈᤶᤔ" det
@@ -26,24 +26,26 @@
 	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_du2 os_pl o_sg perf
 
 "<ᤐ᤺ᤴᤍᤧᤖ>"
-	"ᤐ᤺ᤴᤍᤧᤖ" vblex past prog
+	"ᤐᤢᤵᤔᤠ" v past prog
 
 "<ᤋᤥᤱᤔᤠ>"
-	"ᤋᤥᤱᤔᤠ" vblex inf
-	"ᤋᤥᤱᤔᤠ" vblex inf o_nonsg
-	"ᤋᤥᤱᤔᤠ" vblex inf o_sg
+	"ᤋᤥᤱᤔᤠ" v inf
+	"ᤋᤥᤱᤔᤠ" v inf o_nonsg
+	"ᤋᤥᤱᤔᤠ" v inf o_sg
 
 "<ᤁᤧᤛᤡᤖᤠ>"
 	"ᤁᤧᤛᤡᤖᤠ" adv s_sg2
 
 "<ᤏᤡᤛᤢᤶᤛᤡᤶᤒᤧ>"
-	"ᤏᤡᤔᤠ" vblex nonpast s_pl1 ​o_3 o_nonsg excl perf
+	"ᤏᤡᤔᤠ" v nonpast s_pl1 ​o_3 o_nonsg excl perf
 
 "<ᤜᤥᤀᤡᤳᤗᤖᤡᤰ>"
 	"ᤜᤥᤀᤡᤳᤗᤖᤡᤰ" adv nom o_sg
 
 "<ᤔᤧ᤺ᤴᤏᤡ>"
-	"*ᤔᤧ᤺ᤴᤏᤡ"
+	"ᤔᤧ᤺ᤴᤏᤡ" n sg qst
+	"ᤔᤧ᤺ᤴᤏᤡ" n ser3sg qst
+	"ᤔᤧ᤺ᤴᤏᤡ" n attr qst
 
 "<ᤐᤧᤏᤡ>"
 	"ᤐᤧᤏᤡ" n sg
@@ -51,33 +53,50 @@
 	"ᤐᤧᤏᤡ" n attr
 
 "<ᤆᤢ᤺ᤖᤢᤒᤠ>"
-	"*ᤆᤢ᤺ᤖᤢᤒᤠ"
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_pl2 o_3 o_sg impf
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_sg3 o_3 o_sg impf
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_du3 o_3 o_sg impf
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_pl3 o_3 o_sg impf
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_pl2 o_3 o_sg perf nom
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_sg1 o_3 o_sg incl impf
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_du1 o_3 o_sg incl impf
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_pl1 o_3 o_sg incl impf
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_sg3 o_3 o_sg perf nom
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_du3 o_3 o_sg perf nom
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_pl3 o_3 o_sg perf nom
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf nom
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_du1 o_3 o_sg incl perf nom
+	"ᤆᤢ᤺ᤵᤔᤠ" v nonpast s_pl1 o_3 o_sg incl perf nom
 
 "<ᤁᤧᤀᤡᤵᤛᤡ>"
 	"ᤀᤡᤶᤔᤠ" v nonpast s_pl2 os_pl o_sg perf
 	"ᤀᤡᤶᤔᤠ" v nonpast s_sg2 os_pl o_sg perf
 	"ᤀᤡᤶᤔᤠ" v nonpast s_du2 os_pl o_sg perf
 
-"<ᤖᤠ᤺ᤰᤋᤡᤃᤧ᤹ᤸᤗᤧᤀᤠᤱ>"
-	"*ᤖᤠ᤺ᤰᤋᤡᤃᤧ᤹ᤸᤗᤧᤀᤠᤱ"
+"<ᤖᤠ᤺ᤰᤋᤡᤃᤧ᤹ᤸᤗᤧ>"
+	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_pl1 excl sub
 
 "<ᤖᤥ>"
-	"*ᤖᤥ"
+	"ᤖᤥ" excl
 
 "<ᤁᤧᤍᤛᤠᤶᤒᤠ>"
-	"*ᤁᤧᤍᤛᤠᤶᤒᤠ"
+	"ᤆᤠᤔᤠ" v nonpast s_pl2 os_sg o_sg perf nom
 
 "<ᤐᤠ᤺ᤳᤋᤢᤶᤒᤧᤖ>"
-	"*ᤐᤠ᤺ᤳᤋᤢᤶᤒᤧᤖ"
+	"ᤐᤠ᤺ᤳᤋᤢᤶᤒᤧᤖ" v nonpast s_pl1 o_3 o_sg excl prog
 
 "<ᤔᤧᤈᤧᤰᤛᤢ>"
-	"*ᤔᤧᤈᤧᤰᤛᤢ"
+	"ᤆᤧᤱᤔᤠ" v nonpast s_pl2 o_3 o_sg perf
+	"ᤆᤧᤱᤔᤠ" v nonpast s_du3 o_3 o_sg perf
+	"ᤆᤧᤱᤔᤠ" v nonpast s_pl3 o_3 o_sg perf
+	"ᤆᤧᤱᤔᤠ" v nonpast s_du1 o_3 o_sg incl perf
+	"ᤆᤧᤱᤔᤠ" v nonpast s_pl1 o_3 o_sg incl perf
 
 "<ᤂᤧᤵᤛᤢᤱᤒᤠ>"
-	"*ᤂᤧᤵᤛᤢᤱᤒᤠ"
+	"ᤂᤧᤶᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf nom
 
-"<ᤀᤡᤱᤅᤠ>"
-	"*ᤀᤡᤱᤅᤠ"
+"<ᤀᤡᤱᤃᤠ>"
+	"ᤀᤠ" prn pers p1 sg
 
 "<ᤋᤥᤏᤧᤒᤠ>"
 	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_pl3 os_sg o_sg perf nom
@@ -110,67 +129,160 @@
 	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_sg3 os_sg o_sg impf
 
 "<ᤁᤧᤖᤠ᤺ᤰᤐᤠ>"
-	"*ᤁᤧᤖᤠ᤺ᤰᤐᤠ"
+	"ᤖᤠ᤺ᤰᤔᤠ" v act nom
+	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_pl2 os_sg o_sg impf
+	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_sg2 os_sg o_sg impf
+	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_du2 os_sg o_sg impf
+	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_pl2 os_sg o_sg perf nom
+	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_sg2 os_sg o_sg perf nom
+	"ᤖᤠ᤺ᤰᤔᤠ" v nonpast s_du2 os_sg o_sg perf nom
 
 "<ᤑᤅᤠᤛᤡᤖᤧ>"
-	"*ᤑᤅᤠᤛᤡᤖᤧ"
+	"ᤑᤅᤠᤛᤡᤖᤧ" n pl erg
+	"ᤑᤅᤠᤛᤡᤖᤧ" n pl voc
+	"ᤑᤅᤠᤛᤡᤖᤧ" n pl gen
 
 "<ᤍᤥᤏᤧᤒᤠ>"
-	"*ᤍᤥᤏᤧᤒᤠ"
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_pl3 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_pl1 os_sg o_sg incl perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_du1 os_sg o_sg incl perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_sg1 os_sg o_sg incl perf nom
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_pl1 os_sg o_sg incl perf nom
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_du1 os_sg o_sg incl perf nom
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_sg1 os_sg o_sg incl perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_pl3 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_du3 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_sg3 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_pl1 os_sg o_sg incl impf
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_du1 os_sg o_sg incl impf
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_sg1 os_sg o_sg incl impf
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_pl2 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_pl2 os_sg o_sg impf
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_du3 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_sg3 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_pl1 os_sg o_sg incl impf
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_du1 os_sg o_sg incl impf
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_sg1 os_sg o_sg incl impf
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_pl2 os_sg o_sg perf nom
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_pl3 os_sg o_sg impf
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_du3 os_sg o_sg impf
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_sg3 os_sg o_sg impf
+	"ᤋᤥ᤺ᤔᤠ" v o_2 nonpast s_pl2 os_sg o_sg impf
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_pl3 os_sg o_sg impf
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_du3 os_sg o_sg impf
+	"ᤋᤥ᤺ᤔᤠ" v refl nonpast s_sg3 os_sg o_sg impf
 
 "<ᤛᤖᤛᤸᤗᤇ>"
-	"*ᤛᤖᤛᤸᤗᤇ"
+	"ᤛᤖᤛᤸᤗᤇ" n sg
+	"ᤛᤖᤛᤸᤗᤇ" n ser3sg
+	"ᤛᤖᤛᤸᤗᤇ" n attr
 
 "<ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ>"
 	"ᤀᤧᤶᤓᤧᤍᤠᤱᤒᤠ" pr
 
 "<ᤛᤥᤖᤡᤰ>"
-	"ᤛᤥᤖᤡᤰ"
+	"ᤛᤥᤖᤡᤰ" pr
 
 "<ᤆᤴᤍᤪᤧ>"
-	"*ᤆᤴᤍᤪᤧ"
+	"ᤆᤴᤍᤪᤧ" np sg
+	"ᤆᤴᤍᤪᤧ" np ser3sg
+	"ᤆᤴᤍᤪᤧ" np attr
 
-"<ᤆᤡᤃᤧᤶᤒᤠ>"
-	"*ᤆᤡᤃᤧᤶᤒᤠ"
+"<ᤆᤡᤃᤣᤶᤒᤠ>"
+	"ᤁᤣ᤺ᤶᤒᤠ" adj
+		"ᤆᤡ" adj
+	"ᤁᤣ᤺ᤶᤒᤠ" adj
+		"ᤆᤡ" adv
 
 "<ᤔᤧᤴᤏᤡ᤺ᤳᤋᤢᤴ>"
-	"*ᤔᤧᤴᤏᤡ᤺ᤳᤋᤢᤴ"
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl2 o_3 neg o_nonsg perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl1 o_3 neg o_sg incl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl1 o_3 neg o_sg excl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl1 o_3 neg o_nonsg incl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl1 o_3 neg o_nonsg excl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_du1 o_3 neg o_sg incl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_du1 o_3 neg o_nonsg incl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_sg1 o_3 neg o_sg incl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_sg1 o_3 neg o_nonsg incl perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl3 o_3 neg o_sg perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl3 o_3 neg o_nonsg perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_du3 o_3 neg o_sg perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_du3 o_3 neg o_nonsg perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_sg3 o_3 neg o_sg perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_sg3 o_3 neg o_nonsg perf
+	"ᤏᤡᤳᤔᤠ" v neg nonpast s_pl2 o_3 neg o_sg perf
 
 "<ᤔᤧᤱᤃᤖ>"
-	"*ᤔᤧᤱᤃᤖ"
+	"ᤁᤖ" cnj neg
 
 "<ᤏᤓᤀᤧ>"
-	"*ᤏᤓᤀᤧ"
+	"ᤏᤓᤀᤧ" cnj
 
 "<ᤜᤖᤠᤴᤍᤡ>"
-	"*ᤜᤖᤠᤴᤍᤡ"
+	"ᤜᤖᤠᤴᤍᤡ" n sg
+	"ᤜᤖᤠᤴᤍᤡ" n ser3sg
+	"ᤜᤖᤠᤴᤍᤡ" n attr
 
 "<ᤀ᤺ᤃᤢᤒᤠ>"
-	"*ᤀ᤺ᤃᤢᤒᤠ"
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_pl2 o_3 o_sg impf
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_sg3 o_3 o_sg impf
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_du3 o_3 o_sg impf
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_pl3 o_3 o_sg impf
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_pl2 o_3 o_sg perf nom
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_sg1 o_3 o_sg incl impf
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_du1 o_3 o_sg incl impf
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_pl1 o_3 o_sg incl impf
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_sg3 o_3 o_sg perf nom
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_du3 o_3 o_sg perf nom
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_pl3 o_3 o_sg perf nom
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf nom
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_du1 o_3 o_sg incl perf nom
+	"ᤀᤠ᤺ᤶᤔᤠ" v nonpast s_pl1 o_3 o_sg incl perf nom
 
 "<ᤁᤧᤏᤡ᤺ᤳᤋᤢᤶ>"
-	"*ᤁᤧᤏᤡ᤺ᤳᤋᤢᤶ"
+	"ᤏᤡᤳᤔᤠ" v nonpast s_pl2 o_3 o_sg perf
 
 "<ᤗ᤺ᤳᤋᤢᤱ>"
 	"ᤗ᤺ᤵᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf
 
 "<ᤛᤢᤶᤕᤠ᤺ᤴ>"
-	"*ᤛᤢᤶᤕᤠ᤺ᤴ"
+	"ᤕᤠ᤺ᤴ" n coll
+		"ᤛᤢᤶ" num
 
 "<ᤈᤛᤋᤥ>"
-	"*ᤈᤛᤋᤥ"
+	"ᤈᤛᤋᤥ" cnj
 
 "<ᤀᤡᤳᤋᤢᤱᤅᤠᤱ>"
-	"*ᤀᤡᤳᤋᤢᤱᤅᤠᤱ"
+	"ᤀᤠᤱ" adv
+		"ᤀᤡᤜᤡᤱᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf
+	"ᤀᤠᤱ" cnj
+		"ᤀᤡᤜᤡᤱᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf
 
 "<ᤂᤠᤴᤏᤧᤳᤔᤢ>"
-	"*ᤂᤠᤴᤏᤧᤳᤔᤢ"
+	"ᤂᤠᤴ" det loc
 
 "<ᤔᤖᤧ>"
-	"*ᤔᤖᤧ"
+	"ᤔᤖᤧ" n sg
+	"ᤔᤖᤧ" n ser3sg
+	"ᤔᤖᤧ" n attr
 
 "<ᤜᤥᤵᤋᤧ>"
-	"*ᤜᤥᤵᤋᤧ"
+	"ᤜᤥ᤺ᤵᤔᤠ" v ser1sg
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_pl2 os_sg12 o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_sg3 os_sg12 o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_du3 os_sg12 o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_pl3 os_sg12 o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_sg1 os_sg12 o_sg incl perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_du1 os_sg12 o_sg incl perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v nonpast s_pl1 os_sg12 o_sg incl perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v past s_pl2 os_sg o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v past s_sg3 os_sg o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v past s_du3 os_sg o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v past s_pl3 os_sg o_sg perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v past s_sg1 os_sg o_sg incl perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v past s_du1 os_sg o_sg incl perf
+	"ᤜᤥ᤺ᤵᤔᤠ" v past s_pl1 os_sg o_sg incl perf
 
 "<ᤀᤠᤒᤥᤰᤛᤧᤛᤡ>"
 	"ᤐᤥ᤺ᤱᤔᤠ" v nonpast s_du1 os_sg12 o_nonsg incl perf
@@ -191,7 +303,10 @@
 	"ᤒᤡᤆᤠᤖ" n attr
 
 "<ᤆᤡᤕᤴᤒᤠ>"
-	"*ᤆᤡᤕᤴᤒᤠ"
+	"ᤕᤶᤒᤠ" adj
+		"ᤆᤡ" adj
+	"ᤕᤶᤒᤠ" adj
+		"ᤆᤡ" adv
 
 "<ᤁᤧᤍᤧᤀᤡᤀᤠᤱ>"
 	"ᤀᤠᤱ" adv
@@ -200,22 +315,34 @@
 		"ᤋᤠ᤺ᤔᤠ" v past s_sg2 os_pl o_sg perf
 	"ᤀᤠᤱ" adv
 		"ᤋᤠ᤺ᤔᤠ" v past s_du2 os_pl o_sg perf
+	"ᤀᤠᤱ" cnj
+		"ᤋᤠ᤺ᤔᤠ" v past s_pl2 os_pl o_sg perf
+	"ᤀᤠᤱ" cnj
+		"ᤋᤠ᤺ᤔᤠ" v past s_sg2 os_pl o_sg perf
+	"ᤀᤠᤱ" cnj
+		"ᤋᤠ᤺ᤔᤠ" v past s_du2 os_pl o_sg perf
 
 "<ᤀᤧᤶᤓ>"
-	"*ᤀᤧᤶᤓ"
+	"ᤀᤧᤶᤓ" adv
 
 "<ᤁᤧᤵᤔᤠ>"
-	"*ᤁᤧᤵᤔᤠ"
+	"ᤁᤧᤵᤔᤠ" v inf
+	"ᤁᤧᤵᤔᤠ" v inf o_nonsg
+	"ᤁᤧᤵᤔᤠ" v inf o_sg
 
 "<ᤌᤱᤗᤱᤒᤠᤏᤢ>"
 	"ᤏᤢ" adj
 		"ᤌᤱᤗᤱ" np top nom sg
 
 "<ᤑᤧᤰᤁᤧᤳᤔᤢ>"
-	"*ᤑᤧᤰᤁᤧᤳᤔᤢ"
+	"ᤑᤧᤰᤁᤧᤳᤔᤢ" n sg loc
 
 "<ᤔᤧᤏᤕᤢ>"
-	"*ᤔᤧᤏᤕᤢ"
+	"ᤏ᤺ᤔᤠ" v nonpast s_pl2 o_3 o_sg perf
+	"ᤏ᤺ᤔᤠ" v nonpast s_du3 o_3 o_sg perf
+	"ᤏ᤺ᤔᤠ" v nonpast s_pl3 o_3 o_sg perf
+	"ᤏ᤺ᤔᤠ" v nonpast s_du1 o_3 o_sg incl perf
+	"ᤏ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg incl perf
 
 "<ᤕᤠᤵᤔᤡ>"
 	"ᤕᤠᤵᤔᤡ" n sg
@@ -223,10 +350,10 @@
 	"ᤕᤠᤵᤔᤡ" n attr
 
 "<ᤕᤠ᤺ᤰᤔᤢᤏᤠᤒᤠᤛᤡ>"
-	"*ᤕᤠ᤺ᤰᤔᤢᤏᤠᤒᤠᤛᤡ"
+	"ᤕᤠ᤺ᤰᤔᤢᤏᤠᤒᤠᤛᤡ" v ger nom s_pl3 cop
 
 "<ᤕᤶᤔᤢ>"
-	"*ᤕᤶᤔᤢ"
+	"ᤕᤶᤔᤢ" adv
 
 "<ᤆᤠᤖ>"
 	"ᤆᤠᤔᤠ" v nonpast s_pl2 os_sg o_sg opt perf
@@ -236,38 +363,51 @@
 	"ᤆᤠᤔᤠ" v nonpast s_sg1 os_sg o_sg incl opt perf
 	"ᤆᤠᤔᤠ" v nonpast s_du1 os_sg o_sg incl opt perf
 	"ᤆᤠᤔᤠ" v nonpast s_pl1 os_sg o_sg incl opt perf
+	"ᤆᤠᤖ" num
 
 "<ᤆᤗᤴ>"
-	"*ᤆᤗᤴ"
+	"ᤆᤗᤴ" n sg
+	"ᤆᤗᤴ" n ser3sg
+	"ᤆᤗᤴ" n attr
 
-"<ᤀᤏᤡ>"
-	"*ᤀᤏᤡ"
+"<ᤀᤠᤏᤡ>"
+	"ᤀᤠ" prn pers p1 pl incl
 
 "<ᤁᤧᤕᤢᤱᤔᤠᤏᤢᤀᤠᤱ>"
 	"ᤀᤠᤱ" adv
 		"ᤕᤢᤱᤔᤠ" v inf act com
+	"ᤀᤠᤱ" cnj
+		"ᤕᤢᤱᤔᤠ" v inf act com
 
 "<ᤁᤧᤶᤒᤣᤃᤡᤴᤒᤠ>"
-	"*ᤁᤧᤶᤒᤣᤃᤡᤴᤒᤠ"
+	"ᤐᤣ᤺ᤰᤔᤠ" v neg nonpast s_pl2 os_pl o_sg neg perf nom
+	"ᤐᤣ᤺ᤰᤔᤠ" v neg nonpast s_sg2 os_pl o_sg neg perf nom
+	"ᤐᤣ᤺ᤰᤔᤠ" v neg nonpast s_du2 os_pl o_sg neg perf nom
 
 "<ᤋᤣ᤹ᤖᤢᤶᤒᤧ>"
-	"*ᤋᤣ᤹ᤖᤢᤶᤒᤧ"
+	"ᤋᤥ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg excl perf
 
 "<ᤛᤧ᤹ᤔᤳ>"
-	"*ᤛᤧ᤹ᤔᤳ"
+	"ᤛᤧ᤹ᤔᤳ" n sg
+	"ᤛᤧ᤹ᤔᤳ" n ser3sg
+	"ᤛᤧ᤹ᤔᤳ" n attr
 
 "<ᤗ᤺ᤴᤔᤢᤏᤠᤒᤠ>"
-	"*ᤗ᤺ᤴᤔᤢᤏᤠᤒᤠ"
+	"ᤗ᤺ᤶᤔᤠ" v ger nom
 
 "<ᤗᤡᤱᤎᤧᤵᤐᤠᤏᤢ>"
 	"ᤏᤢ" adj
 		"ᤗᤡᤱᤎᤧᤵ" np top nom sg
+	"ᤏᤢ" soc
+		"ᤗᤡᤱᤎᤧᤵ" np top nom sg
+	"ᤏᤢ" com
+		"ᤗᤡᤱᤎᤧᤵ" np top nom sg
 
 "<ᤁᤧᤗ᤺ᤳᤋᤢᤶᤔᤡᤕᤠ>"
-	"*ᤁᤧᤗ᤺ᤳᤋᤢᤶᤔᤡᤕᤠ"
+	"ᤗ᤺ᤵᤔᤠ" v nonpast s_pl2 o_3 o_sg perf hyp
 
 "<ᤂᤶᤓᤃᤖ>"
-	"*ᤂᤶᤓᤃᤖ"
+	"ᤂᤶᤓᤃᤖ" adv
 
 "<ᤕᤖᤡᤰ>"
 	"ᤕᤖᤡᤰ" adj
@@ -278,35 +418,63 @@
 	"ᤆᤥ᤺ᤰᤔᤠ" vbdo inf o_sg
 
 "<ᤀᤢ᤺ᤱᤔᤢᤏᤠᤒᤠ>"
-	"*ᤀᤢ᤺ᤱᤔᤢᤏᤠᤒᤠ"
+	"ᤀᤢ᤺ᤱᤔᤠ" v ger nom
 
 "<ᤐᤠᤗᤠᤶᤔᤧᤏᤠᤱ>"
 	"*ᤐᤠᤗᤠᤶᤔᤧᤏᤠᤱ"
 
 "<ᤏᤧᤛᤛᤢᤒᤠ>"
-	"*ᤏᤧᤛᤛᤢᤒᤠ"
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl2 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg3 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du3 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl3 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl2 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg1 o_3 o_sg incl impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du1 o_3 o_sg incl impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg incl impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg3 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du3 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl3 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du1 o_3 o_sg incl perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg incl perf nom
 
 "<ᤂᤴ>"
 	"ᤂᤴ" prn dem
 	"ᤂᤴ" prn dem sg
 
 "<ᤕᤠ᤺ᤸᤗᤣᤰ>"
-	"*ᤕᤠ᤺ᤸᤗᤣᤰ"
+	"ᤕᤠ᤺ᤸᤗᤣᤰ" n sg
+	"ᤕᤠ᤺ᤸᤗᤣᤰ" n ser3sg
+	"ᤕᤠ᤺ᤸᤗᤣᤰ" n attr
 
 "<ᤈᤏᤠ>"
-	"*ᤈᤏᤠ"
+	"ᤈᤏᤠ" n clf sg
 
 "<ᤒᤥᤗᤡ>"
-	"*ᤒᤥᤗᤡ"
+	"ᤒᤥᤗᤡ" n sg
+	"ᤒᤥᤗᤡ" n ser3sg
+	"ᤒᤥᤗᤡ" n attr
 
 "<ᤛᤠᤖᤧᤀᤠᤱ>"
-	"*ᤛᤠᤖᤧᤀᤠᤱ"
+	"ᤀᤠᤱ" adv
+		"ᤛᤠ" n sg erg
+	"ᤀᤠᤱ" adv
+		"ᤛᤠ" n sg gen
+	"ᤀᤠᤱ" adv
+		"ᤛᤠ" n sg voc
+	"ᤀᤠᤱ" cnj
+		"ᤛᤠ" n sg erg
+	"ᤀᤠᤱ" cnj
+		"ᤛᤠ" n sg gen
+	"ᤀᤠᤱ" cnj
+		"ᤛᤠ" n sg voc
 
-"<ᤋᤠ᤺ᤳᤋᤠ᤺ᤳᤆᤠᤴ>"
-	"*ᤋᤠ᤺ᤳᤋᤠ᤺ᤳᤆᤠᤴ"
+"<ᤋᤠ᤺ᤳᤋᤠ᤺ᤳ>"
+	"ᤋᤠ᤺ᤳᤋᤠ᤺ᤳ" v v echo
 
 "<ᤍᤣᤂᤡ>"
-	"*ᤍᤣᤂᤡ"
+	"ᤍᤣᤂᤡ" pr
 
 "<ᤆᤀᤡᤲ>"
 	"ᤆᤀᤡᤲ" top
@@ -324,24 +492,45 @@
 	"ᤕᤠᤰᤌᤢᤶᤒᤠ" n sg gen​
 	"ᤕᤠᤰᤌᤢᤶᤒᤠ" n sg voc
 
-"<ᤀᤠᤘᤠ᤹ᤀᤠᤒᤣᤰ>"
-	"*ᤀᤠᤘᤠ᤹ᤀᤠᤒᤣᤰ"
+"<ᤀᤠᤘᤠ᤹>"
+	"ᤘᤠᤔᤠ" v nonpast s_sg1 os_sg o_sg incl perf
+	"ᤘᤠᤔᤠ" v nonpast s_du1 os_sg o_sg incl perf
+	"ᤘᤠᤔᤠ" v nonpast s_pl1 os_sg o_sg incl perf
 
 "<ᤐᤣᤁ᤻ᤔᤠ>"
-	"*ᤐᤣᤁ᤻ᤔᤠ"
+	"ᤐᤣᤁ᤻ᤔᤠ" v inf
+	"ᤐᤣᤁ᤻ᤔᤠ" v inf o_nonsg
+	"ᤐᤣᤁ᤻ᤔᤠ" v inf o_sg
 
 "<ᤆᤠᤱᤅᤠᤱ>"
 	"ᤀᤠᤱ" adv
 		"ᤆᤠᤔᤠ" v nonpast s_sg1 os_sg o_sg incl perf
+	"ᤀᤠᤱ" cnj
+		"ᤆᤠᤔᤠ" v nonpast s_sg1 os_sg o_sg incl perf
 
-"<ᤀᤠᤴᤍᤱᤏᤧᤴ>"
-	"*ᤀᤠᤴᤍᤱᤏᤧᤴ"
+"<ᤔᤏᤠ>"
+	"ᤔᤏᤠ" n sg
+	"ᤔᤏᤠ" n ser3sg
+	"ᤔᤏᤠ" n attr
 
 "<ᤐᤢᤱᤅᤠᤱ>"
-	"*ᤐᤢᤱᤅᤠᤱ"
+	"ᤀᤠᤱ" adv
+		"ᤆᤠᤔᤠ" n sg
+	"ᤀᤠᤱ" adv
+		"ᤆᤠᤔᤠ" n ser3sg
+	"ᤀᤠᤱ" adv
+		"ᤆᤠᤔᤠ" n attr
+	"ᤀᤠᤱ" cnj
+		"ᤆᤠᤔᤠ" n sg
+	"ᤀᤠᤱ" cnj
+		"ᤆᤠᤔᤠ" n ser3sg
+	"ᤀᤠᤱ" cnj
+		"ᤆᤠᤔᤠ" n attr
 
 "<ᤛᤡᤖᤠ>"
-	"*ᤛᤡᤖᤠ"
+	"ᤛᤡᤖᤠ" n sg
+	"ᤛᤡᤖᤠ" n ser3sg
+	"ᤛᤡᤖᤠ" n attr
 
 "<ᤘᤠ᤹ᤀᤡ>"
 	"ᤘᤠᤔᤠ" v nonpast s_pl2 os_pl o_sg perf
@@ -351,24 +540,27 @@
 	"ᤘᤠᤔᤠ" v nonpast s_sg1 os_pl o_sg incl perf
 	"ᤘᤠᤔᤠ" v nonpast s_du1 os_pl o_sg incl perf
 	"ᤘᤠᤔᤠ" v nonpast s_pl1 os_pl o_sg incl perf
+	"ᤘᤠᤔᤠ" v nonpast qst
 
 "<ᤑᤧᤀᤠᤱ>"
-	"*ᤑᤧᤀᤠᤱ"
+	"ᤑᤧᤀᤠᤱ" comp
 
 "<ᤜᤢᤏᤢ>"
-	"*ᤜᤢᤏᤢ"
+	"ᤜᤢᤏᤢ" vbser ger
 
 "<ᤏᤧᤏᤧᤳᤆᤡ>"
-	"*ᤏᤧᤏᤧᤳᤆᤡ"
+	"ᤏᤧᤏᤧᤳᤆᤡ" num
 
 "<ᤀᤠᤓᤧᤍᤠᤱᤒᤠ>"
-	"*ᤀᤠᤓᤧᤍᤠᤱᤒᤠ"
+	"ᤀᤠᤓᤧᤍᤠᤱᤒᤠ" adj
 
 "<ᤐᤪᤧᤶ>"
-	"*ᤐᤪᤧᤶ"
+	"ᤐᤪᤧᤶ" n sg
+	"ᤐᤪᤧᤶ" n ser3sg
+	"ᤐᤪᤧᤶ" n attr
 
 "<ᤀᤰᤂᤧ>"
-	"*ᤀᤰᤂᤧ"
+	"ᤀᤰᤂᤧ" adv
 
 "<ᤕᤠᤰᤌᤢᤶᤒᤧᤸᤗᤧ>"
 	"ᤕᤠᤰᤌᤢᤶᤒᤠ" n abs ins
@@ -387,9 +579,12 @@
 	"ᤕᤠᤰᤌᤢᤶᤒᤠ" n sg gen
 
 "<ᤐᤧᤖᤧᤰᤁᤧᤰᤁᤧᤰᤐᤠ>"
-	"*ᤐᤧᤖᤧᤰᤁᤧᤰᤁᤧᤰᤐᤠ"
+	"ᤐᤧᤖᤧᤰᤁᤧᤰᤁᤧᤰᤐᤠ" adv onom
 
 "<ᤌᤢᤰᤕᤠᤍᤢ>"
-	"*ᤌᤢᤰᤕᤠᤍᤢ"
+	"ᤌᤢᤰᤕᤠᤍᤢ" np top sg
+	"ᤌᤢᤰᤕᤠᤍᤢ" np top ser3sg
+	"ᤌᤢᤰᤕᤠᤍᤢ" np top attr
+	
 "<.>"
 	"." cm
