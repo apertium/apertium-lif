@@ -423,22 +423,6 @@
 "<ᤐᤠᤗᤠᤶᤔᤧᤏᤠᤱ>"
 	"*ᤐᤠᤗᤠᤶᤔᤧᤏᤠᤱ"
 
-"<ᤏᤧᤛᤛᤢᤒᤠ>"
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl2 o_3 o_sg impf
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg3 o_3 o_sg impf
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du3 o_3 o_sg impf
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl3 o_3 o_sg impf
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl2 o_3 o_sg perf nom
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg1 o_3 o_sg incl impf
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du1 o_3 o_sg incl impf
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg incl impf
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg3 o_3 o_sg perf nom
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du3 o_3 o_sg perf nom
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl3 o_3 o_sg perf nom
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf nom
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du1 o_3 o_sg incl perf nom
-	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg incl perf nom
-
 "<ᤂᤴ>"
 	"ᤂᤴ" prn dem
 	"ᤂᤴ" prn dem sg
@@ -586,5 +570,18 @@
 	"ᤌᤢᤰᤕᤠᤍᤢ" np top ser3sg
 	"ᤌᤢᤰᤕᤠᤍᤢ" np top attr
 	
-"<.>"
-	"." cm
+"<ᤏᤧᤛᤛᤢᤒᤠ>"
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl2 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg3 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du3 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl3 o_3 o_sg impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl2 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg1 o_3 o_sg incl impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du1 o_3 o_sg incl impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg incl impf
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg3 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du3 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl3 o_3 o_sg perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_sg1 o_3 o_sg incl perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_du1 o_3 o_sg incl perf nom
+	"ᤏᤧ᤺ᤔᤠ" v nonpast s_pl1 o_3 o_sg incl perf nom
