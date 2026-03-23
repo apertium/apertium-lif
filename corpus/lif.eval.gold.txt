@@ -356,13 +356,6 @@
 	"ᤕᤶᤔᤢ" adv
 
 "<ᤆᤠᤖ>"
-	"ᤆᤠᤔᤠ" v nonpast s_pl2 os_sg o_sg opt perf
-	"ᤆᤠᤔᤠ" v nonpast s_sg3 os_sg o_sg opt perf
-	"ᤆᤠᤔᤠ" v nonpast s_du3 os_sg o_sg opt perf
-	"ᤆᤠᤔᤠ" v nonpast s_pl3 os_sg o_sg opt perf
-	"ᤆᤠᤔᤠ" v nonpast s_sg1 os_sg o_sg incl opt perf
-	"ᤆᤠᤔᤠ" v nonpast s_du1 os_sg o_sg incl opt perf
-	"ᤆᤠᤔᤠ" v nonpast s_pl1 os_sg o_sg incl opt perf
 	"ᤆᤠᤖ" num
 
 "<ᤆᤗᤴ>"
@@ -517,13 +510,6 @@
 	"ᤛᤡᤖᤠ" n attr
 
 "<ᤘᤠ᤹ᤀᤡ>"
-	"ᤘᤠᤔᤠ" v nonpast s_pl2 os_pl o_sg perf
-	"ᤘᤠᤔᤠ" v nonpast s_sg3 os_pl o_sg perf
-	"ᤘᤠᤔᤠ" v nonpast s_du3 os_pl o_sg perf
-	"ᤘᤠᤔᤠ" v nonpast s_pl3 os_pl o_sg perf
-	"ᤘᤠᤔᤠ" v nonpast s_sg1 os_pl o_sg incl perf
-	"ᤘᤠᤔᤠ" v nonpast s_du1 os_pl o_sg incl perf
-	"ᤘᤠᤔᤠ" v nonpast s_pl1 os_pl o_sg incl perf
 	"ᤘᤠᤔᤠ" v nonpast qst
 
 "<ᤑᤧᤀᤠᤱ>"
